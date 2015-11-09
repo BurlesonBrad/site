@@ -428,6 +428,7 @@ input:focus:-ms-input-placeholder { opacity: 0; }
 	#countdown {
 		margin-left: 0;
 		margin-bottom: 0;
+		margin-top: 8em;
 		width: 100%;
 	}
 
@@ -436,11 +437,11 @@ input:focus:-ms-input-placeholder { opacity: 0; }
 	}
 
 	#logo {
-		display: none;
 		float: left;
-		position: relative;
+		position: absolute;
 			left: 50%;
 		margin-left: -88px;
+		margin-top: 10px;
 	}
 
 	#social {
