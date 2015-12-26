@@ -24,7 +24,7 @@ get_header(); ?>
 				/**
 				 * @hooked storefront_display_comments - 10
 				 */
-				do_action( 'storefront_page_after' );
+				//do_action( 'storefront_page_after' );
 				?>
 
 			<?php endwhile; // end of the loop. ?>
