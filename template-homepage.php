@@ -28,7 +28,7 @@ get_header(); ?>
 			 */
 			do_action( 'homepage' ); ?>
 
-			<h1>Helloo!</h1>
 		</main><!-- #main -->
+		<h1>Helloo!</h1>
 	</div><!-- #primary -->
 <?php get_footer(); ?>
