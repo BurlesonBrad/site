@@ -29,7 +29,6 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-		<h1>Uh-huh.</h1>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
