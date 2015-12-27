@@ -27,3 +27,9 @@ Updated: 2015-10-19 17:34:47
     width: 16.66%;
     padding: 0 !important;
 }
+
+
+/* COLORS */
+.site-header, .main-navigation ul ul, .secondary-navigation ul ul, .main-navigation ul.menu > li.menu-item-has-children:after, .secondary-navigation ul.menu ul, .main-navigation ul.menu ul, .main-navigation ul.nav-menu ul {
+	background-color: #00b0ff;
+}
