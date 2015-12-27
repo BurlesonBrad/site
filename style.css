@@ -8,6 +8,22 @@ Updated: 2015-10-19 17:34:47
 
 @charset "UTF-8";
 
+/* LAYOUT */
+/* site */
+@media screen and (min-width: 768px) {
+	.col-full {
+		max-width: 70em;
+	}
+}
+
+/* header */
 .site-header {
 	padding-top: 1.2em;
+}
+
+
+/* INSTAGRAM WIDGET */
+#sb_instagram.sbi_col_6 #sbi_images .sbi_item {
+    width: 16.66%;
+    padding: 0 !important;
 }
