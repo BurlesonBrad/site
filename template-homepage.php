@@ -14,11 +14,7 @@
 
 get_header(); ?>
 
-	<style>
-		main > article > .entry-header {
-			display:none;
-		}
-	</style>
+	<style> main > article > .entry-header { display:none; } </style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
