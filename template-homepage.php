@@ -19,27 +19,37 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
-			<div class="featured-disc-area">
-				<?php
-				$fd_params = array(
-					'posts_per_page' => 1,
-					'product_cat' => 'featured-disc',
-					'post_type' => 'product'
-				);
-				$wc_query = new WP_Query($fd_params);
+			<section class="featured-disc-area">
+				<div class="featured-disc-text">
+					<?php
+					$fd_params = array(
+						'posts_per_page' => 1,
+						'product_cat' => 'featured-disc',
+						'post_type' => 'product'
+					);
+					$wc_query = new WP_Query($fd_params);
 				
-				if ( $wc_query->have_posts() ) :
-					while ( $wc_query->have_posts() ) :
-						$wc_query->the_post(); ?>
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p><?php the_excerpt(); ?></p>
-				<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
-				<?php
-					endwhile;
-					wp_reset_postdata();
-				
-				endif; ?>
-			</div>
+					if ( $wc_query->have_posts() ) :
+						while ( $wc_query->have_posts() ) :
+							$wc_query->the_post(); ?>
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<p><?php the_excerpt(); ?></p>
+					<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
+				</div>
+				<div class="featured-disc-image">
+					<?php
+						the_post_thumbnail();
+						
+						endwhile;
+						wp_reset_postdata();
+					endif; ?>
+				</div>
+				<div class="featured-disc-twitter">
+					<div class="twitter-feed">
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</div>
+			</section>
 
 			<?php
 			/**
