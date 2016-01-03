@@ -38,7 +38,7 @@ get_header(); ?>
 					endwhile;
 					wp_reset_postdata();
 				
-				<?php endif; ?>
+				endif; ?>
 			</div>
 
 			<?php
