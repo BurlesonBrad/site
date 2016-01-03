@@ -18,6 +18,23 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
+			<div class="featured-disc-area">
+				<?php
+				$fd_args = array(
+					'post_type'		=> 'product',
+					'numberposts' 	=> 1,
+					'category_name' => 'featured-disc',
+					'orderby' 		=> 'date'
+				);
+				$featured_disc = get_posts($fd_args);
+				foreach ( $featured_disc as $post ) : setup_postdata( $post ); ?>
+					<h2><?php the_title(); ?></h2>
+					<p><?php the_excerpt(); ?></p>
+				<?php endforeach; 
+				wp_reset_postdata();
+				?>
+			</div>
 
 			<?php
 			/**
@@ -31,19 +48,19 @@ get_header(); ?>
 			do_action( 'homepage' ); ?>
 			
 			<div class="weekly-tip">
-			<?php
-			$wt_args = array(
-				'numberposts' 	=> 1,
-				'category_name' => 'weekly-tip',
-				'orderby' 		=> 'date'
-			);
-			$weekly_tip = get_posts($wt_args);
-			foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
-				<h2><?php the_title(); ?></h2>
-				<p><?php the_excerpt(); ?></p>
-			<?php endforeach; 
-			wp_reset_postdata();
-			?>
+				<?php
+				$wt_args = array(
+					'numberposts' 	=> 1,
+					'category_name' => 'weekly-tip',
+					'orderby' 		=> 'date'
+				);
+				$weekly_tip = get_posts($wt_args);
+				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
+					<h2><?php the_title(); ?></h2>
+					<p><?php the_excerpt(); ?></p>
+				<?php endforeach; 
+				wp_reset_postdata();
+				?>
 			</div>
 
 		</main><!-- #main -->
