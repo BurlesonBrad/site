@@ -10,6 +10,21 @@ Updated: 2015-10-19 17:34:47
 
 /* LAYOUT */
 /* site */
+.featured-disc-area {
+	overflow: auto;
+}
+
+.featured-disc-area > div {
+	float: left;
+	width: 36%;
+	margin: 0;
+	padding: 0;
+}
+
+.featured-disc-image {
+	width: 28%;
+}
+
 @media screen and (min-width: 768px) {
 	.col-full {
 		max-width: 70em;
