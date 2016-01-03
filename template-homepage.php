@@ -26,9 +26,9 @@ get_header(); ?>
 					'posts_per_page' 	=> 1,
 					'tax_query' => array(
 						array(
-							'taxonomy' => 'products',
-							'field'    => 'slug',
-							'terms'    => 'featured-disc',
+							'taxonomy' 	=> 'product_cat',
+							'field'    	=> 'slug',
+							'terms'    	=> 'featured-disc',
 						),
 					),
 				);
