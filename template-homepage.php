@@ -28,26 +28,21 @@ get_header(); ?>
 			 */
 			do_action( 'homepage' ); ?>
 			
+			<div class="weekly-tip">
 			<?php
-			$wt_category = get_category_by_slug('weekly-tip');
-			$wt_cat_id = $wt_category->cat_ID;
 			$wt_args = array(
-				'numberposts' => 1,
-				'category' => $wt_cat_id
+				'numberposts' 	=> 1,
+				'category_name' => 'weekly-tip',
+				'orderby' 		=> 'date'
 			);
-			$weekly_tip = wp_get_recent_posts($wt_args);
-			if ($weekly_tip) {
-			  foreach($weekly_tip as $post) {
-				setup_postdata($post);
-				?>
-				<p><?php the_time('m.d.y') ?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
-				<?php
-				if ($post->post_excerpt) {
-				  echo 'excerpt is:' . $post->post_excerpt;
-				}
-			  }
-			}
+			$weekly_tip = get_posts($wt_args);
+			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+				<h2><?php the_title(); ?></h2>
+				<p><?php the_excerpt(); ?></p>
+			<?php endforeach; 
+			wp_reset_postdata();?>
 			?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
