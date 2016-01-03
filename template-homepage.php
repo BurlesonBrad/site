@@ -30,12 +30,14 @@ get_header(); ?>
 				
 				if ( $wc_query->have_posts() ) :
 					while ( $wc_query->have_posts() ) :
-						$wc_query->the_post();
-						the_title();
+						$wc_query->the_post(); ?>
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<p><?php the_excerpt(); ?></p>
+				<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
+				<?php
 					endwhile;
 					wp_reset_postdata();
-				else: ?>
-				<p><?php _e( 'No Products' ); ?></p>
+				
 				<?php endif; ?>
 			</div>
 
