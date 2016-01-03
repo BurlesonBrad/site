@@ -36,7 +36,7 @@ get_header(); ?>
 				'orderby' 		=> 'date'
 			);
 			$weekly_tip = get_posts($wt_args);
-			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+			foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
 				<h2><?php the_title(); ?></h2>
 				<p><?php the_excerpt(); ?></p>
 			<?php endforeach; 
