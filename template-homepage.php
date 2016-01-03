@@ -27,6 +27,17 @@ get_header(); ?>
 			 * @hooked storefront_on_sale_products - 60
 			 */
 			do_action( 'homepage' ); ?>
+			
+			<?php
+			$wt_category = get_category_by_slug('weekly-tip');
+			$wt_cat_id = $wt_category->cat_ID;
+			$wt_args = array(
+				'numberposts' => 1,
+				'category' => $wt_cat_id
+			);
+			$weekly_tip = wp_get_recent_posts($wt_args);
+			echo $weekly_tip;
+			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
