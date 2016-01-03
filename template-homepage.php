@@ -22,7 +22,6 @@ get_header(); ?>
 			<div class="featured-disc-area">
 				<?php
 				$fd_args = array(
-					'post_type'			=> 'post',
 					'posts_per_page' 	=> 1,
 					'tax_query' => array(
 						array(
@@ -31,6 +30,7 @@ get_header(); ?>
 							'terms'    	=> 'featured-disc',
 						),
 					),
+					'post_type'			=> 'product',
 				);
 				$featured_disc = new WP_Query($fd_args);
 				foreach ( $featured_disc as $post ) : setup_postdata( $post ); ?>
