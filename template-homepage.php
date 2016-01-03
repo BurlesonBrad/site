@@ -21,14 +21,14 @@ get_header(); ?>
 		
 			<div class="featured-disc-area">
 				<?php
-				$params = array(
+				$fd_params = array(
 					'posts_per_page' => 1,
 					'post_type' => 'product'
 				);
-				$wc_query = new WP_Query($params);
+				$wc_query = new WP_Query($fd_params);
 				
-				if ( $wc_query->have_posts()) :
-					while ( $wc_query->have_posts()) :
+				if ( $wc_query->have_posts() ) :
+					while ( $wc_query->have_posts() ) :
 						$wc_query->the_post();
 						the_title();
 					endwhile;
