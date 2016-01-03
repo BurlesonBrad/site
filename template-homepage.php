@@ -35,8 +35,8 @@ get_header(); ?>
 				'numberposts' => 1,
 				'category' => $wt_cat_id
 			);
-			$weekly_tip = wp_get_recent_posts($wt_args);
-			echo '<div class="weekly-tip-area">' . $weekly_tip[0] . '</div>';
+			$weekly_tip = wp_get_recent_posts($wt_args, OBJECT);
+			echo '<div class="weekly-tip-area">' . $weekly_tip . '</div>';
 			?>
 
 		</main><!-- #main -->
