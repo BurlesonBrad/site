@@ -22,15 +22,21 @@ get_header(); ?>
 			<div class="featured-disc-area">
 				<?php
 				$fd_args = array(
-					'post_type'		=> 'product',
-					'numberposts' 	=> 1,
-					'category_name' => 'featured-disc'
+					'post_type'			=> 'product',
+					'posts_per_page' 	=> 1,
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'products',
+							'field'    => 'slug',
+							'terms'    => 'featured-disc',
+						),
+					),
 				);
-				$featured_disc = get_posts($fd_args);
+				$featured_disc = new WP_Query($fd_args);
 				foreach ( $featured_disc as $post ) : setup_postdata( $post ); ?>
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_excerpt(); ?></p>
-				<?php endforeach; 
+				<?php endforeach;
 				wp_reset_postdata();
 				?>
 			</div>
@@ -57,7 +63,7 @@ get_header(); ?>
 				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_excerpt(); ?></p>
-				<?php endforeach; 
+				<?php endforeach;
 				wp_reset_postdata();
 				?>
 			</div>
