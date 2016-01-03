@@ -24,8 +24,7 @@ get_header(); ?>
 				$fd_args = array(
 					'post_type'		=> 'product',
 					'numberposts' 	=> 1,
-					'category_name' => 'featured-disc',
-					'orderby' 		=> 'date'
+					'category_name' => 'featured-disc'
 				);
 				$featured_disc = get_posts($fd_args);
 				foreach ( $featured_disc as $post ) : setup_postdata( $post ); ?>
