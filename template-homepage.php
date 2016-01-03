@@ -22,7 +22,7 @@ get_header(); ?>
 			<div class="featured-disc-area">
 				<?php
 				$fd_args = array(
-					'post_type'			=> 'product',
+					'post_type'			=> 'post',
 					'posts_per_page' 	=> 1,
 					'tax_query' => array(
 						array(
