@@ -23,6 +23,7 @@ get_header(); ?>
 				<?php
 				$fd_params = array(
 					'posts_per_page' => 1,
+					'product_cat' => 'featured-disc',
 					'post_type' => 'product'
 				);
 				$wc_query = new WP_Query($fd_params);
