@@ -35,8 +35,18 @@ get_header(); ?>
 				'numberposts' => 1,
 				'category' => $wt_cat_id
 			);
-			$weekly_tip = wp_get_recent_posts($wt_args, OBJECT);
-			echo '<div class="weekly-tip-area">' . $weekly_tip . $wt_cat_id . '</div>';
+			$weekly_tip = wp_get_recent_posts($wt_args);
+			if ($weekly_tip) {
+			  foreach($weekly_tip as $post) {
+				setup_postdata($post);
+				?>
+				<p><?php the_time('m.d.y') ?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+				<?php
+				if ($post->post_excerpt) {
+				  echo 'excerpt is:' . $post->post_excerpt;
+				}
+			  }
+			}
 			?>
 
 		</main><!-- #main -->
