@@ -21,24 +21,21 @@ get_header(); ?>
 		
 			<div class="featured-disc-area">
 				<?php
-				$fd_args = array(
-					'posts_per_page' 	=> 1,
-					'tax_query' => array(
-						array(
-							'taxonomy' 	=> 'product_cat',
-							'field'    	=> 'slug',
-							'terms'    	=> 'featured-disc',
-						),
-					),
-					'post_type'			=> 'product',
+				$params = array(
+					'posts_per_page' => 1,
+					'post_type' => 'product'
 				);
-				$featured_disc = new WP_Query($fd_args);
-				foreach ( $featured_disc as $post ) : setup_postdata( $post ); ?>
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_excerpt(); ?></p>
-				<?php endforeach;
-				wp_reset_postdata();
-				?>
+				$wc_query = new WP_Query($params);
+				
+				if ( $wc_query->have_posts()) :
+					while ( $wc_query->have_posts()) :
+						$wc_query->the_post();
+						the_title();
+					endwhile;
+					wp_reset_postdata();
+				else: ?>
+				<p><?php _e( 'No Products' ); ?></p>
+				<?php endif; ?>
 			</div>
 
 			<?php
