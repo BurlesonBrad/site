@@ -54,8 +54,9 @@ Updated: 2015-10-19 17:34:47
 	display: none;
 }
 
-.menu-toggle {
+button.menu-toggle {
 	text-align: right;
+	box-shadow: none;
 }
 
 
