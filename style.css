@@ -39,9 +39,23 @@ Updated: 2015-10-19 17:34:47
 	}
 }
 
+@media screen and (max-width: 844px) {
+	.site-search {
+		display: none;
+	}
+}
+
 /* header */
 .site-header {
 	padding-top: 1.2em;
+}
+
+.main-navigation ul li a:before {
+	display: none;
+}
+
+.menu-toggle {
+	text-align: right;
 }
 
 
