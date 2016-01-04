@@ -21,21 +21,23 @@ get_header(); ?>
 		
 			<section class="featured-disc-area">
 				<div class="featured-disc-text">
-					<?php
-					$fd_params = array(
-						'posts_per_page' => 1,
-						'product_cat' => 'featured-disc',
-						'post_type' => 'product'
-					);
-					$wc_query = new WP_Query($fd_params);
-				
-					if ( $wc_query->have_posts() ) :
-						while ( $wc_query->have_posts() ) :
-							$wc_query->the_post(); ?>
-					<p class="featured-disc-pre">This month's disc</p>
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
+					<div class="featured-disc-inner">
+						<?php
+						$fd_params = array(
+							'posts_per_page' => 1,
+							'product_cat' => 'featured-disc',
+							'post_type' => 'product'
+						);
+						$wc_query = new WP_Query($fd_params);
+					
+						if ( $wc_query->have_posts() ) :
+							while ( $wc_query->have_posts() ) :
+								$wc_query->the_post(); ?>
+						<p class="featured-disc-pre">This month's disc</p>
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<p><?php the_excerpt(); ?></p>
+						<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
+					</div>
 				</div>
 				<div class="featured-disc-image">
 					<?php
@@ -46,8 +48,10 @@ get_header(); ?>
 					endif; ?>
 				</div>
 				<div class="featured-disc-twitter twitter-feed">
-					<a class="twitter-timeline" href="https://twitter.com/search?q=%40discraftdg" data-widget-id="680632584016162816">Tweets about @discraftdg</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<div class="featured-disc-inner">
+						<a class="twitter-timeline" href="https://twitter.com/search?q=%40discraftdg" data-widget-id="680632584016162816">Tweets about @discraftdg</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
 				</div>
 			</section>
 
