@@ -32,6 +32,7 @@ get_header(); ?>
 					if ( $wc_query->have_posts() ) :
 						while ( $wc_query->have_posts() ) :
 							$wc_query->the_post(); ?>
+					<p class="featured-disc-pre">This month's disc</p>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<p><?php the_excerpt(); ?></p>
 					<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
