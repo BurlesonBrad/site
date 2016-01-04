@@ -21,7 +21,7 @@ Updated: 2015-10-19 17:34:47
 	padding: 0;
 }
 
-.featured-disc-image {
+.featured-disc-area > div.featured-disc-image {
 	width: 28%;
 }
 
