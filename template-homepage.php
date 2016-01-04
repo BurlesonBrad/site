@@ -18,7 +18,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
 			<section class="featured-disc-area">
 				<div class="featured-disc-text">
 					<div class="featured-disc-inner">
