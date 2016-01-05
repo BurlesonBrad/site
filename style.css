@@ -65,7 +65,7 @@ ul.menu li.current-menu-item > a {
 
 @media screen and (min-width: 768px) {
 	.site-description {
-		display: none;
+		display: none !important;
 	}
 }
 
