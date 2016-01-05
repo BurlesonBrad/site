@@ -43,6 +43,11 @@ ul.menu li.current-menu-item > a {
 	.woocommerce-active .site-header .secondary-navigation {
 		float: right !important;
 		margin-right: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	.secondary-navigation ul.menu a {
+		padding: 0.6em 0.8em;
 	}
 }
 
