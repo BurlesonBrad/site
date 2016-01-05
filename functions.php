@@ -13,4 +13,9 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css' );
 
+add_action( 'init', 'jk_remove_storefront_header_search' );
+function jk_remove_storefront_header_search() {
+	remove_action( 'storefront_header', 'storefront_product_search', 40 );
+}
+
 // END ENQUEUE PARENT ACTION
