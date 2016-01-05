@@ -5,7 +5,8 @@ $(document).ready(function() {
 
 	function customMasthead() {
 		var $utilNavWrap = $("<div class='nav-top'></div>");
-		var $utilNav = $utilNavWrap.wrapInner("<div class='col-full'></div>");
+		var $utilNav = $("<div class='col-full'></div>");
+		$utilNavWrap.wrapInner($utilNav);
 
 		$utilNav.prependTo("#masthead");
 		$("header .secondary-navigation").prependTo($utilNav);
