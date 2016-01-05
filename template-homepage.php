@@ -43,7 +43,7 @@ get_header(); ?>
 				</div>
 				<div class="featured-disc-image">
 					<?php
-						$post_id = the_ID();
+						$post_id = get_the_ID();
 						the_post_thumbnail();
 						
 						endwhile;
