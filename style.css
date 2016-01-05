@@ -52,6 +52,10 @@ ul.menu li.current-menu-item > a {
 }
 
 /* main content */
+body {
+	font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
 .featured-disc-area {
 	overflow: auto;
 }
