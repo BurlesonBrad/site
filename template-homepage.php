@@ -34,7 +34,8 @@ get_header(); ?>
 					
 						if ( $wc_query->have_posts() ) :
 							while ( $wc_query->have_posts() ) :
-								$wc_query->the_post(); ?>
+								$wc_query->the_post(); 
+								$post_id = get_the_ID(); ?>
 						<p class="featured-disc-pre">This month's disc</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
 						<p><?php the_excerpt(); ?></p>
@@ -43,7 +44,6 @@ get_header(); ?>
 				</div>
 				<div class="featured-disc-image">
 					<?php
-						$post_id = get_the_ID();
 						the_post_thumbnail();	
 					?>
 				</div>
