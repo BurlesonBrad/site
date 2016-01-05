@@ -15,7 +15,7 @@ Updated: 2015-10-19 17:34:47
 }
 
 .site-branding {
-	display: none;
+	display: none !important;
 }
 
 .main-navigation ul li a:before {
