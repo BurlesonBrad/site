@@ -8,7 +8,7 @@ $(document).ready(function() {
 		var $utilNav = $("<div class='col-full'></div>");
 		$utilNavWrap.wrapInner($utilNav);
 
-		$utilNav.prependTo("#masthead");
+		$utilNavWrap.prependTo("#masthead");
 		$("header .secondary-navigation").prependTo($utilNav);
 		$("header .site-branding").prependTo($utilNav);
 	}
