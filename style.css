@@ -67,6 +67,11 @@ ul.menu li.current-menu-item > a {
 	.site-description {
 		display: none !important;
 	}
+
+	.woocommerce-active .site-header .secondary-navigation {
+		float: right !important;
+		margin-right: 0 !important;
+	}
 }
 
 /* INSTAGRAM WIDGET */
