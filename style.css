@@ -62,13 +62,13 @@ body, a {
 
 .featured-disc-area > div {
 	float: left;
-	width: 36%;
+	width: 34%;
 	margin: 0;
 	padding: 0;
 }
 
 .featured-disc-area > div.featured-disc-image {
-	width: 28%;
+	width: 32%;
 }
 
 .featured-disc-text .featured-disc-inner {
