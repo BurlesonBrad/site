@@ -59,6 +59,14 @@ button.menu-toggle {
 	box-shadow: none;
 }
 
+ul.menu li.current-menu-item > a {
+	color: #ff3c7c;
+}
+
+p.site-description {
+	display: none;
+}
+
 
 /* INSTAGRAM WIDGET */
 #sb_instagram.sbi_col_6 #sbi_images .sbi_item {
