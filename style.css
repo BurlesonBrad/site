@@ -47,7 +47,7 @@ Updated: 2015-10-19 17:34:47
 
 /* header */
 .site-header {
-	padding-top: 1.2em;
+	padding-top: 0;
 }
 
 .main-navigation ul li a:before {
@@ -61,6 +61,10 @@ button.menu-toggle {
 
 ul.menu li.current-menu-item > a {
 	color: #ff3c7c;
+}
+
+.nav-top {
+	background: #fcfcfc;
 }
 
 @media screen and (min-width: 768px) {
