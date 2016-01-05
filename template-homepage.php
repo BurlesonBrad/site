@@ -44,11 +44,8 @@ get_header(); ?>
 				<div class="featured-disc-image">
 					<?php
 						$post_id = get_the_ID();
-						the_post_thumbnail();
-						
-						endwhile;
-						wp_reset_postdata();
-					endif; ?>
+						the_post_thumbnail();	
+					?>
 				</div>
 				<div class="featured-disc-twitter twitter-feed">
 					<div class="featured-disc-inner">
@@ -57,6 +54,10 @@ get_header(); ?>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					</div>
 				</div>
+				<?php
+				endwhile;
+					wp_reset_postdata();
+				endif; ?>
 			</section>
 
 			<?php
