@@ -201,6 +201,11 @@ ul#menu-main-menu li:nth-child(2) > a {
 	text-transform: uppercase;
 }
 
+.featured-disc-pre {
+	font-family: 'Rock Salt';
+	margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.col-full {
 		max-width: 84em;
