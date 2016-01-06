@@ -35,6 +35,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 	border-radius: 5em;
 }
 
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
+	background-color: #ff3c7c;
+}
+
 /* LAYOUT */
 /* header */
 .site-header {
