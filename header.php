@@ -45,7 +45,7 @@
 		}
 
 		?>
-		<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo $woocommerce->cart->get_cart_total(); ?>.png" style="display:none;" />
+		<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo $woocommerce->cart->get_cart_total(); ?>.png" style="display:block;" />
 		
 	</header><!-- #masthead -->
 
