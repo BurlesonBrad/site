@@ -36,7 +36,7 @@ get_header(); ?>
 								$post_id = get_the_ID(); ?>
 						<p class="featured-disc-pre">This month's disc</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
-						<p><?php the_excerpt(); ?></p>
+						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
 					</div>
 				</div>
