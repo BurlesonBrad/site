@@ -37,6 +37,10 @@ ul.menu li.current-menu-item > a {
 	background: #00aaf5;
 }
 
+ul#menu-main-menu li:first-child.current-menu-item > a {
+	background: #00b0ff;
+}
+
 .nav-top {
 	background: #fcfcfc;
 }
