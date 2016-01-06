@@ -168,12 +168,12 @@ ul#menu-main-menu li:nth-child(2) > a {
 }
 
 .metaslider .caption-wrap {
-	background: transparent;
-	opacity: 1;
-	bottom: auto;
-    top: 0;
-    height: 100%;
-    line-height: 17em;
+	background: transparent !important;
+	opacity: 1 !important;
+	bottom: auto !important;
+    top: 0 !important;
+    height: 100% !important;
+    line-height: 17em !important;
 }
 
 .metaslider .caption {
