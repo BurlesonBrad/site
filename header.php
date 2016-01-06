@@ -46,7 +46,7 @@
 
 	<div id="content" class="site-content" tabindex="-1">
 		<?php if ( is_front_page() ) {
-			if ( function_exists( 'soliloquy' ) ) { soliloquy( '41' ); }
+			echo do_shortcode('[metaslider id=44]');
 		} ?>
 		<div class="col-full">
 

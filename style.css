@@ -162,6 +162,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 	margin-top: -13em !important;
 }
 
+.soliloquy-container {
+	margin: 0 auto;
+}
+
 .page-template-template-homepage .site-main {
 	padding-top: 3em;
 }
