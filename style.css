@@ -70,10 +70,6 @@ ul#menu-main-menu li:nth-child(2) > a {
 	font-family: 'Viga';	
 }
 
-.secondary-navigation a {
-	color: #00b0ff;
-}
-
 @media screen and (min-width: 768px) {
 	.site-description {
 		display: none !important;
@@ -91,6 +87,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 	.secondary-navigation ul.menu a {
 		padding: 0.6em 0.8em;
+		color: #00b0ff;
 	}
 
 	.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a, .site-header-cart .cart-contents {
