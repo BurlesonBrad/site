@@ -207,6 +207,18 @@ ul#menu-main-menu li:nth-child(2) > a {
 	text-transform: uppercase;
 }
 
+.featured-disc-twitter h2 span {
+	font-family: 'Montserrat';
+    opacity: 0.1;
+    font-size: 2em;
+    position: absolute;
+    top: -0.55em;
+}
+
+.featured-disc-twitter h2 a {
+	padding-left: 1em;
+}
+
 .featured-disc-pre {
 	font-family: 'Rock Salt';
 	margin-bottom: 0;
