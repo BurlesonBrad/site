@@ -193,6 +193,11 @@ ul#menu-main-menu li:nth-child(2) > a {
 	padding-right: 1em;
 }
 
+.featured-disc-text h2 {
+	position: relative;
+	top: -6px;
+}
+
 .featured-disc-twitter .featured-disc-inner {
 	padding-left: 1em;
 }
