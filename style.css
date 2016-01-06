@@ -125,6 +125,10 @@ body, a {
 	padding: 2em;
 }
 
+.featured-disc-text {
+	text-align: right;
+}
+
 .featured-disc-text .featured-disc-inner {
 	padding-right: 0.8em;
 }
