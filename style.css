@@ -112,6 +112,11 @@ body, a {
 	background-size: 100% auto;
 }
 
+.borderradius .featured-disc-area > div.featured-disc-image {
+	border: 1.4em solid #fcfcfc;
+	border-radius: 50%;
+}
+
 .no-backgroundsize .featured-disc-area > div.featured-disc-image {
 	background: transparent;
 }
