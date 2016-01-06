@@ -37,6 +37,10 @@ ul.menu li.current-menu-item > a {
 	background: #00aaf5;
 }
 
+ul#menu-main-menu li.current-menu-item > a:hover {
+	border-right: 1px solid #00aaf5;
+}
+
 ul#menu-main-menu li:first-child.current-menu-item > a {
 	visibility: hidden;
 	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50%;
@@ -47,10 +51,11 @@ ul#menu-main-menu li:first-child.current-menu-item > a {
 	visibility: visible;
 	background-image: none;
 	background-color: transparent;
+	border-right: 1px solid #00b0ff;
 }
 
-ul#menu-main-menu li:first-child.current-menu-item > a:hover {
-	border-right: 1px solid #00aaf5;
+.js ul#menu-main-menu li:first-child.current-menu-item > a:hover {
+	border-right: 1px solid #00b0ff;
 }
 
 .nav-top {
