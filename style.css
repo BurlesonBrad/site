@@ -19,6 +19,7 @@ body {
 h2, h2 a {
 	font-family: 'Viga';
 	color: #6a6a6a;
+	letter-spacing: 0;
 }
 
 h2 {}
