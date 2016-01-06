@@ -22,7 +22,9 @@ h2, h2 a {
 	letter-spacing: 0;
 }
 
-h2 {}
+h2 {
+	font-size: 3em;
+}
 
 /* LAYOUT */
 /* header */
@@ -193,6 +195,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 .featured-disc-twitter .featured-disc-inner {
 	padding-left: 1em;
+}
+
+.featured-disc-twitter h2 {
+	text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
