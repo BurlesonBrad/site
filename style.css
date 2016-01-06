@@ -187,10 +187,14 @@ ul#menu-main-menu li:nth-child(2) > a {
 .metaslider .caption {
 	display: inline-block !important;
 	vertical-align: middle !important;
-	padding: 0 !important;
+	padding: 0 0 0 3em !important;
 	width: 50% !important;
 	text-align: right !important;
 	line-height: 1;
+
+	font-family: 'Viga';
+    text-transform: uppercase;
+    font-size: 5em;
 }
 
 
