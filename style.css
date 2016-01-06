@@ -66,8 +66,8 @@ ul#menu-main-menu li:nth-child(2) > a {
 	background: #fcfcfc;
 }
 
-.wds_slider_0 > span > span {
-	width: 100.1% !important;
+.secondary-navigation a, .site-header-cart a {
+	font-family: 'Viga';
 }
 
 @media screen and (min-width: 768px) {
@@ -110,6 +110,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 /* main content */
 body, a {
 	font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.wds_slider_0 > span > span {
+	width: 100.1% !important;
 }
 
 .page-template-template-homepage .site-main {
