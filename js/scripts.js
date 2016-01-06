@@ -42,8 +42,7 @@ $(document).ready(function() {
 			"line-height": height + "px"
 		});
 	}
-	vAlignSliderCaption();
-	$(window).resize(vAlignSliderCaption);
+	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 });
 
