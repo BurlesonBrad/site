@@ -46,7 +46,7 @@
 
 	<div id="content" class="site-content" tabindex="-1">
 		<?php if ( is_front_page() ) {
-			wd_slider(1);
+			do_shortcode("[supsystic-slider id=1 position='center']");
 		} ?>
 		<div class="col-full">
 
