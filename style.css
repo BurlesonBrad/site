@@ -149,6 +149,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 }
 
 /* main content */
+/* SLIDER */
 .wds_slider_0 > span > span {
 	width: 100.1% !important;
 }
@@ -165,6 +166,21 @@ ul#menu-main-menu li:nth-child(2) > a {
 .soliloquy-container {
 	margin: 0 auto;
 }
+
+.metaslider .caption-wrap {
+	background: transparent;
+	opacity: 1;
+	bottom: auto;
+    top: 0;
+    height: 100%;
+    line-height: 17em;
+}
+
+.metaslider .caption {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 
 .page-template-template-homepage .site-main {
 	padding-top: 3em;
