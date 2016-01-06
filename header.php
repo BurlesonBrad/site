@@ -38,14 +38,9 @@
 		</div>
 		<?php
 		global $woocommerce;
-
-		$cart_total = sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);
-		if ( $cart_total === 0 ) {
-			$cart_total = "empty";
-		}
-
+		$cart_total = $woocommerce->cart->cart_contents_count;
 		?>
-		<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo $woocommerce->cart->cart_contents_count; ?>.png" style="display:block;" />
+		<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo ($cart_total > 0 ? $cart_total : 'empty' ); ?>.png" style="display:block;" />
 		
 	</header><!-- #masthead -->
 
