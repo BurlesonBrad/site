@@ -59,12 +59,20 @@ ul.menu li.current-menu-item > a {
 	}
 
 	.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a, .site-header-cart .cart-contents {
-		padding: 2.2em 1em 2.4em !important;
+		padding: 2.2em 1em 2.4em;
+		    border-right: 1px solid #00aaf5;
 	}
 
 	.site-header-cart .cart-contents:after {
-		top: 2.5em !important;
+		top: 2.5em;
 	}
+
+	.main-navigation ul li a:hover {
+		color: #fff;
+		background: #00aaf5;
+	}
+
+	
 }
 
 /* main content */
