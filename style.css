@@ -43,11 +43,6 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 /* header */
 .site-header {
 	padding-top: 0;
-	background: #00b0ff; /* Old browsers */
-	background: -moz-linear-gradient(50deg, #00b0ff 0%, #ff3c7c 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(50deg, #00b0ff 0%,#ff3c7c 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(50deg, #00b0ff 0%,#ff3c7c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .site-branding {
@@ -296,6 +291,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 
 /* COLORS */
-/*.site-header, .main-navigation ul ul, .secondary-navigation ul ul, .main-navigation ul.menu > li.menu-item-has-children:after, .secondary-navigation ul.menu ul, .main-navigation ul.menu ul, .main-navigation ul.nav-menu ul {
-	background-color: #00b0ff;
-}*/
+.gradient-bg {
+	background: #00b0ff; /* Old browsers */
+	background: -moz-linear-gradient(50deg, #00b0ff 0%, #ff3c7c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(50deg, #00b0ff 0%,#ff3c7c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(50deg, #00b0ff 0%,#ff3c7c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
