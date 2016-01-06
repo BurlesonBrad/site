@@ -44,7 +44,7 @@ ul.menu li.current-menu-item > a {
 		display: none !important;
 	}
 
-	.main-navigation {
+	.main-navigation, .site-header-cart {
 	    padding-top: 0 !important;
 	}
 
