@@ -18,9 +18,9 @@ Updated: 2015-10-19 17:34:47
 	display: none !important;
 }
 
-.main-navigation ul li a {
+#masthead ul li a {
 	text-transform: uppercase;
-	font-size: 0.7em;
+	font-size: 0.8em;
 }
 
 .main-navigation ul li a:before {
@@ -64,7 +64,7 @@ ul.menu li.current-menu-item > a {
 	}
 
 	.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a, .site-header-cart .cart-contents {
-		padding: 2.2em 1em 2.4em;
+		padding: 3.2em 1em 3.5em;
 		border-right: 1px solid #00aaf5;
 	}
 
