@@ -70,19 +70,22 @@ get_header(); ?>
 			do_action( 'homepage' ); ?>
 			
 			<div class="weekly-tip">
-				<?php
-				$wt_args = array(
-					'numberposts' 	=> 1,
-					'category_name' => 'weekly-tip',
-					'orderby' 		=> 'date'
-				);
-				$weekly_tip = get_posts($wt_args);
-				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
-					<h3><?php the_title(); ?></h3>
-					<?php the_excerpt(); ?>
-				<?php endforeach;
-				wp_reset_postdata();
-				?>
+				<img src="/wp-content/themes/storefront-child/images/weekly-tip-bubble.png" alt="your weekly disc golf tip" />
+				<div class="weekly-tip-content">
+					<?php
+					$wt_args = array(
+						'numberposts' 	=> 1,
+						'category_name' => 'weekly-tip',
+						'orderby' 		=> 'date'
+					);
+					$weekly_tip = get_posts($wt_args);
+					foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
+						<h3><?php the_title(); ?></h3>
+						<?php the_excerpt(); ?>
+					<?php endforeach;
+					wp_reset_postdata();
+					?>
+				</div>
 			</div>
 
 		</main><!-- #main -->
