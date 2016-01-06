@@ -153,6 +153,15 @@ ul#menu-main-menu li:nth-child(2) > a {
 	width: 100.1% !important;
 }
 
+#supsystic-slider-1 {
+	height: 380px;
+    overflow: hidden;
+}
+
+#supsystic-slider-1 .bx-wrapper {
+	margin-top: -5em;
+}
+
 .page-template-template-homepage .site-main {
 	padding-top: 3em;
 }
