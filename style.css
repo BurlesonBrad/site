@@ -44,6 +44,10 @@ ul.menu li.current-menu-item > a {
 		display: none !important;
 	}
 
+	.main-navigation {
+	    padding-top: 2em !important;
+	}
+
 	.woocommerce-active .site-header .secondary-navigation {
 		float: right !important;
 		margin-right: 0 !important;
