@@ -72,7 +72,8 @@ ul#menu-main-menu li:nth-child(2) > a {
 }
 
 .secondary-navigation a, .site-header-cart a {
-	font-family: 'Viga';	
+	font-family: 'Viga';
+	font-size: 1.1em;
 }
 
 .site-header-cart .widget_shopping_cart, .site-header .product_list_widget li .quantity {
