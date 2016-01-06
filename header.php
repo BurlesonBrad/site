@@ -36,6 +36,17 @@
 			 */
 			do_action( 'storefront_header' ); ?>
 		</div>
+		<?php
+		global $woocommerce;
+
+		$cart_total = sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);
+		if ( $cart_total === 0 ) {
+			$cart_total = "empty";
+		}
+
+		?>
+		<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo $woocommerce->cart->get_cart_total(); ?>.png" style="display:none;" />
+		
 	</header><!-- #masthead -->
 
 	<?php
