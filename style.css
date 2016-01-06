@@ -112,8 +112,9 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 .cart-contents #dynamic_basket {
 	position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
+    margin-top: -18px;
     line-height: 2.244;
     width: 100%;
     text-align: center;
