@@ -61,6 +61,10 @@ ul.menu li.current-menu-item > a {
 	.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a, .site-header-cart .cart-contents {
 		padding: 2.4em 1em 2.2em !important;
 	}
+
+	.site-header-cart .cart-contents:after {
+		top: 2.7em !important;
+	}
 }
 
 /* main content */
