@@ -73,6 +73,12 @@ body, a {
 
 .featured-disc-area > div.featured-disc-image {
 	width: 32%;
+	background: url('images/greatest-disc-halo.png') no-repeat center top;
+	background-size: cover;
+}
+
+.no-bgsizecover .featured-disc-area > div.featured-disc-image {
+	background: transparent;
 }
 
 .featured-disc-text .featured-disc-inner {
