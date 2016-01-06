@@ -35,6 +35,10 @@ ul.menu li.current-menu-item > a {
 	background: #fcfcfc;
 }
 
+.wds_slider_0 > span > span {
+	width: 100.1% !important;
+}
+
 @media screen and (min-width: 768px) {
 	.site-description {
 		display: none !important;

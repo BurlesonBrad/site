@@ -16,16 +16,5 @@ $(document).ready(function() {
 
 });
 
-$(window).load(function() {
-	$("style").each(function() {
-		var content = $(this).html();
-		if ( content.indexOf("width: /*inherit*/") > -1 ) {
-
-			newContent = content.replace("/*inherit*/100%", "100.1%");
-			$(this).html(newContent);
-		}
-	});
-});
-
 
 })(jQuery);
