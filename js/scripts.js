@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 		var $menuHome = $("ul#menu-main-menu li:first-child > a");
 		var liHeight = $menuHome.parent().height();
-		$menuHome.html("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='88' height='55' />")
+		$menuHome.html("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' />")
 			.css({
 				paddingTop: 0,
 			    paddingBottom: 0,
