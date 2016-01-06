@@ -1,6 +1,8 @@
 (function($) {
 
 $(document).ready(function() {
+	$("body, html").addClass("js");
+	
 	$("#sb_instagram").appendTo("#main");
 
 	function customMasthead() {

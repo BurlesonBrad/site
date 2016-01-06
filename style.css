@@ -38,7 +38,13 @@ ul.menu li.current-menu-item > a {
 }
 
 ul#menu-main-menu li:first-child.current-menu-item > a {
-	background: #00b0ff;
+	visibility: hidden;
+	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50% 88px 55px;
+}
+
+.js ul#menu-main-menu li:first-child.current-menu-item > a {
+	visibility: visible;
+	background-image: none;
 }
 
 ul#menu-main-menu li:first-child.current-menu-item > a:hover {
