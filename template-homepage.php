@@ -78,8 +78,8 @@ get_header(); ?>
 				);
 				$weekly_tip = get_posts($wt_args);
 				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_excerpt(); ?></p>
+					<h3><?php the_title(); ?></h3>
+					<?php the_excerpt(); ?>
 				<?php endforeach;
 				wp_reset_postdata();
 				?>
