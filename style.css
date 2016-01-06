@@ -110,6 +110,20 @@ ul#menu-main-menu li:nth-child(2) > a {
 	background-color: transparent;
 }
 
+.cart-contents #dynamic_basket {
+	position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 2.244;
+    width: 100%;
+    text-align: center;
+    text-indent: 0;
+}
+
+.js .site-header-cart .cart-contents:after {
+	display: none;
+}
+
 @media screen and (min-width: 768px) {
 	.site-description {
 		display: none !important;
