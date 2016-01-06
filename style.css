@@ -68,7 +68,7 @@ ul.menu li.current-menu-item > a {
 	background: #00aaf5;
 }
 
-ul.menu li.current-menu-item > a.cart-contents {
+ul.menu li.current-menu-item > a.cart-contents, ul#menu-utility-menu li.current-menu-item > a {
 	background: #00b0ff;
 }
 
