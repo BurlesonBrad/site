@@ -67,7 +67,11 @@ ul#menu-main-menu li:nth-child(2) > a {
 }
 
 .secondary-navigation a, .site-header-cart a {
-	font-family: 'Viga';
+	font-family: 'Viga';	
+}
+
+.secondary-navigation a {
+	color: #00b0ff;
 }
 
 @media screen and (min-width: 768px) {
