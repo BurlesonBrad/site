@@ -68,10 +68,6 @@ ul.menu li.current-menu-item > a {
 	background: #00aaf5;
 }
 
-ul#menu-main-menu li:first-child > a:hover {
-	border-right: 1px solid #00aaf5;
-}
-
 ul#menu-main-menu li:first-child > a {
 	visibility: hidden;
 	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50%;
@@ -85,7 +81,7 @@ ul#menu-main-menu li:first-child > a {
 	border-right: 1px solid #00b0ff;
 }
 
-.js ul#menu-main-menu li:first-child > a:hover {
+ul#menu-main-menu li:first-child > a:hover {
 	border-right: 1px solid #00b0ff;
 }
 
@@ -153,12 +149,23 @@ ul#menu-main-menu li:nth-child(2) > a {
 		top: 3.4em;
 	}
 
-	.main-navigation ul li a:hover {
+	ul#menu-main-menu li a {
+		border-right: 1px solid #00aaf5;
+	}
+
+	ul#menu-main-menu li a:hover {
 		color: #fff;
 		background: #ff3c7c;
 		border-right: 1px solid #ff3c7c;
 	}
 
+	.js ul#menu-main-menu li:first-child > a, ul#menu-main-menu li:first-child > a:hover {
+		border-right: 1px solid #00b0ff;
+	}
+
+	ul#menu-main-menu li:nth-child(2) > a {
+		border-left: 1px solid #00aaf5;
+	}
 	
 }
 
