@@ -39,7 +39,8 @@ ul.menu li.current-menu-item > a {
 
 ul#menu-main-menu li:first-child.current-menu-item > a {
 	visibility: hidden;
-	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50% 88px 55px;
+	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50%;
+	background-size: 88px 55px;
 }
 
 .js ul#menu-main-menu li:first-child.current-menu-item > a {
