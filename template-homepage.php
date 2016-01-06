@@ -16,8 +16,6 @@ get_header(); ?>
 
 	<style> main > article > .entry-header { display:none; } </style>
 
-	<?php echo do_shortcode("[huge_it_slider id='1']"); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<section class="featured-disc-area">

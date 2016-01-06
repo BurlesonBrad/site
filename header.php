@@ -45,6 +45,9 @@
 	do_action( 'storefront_before_content' ); ?>
 
 	<div id="content" class="site-content" tabindex="-1">
+		<?php if ( is_front_page() ) {
+			wd_slider(1);
+		} ?>
 		<div class="col-full">
 
 		<?php
