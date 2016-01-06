@@ -141,7 +141,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 }
 
 .page-template-template-homepage .site-main {
-	padding-top: 1.2em;
+	padding-top: 3em;
 }
 
 .featured-disc-area {
@@ -174,7 +174,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 	border: 0.8em solid #fcfcfc;
 	border-radius: 50%;
 	position: relative;
-	top: -3.4em;
+	top: -5.4em;
 }
 
 .no-backgroundsize .featured-disc-area > div.featured-disc-image {
