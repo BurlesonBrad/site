@@ -188,6 +188,9 @@ ul#menu-main-menu li:nth-child(2) > a {
 .metaslider .caption {
 	display: inline-block !important;
 	vertical-align: middle !important;
+	padding: 0 !important;
+	width: 50% !important;
+	text-align: right !important;
 }
 
 
