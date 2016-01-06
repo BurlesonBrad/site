@@ -13,6 +13,11 @@ body, a {
 	font-size: 0.8em;
 }
 
+h2, h2 a {
+	font-family: 'Viga';
+	color: #6a6a6a;
+}
+
 /* LAYOUT */
 /* header */
 .site-header {
