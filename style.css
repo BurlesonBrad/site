@@ -33,7 +33,8 @@ button.menu-toggle {
 }
 
 ul.menu li.current-menu-item > a {
-	color: #ff3c7c;
+	color: #fff;
+	background: #00aaf5;
 }
 
 .nav-top {
