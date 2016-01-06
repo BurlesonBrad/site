@@ -141,6 +141,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 		color: #00b0ff;
 	}
 
+	.main-navigation ul li, .secondary-navigation ul li {
+		vertical-align: top;
+	}
+
 	.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a, .site-header-cart .cart-contents {
 		padding: 3.1em 1.8em 3.2em;
 	}
