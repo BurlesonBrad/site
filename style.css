@@ -185,7 +185,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 @media screen and (min-width: 768px) {
 	.col-full {
-		max-width: 90em;
+		max-width: 84em;
 	}
 }
 
