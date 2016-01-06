@@ -123,6 +123,8 @@ body, a {
 	width: 32%;
 	background: url('images/greatest-disc-halo.png') no-repeat center top;
 	background-size: 100% auto;
+	position: relative;
+	top: -2em;
 }
 
 .borderradius .featured-disc-area > div.featured-disc-image {
