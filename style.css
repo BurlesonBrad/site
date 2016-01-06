@@ -46,6 +46,7 @@ ul#menu-main-menu li:first-child.current-menu-item > a {
 .js ul#menu-main-menu li:first-child.current-menu-item > a {
 	visibility: visible;
 	background-image: none;
+	background-color: #00b0ff;
 }
 
 ul#menu-main-menu li:first-child.current-menu-item > a:hover {
