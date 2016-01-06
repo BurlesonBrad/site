@@ -24,10 +24,21 @@ $(document).ready(function() {
 			    display: "inline-block"
 			})
 			.parent().css({
-				"line-heignt": liHeight
+				"line-height": liHeight
 			});
 	}
 	customMasthead();
+	$(window).resize(customMasthead);
+
+	function vAlignSliderCaption() {
+		var captionWrap = $(".metaslider .caption-wrap");
+		var height = captionWrap.height();
+		captionWrap.css({
+			"line-height": height
+		});
+	}
+	vAlignSliderCaption();
+	$(window).resize(vAlignSliderCaption);
 
 });
 
