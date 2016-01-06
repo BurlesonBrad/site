@@ -8,14 +8,19 @@ $(document).ready(function() {
 	function customMasthead() {
 		var $utilNavWrap = $("<div class='nav-top'></div>");
 		var $utilNav = $("<div class='col-full'></div>");
-		$utilNavWrap.wrapInner($utilNav);
-
-		$utilNavWrap.prependTo("#masthead");
-		$("header .secondary-navigation").prependTo($utilNav);
-		$("header .site-branding").prependTo($utilNav);
-
 		var $menuHome = $("ul#menu-main-menu li:first-child > a");
 		var liHeight = $menuHome.parent().height();
+
+		if ( !$("body").hasClass("custom-masthead-set") ) {
+			$("body").addClass("custom-masthead-set");
+
+			$utilNavWrap.wrapInner($utilNav);
+
+			$utilNavWrap.prependTo("#masthead");
+			$("header .secondary-navigation").prependTo($utilNav);
+			$("header .site-branding").prependTo($utilNav);
+		}
+		
 		$menuHome.html("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />")
 			.css({
 				paddingTop: 0,
