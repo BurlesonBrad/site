@@ -81,6 +81,10 @@ body, a {
 	background: transparent;
 }
 
+.featured-disc-area > div.featured-disc-image img {
+	padding: 2em;
+}
+
 .featured-disc-text .featured-disc-inner {
 	padding-right: 2em;
 }
