@@ -1,7 +1,7 @@
 (function($) {
 
 $(document).ready(function() {
-	$("body, html").addClass("js");
+	$("body, html").addClass("js").removeClass("no-js");
 
 	$("#sb_instagram").appendTo("#main");
 
