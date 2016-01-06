@@ -29,7 +29,7 @@ $(document).ready(function() {
 			    display: "inline-block"
 			})
 			.parent().css({
-				"line-height": liHeight
+				"line-height": liHeight + "px"
 			});
 	}
 	customMasthead();
@@ -39,7 +39,7 @@ $(document).ready(function() {
 		var captionWrap = $(".metaslider .caption-wrap");
 		var height = captionWrap.height();
 		captionWrap.css({
-			"line-height": height
+			"line-height": height + "px"
 		});
 	}
 	vAlignSliderCaption();
