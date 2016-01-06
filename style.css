@@ -10,6 +10,9 @@ Updated: 2015-10-19 17:34:47
 
 body, a {
 	font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+body {
 	font-size: 0.8em;
 }
 
@@ -17,6 +20,8 @@ h2, h2 a {
 	font-family: 'Viga';
 	color: #6a6a6a;
 }
+
+h2 {}
 
 /* LAYOUT */
 /* header */
