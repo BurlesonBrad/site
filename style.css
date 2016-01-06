@@ -143,10 +143,10 @@ body, a {
 }
 
 .borderradius .featured-disc-area > div.featured-disc-image {
-	border: 1.1em solid #fcfcfc;
+	border: 0.6em solid #fcfcfc;
 	border-radius: 50%;
 	position: relative;
-	top: -2.6em;
+	top: -3em;
 }
 
 .no-backgroundsize .featured-disc-area > div.featured-disc-image {
