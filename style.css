@@ -68,6 +68,10 @@ ul.menu li.current-menu-item > a {
 	background: #00aaf5;
 }
 
+ul.menu li.current-menu-item > a.cart-contents {
+	background: #00b0ff;
+}
+
 ul#menu-main-menu li:first-child > a {
 	visibility: hidden;
 	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50%;
@@ -100,10 +104,11 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 .site-header-cart .widget_shopping_cart, .site-header .product_list_widget li .quantity {
 	color: #fff;
+	background: transparent;
 }
 
 .site-header .widget_shopping_cart li, .site-header .widget_shopping_cart p.buttons, .site-header .widget_shopping_cart p.total {
-	background-color: transparent !important;
+	background-color: transparent;
 }
 
 .cart-contents #dynamic_basket {
