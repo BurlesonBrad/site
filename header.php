@@ -46,7 +46,7 @@
 
 	<div id="content" class="site-content" tabindex="-1">
 		<?php if ( is_front_page() ) {
-			echo do_shortcode("[supsystic-slider id=1 position='center']");
+			if ( function_exists( 'soliloquy' ) ) { soliloquy( '41' ); }
 		} ?>
 		<div class="col-full">
 
