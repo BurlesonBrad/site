@@ -74,6 +74,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 	color: #fff;
 }
 
+.site-header .widget_shopping_cart li, .site-header .widget_shopping_cart p.buttons, .site-header .widget_shopping_cart p.total {
+	background-color: transparent;
+}
+
 @media screen and (min-width: 768px) {
 	.site-description {
 		display: none !important;
