@@ -58,7 +58,7 @@ $(document).ready(function() {
 			"background": "url(" + $basketImg + ") no-repeat left top"
 		});
 	}
-	dynamicBasket();
+	$(window).load(dynamicBasket);
 });
 
 
