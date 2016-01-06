@@ -48,7 +48,7 @@ $(document).ready(function() {
 		var $cartContents = $(".site-header-cart .cart-contents");
 		var $basket = $("#dynamic_basket");
 
-		$basket.appendTo( $cartContents );
+		$basket.appendTo( $cartContents ).show();
 	}
 	$(window).load(dynamicBasket);
 });
