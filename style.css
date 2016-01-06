@@ -32,7 +32,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 	padding: 1.8em 4em;
 	font-family: 'Montserrat';
 	text-transform: uppercase;
-	border-radius: 50%;
+	border-radius: 5em;
 }
 
 /* LAYOUT */
