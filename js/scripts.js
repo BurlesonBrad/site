@@ -44,6 +44,21 @@ $(document).ready(function() {
 	}
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
+	function dynamicBasket() {
+		var $cartSlot = $(".site-header-cart .cart-contents:after");
+		var $basket = $("#dynamic_basket");
+		var $basketImg = $basket.attr("src");
+		var basketWidth = $basket.css("width");
+		var basketHeight = $basket.css("height");
+
+		$cartSlot.css({
+			"content": " ",
+			width: basketWidth,
+			height: basketHeight,
+			"background": "url(" + $basketImg + ") no-repeat left top"
+		});
+	}
+	dynamicBasket();
 });
 
 
