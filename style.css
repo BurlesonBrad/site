@@ -181,6 +181,12 @@ ul#menu-main-menu li:nth-child(2) > a {
 	background: transparent;
 }
 
+.featured-disc-area h2 {
+	position: relative;
+	top: -6px;
+	margin-bottom: 0;
+}
+
 .featured-disc-area > div.featured-disc-image img {
 	padding: 2.2em;
 }
@@ -191,11 +197,6 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 .featured-disc-text .featured-disc-inner {
 	padding-right: 1em;
-}
-
-.featured-disc-text h2 {
-	position: relative;
-	top: -6px;
 }
 
 .featured-disc-twitter .featured-disc-inner {
