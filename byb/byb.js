@@ -37,7 +37,7 @@ function addToBag(discs, types) {
 		newDisc["name"] = n;
 		newDisc["type"] = type;
 
-		if ( $(the_bag).indexOf(slg) > -1 ) {
+		if ( JSON.stringify(the_bag).indexOf(slg) > -1 ) {
 			the_bag.bag.discs.push(newDisc);
 		}
 	}
