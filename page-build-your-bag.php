@@ -44,7 +44,7 @@ get_header(); ?>
 
 <?php do_action( 'storefront_sidebar' ); ?>
 
-	<script src="/wp-content/themes/twentyfifteen-child/byb/js.cookie.js"></script>
-	<script src="/wp-content/themes/twentyfifteen-child/byb/byb.js"></script>
+<script src="/wp-content/themes/twentyfifteen-child/byb/js.cookie.js"></script>
+<script src="/wp-content/themes/twentyfifteen-child/byb/byb.js"></script>
 
 <?php get_footer(); ?>
