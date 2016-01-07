@@ -3,10 +3,6 @@ $(document).ready(function() {
 
 //Cookies.remove('byb');
 
-if ( $("body").hasClass("page-id-45") ) {
-	var $bag_container = $("#bag");
-	getBag( $bag_container );
-}
 function getBag(bc) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
@@ -63,6 +59,11 @@ function addToBag(discs, types) {
 	if ( $(".add-to-bag-success").length < 1 ) {
 		$("body").append("<div class='add-to-bag-success'>Added to your bag! <a href='/build-your-bag'>View your bag</a></div>");
 	}
+}
+
+if ( $("body").hasClass("page-id-45") ) {
+	var $bag_container = $("#bag");
+	getBag( $bag_container );
 }
 
 if ( $("body").hasClass("single-product") ) {
