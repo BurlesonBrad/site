@@ -59,7 +59,7 @@ function addToBag(discs, types) {
 	console.log( Cookies.get('byb') );
 	if ( $(".add-to-bag-success").length === 0 ) {
 		var $success = $("<div class='add-to-bag-success'>Added to bag! <a href='/build-your-bag'>view your bag</a></div>");
-		$success.appendTo("body").delay(1000).fadeOut(400, function() {
+		$success.appendTo("body").delay(5000).fadeOut(400, function() {
 			$(this).remove();
 		});
 	}
