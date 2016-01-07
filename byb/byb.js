@@ -7,7 +7,7 @@ function getBag(bc) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
 		var discs = the_bag.bag.discs;
-		for (index = 1; index < discs.length; ++index) {
+		for (index = 0; index < discs.length; ++index) {
 		    bc.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
 		}
 	} else {
