@@ -37,7 +37,8 @@ function addToBag(arr) {
 		the_bag.bag.discs.push(newDisc);
 	}
 
-	
+	var bag_json = JSON.stringify(the_bag);
+	Cookies.set('byb', bag_json, { expires: 1000 });
 }
 
 if ( $("body").hasClass("single-product") ) {
