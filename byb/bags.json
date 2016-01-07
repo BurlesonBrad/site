@@ -1,0 +1,11 @@
+{
+	"bag": {
+		"user": "1",
+		"name": "My First Bag",
+		"disc": {
+			"type": "driver",
+			"name": "Discraft Buzzz SS",
+			"slug": "discraft-buzzz-ss"
+		}
+	}
+}
