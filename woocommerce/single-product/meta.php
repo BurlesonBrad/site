@@ -27,7 +27,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 	<?php endif; ?>
 
-	<span class="disc_type"><?php echo get_the_term_list( $post->ID, 'disc-types', 'Disc Type:', ', ', '' ); ?></span>
+	<span class="disc_type"><?php echo get_the_term_list( $post->ID, 'disc-types', 'Types: ', ', ', '' ); ?> </span>
 
 	<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $cat_count, 'woocommerce' ) . ' ', '</span>' ); ?>
 
