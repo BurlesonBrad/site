@@ -39,6 +39,8 @@ function addToBag(discs, types) {
 
 	var bag_json = JSON.stringify(the_bag);
 	Cookies.set('byb', bag_json, { expires: 1000 });
+
+	console.log( Cookies.get('byb') );
 }
 
 if ( $("body").hasClass("single-product") ) {
