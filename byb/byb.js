@@ -43,7 +43,7 @@ function addToBag(discs, types) {
 	}
 
 	if ( newDisc.length < 1 ) {
-		if ( $(".add-to-bag-failure").length ) {
+		if ( $(".add-to-bag-failure").length > 0 ) {
 			return;
 		} else {
 			$("body").append("<div class='add-to-bag-failure'>Already added!</div>");
