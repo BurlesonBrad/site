@@ -34,7 +34,14 @@ function addToBag(discs, types) {
 		newDisc["slug"] = slg;
 		newDisc["name"] = n;
 		newDisc["type"] = type;
-		the_bag.bag.discs.push(newDisc);
+
+		if ( the_bag.indexOf(slg) > -1 ) {
+			the_bag.bag.discs.push(newDisc);
+		}
+	}
+
+	if ( newDisc.length < 1 ) {
+		return;
 	}
 
 	var bag_json = JSON.stringify(the_bag);
