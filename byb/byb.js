@@ -14,6 +14,7 @@ function getBag(bc) {
 		for (index = 0; index < discs.length; index++) {
 		    bc.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
 		}
+		console.log("item added");
 	} else {
 		bc.prepend("<div class='add-first-disc'><img src='/wp-content/themes/storefront-child/images/add-first-disc.png' alt='add your first disc' /></div>");
 	}
