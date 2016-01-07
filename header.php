@@ -15,6 +15,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<meta name="google-site-verification" content="fiBSqFZpsHgxiUpm7Ootz42dm9kjmE2iGeiimFo3WcM" />
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Viga|Rock+Salt' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="/wp-content/themes/storefront-child/js/modernizr/modernizr.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>

@@ -16,7 +16,7 @@ function getBag(bc) {
 }
 
 
-function saveBag() {
+function addToBag(arr) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
 	} else {
@@ -28,15 +28,34 @@ function saveBag() {
 		};
 	}
 
-	if ( $("body").hasClass("single-product") ) {
-		
+	for ( i = 0; i < arr.length; ++i ) {
+		var slg = arr[i];
+		var n = slg.replace("-", " ");
+		var newDisc = {};
+		newDisc["slug"] = slg;
+		newDisc["name"] = n;
+		the_bag.bag.discs.push(newDisc);
 	}
+
+	
+}
+
+if ( $("body").hasClass("single-product") ) {
+	var imgSrc = $(".woocommerce-main-image img").attr("src");
+	var dirIndex = imgSrc.indexOf("uploads");
+	var slugIndex = dirIndex + 8;
+	var slug = [];
+	slug.push( imgSrc.substring( slugIndex ).replace(".png", "") );
+
+	$(".add-to-bag").click(function() {
+		addToBag( slug );
+	});
 }
 
 
 if ( $("body").hasClass("page-id-45") ) {
 	var $bag_container = $("#bag");
-	getBag($bag_container);
+	getBag( $bag_container );
 }
 
 
