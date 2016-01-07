@@ -43,13 +43,21 @@ function addToBag(discs, types) {
 	}
 
 	if ( newDisc.length < 1 ) {
-		return;
+		if ( $(".add-to-bag-failure").length ) {
+			return;
+		} else {
+			$("body").append("<div class='add-to-bag-failure'>Already added!</div>");
+			return;
+		}
 	}
 
 	var bag_json = JSON.stringify(the_bag);
 	Cookies.set('byb', bag_json, { expires: 1000 });
 
 	console.log( Cookies.get('byb') );
+	if ( $(".add-to-bag-success").length < 1 ) {
+		$("body").append("<div class='add-to-bag-success'>Added to your bag!</div>");
+	}
 }
 
 if ( $("body").hasClass("single-product") ) {
