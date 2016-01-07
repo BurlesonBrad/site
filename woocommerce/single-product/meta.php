@@ -29,7 +29,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 	<span class="disc_type">
 	<?php
-	$terms = get_the_terms( $product->ID , 'disc-types' );
+	$terms = get_the_terms( $product->ID , 'disc-type' );
 	foreach ( $terms as $term ) {
 		echo $term->name . ' ';
 	} ?>
