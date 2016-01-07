@@ -43,9 +43,9 @@ function addToBag(discs, types) {
 		}
 	}
 
-	console.log( newDisc.length );
+	console.log( $(newDisc).length );
 
-	if ( newDisc.length < 1 ) {
+	if ( $(newDisc).length < 1 ) {
 		if ( $(".add-to-bag-failure").length === 0 ) {
 			var $fail = $("<div class='add-to-bag-failure'>Already added!</div>");
 			$fail.appendTo("body").delay(1000).fadeOut(400, function() {
