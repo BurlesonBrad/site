@@ -86,7 +86,7 @@ function initBag(u,l) {
 
 /** The HTTP request and function call **/
 // var xmlhttp = new XMLHttpRequest();
-// var url = "//localhost:8888/byb/wp-content/themes/twentyfifteen-child/byb/bags.json";
+// var url = "/wp-content/themes/twentyfifteen-child/byb/bags.json";
 // xmlhttp.onreadystatechange = function() {
 //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 //         var byb_data = JSON.parse(xmlhttp.responseText);
