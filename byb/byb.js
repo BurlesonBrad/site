@@ -1,8 +1,6 @@
 (function($) {
 $(document).ready(function() {
 
-
-	
 function getBag(bc) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
@@ -44,6 +42,13 @@ function addToBag(discs, types) {
 }
 
 if ( $("body").hasClass("single-product") ) {
+	if ( $(".add-to-bag").length < 1 ) {
+		var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
+		$("main > div > .summary").prepend( $addToBagBtn );
+	} else {
+		var $addToBagBtn = $(".add-to-bag");
+	}
+
 	var imgSrc = $(".woocommerce-main-image img").attr("src");
 	var dirIndex = imgSrc.indexOf("uploads");
 	var slugIndex = dirIndex + 8;
@@ -52,7 +57,7 @@ if ( $("body").hasClass("single-product") ) {
 	type.push( $("main > div > .summary .product_meta .disc_type a").html() );
 	slug.push( imgSrc.substring( slugIndex ).replace(".png", "") );
 
-	$(".add-to-bag").click(function() {
+	$addToBagBtn.click(function() {
 		addToBag( slug, type );
 	});
 }
