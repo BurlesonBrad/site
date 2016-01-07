@@ -182,6 +182,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 .woocommerce-breadcrumb { display: none; }
 
 #content { padding-top: 3em; }
+body.home #content { padding-top: 0; }
 
 /* SLIDER */
 .wds_slider_0 > span > span {
