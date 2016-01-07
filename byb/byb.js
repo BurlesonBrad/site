@@ -46,7 +46,9 @@ function addToBag(discs, types) {
 	if ( newDisc.length < 1 ) {
 		if ( $(".add-to-bag-failure").length === 0 ) {
 			var $fail = $("<div class='add-to-bag-failure'>Already added!</div>");
-			$fail.appendTo("body").delay(1000).fadeOut();
+			$fail.appendTo("body").delay(1000).fadeOut(400, function() {
+				$(this).remove();
+			});
 		}
 		return;
 	}
@@ -57,7 +59,9 @@ function addToBag(discs, types) {
 	console.log( Cookies.get('byb') );
 	if ( $(".add-to-bag-success").length === 0 ) {
 		var $success = $("<div class='add-to-bag-success'>Added to bag! <a href='/build-your-bag'>view your bag</a></div>");
-		$success.appendTo("body").delay(1000).fadeOut();
+		$success.appendTo("body").delay(1000).fadeOut(400, function() {
+			$(this).remove();
+		});
 	}
 }
 
