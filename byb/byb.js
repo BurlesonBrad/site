@@ -44,20 +44,20 @@ function addToBag(discs, types) {
 	}
 
 	if ( newDisc.length < 1 ) {
-		if ( $(".add-to-bag-failure").length > 0 ) {
-			return;
-		} else {
-			$("body").append("<div class='add-to-bag-failure'>Already added!</div>");
-			return;
+		if ( $(".add-to-bag-failure").length === 0 ) {
+			var $fail = $("<div class='add-to-bag-failure'>Already added!</div>");
+			$fail.appendTo("body").delay(1000).fadeOut();
 		}
+		return;
 	}
 
 	var bag_json = JSON.stringify(the_bag);
 	Cookies.set('byb', bag_json, { expires: 1000 });
 
 	console.log( Cookies.get('byb') );
-	if ( $(".add-to-bag-success").length < 1 ) {
-		$("body").append("<div class='add-to-bag-success'>Added to your bag! <a href='/build-your-bag'>View your bag</a></div>");
+	if ( $(".add-to-bag-success").length === 0 ) {
+		var $success = $("<div class='add-to-bag-success'>Added to bag! <a href='/build-your-bag'>view your bag</a></div>");
+		$success.appendTo("body").delay(1000).fadeOut();
 	}
 }
 
