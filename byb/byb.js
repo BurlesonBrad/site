@@ -34,11 +34,11 @@ function addToBag(discs, types) {
 		var n = slg.replace(/\-/g, " ");
 		var type = types[i];
 		var newDisc = {};
-		newDisc["slug"] = slg;
-		newDisc["name"] = n;
-		newDisc["type"] = type;
 
 		if ( JSON.stringify(the_bag).indexOf(slg) === -1 ) {
+			newDisc["slug"] = slg;
+			newDisc["name"] = n;
+			newDisc["type"] = type;
 			the_bag.bag.discs.push(newDisc);
 		}
 	}
