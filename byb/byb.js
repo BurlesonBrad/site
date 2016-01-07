@@ -16,7 +16,7 @@ function getBag(bc) {
 }
 
 
-function addToBag(arr) {
+function addToBag(discs, types) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
 	} else {
@@ -28,12 +28,14 @@ function addToBag(arr) {
 		};
 	}
 
-	for ( i = 0; i < arr.length; ++i ) {
-		var slg = arr[i];
+	for ( i = 0; i < discs.length; ++i ) {
+		var slg = discs[i];
 		var n = slg.replace("-", " ");
+		var type = types[i];
 		var newDisc = {};
 		newDisc["slug"] = slg;
 		newDisc["name"] = n;
+		newDisc["type"] = type;
 		the_bag.bag.discs.push(newDisc);
 	}
 
@@ -46,10 +48,12 @@ if ( $("body").hasClass("single-product") ) {
 	var dirIndex = imgSrc.indexOf("uploads");
 	var slugIndex = dirIndex + 8;
 	var slug = [];
+	var type = [];
+	type.push( $("main > div > .summary .product_meta .disc_type a").html() );
 	slug.push( imgSrc.substring( slugIndex ).replace(".png", "") );
 
 	$(".add-to-bag").click(function() {
-		addToBag( slug );
+		addToBag( slug, type );
 	});
 }
 
