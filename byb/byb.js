@@ -3,11 +3,15 @@ $(document).ready(function() {
 
 //Cookies.remove('byb');
 
+if ( $("body").hasClass("page-id-45") ) {
+	var $bag_container = $("#bag");
+	getBag( $bag_container );
+}
 function getBag(bc) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
 		var discs = the_bag.bag.discs;
-		for (index = 0; index < discs.length - 1; index++) {
+		for (index = 0; index < discs.length; index++) {
 		    bc.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
 		}
 	} else {
@@ -79,11 +83,6 @@ if ( $("body").hasClass("single-product") ) {
 	$addToBagBtn.click(function() {
 		addToBag( slug, type );
 	});
-}
-
-if ( $("body").hasClass("page-id-45") ) {
-	var $bag_container = $("#bag");
-	getBag( $bag_container );
 }
 
 
