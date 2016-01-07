@@ -56,7 +56,7 @@ function addToBag(discs, types) {
 
 	console.log( Cookies.get('byb') );
 	if ( $(".add-to-bag-success").length < 1 ) {
-		$("body").append("<div class='add-to-bag-success'>Added to your bag!</div>");
+		$("body").append("<div class='add-to-bag-success'>Added to your bag! <a href='/build-your-bag'>View your bag</a></div>");
 	}
 }
 
