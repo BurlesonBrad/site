@@ -30,7 +30,7 @@ function addToBag(discs, types) {
 
 	for ( i = 0; i < discs.length; ++i ) {
 		var slg = discs[i];
-		var n = slg.replace("-", " ");
+		var n = slg.replace(/\-/g, " ");
 		var type = types[i];
 		var newDisc = {};
 		newDisc["slug"] = slg;
