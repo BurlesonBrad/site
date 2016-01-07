@@ -15,12 +15,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<div id="byb-wrapper" data-user="<?php echo $user_ID; ?>" data-temp-user="0">
-			<form id="byb-form">
-				<input type="text" name="bag_name" id="bag_name">
-				<input type="submit" value="save">
-			</form>
-		</div>
+			<div id="byb-wrapper" data-temp-user="0">
+				<form id="byb-form">
+					<input type="text" name="bag_name" id="bag_name">
+					<input type="submit" value="save">
+				</form>
+				<div id="bag">
+				</div>
+			</div>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -44,7 +46,7 @@ get_header(); ?>
 
 <?php do_action( 'storefront_sidebar' ); ?>
 
-<script src="/wp-content/themes/twentyfifteen-child/byb/js.cookie.js"></script>
-<script src="/wp-content/themes/twentyfifteen-child/byb/byb.js"></script>
+<script src="/wp-content/themes/storefront-child/byb/js.cookie.js"></script>
+<script src="/wp-content/themes/storefront-child/byb/byb.js"></script>
 
 <?php get_footer(); ?>

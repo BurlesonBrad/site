@@ -2,18 +2,45 @@
 $(document).ready(function() {
 
 
-var bybWrapper = $("#byb-wrapper"),
-	wp_user = bybWrapper.attr("data-user"),
-	user = ( wp_user != "0" ? wp_user : makeid() ),
-	logged_in = ( wp_user != "0" ? true : false );
 	
-function makeid() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for( var i=0; i < 5; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
+function getBag(bc) {
+	if ( Cookies.get('byb') ) {
+		var the_bag = Cookies.getJSON('byb');
+		var discs = the_bag.bag.discs;
+		for (index = 0; index < discs.length; ++index) {
+		    bc.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>";
+		}
+	} else {
+		bc.prepend("<div class='add-first-disc'><img src='/wp-content/themes/storefront-child/images/add-first-disc.png' alt='add your first disc' /></div>");
+	}
 }
+
+
+function saveBag() {
+	if ( Cookies.get('byb') ) {
+		var the_bag = Cookies.getJSON('byb');
+	} else {
+		var the_bag = { 
+			"bag": {
+				"name": "",
+				"discs": []
+			}
+		};
+	}
+
+	if ( $("body").hasClass("single-product") ) {
+		
+	}
+}
+
+
+if ( $("body").hasClass("page-id-45") ) {
+	var $bag_container = $("#bag");
+	getBag($bag_container);
+}
+
+
+
 
 // Update your bag using the form
 $("#byb-form").submit(function(e) {
@@ -21,48 +48,58 @@ $("#byb-form").submit(function(e) {
 	$("#byb-form input").each(function() {
 		$(this).blur();
 	});
+
 	var $bag_name = $("#byb-form #bag_name").val();
 	var $disc_1 = "Discraft Buzzz SS";
 	var $disc_1_type = "Midrange";
 	var $disc_2 = "Discraft Nuke OS";
 	var $disc_2_type = "Driver";
 	
-	var bag_json = { 
+	var the_bag = { 
 		"bag": {
 			"name": $bag_name,
-			"discs": [
-				{
-					"name": $disc_1,
-					"type": $disc_1_type
-				},
-				{
-					"name": $disc_2,
-					"type": $disc_2_type
-				}
-			]
+			"discs": []
 		}
 	};
+
+	the_bag.bag.discs[i]["name"] = $disc_name;
 	
- 	var bag_json_string = JSON.stringify(bag_json);
- 	Cookies.set('byb', bag_json_string, { expires: 1000 });
+ 	var bag_json = JSON.stringify(the_bag);
+ 	Cookies.set('byb', bag_json, { expires: 1000 });
  	
  	return false;
 });
 
-initBag(user,logged_in);
 
-function initBag(u,l) {
-// get user data (not using that in this version)
-	console.log("user? " + u + " | logged in? " + l);
+
+
+
+// var wp_user = bybWrapper.attr("data-user"),
+//	bybWrapper = $("#byb-wrapper"),
+// 	user = ( wp_user != "0" ? wp_user : makeid() ),
+// 	logged_in = ( wp_user != "0" ? true : false );
+
+// function makeid() {
+//     var text = "";
+//     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//     for( var i=0; i < 5; i++ )
+//         text += possible.charAt(Math.floor(Math.random() * possible.length));
+//     return text;
+// }
+
+
+// function initBag(u,l) {
+// // get user data (not using that in this version)
+// 	console.log("user? " + u + " | logged in? " + l);
 	
-// get the bag
-	var byb_data = Cookies.getJSON('byb'),
-		$bag_name = byb_data.bag.name,
-		$disc_1_name = byb_data.bag.discs[1].name;
-	console.log($bag_name + " | " + $disc_1_name);
+// // get the bag
+// 	var byb_data = Cookies.getJSON('byb'),
+// 		$bag_name = byb_data.bag.name,
+// 		$disc_1_name = byb_data.bag.discs[1].name;
+// 	console.log($bag_name + " | " + $disc_1_name);
 	
-	// use a for loop to display all that data!
-}
+// 	// use a for loop to display all that data!
+// }
 
 });
 })(jQuery);
