@@ -1,6 +1,8 @@
 (function($) {
 $(document).ready(function() {
 
+Cookies.remove('byb');
+
 function getBag(bc) {
 	if ( Cookies.get('byb') ) {
 		var the_bag = Cookies.getJSON('byb');
