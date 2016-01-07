@@ -27,13 +27,12 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 	<?php endif; ?>
 
-	<span class="disc_type">
-	<?php
-	$terms = get_the_terms( $product->ID , 'disc-type' );
+	<!-- $terms = get_the_terms( $post->ID , 'disc-types' );
 	foreach ( $terms as $term ) {
 		echo $term->name . ' ';
-	} ?>
-	</span>
+	} -->
+
+	<span class="disc_type"><?php echo get_the_term_list( $post->ID, 'disc-type', 'Type: ', ', ', '' ); ?> </span>
 
 	<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $cat_count, 'woocommerce' ) . ' ', '</span>' ); ?>
 
