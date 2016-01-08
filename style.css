@@ -353,4 +353,5 @@ body.home #content { padding-top: 0; }
 #bags .disc-area img {
 	width: 130px !important;
 	height: auto !important;
+	display: inline;
 }
