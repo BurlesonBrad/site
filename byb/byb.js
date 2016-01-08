@@ -1,7 +1,7 @@
 (function($) {
 $(document).ready(function() {
 
-//Cookies.remove('byb');
+Cookies.remove('byb');
 console.log( Cookies.get('byb') );
 
 function getBags(bc) {
@@ -13,7 +13,7 @@ function getBags(bc) {
 			bc.append($bag);
 			for (i = 0; i < discs.length; i++) {
 				var $the_disc = $("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
-				if ( discs[index]["type"] === "distance-driver" || discs[index]["type"] === "fairway-driver" ) {
+				if ( discs[index]["type"] === "distance driver" || discs[index]["type"] === "fairway driver" ) {
 		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
 		    	}
 		    	if ( discs[index]["type"] === "midrange" ) {
