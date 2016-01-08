@@ -37,7 +37,7 @@ get_header(); ?>
 					<?php
 					function getDiscBags() {
 						$byb_cookie = $_COOKIE['byb'];
-						echo json_decode($byb_cookie);
+						echo json_decode($byb_cookie, true);
 
 						if ( isset($byb_cookie) ) {
 							$bags = json_decode( $byb_cookie, true );
