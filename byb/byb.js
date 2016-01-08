@@ -92,10 +92,10 @@ function addToBag(bag, discs, types) {
 	}
 }
 
-if ( $("body").hasClass("page-id-45") ) {
-	var $bag_container = $("#bags");
-	getBags( $bag_container );
-}
+// if ( $("body").hasClass("page-id-45") ) {
+// 	var $bag_container = $("#bags");
+// 	getBags( $bag_container );
+// }
 
 if ( $("body").hasClass("single-product") ) {
 	if ( $(".add-to-bag").length < 1 ) {
