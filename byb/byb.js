@@ -55,7 +55,7 @@ function addToBag(bag, discs, types) {
 		var type = types[i];
 		var newDisc = {};
 
-		if ( JSON.stringify(the_bags).indexOf(slg) === -1 ) {
+		if ( the_bags[bagIndex].discs[i].slug != slg ) {
 			newDisc["slug"] = slg;
 			newDisc["name"] = n;
 			newDisc["type"] = type;
