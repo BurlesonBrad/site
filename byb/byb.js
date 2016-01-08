@@ -33,6 +33,14 @@ function addToBag(bag, discs, types) {
 		]
 	}
 
+	for ( i = 0; i < the_bags.length; i++ ) {
+		if ( the_bags[i]["name"] = bag ) {
+			var bagIndex = i;
+		} else {
+			var bagIndex = 0;
+		}
+	}
+
 	for ( i = 0; i < discs.length; i++ ) {
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
@@ -43,7 +51,7 @@ function addToBag(bag, discs, types) {
 			newDisc["slug"] = slg;
 			newDisc["name"] = n;
 			newDisc["type"] = type;
-			the_bags[bag].discs.push(newDisc);
+			the_bags[bagIndex].discs.push(newDisc);
 		}
 	}
 
