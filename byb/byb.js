@@ -7,8 +7,8 @@ function getBags(bc) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 		for (index = 0; index < the_bags.length; index++) {
-			var discs = the_bags[i].discs;
-			var $bag = $("<div class='bag bag-" + the_bags[i]['name'] + "'></div>");
+			var discs = the_bags[index].discs;
+			var $bag = $("<div class='bag bag-" + the_bags[index]['name'] + "'></div>");
 			bc.append($bag);
 			for (i = 0; i < discs.length; i++) {
 		    	$bag.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
