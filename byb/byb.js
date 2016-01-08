@@ -1,8 +1,11 @@
 (function($) {
 $(document).ready(function() {
 
-//Cookies.remove('byb');
 console.log( Cookies.get('byb') );
+
+$("#clear_bags").click(function() {
+	Cookies.remove('byb');
+});
 
 function getBags(bc) {
 	if ( Cookies.get('byb') ) {

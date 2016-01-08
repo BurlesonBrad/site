@@ -39,6 +39,7 @@ get_header(); ?>
 				</form> -->
 				<div id="bags">
 				</div>
+				<button id="clear_bags">Clear All</button>
 			</div>
 
 		</main><!-- #main -->
