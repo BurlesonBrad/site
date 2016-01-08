@@ -142,6 +142,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 	left: 0;
 	top: 0;
 	height: 100%;
+	width: 100%;
 }
 
 .widget_search form:before, .widget_product_search form:before {
