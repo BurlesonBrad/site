@@ -47,11 +47,13 @@ $(document).ready(function() {
 	function dynamicBasket() {
 		var $cartContents = $(".site-header-cart .cart-contents");
 		console.log($cartContents);
+		if ( $cartContents.find("#dynamicBasket").length < 1 ) {
+			setTimeout(dynamicBasket, 1000);
+			return;
+		}
 		var $basket = $("#dynamic_basket");
 
-		$cartContents.load(function() {
-			$basket.appendTo($(this)).show();
-		});
+		$basket.appendTo( $cartContents ).show();
 	}
 	dynamicBasket();
 });
