@@ -46,7 +46,6 @@ $(document).ready(function() {
 
 	function dynamicBasket() {
 		var $cartContents = $(".site-header-cart .cart-contents");
-		console.log($cartContents);
 		var $basket = $("#dynamic_basket");
 		$basket.appendTo( $cartContents ).show();
 	}
