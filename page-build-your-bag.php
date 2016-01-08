@@ -45,13 +45,13 @@ get_header(); ?>
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
 
-								echo '<div class="bag bag-' . $bag_slug; . '"><h2>' . $bag['name'] . '</h2>';
+								echo '<div class="bag bag-' . $bag_slug; . '"><h2>' . $bag["name"] . '</h2>';
 								
 								// Drivers
 								echo '<div class="drivers"><h3>Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "distance driver" || $disc['type'] === "fairway driver" ) {
-										echo '<div class="disc"><a href="/product/' . $disc['slug'] . '"><img src="/wp-content/uploads/' . $disc['slug'] . '.png" alt="' . $disc['name'] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -60,7 +60,7 @@ get_header(); ?>
 								echo '<div class="midranges"><h3>Mid-ranges</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "midrange" ) {
-										echo '<div class="disc"><a href="/product/' . $disc['slug'] . '"><img src="/wp-content/uploads/' . $disc['slug'] . '.png" alt="' . $disc['name'] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -69,7 +69,7 @@ get_header(); ?>
 								echo '<div class="putters"><h3>Putters</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "putter" ) {
-										echo '<div class="disc"><a href="/product/' . $disc['slug'] . '"><img src="/wp-content/uploads/' . $disc['slug'] . '.png" alt="' . $disc['name'] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
