@@ -126,6 +126,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 	display: none;
 }
 
+.header-widget-region .widget_product_search form {
+	margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.site-description {
 		display: none !important;
