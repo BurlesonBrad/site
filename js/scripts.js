@@ -48,14 +48,9 @@ $(document).ready(function() {
 		var $cartContents = $(".site-header-cart .cart-contents");
 		console.log($cartContents);
 		var $basket = $("#dynamic_basket");
-		if ( $basket.length < 1 ) {
-			setTimeout(dynamicBasket, 1000);
-			return;
-		}
-
 		$basket.appendTo( $cartContents ).show();
 	}
-	dynamicBasket();
+	setTimeout( dynamicBasket, 1000 );
 });
 
 
