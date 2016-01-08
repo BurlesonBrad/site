@@ -50,6 +50,7 @@ $(document).ready(function() {
 		var $basket = $("#dynamic_basket");
 
 		$basket.show();
+		$cartContents.append($basket);
 	}
 	dynamicBasket();
 });
