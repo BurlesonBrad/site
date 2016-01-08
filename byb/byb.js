@@ -9,18 +9,18 @@ function getBags(bc) {
 		var the_bags = Cookies.getJSON('byb');
 		for (index = 0; index < the_bags.length; index++) {
 			var discs = the_bags[index].discs;
-			var $bag = $("<div class='bag bag-" + the_bags[index]['name'] + "'><h2>" + the_bags[index]['name'] + "</h2><div class='bag-inner'><div class='drivers'></div><div class='midranges'></div><div class='putters'></div></div></div>");
+			var $bag = $("<div class='bag bag-" + the_bags[index]['name'] + "'><h2>" + the_bags[index]['name'] + "</h2><div class='drivers'><h3>Drivers</h3><div class='disc-area'></div></div><div class='midranges'><h3>Mid-ranges</h3><div class='disc-area'></div></div><div class='putters'><h3>Putters</h3><div class='disc-area'></div></div></div>");
 			bc.append($bag);
 			for (i = 0; i < discs.length; i++) {
 				var $the_disc = $("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
 				if ( discs[index]["type"] === "distance-driver" || discs[index]["type"] === "fairway-driver" ) {
-		    		$bag.find(".drivers").prepend( $the_disc );
+		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
 		    	}
 		    	if ( discs[index]["type"] === "midrange" ) {
-		    		$bag.find(".midranges").prepend( $the_disc );
+		    		$bag.find(".midranges .disc-area").prepend( $the_disc );
 		    	}
 		    	if ( discs[index]["type"] === "putter" ) {
-		    		$bag.find(".putters").prepend( $the_disc );
+		    		$bag.find(".putters .disc-area").prepend( $the_disc );
 		    	}
 			}
 		}
