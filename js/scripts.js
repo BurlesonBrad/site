@@ -49,8 +49,9 @@ $(document).ready(function() {
 		console.log($cartContents);
 		var $basket = $("#dynamic_basket");
 
-		$basket.show();
-		$cartContents.append($basket);
+		$cartContents.load(function() {
+			$basket.appendTo($(this)).show();
+		});
 	}
 	dynamicBasket();
 });
