@@ -40,14 +40,13 @@
 			 */
 			do_action( 'storefront_header' ); ?>
 		</div>
-		<?php
-		global $woocommerce;
-		$cart_total = $woocommerce->cart->cart_contents_count;
-		?>
-		poopoo
-		<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo ($cart_total > 0 ? $cart_total : 'empty' ); ?>.png" style="display:none; width:25px; height:37px;" width="25" height="37" />
-		
 	</header><!-- #masthead -->
+
+	<?php
+	global $woocommerce;
+	$cart_total = $woocommerce->cart->cart_contents_count;
+	?>
+	<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-<?php echo ($cart_total > 0 ? $cart_total : 'empty' ); ?>.png" style="display:none; width:25px; height:37px;" width="25" height="37" />
 
 	<?php
 	/**
