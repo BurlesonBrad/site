@@ -55,7 +55,14 @@ function addToBag(bag, discs, types) {
 		var type = types[i];
 		var newDisc = {};
 
-		if ( the_bags[bagIndex].discs[i].slug != slg ) {
+		if ( Cookies.get('byb') ) {
+			if ( the_bags[bagIndex].discs[i].slug != slg ) {
+				newDisc["slug"] = slg;
+				newDisc["name"] = n;
+				newDisc["type"] = type;
+				the_bags[bagIndex].discs.push(newDisc);
+			}
+		} else {
 			newDisc["slug"] = slg;
 			newDisc["name"] = n;
 			newDisc["type"] = type;
