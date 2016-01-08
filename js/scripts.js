@@ -19,6 +19,8 @@ $(document).ready(function() {
 			$utilNavWrap.prependTo("#masthead");
 			$("header .secondary-navigation").prependTo($utilNav);
 			$("header .site-branding").prependTo($utilNav);
+			$("#woocommerce_product_search-2").prependTo($utilNav);
+			$(".header-widget-region").remove();
 		}
 		
 		$menuHome.html("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />")
