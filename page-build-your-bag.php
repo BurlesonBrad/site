@@ -37,12 +37,13 @@ get_header(); ?>
 					<?php
 					function getDiscBags() {
 						$byb_cookie = $_COOKIE['byb'];
+						$byb_json = '"' . $byb_cookie . '"';
 						echo $byb_cookie;
-						$byb_cookie_obj = json_decode( "\"" . $byb_cookie . "\"", true );
-						var_dump($byb_cookie_obj);
+						$byb_cookie_obj = json_decode( $byb_json, true );
+						echo $byb_cookie_obj;
 
 						if ( isset($byb_cookie) ) {
-							$bags = json_decode( $byb_cookie, true );
+							$bags = $byb_json;
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
