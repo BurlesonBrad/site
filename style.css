@@ -126,8 +126,26 @@ ul#menu-main-menu li:nth-child(2) > a {
 	display: none;
 }
 
-.header-widget-region .widget_product_search form {
+.header-widget-region .widget_product_search form,
+.nav-top .widget_product_search form {
 	margin-bottom: 0;
+}
+
+.nav-top #woocommerce_product_search-2 {
+	float: left;
+}
+
+.nav-top #woocommerce_product_search-2,
+.nav-top #woocommerce_product_search-2 form,
+.nav-top #woocommerce_product_search-2 form input[type="search"] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+
+.widget_search form:before, .widget_product_search form:before {
+	z-index: 999;
 }
 
 @media screen and (min-width: 768px) {
