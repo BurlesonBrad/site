@@ -46,9 +46,13 @@ $(document).ready(function() {
 
 	function dynamicBasket() {
 		var $cartContents = $(".site-header-cart .cart-contents");
+		if ( $cartContents.length < 1 ) {
+			setTimeout(dynamicBasket, 1000);
+			return;
+		}
 		var $basket = $("#dynamic_basket");
 
-		//$basket.appendTo( $cartContents ).show();
+		$basket.appendTo( $cartContents ).show();
 	}
 	dynamicBasket();
 });
