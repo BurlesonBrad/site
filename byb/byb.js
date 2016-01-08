@@ -2,6 +2,7 @@
 $(document).ready(function() {
 
 //Cookies.remove('byb');
+console.log( Cookies.get('byb') );
 
 function getBags(bc) {
 	if ( Cookies.get('byb') ) {
@@ -23,7 +24,6 @@ function getBags(bc) {
 		    	}
 			}
 		}
-		console.log("item added");
 	} else {
 		bc.append("<div class='add-first-bag'><img src='/wp-content/themes/storefront-child/images/add-first-bag.png' alt='add your first disc' /></div>");
 	}
@@ -80,7 +80,6 @@ function addToBag(bag, discs, types) {
 	var bags_json = JSON.stringify(the_bags);
 	Cookies.set('byb', bags_json, { expires: 1000 });
 
-	console.log( Cookies.get('byb') );
 	if ( $(".add-to-bag-success").length === 0 ) {
 		var $success = $("<div class='add-to-bag-success'>Added to bag! <a href='/build-your-bag'>view your bag</a></div>");
 		$success.appendTo("body").delay(5000).fadeOut(400, function() {
