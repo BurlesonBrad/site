@@ -41,9 +41,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="featured-disc-image">
-					<?php
-						the_post_thumbnail();	
-					?>
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();	?></a>
 				</div>
 				<div class="featured-disc-twitter twitter-feed">
 					<div class="featured-disc-inner">
