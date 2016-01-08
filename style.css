@@ -346,3 +346,11 @@ body.home #content { padding-top: 0; }
 	background: linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+
+/* BYB */
+
+#bags .disc-area img {
+	width: 100px !important;
+	height: auto !important;
+}
