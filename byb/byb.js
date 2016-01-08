@@ -1,7 +1,7 @@
 (function($) {
 $(document).ready(function() {
 
-//Cookies.remove('byb');
+Cookies.remove('byb');
 
 function getBags(bc) {
 	if ( Cookies.get('byb') ) {
@@ -56,18 +56,15 @@ function addToBag(bag, discs, types) {
 		var newDisc = {};
 
 		if ( Cookies.get('byb') ) {
-			if ( the_bags[bagIndex].discs[i].slug != slg ) {
-				newDisc["slug"] = slg;
-				newDisc["name"] = n;
-				newDisc["type"] = type;
-				the_bags[bagIndex].discs.push(newDisc);
+			if ( the_bags[bagIndex].discs[i].slug === slg ) {
+				return;
 			}
-		} else {
-			newDisc["slug"] = slg;
-			newDisc["name"] = n;
-			newDisc["type"] = type;
-			the_bags[bagIndex].discs.push(newDisc);
 		}
+
+		newDisc["slug"] = slg;
+		newDisc["name"] = n;
+		newDisc["type"] = type;
+		the_bags[bagIndex].discs.push(newDisc);
 	}
 
 	if ( JSON.stringify(newDisc).indexOf("slug") === -1 ) {
