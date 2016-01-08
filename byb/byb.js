@@ -3,30 +3,34 @@ $(document).ready(function() {
 
 //Cookies.remove('byb');
 
-function getBag(bc) {
+function getBags(bc) {
 	if ( Cookies.get('byb') ) {
-		var the_bag = Cookies.getJSON('byb');
-		var discs = the_bag.bag.discs;
-		for (index = 0; index < discs.length; index++) {
-		    bc.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
+		var the_bags = Cookies.getJSON('byb');
+		for (index = 0; index < the_bags.length; index++) {
+			var discs = the_bags[i].discs;
+			var $bag = $("<div class='bag bag-" + the_bags[i]['name'] + "'></div>");
+			bc.append($bag);
+			for (i = 0; i < discs.length; i++) {
+		    	$bag.prepend("<div class='disc'><img src='/wp-content/uploads/" + discs[index]['slug'] + ".png' alt='" + discs[index]['name'] + "' /></div>");
+			}
 		}
 		console.log("item added");
 	} else {
-		bc.prepend("<div class='add-first-disc'><img src='/wp-content/themes/storefront-child/images/add-first-disc.png' alt='add your first disc' /></div>");
+		bc.append("<div class='add-first-bag'><img src='/wp-content/themes/storefront-child/images/add-first-bag.png' alt='add your first disc' /></div>");
 	}
 }
 
 
-function addToBag(discs, types) {
+function addToBag(bag, discs, types) {
 	if ( Cookies.get('byb') ) {
-		var the_bag = Cookies.getJSON('byb');
+		var the_bags = Cookies.getJSON('byb');
 	} else {
-		var the_bag = { 
-			"bag": {
+		var the_bags = [
+			{
 				"name": "",
 				"discs": []
 			}
-		};
+		]
 	}
 
 	for ( i = 0; i < discs.length; i++ ) {
@@ -35,11 +39,11 @@ function addToBag(discs, types) {
 		var type = types[i];
 		var newDisc = {};
 
-		if ( JSON.stringify(the_bag).indexOf(slg) === -1 ) {
+		if ( JSON.stringify(the_bags).indexOf(slg) === -1 ) {
 			newDisc["slug"] = slg;
 			newDisc["name"] = n;
 			newDisc["type"] = type;
-			the_bag.bag.discs.push(newDisc);
+			the_bags[bag].discs.push(newDisc);
 		}
 	}
 
@@ -53,8 +57,8 @@ function addToBag(discs, types) {
 		return;
 	}
 
-	var bag_json = JSON.stringify(the_bag);
-	Cookies.set('byb', bag_json, { expires: 1000 });
+	var bags_json = JSON.stringify(the_bags);
+	Cookies.set('byb', bags_json, { expires: 1000 });
 
 	console.log( Cookies.get('byb') );
 	if ( $(".add-to-bag-success").length === 0 ) {
@@ -67,27 +71,42 @@ function addToBag(discs, types) {
 
 if ( $("body").hasClass("page-id-45") ) {
 	var $bag_container = $("#bag");
-	getBag( $bag_container );
+	getBags( $bag_container );
 }
 
 if ( $("body").hasClass("single-product") ) {
 	if ( $(".add-to-bag").length < 1 ) {
+		var $bagsMenu = $("<select class='bags-menu'></select>");
+
+		if ( Cookies.get('byb') ) {
+			var the_bags = Cookies.getJSON('byb');
+			for (i = 0; i < the_bags.length; i++ ) {
+				var bagName = the_bags[i]["name"];
+				var bagSlug = $(bagName).toLowerCase().replace(/ /g, "-");
+				$bagsMenu.append("<option value='" + bagSlug + "'>" + bagName + "</option>");
+			}
+		} else {
+			$bagsMenu.append("<option value='new-bag'>New Bag</option>");
+		}
+
 		var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
-		$("main > div > .summary").prepend( $addToBagBtn );
+		$("main > div > .summary").prepend( $bagsMenu + $addToBagBtn );
 	} else {
 		var $addToBagBtn = $(".add-to-bag");
+		var $bagsMenu = $(".bags-menu");
 	}
 
-	var imgSrc = $(".woocommerce-main-image img").attr("src");
-	var dirIndex = imgSrc.indexOf("uploads");
-	var slugIndex = dirIndex + 8;
-	var slug = [];
-	var type = [];
-	type.push( $("main > div > .summary .product_meta .disc_type a").html() );
-	slug.push( imgSrc.substring( slugIndex ).replace(".png", "") );
-
 	$addToBagBtn.click(function() {
-		addToBag( slug, type );
+		var imgSrc = $(".woocommerce-main-image img").attr("src");
+		var dirIndex = imgSrc.indexOf("uploads");
+		var slugIndex = dirIndex + 8;
+		var slug = [];
+		var type = [];
+
+		type.push( $("main > div > .summary .product_meta .disc_type a").html() );
+		slug.push( imgSrc.substring( slugIndex ).replace(".png", "") );
+
+		addToBag( $bagsMenu.val(), slug, type );
 	});
 }
 
@@ -102,24 +121,6 @@ $("#byb-form").submit(function(e) {
 	});
 
 	var $bag_name = $("#byb-form #bag_name").val();
-	var $disc_1 = "Discraft Buzzz SS";
-	var $disc_1_type = "Midrange";
-	var $disc_2 = "Discraft Nuke OS";
-	var $disc_2_type = "Driver";
-	
-	var the_bag = { 
-		"bag": {
-			"name": $bag_name,
-			"discs": []
-		}
-	};
-
-	the_bag.bag.discs[i]["name"] = $disc_name;
-	
- 	var bag_json = JSON.stringify(the_bag);
- 	Cookies.set('byb', bag_json, { expires: 1000 });
- 	
- 	return false;
 });
 
 
