@@ -45,7 +45,7 @@ get_header(); ?>
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
 
-								echo '<div class="bag bag-' . $bag_slug; . '"><h2>' . $bag["name"] . '</h2>';
+								echo '<div class="bag bag-' . $bag_slug . '"><h2>' . $bag["name"] . '</h2>';
 								
 								// Drivers
 								echo '<div class="drivers"><h3>Drivers</h3><div class="disc-area">';
