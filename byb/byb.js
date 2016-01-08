@@ -90,7 +90,7 @@ if ( $("body").hasClass("single-product") ) {
 			var the_bags = Cookies.getJSON('byb');
 			for (i = 0; i < the_bags.length; i++ ) {
 				var bagName = the_bags[i]["name"];
-				var bagSlug = $(bagName).toLowerCase().replace(/ /g, "-");
+				var bagSlug = bagName.toLowerCase().replace(/ /g, "-");
 				$bagsMenu.append("<option value='" + bagSlug + "'>" + bagName + "</option>");
 			}
 		} else {
