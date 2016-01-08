@@ -13,13 +13,13 @@ function getBags(bc) {
 			bc.append($bag);
 			for (i = 0; i < discs.length; i++) {
 				var $the_disc = $("<div class='disc'><img src='/wp-content/uploads/" + discs[i]['slug'] + ".png' alt='" + discs[i]['name'] + "' /></div>");
-				if ( discs[index]["type"] === "distance driver" || discs[index]["type"] === "fairway driver" ) {
+				if ( discs[i]["type"] === "distance driver" || discs[i]["type"] === "fairway driver" ) {
 		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
 		    	}
-		    	if ( discs[index]["type"] === "midrange" ) {
+		    	if ( discs[i]["type"] === "midrange" ) {
 		    		$bag.find(".midranges .disc-area").prepend( $the_disc );
 		    	}
-		    	if ( discs[index]["type"] === "putter" ) {
+		    	if ( discs[i]["type"] === "putter" ) {
 		    		$bag.find(".putters .disc-area").prepend( $the_disc );
 		    	}
 			}
