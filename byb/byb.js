@@ -13,7 +13,7 @@ function getBags(bc) {
 			var $bag = $("<div class='bag bag-" + bag_slug + "'><h2>" + the_bags[index]['name'] + "</h2><div class='drivers'><h3>Drivers</h3><div class='disc-area'></div></div><div class='midranges'><h3>Mid-ranges</h3><div class='disc-area'></div></div><div class='putters'><h3>Putters</h3><div class='disc-area'></div></div></div>");
 			bc.append($bag);
 			for (i = 0; i < discs.length; i++) {
-				var $the_disc = $("<div class='disc'><img src='/wp-content/uploads/" + discs[i]['slug'] + ".png' alt='" + discs[i]['name'] + "' /></div>");
+				var $the_disc = $("<div class='disc'><a href='/product/" + discs[i]['slug'] + "'><img src='/wp-content/uploads/" + discs[i]['slug'] + ".png' alt='" + discs[i]['name'] + "' /></a></div>");
 				if ( discs[i]["type"] === "distance driver" || discs[i]["type"] === "fairway driver" ) {
 		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
 		    	}
