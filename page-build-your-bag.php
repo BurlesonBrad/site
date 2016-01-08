@@ -15,7 +15,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+<!-- 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
 				do_action( 'storefront_page_before' );
@@ -30,7 +30,7 @@ get_header(); ?>
 				do_action( 'storefront_page_after' );
 				?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; // end of the loop. ?> -->
 
 			<div id="byb-wrapper" data-temp-user="0">
 				<form id="byb-form">
