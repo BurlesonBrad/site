@@ -105,7 +105,7 @@ if ( $("body").hasClass("single-product") ) {
 				$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
 			}
 		} else {
-			$bagsMenu.append("<option value='New Bag'>New Bag</option>");
+			$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 		}
 
 		var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
