@@ -46,6 +46,7 @@ $(document).ready(function() {
 
 	function dynamicBasket() {
 		var $cartContents = $(".site-header-cart .cart-contents");
+		console.log($cartContents);
 		if ( $cartContents.length < 1 ) {
 			setTimeout(dynamicBasket, 1000);
 			return;
