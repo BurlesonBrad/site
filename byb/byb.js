@@ -1,7 +1,7 @@
 (function($) {
 $(document).ready(function() {
 
-//Cookies.remove('byb');
+Cookies.remove('byb');
 console.log( Cookies.get('byb') );
 
 function getBags(bc) {
@@ -52,7 +52,7 @@ function addToBag(bag, discs, types) {
 	for ( i = 0; i < discs.length; i++ ) {
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
-		var type = types[i];
+		var type = types[i].toLowerCase();
 		var newDisc = {};
 
 		if ( Cookies.get('byb') ) {
