@@ -49,7 +49,7 @@ $(document).ready(function() {
 		console.log($cartContents);
 		var $basket = $("#dynamic_basket");
 
-		$basket.show().appendTo( $cartContents );
+		$basket.show();
 	}
 	dynamicBasket();
 });
