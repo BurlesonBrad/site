@@ -37,7 +37,7 @@ get_header(); ?>
 					<input type="text" name="bag_name" id="bag_name">
 					<input type="submit" value="save">
 				</form>
-				<div id="bag">
+				<div id="bags">
 				</div>
 			</div>
 
