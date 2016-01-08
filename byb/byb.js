@@ -1,7 +1,7 @@
 (function($) {
 $(document).ready(function() {
 
-//Cookies.remove('byb');
+Cookies.remove('byb');
 
 function getBags(bc) {
 	if ( Cookies.get('byb') ) {
@@ -89,9 +89,9 @@ if ( $("body").hasClass("single-product") ) {
 		if ( Cookies.get('byb') ) {
 			var the_bags = Cookies.getJSON('byb');
 			for (i = 0; i < the_bags.length; i++ ) {
-				var bagName = the_bags[i]["name"];
-				var bagSlug = bagName.toLowerCase().replace(/ /g, "-");
-				$bagsMenu.append("<option value='" + bagSlug + "'>" + bagName + "</option>");
+				var bagSlug = the_bags[i]["name"];
+				var bagName = bagName.replace(/\-/g, "-");
+				$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
 			}
 		} else {
 			$bagsMenu.append("<option value='new-bag'>New Bag</option>");
