@@ -349,8 +349,11 @@ body.home #content { padding-top: 0; }
 
 
 /* BYB */
+.bag .disc {
+	display: inline-block;
+}
 
-#bags .disc-area img {
+.bag .disc-area img {
 	width: 130px !important;
 	height: auto !important;
 	display: inline;
