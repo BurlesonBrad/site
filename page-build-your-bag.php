@@ -33,10 +33,10 @@ get_header(); ?>
 			<?php // endwhile; // end of the loop. ?>
 
 			<div id="byb-wrapper" data-temp-user="0">
-				<form id="byb-form">
+				<!-- <form id="byb-form">
 					<input type="text" name="bag_name" id="bag_name">
 					<input type="submit" value="save">
-				</form>
+				</form> -->
 				<div id="bags">
 				</div>
 			</div>
