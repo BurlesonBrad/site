@@ -90,7 +90,7 @@ if ( $("body").hasClass("single-product") ) {
 		}
 
 		var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
-		$("main > div > .summary").prepend( $bagsMenu ).append( $addToBagBtn );
+		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
 	} else {
 		var $addToBagBtn = $(".add-to-bag");
 		var $bagsMenu = $(".bags-menu");
