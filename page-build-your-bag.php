@@ -41,7 +41,7 @@ get_header(); ?>
 						if ( isset($byb_cookie) ) {
 							$bags = json_decode( $byb_cookie, true );
 							foreach ( $bags as $bag ):
-								$bag_slug = str_replace( " ", "-", $bag['name'] );
+								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
 
