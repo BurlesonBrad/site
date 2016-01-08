@@ -1,7 +1,7 @@
 (function($) {
 $(document).ready(function() {
 
-//Cookies.remove('byb');
+Cookies.remove('byb');
 console.log( Cookies.get('byb') );
 
 function getBags(bc) {
