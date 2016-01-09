@@ -51,9 +51,18 @@ get_header(); ?>
 								echo '<div class="bag bag-' . $bag_slug . '"><h2>' . $bag["name"] . '</h2>';
 								
 								// Drivers
-								echo '<div class="drivers"><h3>Drivers</h3><div class="disc-area">';
+								echo '<div class="distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
-									if ( $disc['type'] === "distance driver" || $disc['type'] === "fairway driver" ) {
+									if ( $disc['type'] === "distance driver" ) {
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
+							    	}
+							    endforeach;
+							    echo '</div></div>';
+
+							    // Fairway
+								echo '<div class="fairway-drivers"><h3>Fairway Drivers</h3><div class="disc-area">';
+								foreach ( $discs as $disc ):
+									if ( $disc['type'] === "fairway driver" ) {
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
