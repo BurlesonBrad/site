@@ -378,6 +378,10 @@ body.home #content { padding-top: 0; }
 
 
 /* BYB */
+.content-area.build-your-bag {
+	width: 100% !important;
+}
+
 .bag .disc {
 	display: inline-block;
 }
