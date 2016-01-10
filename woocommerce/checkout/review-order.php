@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			do_action( 'woocommerce_review_order_before_cart_contents' );
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-				var_dump( $cart_item['data']['post']['post_name'] );
+				var_dump( $cart_item['data'] );
 			}
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
