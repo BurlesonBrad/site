@@ -391,15 +391,15 @@ body.home #content { padding-top: 0; }
 .bags-menu { display: none; }
 
 .add-to-bag .added {
-	display: none;
+	display: none !important;
 }
 
 .add-to-bag.success .added {
-	display: inline-block;
+	display: inline-block !important;
 }
 
 .add-to-bag.success .not-yet-added {
-	display: none;
+	display: none !important;
 }
 
 .add-to-bag-failure, .add-to-bag-success {
