@@ -80,7 +80,7 @@ function addToBag(bag, disc, t) {
 	newDisc["type"] = disc_type;
 
 	console.log( the_bags[bagIndex] );
-	the_bags[bagIndex].disc.push(newDisc);
+	the_bags[bagIndex].discs.push(newDisc);
 
 
 
