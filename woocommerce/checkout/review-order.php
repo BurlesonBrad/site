@@ -12,14 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php
-	echo '<ul class="test">';
-	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-		var_dump( $cart_item->data );
-	}
-	echo '</ul>';
-?>
-
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
 		<tr>
@@ -30,6 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<tbody>
 		<?php
 			do_action( 'woocommerce_review_order_before_cart_contents' );
+
+			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+				var_dump( $cart_item->data );
+			}
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
