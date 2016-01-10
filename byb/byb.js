@@ -5,7 +5,7 @@ console.log( Cookies.get('byb') );
 
 $("#clear_bags").click(function() {
 	Cookies.remove('byb');
-	window.reload();
+	location.reload();
 });
 
 // function getBags(bc) {
