@@ -29,11 +29,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 
 	 $type = wp_get_post_terms( $post->ID, 'disc-type' );
+	 $type = $type.slug;
 ?>
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
 
-<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type[0]; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
 		/**
