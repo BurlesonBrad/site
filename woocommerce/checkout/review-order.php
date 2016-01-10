@@ -24,17 +24,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			do_action( 'woocommerce_review_order_before_cart_contents' );
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-				var_dump( $cart_item['data'] );
-				$type = wp_get_post_terms( $post->ID, 'disc-type' ); 
-				$type = $type[0]->slug;
-			}
-
-			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+				$post_id = $cart_item['data']->post->ID );
+				$type = wp_get_post_terms( $post_id, 'disc-type' ); 
+				$type = $type[0]->slug;
 
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					?>
-					<tr data-product-slug="<?php echo $cart_item['data']->post->post_name; ?>" class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<tr data-product-slug="<?php echo $cart_item['data']->post->post_name; ?>" data-disc-type="<?php echo $type" class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 						<td class="product-name">
 							<?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
 							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); ?>
