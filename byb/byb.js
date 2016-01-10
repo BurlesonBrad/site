@@ -165,7 +165,7 @@ $("form.checkout").submit(function() {
 		addToBag( $bag, slug, type );
 	});
 
-	console.log("clicked " + $bag + $cartItem);
+	console.log("clicked " + $bag + slug + type);
 
 });
 
