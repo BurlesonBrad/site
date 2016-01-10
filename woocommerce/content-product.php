@@ -43,6 +43,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 }
 
 $type = wp_get_post_terms( $post->ID, 'disc-type' );
+echo $type;
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type[0]; ?>" <?php post_class( $classes ); ?>>
 
