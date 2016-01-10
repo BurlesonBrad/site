@@ -34,7 +34,7 @@ function getBags(bc) {
 }
 
 // BAG STRUCTURE:
-function addToBag(e, bag, disc, t) {
+function addToBag(bag, disc, t) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
@@ -53,11 +53,11 @@ function addToBag(e, bag, disc, t) {
 	}
 
 	if ( disc.length === 0 ) {
-		disc = $(e.target).parent("*[data-product-slug]").data("product-slug");
+		disc = $("*[data-product-slug]").data("product-slug");
 	}
 
 	if ( t.length === 0 ) {
-		t = $(e.target).parent("*[data-disc-type]").data("disc-type");
+		t = $("*[data-disc-type]").data("disc-type");
 	}
 
 // find the right bag, otherwise use the first bag
@@ -142,8 +142,19 @@ if ( $("body").hasClass("single-product") ) {
 /***	ADD TO BAG 		***/
 /***					***/
 
-$addToBagBtn.click(function(event) {
-	addToBag( event, $bagsMenu.val(), slug, type );
+$addToBagBtn.click(function() {
+	addToBag( $bagsMenu.val(), slug, type );
+});
+
+$("form.woocommerce-checkout").submit(function() {
+	var $cartItem = $(this).parent("#payment").prev(".shop_table").find(".cart_item");
+	$bag = $bagsMenu.find("option").first().attr("value");
+	$cartItem.each(function() {
+		var $this = $(this);
+		slug = $this.data("product-slug");
+		type = $this.data("disc-type");
+		addToBag( $bag, slug, type );
+	});
 });
 
 
