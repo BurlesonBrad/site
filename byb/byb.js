@@ -54,9 +54,11 @@ function addToBag(bag, disc, t) {
 
 // find the right bag, otherwise use the first bag
 	var this_bag = the_bags[0];
+	var bagIndex = 0;
 	for ( i = 0; i < the_bags.length; i++ ) {
 		if (the_bags[i]["name"] === bag ) {
 			this_bag = the_bags[i];
+			bagIndex = i;
 		}
 	}
 
