@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 
 	 $type = wp_get_post_terms( $post->ID, 'disc-type' );
-	 $type = $type.slug;
+	 $type = $type->slug;
 ?>
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>

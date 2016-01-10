@@ -29,7 +29,7 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 $woocommerce_loop['loop'] ++;
 
 $type = wp_get_post_terms( $post->ID, 'disc-type' );
-$type = $type.slug;
+$type = $type->slug;
 
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" <?php wc_product_cat_class(); ?>>
