@@ -160,7 +160,7 @@ if ( Cookies.get('byb') ) {
 		var $this = $(this);
 		var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
 		for (i = 0; i < the_bags.length; i++ ) {
-			for (index = 0, index < the_bags[i]["discs"].length; index++ ) {
+			for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
 				this_slug = the_bags[i]["discs"][index]["name"];
 				if ( disc_slug === this_slug ) {
 					$this.addClass("success");
