@@ -72,8 +72,8 @@ function addToBag(bag, disc, t) {
 // DISC STRUCTURE:
 	var newDisc = {};
 
-	var disc_name = disc[0].replace(/\-/g, " ");
-	var disc_type = t[0].toLowerCase();
+	var disc_name = disc.replace(/\-/g, " ");
+	var disc_type = t.toLowerCase();
 
 	newDisc["slug"] = disc;
 	newDisc["name"] = disc_name;
@@ -133,11 +133,8 @@ if ( $("body").hasClass("single-product") ) {
 	}
 
 	$addToBagBtn.click(function() {
-		var slug = [];
-		var type = [];
-
-		type.push( $("main > div > .summary .product_meta .disc_type a").html() );
-		slug.push( $discSlug );
+		var type = $("main > div > .summary .product_meta .disc_type a").html();
+		var slug = $discSlug;
 
 		addToBag( $bagsMenu.val(), slug, type );
 	});
