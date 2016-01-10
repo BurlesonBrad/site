@@ -47,15 +47,16 @@ function addToBag(bag, discs, types) {
 	}
 
 	for ( i = 0; i < the_bags.length; i++ ) {
-		if ( the_bags[i]["name"] = bag ) {
-			var bagIndex = i;
+		if (the_bags[i]["name"] = bag ) {
+			var this_bag = the_bags[i];
+			return;
 		} else {
-			var bagIndex = 0;
+			var this_bag = the_bags[0];
 		}
 	}
 
 // DISC STRUCTURE:
-	console.log("length: " + discs.length + " | array: " + discs);
+	console.log("bag: " + this_bag + "length: " + discs.length + " | array: " + discs);
 	for ( i = 0; i < discs.length; i++ ) {
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
