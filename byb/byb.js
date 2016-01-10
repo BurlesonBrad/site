@@ -52,12 +52,9 @@ function addToBag(bag, disc, t) {
 		];
 	}
 
-	if ( disc.length === 0 ) {
-		disc = $("*[data-product-slug]").data("product-slug");
-	}
-
-	if ( t.length === 0 ) {
-		t = $("*[data-disc-type]").data("disc-type");
+	if ( disc.length === 0 || t.length === 0 ) {
+		alert("Sorry, but there was a problem adding this disc to your bag.");
+		return;
 	}
 
 // find the right bag, otherwise use the first bag
@@ -108,7 +105,7 @@ function addToBag(bag, disc, t) {
 	}
 }
 
-// INSERT THE ADD BUTTON
+// INSERT THE ADD BUTTON INTERFACE
 var $bagsMenu = $("<select class='bags-menu'></select>");
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
@@ -122,20 +119,16 @@ if ( Cookies.get('byb') ) {
 }
 var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
 
-// SET PARAMETERS
 if ( $("body").hasClass("single-product") ) {
-	var type = $("main > div > .summary .product_meta .disc_type a").html();
-	var slug = $discSlug;
-
 	if ( $(".add-to-bag").length < 1 ) {
 		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
 	} else {
 		$addToBagBtn = $(".add-to-bag");
-		$bagsMenu = $(".bags-menu");
 	}
 } else {
-	var type;
-	var slug;
+	$(".product[data-product-slug]").each(function() {
+		$(this).prepend( $addToBagBtn ).prepend( $bagsMenu );
+	});
 }
 
 /***					***/
@@ -143,11 +136,23 @@ if ( $("body").hasClass("single-product") ) {
 /***					***/
 
 $addToBagBtn.click(function() {
+	var type;
+	var slug;
+
+	if ( $("body").hasClass("single-product") ) {
+		slug = $discSlug;
+		type = $("main > div > .summary .product_meta .disc_type a").html();
+	} else {
+		slug = $(this).parents(".product[data-product-slug]").data("product-slug");
+		type = $(this).parents(".product[data-disc-type]").data("disc-type");
+	}
+	$bagsMenu = $(this).parents(".product").find(".bags-menu");
+	
 	addToBag( $bagsMenu.val(), slug, type );
 });
 
 $("form.woocommerce-checkout").submit(function() {
-	var $cartItem = $(this).parent("#payment").prev(".shop_table").find(".cart_item");
+	var $cartItem = $(this).parents("#payment").prev(".shop_table").find(".cart_item");
 	$bag = $bagsMenu.find("option").first().attr("value");
 	$cartItem.each(function() {
 		var $this = $(this);
