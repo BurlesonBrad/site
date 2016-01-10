@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-				$post_id = $cart_item['data']->post->ID );
+				$post_id = $cart_item['data']->post->ID;
 				$type = wp_get_post_terms( $post_id, 'disc-type' ); 
 				$type = $type[0]->slug;
 
