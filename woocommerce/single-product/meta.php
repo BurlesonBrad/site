@@ -18,7 +18,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 ?>
 
-<script type="text/javascript">var $discSlug = <?php echo $post->post_name; ?>;</script>
+<script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
 
 <div class="product_meta">
 
