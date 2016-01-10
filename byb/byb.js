@@ -40,7 +40,7 @@ function addToBag(bag, disc, t) {
 	} else {
 		var the_bags = [
 			{
-				"name": "",
+				"name": "My Bag",
 				"discs": [
 					{
 					"slug": "",
@@ -85,7 +85,6 @@ function addToBag(bag, disc, t) {
 	newDisc["name"] = disc_name;
 	newDisc["type"] = disc_type;
 
-	console.log( the_bags[bagIndex] );
 	the_bags[bagIndex].discs.push(newDisc);
 
 // SET THE COOKIE
