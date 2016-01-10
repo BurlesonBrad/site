@@ -34,49 +34,53 @@ function getBags(bc) {
 }
 
 // BAG STRUCTURE:
-function addToBag(bag, discs, types) {
+function addToBag(bag, disc, type) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
 		var the_bags = [
 			{
 				"name": "",
-				"discs": []
+				"discs": [
+					{
+					"slug": "",
+					"name": "",
+					"type": ""
+					}
+				]
 			}
-		]
+		];
 	}
 
+// find the right bag, otherwise use the first bag
+	var this_bag = the_bags[0];
 	for ( i = 0; i < the_bags.length; i++ ) {
-		if (the_bags[i]["name"] = bag ) {
-			var this_bag = the_bags[i];
-			return;
-		} else {
-			var this_bag = the_bags[0];
+		if (the_bags[i]["name"] === bag ) {
+			this_bag = the_bags[i];
+		}
+	}
+
+// find if this disc is already set; if so, return before newDisc object is created and the cookie is set
+	for ( i = 0; i < this_bag.discs.length; i++ ) {
+		if ( this_bag["discs"][i]["slug"] === disc ) {
+			return; // PREVENTING DUPLICATES Part 1
 		}
 	}
 
 // DISC STRUCTURE:
-	console.log("bag: " + this_bag + "length: " + discs.length + " | array: " + discs);
-	for ( i = 0; i < discs.length; i++ ) {
-		var slg = discs[i];
-		var n = slg.replace(/\-/g, " ");
-		var type = types[i].toLowerCase();
-		var newDisc = {};
+	var newDisc = {};
+	var disc_name = disc.replace(/\-/g, " ");
+	var type = types[i].toLowerCase();
 
-		if ( Cookies.get('byb') ) {
-			if ( the_bags[bagIndex].discs[i].slug === slg ) {
-				return;
-			}
-		}
+	newDisc["slug"] = disc;
+	newDisc["name"] = disc_name;
+	newDisc["type"] = type;
+	the_bags[bagIndex].disc.push(newDisc);
 
-		newDisc["slug"] = slg;
-		newDisc["name"] = n;
-		newDisc["type"] = type;
-		the_bags[bagIndex].discs.push(newDisc);
-	}
+	var newDiscJSON = JSON.stringify(newDisc);
 
-// PREVENTING DUPLICATES:
-	if ( JSON.stringify(newDisc).indexOf("slug") === -1 ) {
+// PREVENTING DUPLICATES Part 2:
+	if ( newDiscJSON.indexOf("slug") === -1 ) {
 		if ( $(".add-to-bag-failure").length === 0 ) {
 			var $fail = $("<div class='add-to-bag-failure'>Already added! <a href='/build-your-bag'>view your bag</a></div>");
 			$fail.appendTo("body").delay(2000).fadeOut(400, function() {
@@ -122,19 +126,21 @@ if ( $("body").hasClass("single-product") ) {
 	}
 
 	$addToBagBtn.click(function() {
-		var imgSrc = $(".woocommerce-main-image img").attr("src");
-		var dirIndex = imgSrc.indexOf("uploads");
-		var slugIndex = dirIndex + 8;
 		var slug = [];
 		var type = [];
 
 		type.push( $("main > div > .summary .product_meta .disc_type a").html() );
-		slug.push( imgSrc.substring( slugIndex ).replace(".png", "") );
+		slug.push( $discSlug );
 
 		addToBag( $bagsMenu.val(), slug, type );
 	});
 }
 
+// ADD FROM CATEGORY PAGE / CAROUSEL
+$(".products .product").click(function(e) ) {
+	var $target = $(e.target);
+
+});
 
 
 
