@@ -61,7 +61,7 @@ function addToBag(bag, discs, types) {
 		var type = types[i].toLowerCase();
 		var newDisc = {};
 
-		$("body").prepend(the_bags[bagIndex].discs[i].slug);
+		$("body").prepend(slg);
 
 		if ( Cookies.get('byb') ) {
 			if ( the_bags[bagIndex].discs[i].slug === slg ) {
