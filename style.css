@@ -383,3 +383,5 @@ body.home #content { padding-top: 0; }
 	height: auto !important;
 	display: inline;
 }
+
+.bags-menu { display: none; }
