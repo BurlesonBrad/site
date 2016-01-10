@@ -41,7 +41,7 @@ function addToBag(bag, disc, t) {
 		var the_bags = [
 			{
 				"name": "My Bag",
-				"discs": [];
+				"discs": []
 			}
 		];
 		// var the_bags = [
