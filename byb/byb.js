@@ -108,6 +108,7 @@ function addToBag(e, bag, disc, t) {
 	}
 }
 
+// INSERT THE ADD BUTTON
 var $bagsMenu = $("<select class='bags-menu'></select>");
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
@@ -121,6 +122,7 @@ if ( Cookies.get('byb') ) {
 }
 var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
 
+// SET PARAMETERS
 if ( $("body").hasClass("single-product") ) {
 	var type = $("main > div > .summary .product_meta .disc_type a").html();
 	var slug = $discSlug;
