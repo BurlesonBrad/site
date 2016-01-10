@@ -171,9 +171,9 @@ if ( $("body").hasClass("single-product") ) {
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
 	$(".add-to-bag").each(function() {
-		console.log("button");
 		var $this = $(this);
 		var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
+		console.log(disc_slug);
 		for (i = 0; i < the_bags.length; i++ ) {
 			for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
 				this_slug = the_bags[i]["discs"][index]["name"];
