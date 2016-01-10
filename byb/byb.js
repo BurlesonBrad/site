@@ -149,8 +149,6 @@ $addToBagBtn.click(function(e) {
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
-	console.log($bag + slug + type);
-
 	addToBag( e, $bag, slug, type );
 });
 
@@ -176,7 +174,6 @@ if ( Cookies.get('byb') ) {
 		for (i = 0; i < the_bags.length; i++ ) {
 			for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
 				this_slug = the_bags[i]["discs"][index]["slug"];
-				console.log(this_slug);
 				if ( disc_slug === this_slug ) {
 					$this.addClass("success");
 				}
