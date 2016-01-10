@@ -128,8 +128,8 @@ if ( $("body").hasClass("single-product") ) {
 } else {
 	$(".product[data-product-slug]").each(function() {
 		var $this = $(this);
-		$addToBagBtn.clone().prependTo($this);
-		$bagsMenu.clone().prependTo($this);
+		$addToBagBtn.clone(true).prependTo($this);
+		$bagsMenu.clone(true).prependTo($this);
 	});
 }
 
@@ -137,7 +137,7 @@ if ( $("body").hasClass("single-product") ) {
 /***	ADD TO BAG 		***/
 /***					***/
 
-console.log($addToBagBtn);
+console.log($addToBagBtn.length);
 
 $addToBagBtn.click(function() {
 	var type;
