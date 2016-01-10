@@ -162,6 +162,9 @@ $("form.woocommerce-checkout input[type='submit']").click(function() {
 		type = $this.data("disc-type");
 		addToBag( $bag, slug, type );
 	});
+
+	console.log("clicked " + $bag + $cartItem);
+
 });
 
 
