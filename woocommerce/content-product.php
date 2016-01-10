@@ -42,7 +42,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
 ?>
-<li data-product-slug="<?php echo $product->post_name; ?>"<?php post_class( $classes ); ?>>
+<script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
+
+<li data-product-slug="<?php echo $post->post_name; ?>"<?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 

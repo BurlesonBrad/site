@@ -28,7 +28,10 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 // Increase loop count
 $woocommerce_loop['loop'] ++;
 ?>
-<li data-product-slug="<?php echo $product->post_name; ?>" <?php wc_product_cat_class(); ?>>
+
+<script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
+
+<li data-product-slug="<?php echo $post->post_name; ?>" <?php wc_product_cat_class(); ?>>
 	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
 
 	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
