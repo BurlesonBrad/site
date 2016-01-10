@@ -153,6 +153,8 @@ $addToBagBtn.click(function() {
 	addToBag( $bagsMenu.val(), slug, type );
 });
 
+console.log( $("#place_order").length );
+
 $("#place_order").click(function() {
 	var $cartItem = $(this).parents("#payment").prev(".shop_table").find(".cart_item");
 	$bag = $bagsMenu.find("option").first().attr("value");
