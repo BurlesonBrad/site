@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 	echo '<ul class="test">';
 	foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-		echo $cart_item->data->post_name;
+		echo '<li>' . $cart_item->data->post_name . '</li>';
 	}
 	echo '</ul>';
 ?>
