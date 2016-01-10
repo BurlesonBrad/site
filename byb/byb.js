@@ -156,7 +156,7 @@ $addToBagBtn.click(function(e) {
 
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
-	$addToBagBtn.each(function() {
+	$(".add-to-bag").each(function() {
 		console.log("button");
 		var $this = $(this);
 		var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
