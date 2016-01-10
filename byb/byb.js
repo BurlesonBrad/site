@@ -76,12 +76,12 @@ function addToBag(e, bag, disc, t) {
 // find if this disc is already set; if so, return before newDisc object is created and the cookie is set
 	for ( i = 0; i < this_bag.discs.length; i++ ) {
 		if ( this_bag["discs"][i]["slug"] === disc ) {
-			if ( $(".add-to-bag-failure").length === 0 ) {
-				var $fail = $("<div class='add-to-bag-failure'>Already added! <a href='/build-your-bag'>view your bag</a></div>");
-				$fail.appendTo("body").delay(2000).fadeOut(400, function() {
-					$(this).remove();
-				});
-			}
+			// if ( $(".add-to-bag-failure").length === 0 ) {
+			// 	var $fail = $("<div class='add-to-bag-failure'>Already added! <a href='/build-your-bag'>view your bag</a></div>");
+			// 	$fail.appendTo("body").delay(2000).fadeOut(400, function() {
+			// 		$(this).remove();
+			// 	});
+			// }
 			return; // PREVENTING DUPLICATES Part 1
 		}
 	}
