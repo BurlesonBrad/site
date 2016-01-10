@@ -154,6 +154,22 @@ $addToBagBtn.click(function(e) {
 	addToBag( e, $bag, slug, type );
 });
 
+if ( Cookies.get('byb') ) {
+	var the_bags = Cookies.getJSON('byb');
+	$addToBagBtn.each(function() {
+		var $this = $(this);
+		var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
+		for (i = 0; i < the_bags.length; i++ ) {
+			for (index = 0, index < the_bags[i]["discs"].length; index++ ) {
+				this_slug = the_bags[i]["discs"][index]["name"];
+				if ( disc_slug === this_slug ) {
+					$this.addClass("success");
+				}
+			}
+		}
+	});
+}
+
 if ( $("body").hasClass("single-product") ) {
 	if ( $(".add-to-bag").length < 1 ) {
 		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
