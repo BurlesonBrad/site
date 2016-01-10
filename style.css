@@ -396,6 +396,13 @@ body.home #content { padding-top: 0; }
 	left: 0;
 	z-index: 999;
 	width: 100%;
-	padding: 3em 0;
+	padding: 2em 0;
 	line-height: 1;
+	text-align: center;
+	background: #00ffb0;
 }
+
+.add-to-bag-failure a, .add-to-bag-success a {
+	color: #eee;
+}
+
