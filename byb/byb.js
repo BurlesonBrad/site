@@ -151,7 +151,7 @@ $addToBagBtn.click(function(e) {
 
 	console.log($bag + slug + type);
 
-	addToBag( $bag, slug, type );
+	addToBag( e, $bag, slug, type );
 });
 
 if ( $("body").hasClass("single-product") ) {
