@@ -111,7 +111,7 @@ function addToBag(e, bag, disc, t) {
 	}
 
 	if ( $(e.target).hasClass("add-to-bag") ) {
-		$addToBagBtn.addClass("success");
+		$(e.target).addClass("success");
 	}
 }
 
