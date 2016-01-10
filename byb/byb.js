@@ -58,7 +58,6 @@ function addToBag(bag, discs, types) {
 // DISC STRUCTURE:
 	console.log("bag: " + this_bag + "length: " + discs.length + " | array: " + discs);
 	for ( i = 0; i < discs.length; i++ ) {
-		
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
 		var type = types[i].toLowerCase();
@@ -76,6 +75,7 @@ function addToBag(bag, discs, types) {
 		the_bags[bagIndex].discs.push(newDisc);
 	}
 
+// PREVENTING DUPLICATES:
 	if ( JSON.stringify(newDisc).indexOf("slug") === -1 ) {
 		if ( $(".add-to-bag-failure").length === 0 ) {
 			var $fail = $("<div class='add-to-bag-failure'>Already added! <a href='/build-your-bag'>view your bag</a></div>");
@@ -86,9 +86,11 @@ function addToBag(bag, discs, types) {
 		return;
 	}
 
+// SET THE COOKIE
 	var bags_json = JSON.stringify(the_bags);
 	Cookies.set('byb', bags_json, { expires: 1000 });
 
+// ON SUCCESS:
 	if ( $(".add-to-bag-success").length === 0 ) {
 		var $success = $("<div class='add-to-bag-success'>Added to bag! <a href='/build-your-bag'>view your bag</a></div>");
 		$success.appendTo("body").delay(5000).fadeOut(400, function() {
@@ -96,11 +98,6 @@ function addToBag(bag, discs, types) {
 		});
 	}
 }
-
-// if ( $("body").hasClass("page-id-45") ) {
-// 	var $bag_container = $("#bags");
-// 	getBags( $bag_container );
-// }
 
 if ( $("body").hasClass("single-product") ) {
 	if ( $(".add-to-bag").length < 1 ) {
