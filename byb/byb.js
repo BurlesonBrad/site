@@ -55,14 +55,12 @@ function addToBag(bag, discs, types) {
 	}
 
 // DISC STRUCTURE:
-	$("body").prepend(discs.length);
+	console.log("length: " + discs.length + " | array: " + discs);
 	for ( i = 0; i < discs.length; i++ ) {
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
 		var type = types[i].toLowerCase();
 		var newDisc = {};
-
-		$("body").prepend(slg);
 
 		if ( Cookies.get('byb') ) {
 			if ( the_bags[bagIndex].discs[i].slug === slg ) {
