@@ -78,7 +78,11 @@ function addToBag(bag, disc, t) {
 	newDisc["slug"] = disc;
 	newDisc["name"] = disc_name;
 	newDisc["type"] = disc_type;
+
+	console.log( the_bags[bagIndex] );
 	the_bags[bagIndex].disc.push(newDisc);
+
+
 
 	var newDiscJSON = JSON.stringify(newDisc);
 
