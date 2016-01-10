@@ -34,7 +34,7 @@ function getBags(bc) {
 }
 
 // BAG STRUCTURE:
-function addToBag(bag, disc, t) {
+function addToBag(e, bag, disc, t) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
@@ -50,6 +50,10 @@ function addToBag(bag, disc, t) {
 				]
 			}
 		];
+	}
+
+	if ( disc.length === 0 ) {
+		disc = $(e.target).parent("*[data-product-slug]").data("product-slug");
 	}
 
 // find the right bag, otherwise use the first bag
@@ -100,40 +104,36 @@ function addToBag(bag, disc, t) {
 	}
 }
 
+var $bagsMenu = $("<select class='bags-menu'></select>");
+if ( Cookies.get('byb') ) {
+	var the_bags = Cookies.getJSON('byb');
+	for (i = 0; i < the_bags.length; i++ ) {
+		var bagSlug = the_bags[i]["name"];
+		var bagName = bagSlug.replace(/\-/g, " ");
+		$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
+	}
+} else {
+	$bagsMenu.append("<option value='My Bag'>My Bag</option>");
+}
+var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
+
 if ( $("body").hasClass("single-product") ) {
+	var type = $("main > div > .summary .product_meta .disc_type a").html();
+	var slug = $discSlug;
+
 	if ( $(".add-to-bag").length < 1 ) {
-		var $bagsMenu = $("<select class='bags-menu'></select>");
-
-		if ( Cookies.get('byb') ) {
-			var the_bags = Cookies.getJSON('byb');
-			for (i = 0; i < the_bags.length; i++ ) {
-				var bagSlug = the_bags[i]["name"];
-				var bagName = bagSlug.replace(/\-/g, " ");
-				$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
-			}
-		} else {
-			$bagsMenu.append("<option value='My Bag'>My Bag</option>");
-		}
-
-		var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
 		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
 	} else {
-		var $addToBagBtn = $(".add-to-bag");
-		var $bagsMenu = $(".bags-menu");
+		$addToBagBtn = $(".add-to-bag");
+		$bagsMenu = $(".bags-menu");
 	}
-
-	$addToBagBtn.click(function() {
-		var type = $("main > div > .summary .product_meta .disc_type a").html();
-		var slug = $discSlug;
-
-		addToBag( $bagsMenu.val(), slug, type );
-	});
+} else {
+	var type;
+	var slug;
 }
 
-// ADD FROM CATEGORY PAGE / CAROUSEL
-$(".products .product").click(function(e) {
-	var $target = $(e.target);
-
+$addToBagBtn.click(function(event) {
+	addToBag( event, $bagsMenu.val(), slug, type );
 });
 
 
