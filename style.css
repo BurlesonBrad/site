@@ -399,7 +399,8 @@ body.home #content { padding-top: 0; }
 	padding: 2em 0;
 	line-height: 1;
 	text-align: center;
-	background: #00ffb0;
+	background: #00fa90;
+	color: #fff;
 }
 
 .add-to-bag-failure a, .add-to-bag-success a {
