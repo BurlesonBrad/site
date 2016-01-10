@@ -137,6 +137,8 @@ if ( $("body").hasClass("single-product") ) {
 /***	ADD TO BAG 		***/
 /***					***/
 
+console.log($addToBagBtn);
+
 $addToBagBtn.click(function() {
 	var type;
 	var slug;
