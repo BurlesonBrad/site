@@ -7,31 +7,31 @@ $("#clear_bags").click(function() {
 	Cookies.remove('byb');
 });
 
-function getBags(bc) {
-	if ( Cookies.get('byb') ) {
-		var the_bags = Cookies.getJSON('byb');
-		for (index = 0; index < the_bags.length; index++) {
-			var bag_slug = the_bags[index]['name'].replace(/ /g, "-").toLowerCase();
-			var discs = the_bags[index].discs;
-			var $bag = $("<div class='bag bag-" + bag_slug + "'><h2>" + the_bags[index]['name'] + "</h2><div class='drivers'><h3>Drivers</h3><div class='disc-area'></div></div><div class='midranges'><h3>Mid-ranges</h3><div class='disc-area'></div></div><div class='putters'><h3>Putters</h3><div class='disc-area'></div></div></div>");
-			bc.append($bag);
-			for (i = 0; i < discs.length; i++) {
-				var $the_disc = $("<div class='disc'><a href='/product/" + discs[i]['slug'] + "'><img src='/wp-content/uploads/" + discs[i]['slug'] + ".png' alt='" + discs[i]['name'] + "' /></a></div>");
-				if ( discs[i]["type"] === "distance-driver" || discs[i]["type"] === "fairway-driver" ) {
-		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
-		    	}
-		    	if ( discs[i]["type"] === "midrange" ) {
-		    		$bag.find(".midranges .disc-area").prepend( $the_disc );
-		    	}
-		    	if ( discs[i]["type"] === "putter" ) {
-		    		$bag.find(".putters .disc-area").prepend( $the_disc );
-		    	}
-			}
-		}
-	} else {
-		bc.append("<div class='add-first-bag'><img src='/wp-content/themes/storefront-child/images/add-first-bag.png' alt='add your first disc' /></div>");
-	}
-}
+// function getBags(bc) {
+// 	if ( Cookies.get('byb') ) {
+// 		var the_bags = Cookies.getJSON('byb');
+// 		for (index = 0; index < the_bags.length; index++) {
+// 			var bag_slug = the_bags[index]['name'].replace(/ /g, "-").toLowerCase();
+// 			var discs = the_bags[index].discs;
+// 			var $bag = $("<div class='bag bag-" + bag_slug + "'><h2>" + the_bags[index]['name'] + "</h2><div class='drivers'><h3>Drivers</h3><div class='disc-area'></div></div><div class='midranges'><h3>Mid-ranges</h3><div class='disc-area'></div></div><div class='putters'><h3>Putters</h3><div class='disc-area'></div></div></div>");
+// 			bc.append($bag);
+// 			for (i = 0; i < discs.length; i++) {
+// 				var $the_disc = $("<div class='disc'><a href='/product/" + discs[i]['slug'] + "'><img src='/wp-content/uploads/" + discs[i]['slug'] + ".png' alt='" + discs[i]['name'] + "' /></a></div>");
+// 				if ( discs[i]["type"] === "distance-driver" || discs[i]["type"] === "fairway-driver" ) {
+// 		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
+// 		    	}
+// 		    	if ( discs[i]["type"] === "midrange" ) {
+// 		    		$bag.find(".midranges .disc-area").prepend( $the_disc );
+// 		    	}
+// 		    	if ( discs[i]["type"] === "putter" ) {
+// 		    		$bag.find(".putters .disc-area").prepend( $the_disc );
+// 		    	}
+// 			}
+// 		}
+// 	} else {
+// 		bc.append("<div class='add-first-bag'><img src='/wp-content/themes/storefront-child/images/add-first-bag.png' alt='add your first disc' /></div>");
+// 	}
+// }
 
 // BAG STRUCTURE:
 function addToBag(bag, disc, t) {
