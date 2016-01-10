@@ -153,7 +153,7 @@ $addToBagBtn.click(function() {
 	addToBag( $bagsMenu.val(), slug, type );
 });
 
-$("form.woocommerce-checkout input[type='submit']").click(function() {
+$("#place_order").click(function() {
 	var $cartItem = $(this).parents("#payment").prev(".shop_table").find(".cart_item");
 	$bag = $bagsMenu.find("option").first().attr("value");
 	$cartItem.each(function() {
