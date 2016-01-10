@@ -56,6 +56,10 @@ function addToBag(e, bag, disc, t) {
 		disc = $(e.target).parent("*[data-product-slug]").data("product-slug");
 	}
 
+	if ( t.length === 0 ) {
+		t = $(e.target).parent("*[data-disc-type]").data("disc-type");
+	}
+
 // find the right bag, otherwise use the first bag
 	var this_bag = the_bags[0];
 	var bagIndex = 0;
@@ -83,7 +87,7 @@ function addToBag(e, bag, disc, t) {
 	var newDisc = {};
 
 	var disc_name = disc.replace(/\-/g, " ");
-	var disc_type = t.toLowerCase();
+	var disc_type = t.toLowerCase().replace(/ /g, "-");
 
 	newDisc["slug"] = disc;
 	newDisc["name"] = disc_name;
@@ -131,6 +135,10 @@ if ( $("body").hasClass("single-product") ) {
 	var type;
 	var slug;
 }
+
+/***					***/
+/***	ADD TO BAG 		***/
+/***					***/
 
 $addToBagBtn.click(function(event) {
 	addToBag( event, $bagsMenu.val(), slug, type );
