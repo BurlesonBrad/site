@@ -149,10 +149,11 @@ $addToBagBtn.click(function() {
 		type = $(this).parents(".product[data-disc-type]").data("disc-type");
 	}
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
+	$bag = $bagsMenu.val();
 
 	console.log($bag + slug + type);
 
-	addToBag( $bagsMenu.val(), slug, type );
+	addToBag( $bag, slug, type );
 });
 
 $("form.checkout").submit(function() {
