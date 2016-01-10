@@ -139,7 +139,7 @@ if ( $("body").hasClass("single-product") ) {
 
 console.log($addToBagBtn.length);
 
-$addToBagBtn.click(function() {
+$(".add-to-bag").click(function() {
 	var type;
 	var slug;
 
