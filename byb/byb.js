@@ -17,7 +17,7 @@ function getBags(bc) {
 			bc.append($bag);
 			for (i = 0; i < discs.length; i++) {
 				var $the_disc = $("<div class='disc'><a href='/product/" + discs[i]['slug'] + "'><img src='/wp-content/uploads/" + discs[i]['slug'] + ".png' alt='" + discs[i]['name'] + "' /></a></div>");
-				if ( discs[i]["type"] === "distance driver" || discs[i]["type"] === "fairway driver" ) {
+				if ( discs[i]["type"] === "distance-driver" || discs[i]["type"] === "fairway-driver" ) {
 		    		$bag.find(".drivers .disc-area").prepend( $the_disc );
 		    	}
 		    	if ( discs[i]["type"] === "midrange" ) {
