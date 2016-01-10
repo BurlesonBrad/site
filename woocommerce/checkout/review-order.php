@@ -25,6 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				var_dump( $cart_item['data'] );
+				$type = wp_get_post_terms( $post->ID, 'disc-type' ); 
+				$type = $type[0]->slug;
 			}
 
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
