@@ -34,7 +34,7 @@ $("#clear_bags").click(function() {
 // }
 
 // BAG STRUCTURE:
-function addToBag(bag, disc, t) {
+function addToBag(e, bag, disc, t) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
@@ -109,6 +109,10 @@ function addToBag(bag, disc, t) {
 			$(this).remove();
 		});
 	}
+
+	if ( $(e.target).hasClass("add-to-bag") ) {
+		$addToBagBtn.addClass("success");
+	}
 }
 
 // INSERT THE ADD BUTTON INTERFACE
@@ -123,7 +127,7 @@ if ( Cookies.get('byb') ) {
 } else {
 	$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 }
-var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
+var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src='add-to-bag-icon.png' alt='Add' /><img class='added' src='add-to-bag-success.png' alt='Add' />Add to bag</button>");
 
 /***					***/
 /***	ADD TO BAG 		***/
@@ -131,7 +135,7 @@ var $addToBagBtn = $("<button class='add-to-bag'>Add to bag</button>");
 
 console.log($addToBagBtn.length);
 
-$addToBagBtn.click(function() {
+$addToBagBtn.click(function(e) {
 	var type;
 	var slug;
 
@@ -164,14 +168,14 @@ if ( $("body").hasClass("single-product") ) {
 	});
 }
 
-$("form.checkout").submit(function() {
+$("form.checkout").submit(function(e) {
 	var $cartItem = $(this).find("#payment").prev(".shop_table").find(".cart_item");
 	$bag = $bagsMenu.find("option").first().attr("value");
 	$cartItem.each(function() {
 		var $this = $(this);
 		slug = $this.data("product-slug");
 		type = $this.data("disc-type");
-		addToBag( $bag, slug, type );
+		addToBag(e, $bag, slug, type );
 	});
 
 });
