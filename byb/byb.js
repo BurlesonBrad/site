@@ -133,7 +133,7 @@ var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src=
 /***	ADD TO BAG 		***/
 /***					***/
 
-console.log($addToBagBtn.length);
+console.log($(".add-to-bag").length);
 
 $addToBagBtn.click(function(e) {
 	var type;
