@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 	return;
 	 }
 
-	 $type = wp_get_post_terms( $post->ID, 'disc-type' ); ?>
+	 $type = wp_get_post_terms( $post->ID, 'disc-type' );
 ?>
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
