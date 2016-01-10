@@ -39,6 +39,10 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 	background-color: #ff3c7c;
 }
 
+a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.wc-forward:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+	outline: none;
+}
+
 /* LAYOUT */
 /* header */
 .site-header {
