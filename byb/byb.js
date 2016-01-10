@@ -38,18 +38,19 @@ function addToBag(bag, disc, t) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
-		var the_bags = [
-			{
-				"name": "My Bag",
-				"discs": [
-					{
-					"slug": "",
-					"name": "",
-					"type": ""
-					}
-				]
-			}
-		];
+		var the_bags = [];
+		// var the_bags = [
+		// 	{
+		// 		"name": "My Bag",
+		// 		"discs": [
+		// 			{
+		// 			"slug": "",
+		// 			"name": "",
+		// 			"type": ""
+		// 			}
+		// 		]
+		// 	}
+		// ];
 	}
 
 	if ( disc.length === 0 || t.length === 0 ) {
