@@ -55,6 +55,7 @@ function addToBag(bag, discs, types) {
 	}
 
 // DISC STRUCTURE:
+	$("body").prepend(discs.length);
 	for ( i = 0; i < discs.length; i++ ) {
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
