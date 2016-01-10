@@ -133,7 +133,7 @@ var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src=
 /***	ADD TO BAG 		***/
 /***					***/
 
-console.log($(".add-to-bag").length);
+console.log($addToBagBtn.length);
 
 $addToBagBtn.click(function(e) {
 	var type;
@@ -154,6 +154,20 @@ $addToBagBtn.click(function(e) {
 	addToBag( e, $bag, slug, type );
 });
 
+if ( $("body").hasClass("single-product") ) {
+	if ( $(".add-to-bag").length < 1 ) {
+		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
+	} else {
+		$addToBagBtn = $(".add-to-bag");
+	}
+} else {
+	$(".product[data-product-slug]").each(function() {
+		var $this = $(this);
+		$addToBagBtn.clone(true).prependTo($this);
+		$bagsMenu.clone(true).prependTo($this);
+	});
+}
+
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
 	$(".add-to-bag").each(function() {
@@ -168,20 +182,6 @@ if ( Cookies.get('byb') ) {
 				}
 			}
 		}
-	});
-}
-
-if ( $("body").hasClass("single-product") ) {
-	if ( $(".add-to-bag").length < 1 ) {
-		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
-	} else {
-		$addToBagBtn = $(".add-to-bag");
-	}
-} else {
-	$(".product[data-product-slug]").each(function() {
-		var $this = $(this);
-		$addToBagBtn.clone(true).prependTo($this);
-		$bagsMenu.clone(true).prependTo($this);
 	});
 }
 
