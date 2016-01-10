@@ -38,7 +38,12 @@ function addToBag(bag, disc, t) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
-		var the_bags = [];
+		var the_bags = [
+			{
+				"name": "My Bag",
+				"discs": [];
+			}
+		];
 		// var the_bags = [
 		// 	{
 		// 		"name": "My Bag",
