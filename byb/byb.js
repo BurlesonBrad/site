@@ -150,10 +150,10 @@ $addToBagBtn.click(function() {
 	}
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 
+	console.log($bag + slug + type);
+
 	addToBag( $bagsMenu.val(), slug, type );
 });
-
-console.log( $("#place_order").length );
 
 $("form.checkout").submit(function() {
 	var $cartItem = $(this).find("#payment").prev(".shop_table").find(".cart_item");
@@ -164,8 +164,6 @@ $("form.checkout").submit(function() {
 		type = $this.data("disc-type");
 		addToBag( $bag, slug, type );
 	});
-
-	console.log("clicked " + $bag + slug + type);
 
 });
 
