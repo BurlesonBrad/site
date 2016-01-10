@@ -389,3 +389,12 @@ body.home #content { padding-top: 0; }
 }
 
 .bags-menu { display: none; }
+
+.add-to-bag-failure, .add-to-bag-success {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
