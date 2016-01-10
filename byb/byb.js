@@ -34,7 +34,7 @@ function getBags(bc) {
 }
 
 // BAG STRUCTURE:
-function addToBag(bag, disc, type) {
+function addToBag(bag, disc, t) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
@@ -71,11 +71,11 @@ function addToBag(bag, disc, type) {
 	var newDisc = {};
 
 	var disc_name = disc[0].replace(/\-/g, " ");
-	var type = types[i].toLowerCase();
+	var disc_type = t[i].toLowerCase();
 
 	newDisc["slug"] = disc;
 	newDisc["name"] = disc_name;
-	newDisc["type"] = type;
+	newDisc["type"] = disc_type;
 	the_bags[bagIndex].disc.push(newDisc);
 
 	var newDiscJSON = JSON.stringify(newDisc);
