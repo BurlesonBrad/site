@@ -127,7 +127,9 @@ if ( $("body").hasClass("single-product") ) {
 	}
 } else {
 	$(".product[data-product-slug]").each(function() {
-		$(this).prepend( $addToBagBtn ).prepend( $bagsMenu );
+		var $this = $(this);
+		$addToBagBtn.clone().prependTo($this);
+		$bagsMenu.clone().prependTo($this);
 	});
 }
 
@@ -147,7 +149,7 @@ $addToBagBtn.click(function() {
 		type = $(this).parents(".product[data-disc-type]").data("disc-type");
 	}
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
-	
+
 	addToBag( $bagsMenu.val(), slug, type );
 });
 
