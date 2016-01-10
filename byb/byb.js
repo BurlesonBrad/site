@@ -173,10 +173,10 @@ if ( Cookies.get('byb') ) {
 	$(".add-to-bag").each(function() {
 		var $this = $(this);
 		var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
-		console.log(disc_slug);
 		for (i = 0; i < the_bags.length; i++ ) {
 			for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
 				this_slug = the_bags[i]["discs"][index]["name"];
+				console.log(this_slug);
 				if ( disc_slug === this_slug ) {
 					$this.addClass("success");
 				}
