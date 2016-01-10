@@ -137,7 +137,7 @@ if ( $("body").hasClass("single-product") ) {
 }
 
 // ADD FROM CATEGORY PAGE / CAROUSEL
-$(".products .product").click(function(e) ) {
+$(".products .product").click(function(e) {
 	var $target = $(e.target);
 
 });
