@@ -69,6 +69,7 @@ function addToBag(bag, disc, type) {
 
 // DISC STRUCTURE:
 	var newDisc = {};
+	console.log(disc);
 	var disc_slug = disc;
 	var disc_name = disc_slug.replace(/\-/g, " ");
 	var type = types[i].toLowerCase();
