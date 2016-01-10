@@ -58,6 +58,7 @@ function addToBag(bag, discs, types) {
 // DISC STRUCTURE:
 	console.log("bag: " + this_bag + "length: " + discs.length + " | array: " + discs);
 	for ( i = 0; i < discs.length; i++ ) {
+		
 		var slg = discs[i];
 		var n = slg.replace(/\-/g, " ");
 		var type = types[i].toLowerCase();
