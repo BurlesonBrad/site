@@ -294,7 +294,7 @@ body.home #content { padding-top: 0; }
 
 .featured-disc-area > div.featured-disc-image {
 	width: 32%;
-	background: #fcfcfc url('images/greatest-disc-halo.png') no-repeat center top;
+	background: #fcfcfc url('images/featured-disc-halo.png') no-repeat center top;
 	background-size: 100% auto;
 }
 
