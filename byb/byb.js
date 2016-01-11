@@ -233,7 +233,6 @@ $("form.edit-bag-name").submit(function(e) {
 
 	$bagTitle.html( newName ).show();
 	$this.hide();
-//	$bagNameInput.blur();
 
 	editBagName( newName, bagName );
 });
