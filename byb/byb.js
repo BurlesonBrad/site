@@ -220,7 +220,8 @@ if ( Cookies.get('byb') ) {
 
 // EDIT BAG
 $("form.edit-bag-name").submit(function(e) {
-	e.preventDefault().stopPropagation();
+	e.preventDefault();
+	e.stopPropagation();
 
 	var $bagNameInput = $(this).find("input[type='text']");
 	var newName = $bagNameInput.val();
