@@ -229,14 +229,13 @@ $("form.edit-bag-name").submit(function(e) {
 	var $bagNameInput = $this.find("input[type='text']");
 	var $bagTitle = $this.siblings("h2");
 	var bagName = $bagTitle.text();
-	var newName = "New Name";
-//	var newName = $bagNameInput.val();
+	var newName = $bagNameInput.val();
 
 	$bagTitle.html( newName ).show();
 	$this.hide();
-	$bagNameInput.blur();
+//	$bagNameInput.blur();
 
-//	editBagName( newName, bagName );
+	editBagName( newName, bagName );
 });
 
 $(".bag-edit-btn").click(function() {
