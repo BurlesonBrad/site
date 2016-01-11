@@ -393,6 +393,8 @@ body.home #content { padding-top: 0; }
 	width: 100%;
 	padding: 0;
 	margin: 0 0 0.618em;
+	background: transparent !important;
+	box-shadow: none !important;
 
 	font-family: 'Viga';
 	color: #ccc;
