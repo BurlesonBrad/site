@@ -173,8 +173,6 @@ $addToBagBtn.click(function(e) {
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
-	$(this).addClass("success");
-
 	addToBag( e, $bag, slug, type );
 });
 
@@ -187,7 +185,6 @@ $("form.checkout").submit(function(e) {
 		type = $this.data("disc-type");
 		addToBag(e, $bag, slug, type );
 	});
-
 });
 
 // Insert ADD-TO-BAG buttons
