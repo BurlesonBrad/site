@@ -52,6 +52,8 @@ function editBagName( bag, name ) {
 	}
 
 	this_bag["name"] = name;
+	var bags_json = JSON.stringify(the_bags);
+	Cookies.set('byb', bags_json, { expires: 1000 });
 }
 
 // BAG STRUCTURE:
