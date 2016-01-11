@@ -47,7 +47,7 @@ get_header(); ?>
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
 
-								echo '<div class="bag bag-' . $bag_slug . '"><form action="' . echo $_SERVER['PHP_SELF']; . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text"><input type="submit" style="display:none;"><h2>' . $bag["name"] . '</h2>';
+								echo '<div class="bag bag-' . $bag_slug . '"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text"><input type="submit" style="display:none;"><h2>' . $bag["name"] . '</h2>';
 								
 								// Drivers
 								echo '<div class="distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
