@@ -249,11 +249,13 @@ $(".bag-edit-btn").click(function() {
 		var $bagName = $bagNameForm.siblings("h2");
 		var $bagNameInput = $bagNameForm.find("input[type='text']");
 
+		$this.hide();
 		$bagName.hide();
 		$bagNameForm.show();
 		$bagNameInput.focus();
 
 		$bagNameInput.blur(function() {
+			$this.show();
 			$bagNameForm.submit();
 		});
 	}
