@@ -419,7 +419,7 @@ body.home #content { padding-top: 0; }
 	font-family: 'Rock Salt';
 	text-transform: lowercase;
     font-size: 5em;
-    color: #ccc;
+    color: #d4d4d4;
     line-height: 1.1;
     padding: 0.64em 0 0.47em;
     margin: 0;
@@ -493,6 +493,7 @@ form.edit-bag-name {
 
 .bag-edit-btn span {
 	display: none;
+	text-shadow: -1px 1px 3px #fcfcfc;
 }
 
 .bag-edit-btn:hover span {
