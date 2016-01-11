@@ -63,7 +63,7 @@ get_header(); ?>
 							    	}
 							    endforeach;
 							    echo '</div></div>';
-							    if ( $dd_count = 0 ) {
+							    if ( $dd_count === 0 ) {
 							    	echo '<style>.distance-drivers{display:none;}</style>';
 							    }
 
@@ -76,7 +76,7 @@ get_header(); ?>
 							    	}
 							    endforeach;
 							    echo '</div></div>';
-							    if ( $fd_count = 0 ) {
+							    if ( $fd_count === 0 ) {
 							    	echo '<style>.fairway-drivers{display:none;}</style>';
 							    }
 
@@ -89,7 +89,7 @@ get_header(); ?>
 							    	}
 							    endforeach;
 							    echo '</div></div>';
-							    if ( $mr_count = 0 ) {
+							    if ( $mr_count === 0 ) {
 							    	echo '<style>.midranges{display:none;}</style>';
 							    }
 
@@ -102,8 +102,7 @@ get_header(); ?>
 							    	}
 							    endforeach;							    
 							    echo '</div></div>';
-							    echo $p_count;
-							    if ( $p_count = 0 ) {
+							    if ( $p_count === 0 ) {
 							    	echo '<style>.putters{display:none;}</style>';
 							    }
 
