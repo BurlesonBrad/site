@@ -417,7 +417,6 @@ body.home #content { padding-top: 0; }
 
 .bag-title h2 {
 	font-family: 'Rock Salt';
-	text-align: center;
 	text-transform: lowercase;
     font-size: 5em;
     color: #ddd;
@@ -473,7 +472,7 @@ form.edit-bag-name {
 	cursor: pointer;
 	position: absolute;
 		top: 0;
-		left: 0;
+		right: 0;
 		z-index: 10;
 
 	font-size: 0.7em;
@@ -501,7 +500,7 @@ form.edit-bag-name {
 }
 
 .bag-edit-btn > * {
-	float: left;
+	float: right;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -509,11 +508,11 @@ form.edit-bag-name {
 .edit-icon {
 	width: 20px;
 	height: 20px;
-	margin-right: 6px;
+	margin-left: 6px;
 }
 
 .bag {
-	text-align: center;
+	text-align: left;
 }
 
 .bag .disc {
