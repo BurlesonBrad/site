@@ -419,10 +419,11 @@ body.home #content { padding-top: 0; }
 	font-family: 'Rock Salt';
 	text-transform: lowercase;
     font-size: 5em;
-    color: #ddd;
+    color: #ff3c7c;
     line-height: 1.1;
     padding: 0.64em 0 0.47em;
     margin: 0;
+    opacity: 0.9;
 }
 
 .bag h3 {
@@ -450,7 +451,7 @@ form.edit-bag-name {
 	box-shadow: none !important;
 
 	font-family: 'Rock Salt';
-	color: #ccc;
+	color: #ff3c7c;
 	letter-spacing: 0;
 	font-size: 5em;
 	line-height: 1.1;
