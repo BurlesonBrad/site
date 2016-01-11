@@ -382,6 +382,12 @@ body.home #content { padding-top: 0; }
 	width: 100% !important;
 }
 
+.bag h2 {
+	text-align: center;
+    font-size: 5em;
+    color: #ddd;
+}
+
 .bag .disc {
 	display: inline-block;
 }
