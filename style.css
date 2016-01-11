@@ -494,11 +494,11 @@ body.home #content { padding-top: 0; }
 	position: relative;
 	margin-left: -60px;
 
-	-webkit-transform: margin 400ms;
-	-moz-transform: margin 400ms;
-	-ms-transform: margin 400ms;
-	-o-transform: margin 400ms;
-	transform: margin 400ms;
+	-webkit-transition: margin 400ms;
+	-moz-transition: margin 400ms;
+	-ms-transition: margin 400ms;
+	-o-transition: margin 400ms;
+	transition: margin 400ms;
 }
 
 .bag .disc:first-child {
