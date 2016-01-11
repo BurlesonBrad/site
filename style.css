@@ -427,7 +427,7 @@ body.home #content { padding-top: 0; }
 .bag-edit-btn {
 	cursor: pointer;
 	position: absolute;
-	top: 3em;
+	top: 0;
 	left: 0;
 	z-index: 10;
 
@@ -437,6 +437,10 @@ body.home #content { padding-top: 0; }
 	font-weight: bold;
 	line-height: 23px;
 	opacity: 0.4;
+}
+
+.edit-bag-name {
+	top: 3em;
 }
 
 .bag-edit-btn:hover {
