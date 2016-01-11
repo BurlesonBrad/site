@@ -446,6 +446,7 @@ body.home #content { padding-top: 0; }
 .edit-icon {
 	width: 23px;
 	height: 23px;
+	margin-right: 6px;
 }
 
 .bag .disc {
