@@ -62,10 +62,10 @@ get_header(); ?>
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    echo '</div></div>';
 							    if ( $dd_count = 0 ) {
 							    	echo '<style>.distance-drivers{display:none;}</style>';
 							    }
-							    echo '</div></div>';
 
 							    // Fairway
 								echo '<div class="fairway-drivers"><h3>Fairway Drivers</h3><div class="disc-area">';
@@ -75,10 +75,10 @@ get_header(); ?>
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    echo '</div></div>';
 							    if ( $fd_count = 0 ) {
 							    	echo '<style>.fairway-drivers{display:none;}</style>';
 							    }
-							    echo '</div></div>';
 
 							    // Mid-ranges
 								echo '<div class="midranges"><h3>Mid-ranges</h3><div class="disc-area">';
@@ -88,10 +88,10 @@ get_header(); ?>
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    echo '</div></div>';
 							    if ( $mr_count = 0 ) {
 							    	echo '<style>.midranges{display:none;}</style>';
 							    }
-							    echo '</div></div>';
 
 								// Putters
 								echo '<div class="putters"><h3>Putters</h3><div class="disc-area">';
@@ -100,12 +100,12 @@ get_header(); ?>
 										$p_count++;
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
-							    endforeach;
-							    echo '<pre>' . $p_count . '</pre>';
+							    endforeach;							    
+							    echo '</div></div>';
 							    if ( $p_count = 0 ) {
 							    	echo '<style>.putters{display:none;}</style>';
+							    	echo 'success';
 							    }
-							    echo '</div></div>';
 
 							endforeach;
 						} else {
