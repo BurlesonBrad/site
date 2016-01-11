@@ -32,7 +32,7 @@ $(document).ready(function() {
 				    display: "inline-block"
 				})
 				.parent().css({
-					"line-height": liHeight + "px"
+					//"line-height": liHeight + "px"
 				});
 		}
 	}
