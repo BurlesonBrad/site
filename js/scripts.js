@@ -23,17 +23,17 @@ $(document).ready(function() {
 			$(".header-widget-region").remove();
 		}
 		
-		if ( $(window).width() < 844 ) {
+		if ( $(window).width() > 844 ) {
 			$menuHome.html("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />")
 				.css({
 					paddingTop: 0,
 				    paddingBottom: 0,
 				    "vertical-align": "middle",
 				    display: "inline-block"
+				})
+				.parent().css({
+					"line-height": liHeight + "px"
 				});
-				// .parent().css({
-				// 	"line-height": liHeight + "px"
-				// });
 		}
 	}
 	customMasthead();
