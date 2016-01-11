@@ -398,6 +398,10 @@ body.home #content { padding-top: 0; }
 
 
 /* BYB */
+.page-id-45 #content {
+	padding-top: 0;
+}
+
 .content-area.build-your-bag {
 	width: 100% !important;
 }
