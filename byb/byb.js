@@ -173,6 +173,8 @@ $addToBagBtn.click(function(e) {
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
+	$(this).addClass("success");
+
 	addToBag( e, $bag, slug, type );
 });
 
