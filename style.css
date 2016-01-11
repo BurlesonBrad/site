@@ -366,6 +366,14 @@ body.home #content { padding-top: 0; }
 	}
 }
 
+@media screen and (max-width: 83.999em) {
+	.col-full {
+		max-width: 90%;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
 @media screen and (max-width: 844px) {
 	.site-search {
 		display: none;
