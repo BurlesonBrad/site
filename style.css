@@ -411,6 +411,16 @@ body.home #content { padding-top: 0; }
 	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2) !important;
 }
 
+.no-js .edit-btn {
+	display: none !important;
+}
+
+.edit-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .bag .disc {
 	display: inline-block;
 }
