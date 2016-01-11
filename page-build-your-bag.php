@@ -101,6 +101,7 @@ get_header(); ?>
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    echo '<pre>' . $p_count . '</pre>';
 							    if ( $p_count = 0 ) {
 							    	echo '<style>.putters{display:none;}</style>';
 							    }
