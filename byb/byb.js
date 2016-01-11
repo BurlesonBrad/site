@@ -225,6 +225,8 @@ $("form.edit-bag-name").submit(function() {
 	var newName = $bagNameInput.val();
 	$bagName.html( newName );
 	editBagName( newName );
+	
+	return false;
 });
 
 $(".bag-edit-btn").click(function() {
