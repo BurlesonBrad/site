@@ -429,6 +429,11 @@ body.home #content { padding-top: 0; }
 	top: 0;
 	left: 0;
 	z-index: 10;
+
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #888;
+	font-weight: bold;
 }
 
 .bag-edit-btn > * {
