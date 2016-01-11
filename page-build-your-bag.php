@@ -54,7 +54,7 @@ get_header(); ?>
 								echo '<div class="distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "distance-driver" ) {
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -63,7 +63,7 @@ get_header(); ?>
 								echo '<div class="fairway-drivers"><h3>Fairway Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "fairway-driver" ) {
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -72,7 +72,7 @@ get_header(); ?>
 								echo '<div class="midranges"><h3>Mid-ranges</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "midrange" ) {
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -81,7 +81,7 @@ get_header(); ?>
 								echo '<div class="putters"><h3>Putters</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "putter" ) {
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '.png" alt="' . $disc["name"] . '" /></a></div>';
+										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
 							    echo '</div></div>';
