@@ -235,6 +235,7 @@ $("form.edit-bag-name").submit(function(e) {
 	var bagName = $bagTitle.text();
 	var newName = $bagNameInput.val();
 
+	$bagNameInput.show();
 	$bagTitle.html( newName ).show();
 	$this.hide();
 
@@ -254,7 +255,6 @@ $(".bag-edit-btn").click(function() {
 		$bagNameInput.focus();
 
 		$bagNameInput.blur(function() {
-			$this.show();
 			$bagNameForm.submit();
 		});
 	}
