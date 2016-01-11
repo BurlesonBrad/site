@@ -219,6 +219,14 @@ if ( Cookies.get('byb') ) {
 
 
 // EDIT BAG
+$("form.edit-bag-name").submit(function() {
+	var $bagNameInput = $(this).find("input[type='text']");
+	e.preventDefault();
+	var newName = $bagNameInput.val();
+	$bagName.html( newName );
+	editBagName( newName );
+});
+
 $(".bag-edit-btn").click(function() {
 	var $this = $(this);
 	if ( $this.siblings("form.edit-bag-name").length ) {
@@ -229,13 +237,6 @@ $(".bag-edit-btn").click(function() {
 		$bagName.hide();
 		$bagNameForm.show();
 		$bagNameInput.focus();
-
-		$bagNameForm.submit(function(e) {
-			e.preventDefault();
-			var newName = $bagNameInput.val();
-			$bagName.html( newName );
-			editBagName( newName );
-		});
 
 		$bagNameInput.blur(function() {
 			$bagNameForm.submit();
