@@ -436,7 +436,6 @@ body.home #content { padding-top: 0; }
 }
 
 form.edit-bag-name {
-	top: 3em;
 	margin: 0 !important;
 }
 
@@ -480,6 +479,10 @@ form.edit-bag-name {
 	font-weight: bold;
 	line-height: 23px;
 	opacity: 0.4;
+}
+
+.bag-name-edit-btn {
+	top: 3em;
 }
 
 .bag-edit-btn:hover {

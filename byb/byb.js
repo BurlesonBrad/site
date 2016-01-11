@@ -224,7 +224,7 @@ if ( Cookies.get('byb') ) {
 // EDIT BAG
 $(".bag-edit-btn").each(function() {
 	if ( $(this).siblings("form.edit-bag-name").length ) {
-		$(this).addClass("edit-bag-name");
+		$(this).addClass("bag-name-edit-btn");
 	}
 });
 $("form.edit-bag-name").submit(function(e) {
@@ -255,9 +255,7 @@ $(".bag-edit-btn").click(function() {
 		$bagNameInput.focus();
 
 		$bagNameInput.blur(function() {
-			$this.css({
-				display: "inline-block"
-			});
+			$this.show();
 			$bagNameForm.submit();
 		});
 	}
