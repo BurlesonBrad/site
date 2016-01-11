@@ -42,6 +42,7 @@ get_header(); ?>
 
 						if ( isset($byb_cookie) ) {
 							$bags = $byb_array;
+							
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
