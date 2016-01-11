@@ -406,7 +406,7 @@ body.home #content { padding-top: 0; }
 }
 
 .edit-bag-name input[type="text"]:focus {
-	background: #eee;
+	background: #fff !important;
 }
 
 .bag .disc {
