@@ -133,26 +133,27 @@ var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src=
 /***					***/
 /***	ADD TO BAG 		***/
 /***					***/
-
-console.log($addToBagBtn.length);
-
 $addToBagBtn.click(function(e) {
 	var type;
 	var slug;
 
-	if ( $("body").hasClass("single-product") ) {
+// Set page-specific parameters
+	if ( $("body").hasClass("single-product") ) { // PDP
 		slug = $discSlug;
 		type = $("main > div > .summary .product_meta .disc_type a").html();
-	} else {
+	} else { // EVERYTHING ELSE
 		slug = $(this).parents(".product[data-product-slug]").data("product-slug");
 		type = $(this).parents(".product[data-disc-type]").data("disc-type");
 	}
+
+	// applies to all
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
 	addToBag( e, $bag, slug, type );
 });
 
+// Insert ADD-TO-BAG buttons
 if ( $("body").hasClass("single-product") ) {
 	if ( $(".add-to-bag").length < 1 ) {
 		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
