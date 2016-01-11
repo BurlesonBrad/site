@@ -230,13 +230,14 @@ $("form.edit-bag-name").submit(function(e) {
 	e.preventDefault();
 	e.stopPropagation();
 	var $this = $(this);
+	var $editBagBtn = $this.siblings(".bag-edit-btn");
 	var $bagNameInput = $this.find("input[type='text']");
 	var $bagTitle = $this.siblings("h2");
 	var bagName = $bagTitle.text();
 	var newName = $bagNameInput.val();
 
-	$bagNameInput.show();
 	$bagTitle.html( newName ).show();
+	$editBagBtn.show();
 	$this.hide();
 
 	editBagName( newName, bagName );
