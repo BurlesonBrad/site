@@ -491,6 +491,17 @@ body.home #content { padding-top: 0; }
 
 .bag .disc {
 	display: inline-block;
+	position: relative;
+
+	-webkit-transform: margin 400ms;
+	-moz-transform: margin 400ms;
+	-ms-transform: margin 400ms;
+	-o-transform: margin 400ms;
+	transform: margin 400ms;
+}
+
+.bag .disc:hover {
+	margin-right: 70px;
 }
 
 .bag .disc-area img {
