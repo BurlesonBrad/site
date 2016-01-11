@@ -255,7 +255,9 @@ $(".bag-edit-btn").click(function() {
 		$bagNameInput.focus();
 
 		$bagNameInput.blur(function() {
-			$this.show();
+			$this.css({
+				display: "inline-block"
+			});
 			$bagNameForm.submit();
 		});
 	}
