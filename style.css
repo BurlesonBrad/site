@@ -452,11 +452,11 @@ body.home #content { padding-top: 0; }
 .bag-edit-btn {
 	cursor: pointer;
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
+		top: 0;
+		left: 0;
+		z-index: 10;
 
-	font-size: 0.8em;
+	font-size: 0.7em;
 	text-transform: uppercase;
 	color: #888;
 	font-weight: bold;
@@ -479,8 +479,8 @@ body.home #content { padding-top: 0; }
 }
 
 .edit-icon {
-	width: 23px;
-	height: 23px;
+	width: 18px;
+	height: 18px;
 	margin-right: 6px;
 }
 
