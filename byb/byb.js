@@ -219,14 +219,13 @@ if ( Cookies.get('byb') ) {
 
 
 // EDIT BAG
-$("form.edit-bag-name").submit(function() {
+$("form.edit-bag-name").submit(function(e) {
+	e.preventDefault().stopPropagation();
+
 	var $bagNameInput = $(this).find("input[type='text']");
-	e.preventDefault();
 	var newName = $bagNameInput.val();
 	$bagName.html( newName );
 	editBagName( newName );
-	
-	return false;
 });
 
 $(".bag-edit-btn").click(function() {
