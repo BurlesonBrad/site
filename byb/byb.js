@@ -133,7 +133,7 @@ function addToBag(e, bag, disc, t) {
 		});
 	}
 
-	if ( $(e.target).hasClass("add-to-bag") ) {
+	if ( $(e.target).hasClass("add-to-bag") || $(e.target).parent("add-to-bag").length ) {
 		$(e.target).addClass("success");
 	}
 }
