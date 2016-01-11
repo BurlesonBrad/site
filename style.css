@@ -425,6 +425,7 @@ body.home #content { padding-top: 0; }
 }
 
 .bag-edit-btn {
+	cursor: pointer;
 	position: absolute;
 	top: 0;
 	left: 0;
