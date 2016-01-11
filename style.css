@@ -432,9 +432,14 @@ body.home #content { padding-top: 0; }
 
 	font-size: 0.8em;
 	text-transform: uppercase;
-	color: #bbb;
+	color: #888;
 	font-weight: bold;
 	line-height: 23px;
+	opacity: 0.4;
+}
+
+.bag-edit-btn:hover {
+	opacity: 1;
 }
 
 .bag-edit-btn > * {
