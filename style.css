@@ -415,8 +415,9 @@ body.home #content { padding-top: 0; }
 }
 
 .bag-title h2 {
+	font-family: 'Rock Salt'
 	text-align: center;
-	text-transform: uppercase;
+	text-transform: lowercase;
     font-size: 5em;
     color: #ddd;
     line-height: 1.1;
@@ -447,14 +448,14 @@ form.edit-bag-name {
 	background: transparent !important;
 	box-shadow: none !important;
 
-	font-family: 'Viga';
+	font-family: 'Rock Salt';
 	color: #ccc;
 	letter-spacing: 0;
 	text-align: center;
 	font-size: 5em;
 	line-height: 1.1;
 	font-weight: bold;
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 
 .edit-bag-name input[type="text"]:focus {
