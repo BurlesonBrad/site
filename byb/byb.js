@@ -232,7 +232,7 @@ $("form.edit-bag-name").submit(function(e) {
 
 	$bagName.html( newName );
 	$bagName.show();
-	$(this).hide();
+	$this.hide();
 	$bagNameInput.blur();
 
 	editBagName( newName );
