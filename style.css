@@ -485,6 +485,10 @@ body.home #content { padding-top: 0; }
 	margin-right: 6px;
 }
 
+.bag {
+	text-align: center;
+}
+
 .bag .disc {
 	display: inline-block;
 }
