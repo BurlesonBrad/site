@@ -58,6 +58,10 @@ a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.
 	font-size: 0.95em;
 }
 
+.main-navigation ul {
+	overflow: auto;
+}
+
 .main-navigation ul li a:before {
 	display: none;
 }
