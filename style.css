@@ -352,6 +352,12 @@ body.home #content { padding-top: 0; }
 	margin-bottom: 0;
 }
 
+.col-full {
+	max-width: 84em;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
 @media screen and (min-width: 84em) {
 	.col-full {
 		max-width: 84em;
