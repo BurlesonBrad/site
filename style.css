@@ -434,10 +434,13 @@ body.home #content { padding-top: 0; }
 	text-transform: uppercase;
 	color: #888;
 	font-weight: bold;
+	line-height: 23px;
 }
 
 .bag-edit-btn > * {
 	float: left;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .edit-icon {
