@@ -222,9 +222,11 @@ if ( Cookies.get('byb') ) {
 
 
 // EDIT BAG
-if ( $(".bag-edit-btn").siblings("form.edit-bag-name").length ) {
-	$(this).addClass(".edit-bag-name");
-}
+$(".bag-edit-btn").each(function() {
+	if ( $(this).siblings("form.edit-bag-name").length ) {
+		$(this).addClass(".edit-bag-name");
+	}
+});
 $("form.edit-bag-name").submit(function(e) {
 	e.preventDefault();
 	e.stopPropagation();
