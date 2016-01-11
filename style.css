@@ -405,6 +405,10 @@ body.home #content { padding-top: 0; }
 	font-weight: bold;
 }
 
+.edit-bag-name input[type="text"]:focus {
+	background: #eee;
+}
+
 .bag .disc {
 	display: inline-block;
 }
