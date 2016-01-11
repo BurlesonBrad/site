@@ -140,6 +140,7 @@ function addToBag(e, bag, disc, t) {
 
 // INSERT THE ADD BUTTON INTERFACE
 var $bagsMenu = $("<select class='bags-menu'></select>");
+console.log( Cookies.get('byb') );
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
 	for (i = 0; i < the_bags.length; i++ ) {
