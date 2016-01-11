@@ -424,6 +424,13 @@ body.home #content { padding-top: 0; }
     margin: 0;
 }
 
+.bag h3 {
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #666 !important;
+}
+
 .edit-bag-name input[type="text"] {
 	display: block;
 	width: 100%;
