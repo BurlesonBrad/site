@@ -222,9 +222,10 @@ if ( Cookies.get('byb') ) {
 $("form.edit-bag-name").submit(function(e) {
 	e.preventDefault();
 	e.stopPropagation();
-
 	var $bagNameInput = $(this).find("input[type='text']");
+	var $bagName = $(this).siblings("h2");
 	var newName = $bagNameInput.val();
+
 	$bagName.html( newName );
 	editBagName( newName );
 });
