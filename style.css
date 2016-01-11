@@ -431,6 +431,15 @@ body.home #content { padding-top: 0; }
 	z-index: 10;
 }
 
+.bag-edit-btn > * {
+	float: left;
+}
+
+.edit-icon {
+	width: 23px;
+	height: 23px;
+}
+
 .bag .disc {
 	display: inline-block;
 }
