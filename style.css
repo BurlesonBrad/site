@@ -435,7 +435,8 @@ body.home #content { padding-top: 0; }
 	margin-bottom: 0.5em;
 }
 
-.edit-bag-name {
+form.edit-bag-name {
+	top: 3em;
 	margin: 0 !important;
 }
 
@@ -481,12 +482,16 @@ body.home #content { padding-top: 0; }
 	opacity: 0.4;
 }
 
-.edit-bag-name {
-	top: 3em;
-}
-
 .bag-edit-btn:hover {
 	opacity: 1;
+}
+
+.bag-edit-btn span {
+	display: none;
+}
+
+.bag-edit-btn:hover span {
+	display: inline-block;
 }
 
 .bag-edit-btn > * {
