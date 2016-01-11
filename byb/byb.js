@@ -140,7 +140,7 @@ function addToBag(e, bag, disc, t) {
 
 // INSERT THE ADD BUTTON INTERFACE
 var $bagsMenu = $("<select class='bags-menu'></select>");
-console.log( Cookies.get('byb') );
+
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
 	for (i = 0; i < the_bags.length; i++ ) {
@@ -227,16 +227,16 @@ $("form.edit-bag-name").submit(function(e) {
 	e.stopPropagation();
 	var $this = $(this);
 	var $bagNameInput = $this.find("input[type='text']");
-	var $bagName = $this.siblings("h2");
+	var $bagTitle = $this.siblings("h2");
+	var bagName = $bagTitle.text();
 	var newName = "New Name";
 //	var newName = $bagNameInput.val();
 
-	$bagName.html( newName );
-	$bagName.show();
+	$bagTitle.html( newName ).show();
 	$this.hide();
 	$bagNameInput.blur();
 
-	editBagName( newName );
+	editBagName( newName, bagName );
 });
 
 $(".bag-edit-btn").click(function() {
