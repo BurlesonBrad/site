@@ -501,12 +501,8 @@ body.home #content { padding-top: 0; }
 	transition: margin 400ms;
 }
 
-.bag .disc:first-child {
+.bag .disc.get-out-the-way {
 	margin-left: 0;
-}
-
-.bag .disc:hover {
-	margin-right: 70px;
 }
 
 .bag .disc-area img {

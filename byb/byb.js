@@ -260,6 +260,13 @@ $(".bag-edit-btn").click(function() {
 });
 
 
+$(".disc").hover(function() {
+	if ( $(this).next(".disc").length ) {
+		$(this).next(".disc").toggleClass("get-out-the-way");
+	}
+});
+
+
 
 // Update your bag using the form
 $("#byb-form").submit(function(e) {
