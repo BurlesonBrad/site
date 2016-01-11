@@ -382,6 +382,10 @@ body.home #content { padding-top: 0; }
 	width: 100% !important;
 }
 
+#bags form {
+	display: none;
+}
+
 .bag-title {
 	position: relative;
 }
@@ -419,7 +423,7 @@ body.home #content { padding-top: 0; }
 	display: none !important;
 }
 
-.edit-btn {
+.bag-edit-btn {
 	position: absolute;
 	top: 0;
 	left: 0;

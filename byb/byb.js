@@ -34,6 +34,26 @@ $("#clear_bags").click(function() {
 // 	}
 // }
 
+function editBagName( bag, name ) {
+	if ( Cookies.get('byb') ) {
+		var the_bags = Cookies.getJSON('byb');
+	} else {
+		alert("Sorry, but there was a problem adding this disc to your bag.");
+		return;
+	}
+
+	var this_bag = the_bags[0];
+	var bagIndex = 0;
+	for ( i = 0; i < the_bags.length; i++ ) {
+		if (the_bags[i]["name"] === bag ) {
+			this_bag = the_bags[i];
+			bagIndex = i;
+		}
+	}
+
+	this_bag["name"] = name;
+}
+
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
 	if ( Cookies.get('byb') ) {
@@ -153,6 +173,18 @@ $addToBagBtn.click(function(e) {
 	addToBag( e, $bag, slug, type );
 });
 
+$("form.checkout").submit(function(e) {
+	var $cartItem = $(this).find("#payment").prev(".shop_table").find(".cart_item");
+	$bag = $bagsMenu.find("option").first().attr("value");
+	$cartItem.each(function() {
+		var $this = $(this);
+		slug = $this.data("product-slug");
+		type = $this.data("disc-type");
+		addToBag(e, $bag, slug, type );
+	});
+
+});
+
 // Insert ADD-TO-BAG buttons
 if ( $("body").hasClass("single-product") ) {
 	if ( $(".add-to-bag").length < 1 ) {
@@ -184,16 +216,32 @@ if ( Cookies.get('byb') ) {
 	});
 }
 
-$("form.checkout").submit(function(e) {
-	var $cartItem = $(this).find("#payment").prev(".shop_table").find(".cart_item");
-	$bag = $bagsMenu.find("option").first().attr("value");
-	$cartItem.each(function() {
-		var $this = $(this);
-		slug = $this.data("product-slug");
-		type = $this.data("disc-type");
-		addToBag(e, $bag, slug, type );
-	});
 
+// 
+
+// EDIT BAG
+
+
+$(".bag-edit-btn").click(function() {
+	var $this = $(this);
+	if ( $this.siblings("form.edit-bag-name").length ) {
+		var $bagNameForm = $this.siblings("form.edit-bag-name");
+		var $bagName = $bagNameForm.siblings("h2");
+		var $bagNameInput = $bagNameForm.find("input[type='text']");
+
+		$bagName.hide();
+		$bagNameForm.show();
+		$bagNameInput.focus();
+
+		$bagNameForm.submit(function(e) {
+			e.preventDefault();
+			$bagName.html( $bagNameInput.val() );
+		});
+
+		$bagNameInput.blur(function() {
+			$bagNameForm.submit();
+		});
+	}
 });
 
 
