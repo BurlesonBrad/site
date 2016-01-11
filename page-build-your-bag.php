@@ -102,9 +102,9 @@ get_header(); ?>
 							    	}
 							    endforeach;							    
 							    echo '</div></div>';
+							    echo $p_count;
 							    if ( $p_count = 0 ) {
 							    	echo '<style>.putters{display:none;}</style>';
-							    	echo 'success';
 							    }
 
 							endforeach;
