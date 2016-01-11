@@ -30,10 +30,10 @@ $(document).ready(function() {
 				    paddingBottom: 0,
 				    "vertical-align": "middle",
 				    display: "inline-block"
-				})
-				.parent().css({
-					//"line-height": liHeight + "px"
 				});
+				// .parent().css({
+				// 	"line-height": liHeight + "px"
+				// });
 		}
 	}
 	customMasthead();
