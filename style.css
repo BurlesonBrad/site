@@ -431,6 +431,10 @@ body.home #content { padding-top: 0; }
     color: #666 !important;
 }
 
+.disc-area {
+	margin-bottom: 0.5em;
+}
+
 .edit-bag-name input[type="text"] {
 	display: block;
 	width: 100%;
