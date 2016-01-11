@@ -224,7 +224,7 @@ if ( Cookies.get('byb') ) {
 // EDIT BAG
 $(".bag-edit-btn").each(function() {
 	if ( $(this).siblings("form.edit-bag-name").length ) {
-		$(this).addClass(".edit-bag-name");
+		$(this).addClass("edit-bag-name");
 	}
 });
 $("form.edit-bag-name").submit(function(e) {
