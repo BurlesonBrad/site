@@ -200,6 +200,7 @@ if ( $("body").hasClass("single-product") ) {
 	});
 }
 
+// Deactivate 'add to bag' buttons for already-added discs
 if ( Cookies.get('byb') ) {
 	var the_bags = Cookies.getJSON('byb');
 	$(".add-to-bag").each(function() {
@@ -217,11 +218,7 @@ if ( Cookies.get('byb') ) {
 }
 
 
-// 
-
 // EDIT BAG
-
-
 $(".bag-edit-btn").click(function() {
 	var $this = $(this);
 	if ( $this.siblings("form.edit-bag-name").length ) {
@@ -235,7 +232,9 @@ $(".bag-edit-btn").click(function() {
 
 		$bagNameForm.submit(function(e) {
 			e.preventDefault();
-			$bagName.html( $bagNameInput.val() );
+			var newName = $bagNameInput.val();
+			$bagName.html( newName );
+			editBagName( newName );
 		});
 
 		$bagNameInput.blur(function() {
