@@ -30,6 +30,7 @@ h2 {
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart {
 	box-shadow: none;
 	padding: 1.8em 4em;
+	font-size: 0.9em;
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 	border-radius: 5em;
