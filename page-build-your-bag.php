@@ -47,6 +47,10 @@ get_header(); ?>
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
 								$edit_btn = '<div class="bag-edit-btn"><img class="edit-icon" src="' . get_stylesheet_directory_uri() . '/images/edit-icon-blue.png" alt="Edit bag name" /><span>Change your bag\'s name</span></div>';
+								$dd_count = 0;
+								$fd_count = 0;
+								$mr_count = 0;
+								$p_count = 0;
 
 								echo '<div class="bag bag-' . $bag_slug . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2>' . $edit_btn . '</div>';
 								
@@ -54,36 +58,52 @@ get_header(); ?>
 								echo '<div class="distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "distance-driver" ) {
+										$dd_count++;
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    if ( $dd_count = 0 ) {
+							    	echo '<style>.distance-drivers{display:none;}</style>';
+							    }
 							    echo '</div></div>';
 
 							    // Fairway
 								echo '<div class="fairway-drivers"><h3>Fairway Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "fairway-driver" ) {
+										$fd_count++;
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    if ( $fd_count = 0 ) {
+							    	echo '<style>.fairway-drivers{display:none;}</style>';
+							    }
 							    echo '</div></div>';
 
 							    // Mid-ranges
 								echo '<div class="midranges"><h3>Mid-ranges</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "midrange" ) {
+										$mr_count++;
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    if ( $mr_count = 0 ) {
+							    	echo '<style>.midranges{display:none;}</style>';
+							    }
 							    echo '</div></div>';
 
 								// Putters
 								echo '<div class="putters"><h3>Putters</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "putter" ) {
+										$p_count++;
 										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
 							    	}
 							    endforeach;
+							    if ( $p_count = 0 ) {
+							    	echo '<style>.putters{display:none;}</style>';
+							    }
 							    echo '</div></div>';
 
 							endforeach;
