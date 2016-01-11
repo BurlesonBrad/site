@@ -399,7 +399,7 @@ body.home #content { padding-top: 0; }
 
 /* BYB */
 .page-id-45 #content {
-	padding-top: 2em;
+	padding-top: 0;
 }
 
 .content-area.build-your-bag {
@@ -421,7 +421,7 @@ body.home #content { padding-top: 0; }
     font-size: 5em;
     color: #ddd;
     line-height: 1.1;
-    padding: 0.68em 0 0.2em;
+    padding: 0.67em 0 0.44em;
     margin: 0;
 }
 
@@ -484,7 +484,7 @@ form.edit-bag-name {
 }
 
 .bag-name-edit-btn {
-	top: 3em;
+	top: 6em;
 }
 
 .bag-edit-btn:hover {
