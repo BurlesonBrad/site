@@ -253,7 +253,7 @@ $removeBtn.click(function(e) {
 	addToBag( e, $bag, slug, type );
 });
 
-$(".page-id-45 .disc['data-product-slug']").each(function() {
+$(".page-id-45 .disc[data-product-slug]").each(function() {
 	$(this).append($removeBtn);
 });
 
