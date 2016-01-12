@@ -34,11 +34,12 @@ function set_byb_cookie() {
 		$user_id = $user->ID;
 		$byb = get_user_meta($user_id, 'byb', true);
 		$byb_cookie = $_COOKIE['byb'];
-		if ( isset($byb_cookie) ) {
+		if ( isset($byb_cookie) && $byb_cookie != 'undefined' ) {
 			// UPDATE user meta with the cookie
 			$byb_json = stripslashes($byb_cookie);
 			update_user_meta($user_id, 'byb', $byb_json);
-		} else {
+		}
+		if ( (!isset($byb_cookie) || $byb_cookie === 'undefined') && isset($byb) ) {
 			setcookie("byb", $byb, time() + 36000000);
 		}
 	}
