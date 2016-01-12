@@ -56,6 +56,14 @@ get_header(); ?>
 				endif; ?>
 			</section>
 
+			<section class="shop-by-disc-type">
+
+			</section>
+
+			<section class="shop-by-brand">
+				<?php echo do_shortcode("[product_brand_thumbnails]"); ?>
+			</section>
+
 			<?php
 			/**
 			 * @hooked storefront_homepage_content - 10
