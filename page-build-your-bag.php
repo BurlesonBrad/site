@@ -44,11 +44,23 @@ get_header(); ?>
 				<div id="bags">
 					<?php
 					function getDiscBags() {
-						$byb_cookie = $_COOKIE['byb'];
-						$byb_json = stripslashes($byb_cookie);
-						$byb_array = json_decode( $byb_json, true );
+						if ( is_user_logged_in() ) {
+							$user = wp_get_current_user();
+							$user_id = $user->ID;
+							$byb = get_user_meta($user_id, 'byb', true);
+							$byb_cookie = $_COOKIE['byb'];
+							if ( isset($byb_cookie) ) {
+								// UPDATE user meta with the cookie
+								$byb_json = stripslashes($byb_cookie);
+								update_user_meta($user_id, 'byb', $byb_json);
+							}
+						} else {
+							$byb = $_COOKIE['byb'];
+						}
 
-						if ( isset($byb_cookie) ) {
+						if ( isset($byb) ) {
+							$byb_json = stripslashes($byb);
+							$byb_array = json_decode( $byb_json, true );
 							$bags = $byb_array;
 
 							foreach ( $bags as $bag ):
