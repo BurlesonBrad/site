@@ -63,9 +63,10 @@ get_header(); ?>
 							$byb = $_COOKIE['byb'];
 						}
 
-						if ( isset($byb) ) {
-							$byb_json = stripslashes($byb);
-							$byb_array = json_decode( $byb_json, true );
+						$byb_json = stripslashes($byb);
+						$byb_array = json_decode( $byb_json, true );
+
+						if ( is_array($byb_array) ) {
 							$bags = $byb_array;
 
 							foreach ( $bags as $bag ):
