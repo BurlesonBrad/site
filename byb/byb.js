@@ -94,8 +94,6 @@ function addToBag(e, bag, disc, t) {
 		});
 	}
 
-	console.log($(e.target).parents(".add-to-bag").length);
-
 	if ( $(e.target).hasClass("add-to-bag") ) {
 		$(e.target).addClass("success");
 	}
