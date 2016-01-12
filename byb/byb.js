@@ -38,7 +38,7 @@ function editBagName( bag, name ) {
 	if ( Cookies.get('byb') ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
-		alert("Sorry, but there was a problem adding this disc to your bag.");
+		alert("Sorry, but there was a problem editing your bag.");
 		return;
 	}
 
