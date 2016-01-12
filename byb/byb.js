@@ -101,7 +101,7 @@ function addToBag(e, bag, disc, t) {
 // INSERT THE ADD BUTTON INTERFACE
 var $bagsMenu = $("<select class='bags-menu'></select>");
 
-if ( Cookies.get('byb') ) {
+if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 	var the_bags = Cookies.getJSON('byb');
 	for (i = 0; i < the_bags.length; i++ ) {
 		var bagSlug = the_bags[i]["name"];
