@@ -43,5 +43,6 @@ function set_byb_cookie() {
 			setcookie("byb", $byb, time() - 36000000);
 		}
 	}
+	setcookie("byb", $byb, time() - 36000000);
 }
 add_action( 'init', 'set_byb_cookie');
