@@ -236,8 +236,7 @@ var $removeBtn = $("<img src='remove-from-bag-icon.png' alt='remove' />");
 $removeBtn.click(function(e) {
 	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
 
-	$bagsMenu = $(this).parents(".product").find(".bags-menu");
-	$bag = $bagsMenu.val();
+	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
 
 	removeFromBag( e, $bag, slug );
 });
