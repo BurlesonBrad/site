@@ -42,6 +42,9 @@ add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
 // 		if ( (!isset($byb_cookie) || $byb_cookie === 'undefined') && (isset($byb) && $byb != 'undefined') ) {
 // 			setcookie("byb", $byb, time()+36000000, "/");
 // 		}
+// 		else {
+// 			setcookie("byb", $byb, time() - 3600);
+// 		}
 // 	}
 // //	setcookie("byb", $byb, time() - 36000000);
 // }
