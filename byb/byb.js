@@ -1,6 +1,8 @@
 (function($) {
 $(document).ready(function() {
 
+Cookies.remove('byb');
+
 console.log( Cookies.get('byb') );
 
 $("#clear_bags").click(function() {
@@ -223,7 +225,7 @@ function removeFromBag(e, bag, disc) {
 
 	for ( i = 0; i < this_bag.discs.length; i++ ) {
 		if ( this_bag["discs"][i]["slug"] === disc ) {
-			this_bag = this_bag["discs"].splice(i, 1);
+			this_bag["discs"].splice(i, 1);
 			updated_bag = JSON.stringify( the_bags[bagIndex][this_bag] );
 			Cookies.set("byb", updated_bag);
 			location.reload();
