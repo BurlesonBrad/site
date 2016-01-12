@@ -40,9 +40,9 @@ function set_byb_cookie() {
 			update_user_meta($user_id, 'byb', $byb_json);
 		}
 		if ( (!isset($byb_cookie) || $byb_cookie === 'undefined') && (isset($byb) && $byb != 'undefined') ) {
-			setcookie("byb", $byb, time() - 36000000);
+			setcookie("byb", $byb, time()+36000000);
 		}
 	}
-	setcookie("byb", $byb, time() - 36000000);
+//	setcookie("byb", $byb, time() - 36000000);
 }
 add_action( 'init', 'set_byb_cookie');
