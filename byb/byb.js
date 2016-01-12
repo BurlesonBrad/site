@@ -199,7 +199,7 @@ function removeFromBag(e, bag, disc) {
 	for ( i = 0; i < this_bag.discs.length; i++ ) {
 		if ( this_bag["discs"][i]["slug"] === disc ) {
 			this_bag = this_bag["discs"].splice(i, 1);
-			the_bags[bagIndex] = this_bag
+			the_bags[bagIndex] = this_bag;
 			updated_bag = JSON.stringify( the_bags );
 			Cookies.set("byb", updated_bag);
 			location.reload();
