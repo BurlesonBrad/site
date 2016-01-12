@@ -234,27 +234,16 @@ function removeFromBag(e, bag, disc) {
 
 var $removeBtn = $("<img src='remove-from-bag-icon.png' alt='remove' />");
 $removeBtn.click(function(e) {
-	var type;
-	var slug;
+	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
 
-// Set page-specific parameters
-	if ( $("body").hasClass("single-product") ) { // PDP
-		slug = $discSlug;
-		type = $("main > div > .summary .product_meta .disc_type a").html();
-	} else { // EVERYTHING ELSE
-		slug = $(this).parents(".product[data-product-slug]").data("product-slug");
-		type = $(this).parents(".product[data-disc-type]").data("disc-type");
-	}
-
-	// applies to all
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
-	addToBag( e, $bag, slug, type );
+	removeFromBag( e, $bag, slug, type );
 });
 
 $(".page-id-45 .disc[data-product-slug]").each(function() {
-	$(this).append($removeBtn);
+	$removeBtn.clone(true).appendTo($(this));
 });
 
 
@@ -308,17 +297,6 @@ $(".disc").hover(function() {
 	}
 });
 
-
-
-// Update your bag using the form
-$("#byb-form").submit(function(e) {
-	e.preventDefault();
-	$("#byb-form input").each(function() {
-		$(this).blur();
-	});
-
-	var $bag_name = $("#byb-form #bag_name").val();
-});
 
 
 
