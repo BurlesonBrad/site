@@ -14,6 +14,7 @@ function set_byb_cookie() {
 			update_user_meta($user_id, 'byb', $byb_json);
 		} else {
 			setcookie("byb", $byb, 36000000);
+			echo 'success?';
 		}
 	}
 }
@@ -21,7 +22,7 @@ add_action( 'init', 'set_byb_cookie');
 
 // BEGIN ENQUEUE PARENT ACTION
 // AUTO GENERATED - Do not modify or remove comment markers above or below:
- 
+
 if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     function chld_thm_cfg_parent_css() {
         wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css' );
