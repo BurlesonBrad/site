@@ -573,3 +573,16 @@ form.edit-bag-name {
 	color: #eee;
 }
 
+.remove-from-bag {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+    top: 0;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+}
+
+.disc:hover .remove-from-bag {
+	display: block;
+}
