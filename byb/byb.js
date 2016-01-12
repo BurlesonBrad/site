@@ -239,7 +239,7 @@ $removeBtn.click(function(e) {
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
-	removeFromBag( e, $bag, slug, type );
+	removeFromBag( e, $bag, slug );
 });
 
 $(".page-id-45 .disc[data-product-slug]").each(function() {
