@@ -574,13 +574,13 @@ form.edit-bag-name {
 }
 
 .remove-from-bag {
-	display: none;
+	display: none !important;
 	cursor: pointer;
 	position: absolute;
     top: 0;
     right: 5px;
-    width: 6px;
-    height: 6px;
+    width: 6px !important;
+    height: 6px !important;
 }
 
 .disc:hover .remove-from-bag {
