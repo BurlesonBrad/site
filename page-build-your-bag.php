@@ -1,19 +1,6 @@
 <?php
 // Set the cookie if it's not already set
-if ( is_user_logged_in() ) {
-	$user = wp_get_current_user();
-	$user_id = $user->ID;
-	$byb = get_user_meta($user_id, 'byb', true);
-	$byb_cookie = $_COOKIE['byb'];
-	if ( isset($byb_cookie) ) {
-		// UPDATE user meta with the cookie
-		$byb_json = stripslashes($byb_cookie);
-		update_user_meta($user_id, 'byb', $byb_json);
-	} else {
-		setcookie("byb", $byb, 36000000);
-		echo 'success';
-	}
-}
+
 
 /**
  * The template for displaying all pages.
