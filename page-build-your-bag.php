@@ -11,6 +11,7 @@ if ( is_user_logged_in() ) {
 		update_user_meta($user_id, 'byb', $byb_json);
 	} else {
 		setcookie("byb", $byb, 36000000);
+		echo 'success';
 	}
 }
 
