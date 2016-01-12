@@ -181,7 +181,7 @@ if ( $("body").hasClass("single-product") ) {
 		$addToBagBtn = $(".add-to-bag");
 	}
 } else {
-	$(".product[data-product-slug]").each(function() {
+	$(".product[data-product-slug]").not(".disc").each(function() {
 		var $this = $(this);
 		$addToBagBtn.clone(true).prependTo($this);
 		$bagsMenu.clone(true).prependTo($this);
@@ -253,7 +253,7 @@ $removeBtn.click(function(e) {
 	addToBag( e, $bag, slug, type );
 });
 
-$(".page-id-45 .product['data-product-slug']").each(function() {
+$(".page-id-45 .disc['data-product-slug']").each(function() {
 	$(this).append($removeBtn);
 });
 
