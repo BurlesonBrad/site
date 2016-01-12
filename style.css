@@ -579,8 +579,8 @@ form.edit-bag-name {
 	position: absolute;
     top: 0;
     right: 5px;
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
 }
 
 .disc:hover .remove-from-bag {
