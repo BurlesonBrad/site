@@ -28,24 +28,24 @@ function hyzershop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
 
-function set_byb_cookie() {
-	if ( is_user_logged_in() ) {
-		$user = wp_get_current_user();
-		$user_id = $user->ID;
-		$byb = get_user_meta($user_id, 'byb', true);
-		$byb_cookie = $_COOKIE['byb'];
-		if ( isset($byb_cookie) && $byb_cookie != 'undefined' ) {
-			// UPDATE user meta with the cookie
-			$byb_json = stripslashes($byb_cookie);
-			update_user_meta($user_id, 'byb', $byb_json);
-		}
-		if ( (!isset($byb_cookie) || $byb_cookie === 'undefined') && (isset($byb) && $byb != 'undefined') ) {
-			setcookie("byb", $byb, time()+86400000, "/", ".hyzershop.com");
-		}
-		else {
-			setcookie("byb", $byb, time()-3600, "/", ".hyzershop.com");
-		}
-	}
-//	setcookie("byb", $byb, time() - 36000000);
-}
-add_action( 'init', 'set_byb_cookie');
+// function set_byb_cookie() {
+// 	if ( is_user_logged_in() ) {
+// 		$user = wp_get_current_user();
+// 		$user_id = $user->ID;
+// 		$byb = get_user_meta($user_id, 'byb', true);
+// 		$byb_cookie = $_COOKIE['byb'];
+// 		if ( isset($byb_cookie) && $byb_cookie != 'undefined' ) {
+// 			// UPDATE user meta with the cookie
+// 			$byb_json = stripslashes($byb_cookie);
+// 			update_user_meta($user_id, 'byb', $byb_json);
+// 		}
+// 		if ( (!isset($byb_cookie) || $byb_cookie === 'undefined') && (isset($byb) && $byb != 'undefined') ) {
+// 			setcookie("byb", $byb, time()+86400000, "/", ".hyzershop.com");
+// 		}
+// 		else {
+// 			setcookie("byb", $byb, time()-3600, "/", ".hyzershop.com");
+// 		}
+// 	}
+// //	setcookie("byb", $byb, time() - 36000000);
+// }
+// add_action( 'init', 'set_byb_cookie');

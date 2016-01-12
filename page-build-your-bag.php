@@ -44,30 +44,6 @@ get_header(); ?>
 				<div id="bags">
 					<?php
 					function getDiscBags() {
-						if ( is_user_logged_in() ) {
-							// if they already have a logged-in bag
-							$byb_cookie = $_COOKIE['byb'];
-							if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-								echo '<h1>yahoo!</h1>';
-								if ( isset($_POST['byb']) && $_POST['byb'] != 'undefined' ) {
-									$byb = $_POST['byb'];
-								}
-							} else {
-								// if they don't have a logged-in bag, but have a cookie bag
-								if ( isset( $_COOKIE['byb'] ) ) {
-									$byb = $_COOKIE['byb'];
-								} else { // if they ain't got no bag nohow
-									$byb = false;
-								}
-							}
-						} else {
-							if ( isset( $_COOKIE['byb'] ) ) {
-								$byb = $_COOKIE['byb'];
-							} else { // if they ain't got no bag nohow
-								$byb = false;
-							}
-						}
-
 						// if ( is_user_logged_in() ) {
 						// 	$user = wp_get_current_user();
 						// 	$user_id = $user->ID;
@@ -86,6 +62,8 @@ get_header(); ?>
 						// } else {
 						// 	$byb = $_COOKIE['byb'];
 						// }
+
+						$byb = $_COOKIE['byb'];
 
 						if ( $byb ) {
 							$byb_json = stripslashes($byb);
