@@ -9,7 +9,7 @@ $("#clear_bags").click(function() {
 });
 
 function editBagName( bag, name ) {
-	if ( Cookies.get('byb') ) {
+	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
 		alert("Sorry, but there was a problem editing your bag.");
@@ -36,7 +36,7 @@ function editBagName( bag, name ) {
 
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
-	if ( Cookies.get('byb') ) {
+	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 		var the_bags = Cookies.getJSON('byb');
 	} else {
 		var the_bags = [
@@ -163,7 +163,7 @@ if ( $("body").hasClass("single-product") ) {
 }
 
 // Deactivate 'add to bag' buttons for already-added discs
-if ( Cookies.get('byb') ) {
+if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 	var the_bags = Cookies.getJSON('byb');
 	$(".add-to-bag").each(function() {
 		var $this = $(this);
