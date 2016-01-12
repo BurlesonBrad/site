@@ -54,6 +54,9 @@ get_header(); ?>
 								$byb_json = stripslashes($byb_cookie);
 								update_user_meta($user_id, 'byb', $byb_json);
 							}
+							if ( !isset($byb) ) {
+								$byb = $byb_cookie;
+							}
 						} else {
 							$byb = $_COOKIE['byb'];
 						}
