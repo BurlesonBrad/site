@@ -15,22 +15,30 @@ get_header(); ?>
 	<div id="primary" class="content-area build-your-bag">
 		<main id="main" class="site-main" role="main">
 
- 			<?php // while ( have_posts() ) : the_post(); ?>
-
-				<?php
-				// do_action( 'storefront_page_before' );
-				?>
-
-				<?php // get_template_part( 'content', 'page' ); ?>
-
-				<?php
-				/**
-				 * @hooked storefront_display_comments - 10
-				 */
-				// do_action( 'storefront_page_after' );
-				?>
-
-			<?php // endwhile; // end of the loop. ?>
+ 		<?php
+ 		function get_disc($s, $part) {
+			$args = array(
+			  'name'        => $s,
+			  'post_type'   => 'product',
+			  'post_status' => 'publish',
+			  'numberposts' => 1
+			);
+			$products = get_posts($args);
+			$product = $products[0];
+			if( $products ) :
+				if ( $part === 'thumbnail' ) {
+					return get_the_post_thumbnail( $product->ID, 'medium' );
+				}
+				if ( $part === 'slug' ) {
+					return $product->post_name;
+				}
+				if ( $part === 'link' ) {
+					return get_post_permalink( $product->ID );
+				}
+			endif;
+			wp_reset_postdata();
+		}
+		?>
 
 			<div id="byb-wrapper" data-temp-user="0">
 				<div id="bags">
@@ -54,7 +62,8 @@ get_header(); ?>
 								$p_count = 0;
 
 								function the_disc($d) {
-									echo '<div class="disc ' . $d["slug"] . '"><a href="/product/' . $d["slug"] . '"><img src="/wp-content/uploads/' . $d["slug"] . '-300x300.png" alt="' . $d["name"] . '" /></a></div>';
+									$slug = $d["slug"];
+									echo '<div class="disc ' . get_disc( $slug, 'slug' ) . '"><a href="' . get_disc( $slug, 'link' ) . '">' . get_disc( $slug, 'thumbnail' ) . '</a></div>';
 								}
 
 								echo '<div class="bag bag-' . $bag_slug . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2>' . $edit_btn . '</div>';
@@ -117,6 +126,7 @@ get_header(); ?>
 						}
 					}
 					getDiscBags();
+
 				?>
 
 				<!-- <form id="byb-form">
@@ -131,7 +141,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php 
+<?php
 //	do_action( 'storefront_sidebar' );
 ?>
 
