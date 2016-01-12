@@ -96,8 +96,11 @@ function addToBag(e, bag, disc, t) {
 
 	console.log($(e.target).parents(".add-to-bag").length);
 
-	if ( $(e.target).hasClass("add-to-bag") || $(e.target).parents(".add-to-bag").length === 1 ) {
+	if ( $(e.target).hasClass("add-to-bag") ) {
 		$(e.target).addClass("success");
+	}
+	if ( $(e.target).parents(".add-to-bag").length === 1 ) {
+		$(e.target).parents(".add-to-bag").addClass("success");
 	}
 }
 
