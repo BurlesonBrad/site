@@ -49,4 +49,8 @@ add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
 // //	setcookie("byb", $byb, time() - 36000000);
 // }
 // add_action( 'init', 'set_byb_cookie');
-setcookie("byb", $byb, time() - 36000000);
+
+function remove_byb_cookie() {
+	setcookie("byb", $byb, time() - 36000000);
+}
+add_action( 'init', 'remove_byb_cookie' );
