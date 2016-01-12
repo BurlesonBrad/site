@@ -56,6 +56,10 @@ function editBagName( bag, name ) {
 	Cookies.set('byb', bags_json, { expires: 1000 });
 }
 
+/***						***/
+/***	BEGIN ADD TO BAG 	***/
+/***						***/
+
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
 	if ( Cookies.get('byb') ) {
@@ -67,18 +71,6 @@ function addToBag(e, bag, disc, t) {
 				"discs": []
 			}
 		];
-		// var the_bags = [
-		// 	{
-		// 		"name": "My Bag",
-		// 		"discs": [
-		// 			{
-		// 			"slug": "",
-		// 			"name": "",
-		// 			"type": ""
-		// 			}
-		// 		]
-		// 	}
-		// ];
 	}
 
 	if ( disc.length === 0 || t.length === 0 ) {
@@ -99,12 +91,6 @@ function addToBag(e, bag, disc, t) {
 // find if this disc is already set; if so, return before newDisc object is created and the cookie is set
 	for ( i = 0; i < this_bag.discs.length; i++ ) {
 		if ( this_bag["discs"][i]["slug"] === disc ) {
-			// if ( $(".add-to-bag-failure").length === 0 ) {
-			// 	var $fail = $("<div class='add-to-bag-failure'>Already added! <a href='/build-your-bag'>view your bag</a></div>");
-			// 	$fail.appendTo("body").delay(2000).fadeOut(400, function() {
-			// 		$(this).remove();
-			// 	});
-			// }
 			return; // PREVENTING DUPLICATES Part 1
 		}
 	}
@@ -218,6 +204,35 @@ if ( Cookies.get('byb') ) {
 		}
 	});
 }
+
+
+/***						***/
+/***	REMOVE FROM BAG 	***/
+/***						***/
+function removeFromBag(e, bag, disc) {
+	var the_bags = Cookies.getJSON('byb');
+
+	var this_bag = the_bags[0];
+	var bagIndex = 0;
+	for ( i = 0; i < the_bags.length; i++ ) {
+		if (the_bags[i]["name"] === bag ) {
+			this_bag = the_bags[i];
+			bagIndex = i;
+		}
+	}
+
+	for ( i = 0; i < this_bag.discs.length; i++ ) {
+		if ( this_bag["discs"][i]["slug"] === disc ) {
+			this_bag = this_bag["discs"].splice(i, 1);
+			updated_bag = JSON.stringify( the_bags[bagIndex][this_bag] );
+			Cookies.set("byb", updated_bag);
+			location.reload();
+		}
+	}
+
+}
+
+
 
 
 // EDIT BAG

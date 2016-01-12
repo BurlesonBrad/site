@@ -54,7 +54,7 @@ get_header(); ?>
 								$byb_json = stripslashes($byb_cookie);
 								update_user_meta($user_id, 'byb', $byb_json);
 							} else {
-								// see setcookie() at top
+								// taken care of by set_byb_cookie() in functions.php
 							}
 							if ( !isset($byb) ) {
 								$byb = $byb_cookie;
@@ -80,7 +80,7 @@ get_header(); ?>
 
 								function the_disc($d) {
 									$slug = $d["slug"];
-									echo '<div class="disc ' . get_disc( $slug, 'slug' ) . '"><a href="' . get_disc( $slug, 'link' ) . '">' . get_disc( $slug, 'thumbnail' ) . '</a></div>';
+									echo '<div class="disc ' . get_disc( $slug, 'slug' ) . '" data-disc-slug="' . get_disc( $slug, 'slug' ) . '"><a href="' . get_disc( $slug, 'link' ) . '">' . get_disc( $slug, 'thumbnail' ) . '</a></div>';
 								}
 
 								echo '<div class="bag bag-' . $bag_slug . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2>' . $edit_btn . '</div>';
