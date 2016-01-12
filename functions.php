@@ -14,6 +14,7 @@ function set_byb_cookie() {
 			update_user_meta($user_id, 'byb', $byb_json);
 		} else {
 			setcookie("byb", $byb, 36000000, "/");
+			var_dump(headers_sent());
 		}
 	}
 }
