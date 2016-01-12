@@ -2,9 +2,6 @@
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
-// BEGIN ENQUEUE PARENT ACTION
-// AUTO GENERATED - Do not modify or remove comment markers above or below:
-
 function set_byb_cookie() {
 	if ( is_user_logged_in() ) {
 		$user = wp_get_current_user();
@@ -21,7 +18,10 @@ function set_byb_cookie() {
 	}
 }
 add_action( 'init', 'set_byb_cookie');
-        
+
+// BEGIN ENQUEUE PARENT ACTION
+// AUTO GENERATED - Do not modify or remove comment markers above or below:
+ 
 if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     function chld_thm_cfg_parent_css() {
         wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css' );
