@@ -27,7 +27,7 @@ function editBagName( bag, name ) {
 
 	this_bag["name"] = name;
 	var bags_json = JSON.stringify(the_bags);
-	Cookies.set('byb', bags_json, { expires: 10000 });
+	Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
 }
 
 /***						***/
@@ -83,7 +83,7 @@ function addToBag(e, bag, disc, t) {
 
 // SET THE COOKIE
 	var bags_json = JSON.stringify(the_bags);
-	Cookies.set('byb', bags_json, { expires: 10000 });
+	Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
 	console.log( Cookies.get('byb') );
 
 // ON SUCCESS:
@@ -202,7 +202,7 @@ function removeFromBag(e, bag, disc) {
 	for ( i = 0; i < this_bag.discs.length; i++ ) {
 		if ( this_bag["discs"][i]["slug"] === disc ) {
 			the_bags[bagIndex]["discs"].splice(i, 1);
-			Cookies.set("byb", the_bags);
+			Cookies.set("byb", the_bags, { expires: 1000, path: "/", domain: ".hyzershop.com" });
 			location.reload();
 		}
 	}
