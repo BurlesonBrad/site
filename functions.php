@@ -5,6 +5,22 @@ if ( !defined( 'ABSPATH' ) ) exit;
 // BEGIN ENQUEUE PARENT ACTION
 // AUTO GENERATED - Do not modify or remove comment markers above or below:
 
+function set_byb_cookie() {
+	if ( is_user_logged_in() ) {
+		$user = wp_get_current_user();
+		$user_id = $user->ID;
+		$byb = get_user_meta($user_id, 'byb', true);
+		$byb_cookie = $_COOKIE['byb'];
+		if ( isset($byb_cookie) ) {
+			// UPDATE user meta with the cookie
+			$byb_json = stripslashes($byb_cookie);
+			update_user_meta($user_id, 'byb', $byb_json);
+		} else {
+			setcookie("byb", $byb, 36000000);
+		}
+	}
+}
+add_action( 'init', 'set_byb_cookie');
         
 if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     function chld_thm_cfg_parent_css() {
@@ -28,20 +44,3 @@ function hyzershop_scripts() {
 	wp_enqueue_script( 'js-cookie', get_stylesheet_directory_uri() . '/byb/js.cookie.js', array() );
 }
 add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
-
-function set_byb_cookie() {
-	if ( is_user_logged_in() ) {
-		$user = wp_get_current_user();
-		$user_id = $user->ID;
-		$byb = get_user_meta($user_id, 'byb', true);
-		$byb_cookie = $_COOKIE['byb'];
-		if ( isset($byb_cookie) ) {
-			// UPDATE user meta with the cookie
-			$byb_json = stripslashes($byb_cookie);
-			update_user_meta($user_id, 'byb', $byb_json);
-		} else {
-			setcookie("byb", $byb, 36000000);
-		}
-	}
-}
-add_action( 'init', 'set_byb_cookie');
