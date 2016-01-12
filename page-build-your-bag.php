@@ -1,7 +1,4 @@
 <?php
-// Set the cookie if it's not already set
-
-
 /**
  * The template for displaying all pages.
  *
