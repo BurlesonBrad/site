@@ -536,7 +536,7 @@ form.edit-bag-name {
 	margin-left: 10px;
 }
 
-.bag .disc-area img {
+.bag .disc-area a img {
 	width: 130px !important;
 	height: auto !important;
 	display: inline;
@@ -574,15 +574,15 @@ form.edit-bag-name {
 }
 
 .remove-from-bag {
-	display: none !important;
+	display: none;
 	cursor: pointer;
 	position: absolute;
     top: 0;
     right: 5px;
-    width: 6px !important;
-    height: 6px !important;
+    width: 6px;
+    height: 6px;
 }
 
 .disc:hover .remove-from-bag {
-	display: block !important;
+	display: block;
 }
