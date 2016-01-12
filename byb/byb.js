@@ -83,6 +83,7 @@ function addToBag(e, bag, disc, t) {
 
 // SET THE COOKIE
 	var bags_json = JSON.stringify(the_bags);
+	console.log(bags_json);
 	Cookies.set('byb', bags_json, { expires: 10000 });
 
 // ON SUCCESS:
