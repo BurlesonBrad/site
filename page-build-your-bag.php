@@ -42,7 +42,7 @@ get_header(); ?>
 
 						if ( isset($byb_cookie) ) {
 							$bags = $byb_array;
-							
+
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
@@ -53,6 +53,10 @@ get_header(); ?>
 								$mr_count = 0;
 								$p_count = 0;
 
+								function the_disc($d) {
+									echo '<div class="disc ' . $d["slug"] . '"><a href="/product/' . $d["slug"] . '"><img src="/wp-content/uploads/' . $d["slug"] . '-300x300.png" alt="' . $d["name"] . '" /></a></div>';
+								}
+
 								echo '<div class="bag bag-' . $bag_slug . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2>' . $edit_btn . '</div>';
 								
 								// Drivers
@@ -60,7 +64,7 @@ get_header(); ?>
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "distance-driver" ) {
 										$dd_count++;
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
+										the_disc( $disc );
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -73,7 +77,7 @@ get_header(); ?>
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "fairway-driver" ) {
 										$fd_count++;
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
+										the_disc( $disc );
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -86,7 +90,7 @@ get_header(); ?>
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "midrange" ) {
 										$mr_count++;
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
+										the_disc( $disc );
 							    	}
 							    endforeach;
 							    echo '</div></div>';
@@ -99,7 +103,7 @@ get_header(); ?>
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "putter" ) {
 										$p_count++;
-										echo '<div class="disc"><a href="/product/' . $disc["slug"] . '"><img src="/wp-content/uploads/' . $disc["slug"] . '-300x300.png" alt="' . $disc["name"] . '" /></a></div>';
+										the_disc( $disc );
 							    	}
 							    endforeach;							    
 							    echo '</div></div>';
