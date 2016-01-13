@@ -39,8 +39,10 @@ function getBags(v) {
 function editBagName( bag, name ) {
 	var the_bags;
 	getBags(the_bags);
-	if ( !the_bags && Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-		the_bags = Cookies.getJSON('byb');
+	if ( !the_bags ) {
+		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+			the_bags = Cookies.getJSON('byb');
+		}
 	}
 
 	var this_bag = the_bags[0];
@@ -140,7 +142,7 @@ var $bagsMenu = $("<select class='bags-menu'></select>");
 
 var the_bags;
 getBags(the_bags);
-if ( !the_bags )
+if ( !the_bags ) {
 	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 		the_bags = Cookies.getJSON('byb');
 		for (i = 0; i < the_bags.length; i++ ) {
@@ -207,7 +209,7 @@ if ( $("body").hasClass("single-product") ) {
 (function() {
 	var the_bags;
 	getBags(the_bags);
-	if ( !the_bags )
+	if ( !the_bags ) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			var the_bags = Cookies.getJSON('byb');
 			$(".add-to-bag").each(function() {
