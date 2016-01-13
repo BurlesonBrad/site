@@ -395,6 +395,7 @@ body.home #content { padding-top: 0; }
 	background-size: 100% auto;
 	display: inline-block;
 	margin: 0 auto;
+	padding: 3em 0;
 }
 
 .disc-types-inner > a {
