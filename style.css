@@ -214,6 +214,11 @@ ul#menu-main-menu li:nth-child(2) > a {
 }
 
 /* main content */
+.page-template-template-homepage #content > .col-full {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
 .woocommerce-breadcrumb { display: none; }
 
 #content { padding-top: 3em; }
@@ -382,7 +387,7 @@ body.home #content { padding-top: 0; }
 }
 
 .shop-by-disc-type {
-	
+
 }
 
 
