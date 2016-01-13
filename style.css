@@ -386,8 +386,9 @@ body.home #content { padding-top: 0; }
 	}
 }
 
-.shop-by-disc-type {
-
+.backgroundsize .disc-types-inner {
+	background: url("/images/shop-by-disc-type.png") no-repeat 50% 50%;
+	background-size: 100% auto;
 }
 
 

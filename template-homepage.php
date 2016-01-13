@@ -64,7 +64,7 @@ get_header(); ?>
 				$disc_types = get_terms( $taxonomy, $dt_args );
 			?>
 			<section class="shop-by-disc-type gradient-bg">
-				<div class="disc-type-inner col-full">
+				<div class="disc-types-inner col-full">
 				<?php
 					foreach ( $disc_types as $id => $slug ) {
 						echo '<img src="' . get_stylesheet_directory_uri() . '/images/' . $slug . '-profile-white.png" alt="' . $slug . '" />';
