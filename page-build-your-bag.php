@@ -16,6 +16,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
  		<?php
+ 		if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+ 			$byb_json = $_POST['bags'];
+ 			update_user_meta($user_id, 'byb', $byb_json);
+ 		}
+
  		function get_disc($s, $part) {
 			$args = array(
 			  'name'        => $s,
@@ -44,28 +49,16 @@ get_header(); ?>
 				<div id="bags">
 					<?php
 					function getDiscBags() {
-						// if ( is_user_logged_in() ) {
-						// 	$user = wp_get_current_user();
-						// 	$user_id = $user->ID;
-						// 	$byb = get_user_meta($user_id, 'byb', true);
-						// 	$byb_cookie = $_COOKIE['byb'];
-						// 	if ( isset($byb_cookie) ) {
-						// 		// UPDATE user meta with the cookie
-						// 		$byb_json = stripslashes($byb_cookie);
-						// 		update_user_meta($user_id, 'byb', $byb_json);
-						// 	} else {
-						// 		// taken care of by set_byb_cookie() in functions.php
-						// 	}
-						// 	if ( !isset($byb) ) {
-						// 		$byb = $byb_cookie;
-						// 	}
-						// } else {
-						// 	$byb = $_COOKIE['byb'];
-						// }
+						if ( is_user_logged_in() ) {
+							$user = wp_get_current_user();
+							$user_id = $user->ID;
+							$byb = get_user_meta($user_id, 'byb', true);
+							if ( !$byb ) {
+								$byb = $_COOKIE['byb'];
+							}
+						}
 
-						$byb = $_COOKIE['byb'];
-
-						if ( isset( $byb ) ) {
+						if ( isset($byb) ) {
 							$byb_json = stripslashes($byb);
 							$byb_array = json_decode( $byb_json, true );
 							$bags = $byb_array;
