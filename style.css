@@ -409,12 +409,12 @@ body.home #content { padding-top: 0; }
 	margin: 0 2em;
 }
 
-@media screen and (max-width: 88em) {
+@media screen and (max-width: 71em) and (min-width: 45em) {
 	.disc-types-inner > a > img {
-		height: 58px;
-		width: auto;
-		display: block;
-		margin: 2em auto;
+		/*margin: 2em auto;*/
+	}
+	.disc-types-inner {
+		width: 45em;
 	}
 }
 
