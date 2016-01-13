@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<section class="featured-disc-area">
+			<section class="featured-disc-area col-full">
 				<div class="featured-disc-text">
 					<div class="featured-disc-inner">
 						<?php
@@ -64,7 +64,7 @@ get_header(); ?>
 				$disc_types = get_terms( $taxonomy, $dt_args );
 			?>
 			<section class="shop-by-disc-type gradient-bg">
-				<div class="disc-type-inner">
+				<div class="disc-type-inner col-full">
 				<?php
 					foreach ( $disc_types as $id => $slug ) {
 						echo '<img src="' . get_stylesheet_directory_uri() . '/images/' . $slug . '-profile-white.png" alt="' . $slug . '" />';
@@ -73,7 +73,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="shop-by-brand">
+			<section class="shop-by-brand col-full">
 				<?php echo do_shortcode("[product_brand_thumbnails]"); ?>
 			</section>
 
