@@ -282,7 +282,7 @@ body.home #content { padding-top: 0; }
 	content: " ";
 	display: block;
 	height: 1px;
-	width: 1px;
+	width: 100%;
 	visibility: hidden;
 }
 
