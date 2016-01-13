@@ -404,7 +404,8 @@ body.home #content { padding-top: 0; }
 .disc-types-inner > a > img {
 	height: 58px;
 	width: auto;
-	display: inline;
+	display: inline-block;
+	margin: 0 2em;
 }
 
 
