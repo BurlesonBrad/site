@@ -8,6 +8,18 @@ $("#clear_bags").click(function() {
 	location.reload();
 });
 
+function updateBags(data) {
+	$.post("../page-build-your-bag.php", {
+		bags: data
+	});
+}
+
+function deleteBags(data) {
+	$.post("../page-build-your-bag.php", {
+		bags: ''
+	});
+}
+
 function editBagName( bag, name ) {
 	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 		var the_bags = Cookies.getJSON('byb');
@@ -29,12 +41,6 @@ function editBagName( bag, name ) {
 	var bags_json = JSON.stringify(the_bags);
 	updateBags(bags_json);
 	Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
-}
-
-function updateBags(data) {
-	$.post("../page-build-your-bag.php", {
-		bags: data
-	});
 }
 
 /***						***/

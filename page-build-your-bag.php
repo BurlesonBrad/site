@@ -16,9 +16,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
  		<?php
- 		if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+ 		if ( $_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['bags'] ) {
  			$byb_json = $_POST['bags'];
- 			update_user_meta($user_id, 'byb', $byb_json);
+ 			if ( $byb_json === '' ) {
+ 				delete_user_meta($user_id, 'byb', $byb_json);
+ 			} else {
+ 				update_user_meta($user_id, 'byb', $byb_json);
+ 			}
  		}
 
  		function get_disc($s, $part) {
