@@ -1,7 +1,12 @@
 (function($) {
 $(document).ready(function() {
 
-console.log( Cookies.get('byb') );
+var bags_log;
+getBags(bags_log);
+if (!bags_log) {
+	bags_log = Cookies.get('byb');
+}
+console.log( bags_log );
 
 $("#clear_bags").click(function() {
 	deleteBags();
@@ -21,11 +26,21 @@ function deleteBags() {
 	});
 }
 
+function getBags(v) {
+	$.get("../wp-content/themes/storefront-child/page-build-your-bag.php", {
+		byb: 'true'
+	}, function(data) {
+		v = data;
+	}).fail(function(data) {
+		v = false;
+	});
+}
+
 function editBagName( bag, name ) {
-	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-		var the_bags = Cookies.getJSON('byb');
-	} else {
-		return;
+	var the_bags;
+	getBags(the_bags);
+	if ( !the_bags && Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+		the_bags = Cookies.getJSON('byb');
 	}
 
 	var this_bag = the_bags[0];
@@ -49,15 +64,19 @@ function editBagName( bag, name ) {
 
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
-	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-		var the_bags = Cookies.getJSON('byb');
-	} else {
-		var the_bags = [
-			{
-				"name": "My Bag",
-				"discs": []
-			}
-		];
+	var the_bags;
+	getBags(the_bags);
+	if ( !the_bags ) {
+		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+			var the_bags = Cookies.getJSON('byb');
+		} else {
+			var the_bags = [
+				{
+					"name": "My Bag",
+					"discs": []
+				}
+			];
+		}
 	}
 
 	if ( disc.length === 0 || t.length === 0 ) {
@@ -98,7 +117,7 @@ function addToBag(e, bag, disc, t) {
 	var bags_json = JSON.stringify(the_bags);
 	updateBags(bags_json);
 	Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
-	console.log( Cookies.get('byb') );
+	console.log( bags_json );
 
 // ON SUCCESS:
 	if ( $(".add-to-bag-success").length === 0 ) {
@@ -119,15 +138,19 @@ function addToBag(e, bag, disc, t) {
 // INSERT THE ADD BUTTON INTERFACE
 var $bagsMenu = $("<select class='bags-menu'></select>");
 
-if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-	var the_bags = Cookies.getJSON('byb');
-	for (i = 0; i < the_bags.length; i++ ) {
-		var bagSlug = the_bags[i]["name"];
-		var bagName = bagSlug.replace(/\-/g, " ");
-		$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
+var the_bags;
+getBags(the_bags);
+if ( !the_bags )
+	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+		the_bags = Cookies.getJSON('byb');
+		for (i = 0; i < the_bags.length; i++ ) {
+			var bagSlug = the_bags[i]["name"];
+			var bagName = bagSlug.replace(/\-/g, " ");
+			$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
+		}
+	} else {
+		$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 	}
-} else {
-	$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 }
 var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src='add-to-bag-icon.png' alt='Add' /><img class='added' src='add-to-bag-success.png' alt='Add' />Add<span class='added'>ed</span> to bag<span class='added'>!</span></button>");
 
@@ -181,28 +204,37 @@ if ( $("body").hasClass("single-product") ) {
 }
 
 // Deactivate 'add to bag' buttons for already-added discs
-if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-	var the_bags = Cookies.getJSON('byb');
-	$(".add-to-bag").each(function() {
-		var $this = $(this);
-		var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
-		for (i = 0; i < the_bags.length; i++ ) {
-			for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
-				this_slug = the_bags[i]["discs"][index]["slug"];
-				if ( disc_slug === this_slug ) {
-					$this.addClass("success");
+(function() {
+	var the_bags;
+	getBags(the_bags);
+	if ( !the_bags )
+		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+			var the_bags = Cookies.getJSON('byb');
+			$(".add-to-bag").each(function() {
+				var $this = $(this);
+				var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
+				for (i = 0; i < the_bags.length; i++ ) {
+					for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
+						this_slug = the_bags[i]["discs"][index]["slug"];
+						if ( disc_slug === this_slug ) {
+							$this.addClass("success");
+						}
+					}
 				}
-			}
+			});
 		}
-	});
-}
-
+	}
+}();
 
 /***						***/
 /***	REMOVE FROM BAG 	***/
 /***						***/
 function removeFromBag(e, bag, disc) {
-	var the_bags = Cookies.getJSON('byb');
+	var the_bags;
+	getBags(the_bags);
+	if ( !the_bags ) {
+		the_bags = Cookies.getJSON('byb');
+	}
 
 	var this_bag = the_bags[0];
 	var bagIndex = 0;
