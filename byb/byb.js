@@ -4,6 +4,7 @@ $(document).ready(function() {
 console.log( Cookies.get('byb') );
 
 $("#clear_bags").click(function() {
+	deleteBags();
 	Cookies.remove('byb', {domain: '.hyzershop.com'});
 	location.reload();
 });
@@ -14,7 +15,7 @@ function updateBags(data) {
 	});
 }
 
-function deleteBags(data) {
+function deleteBags() {
 	$.post("../wp-content/themes/storefront-child/page-build-your-bag.php", {
 		bags: ''
 	});
