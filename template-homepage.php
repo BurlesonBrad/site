@@ -22,7 +22,6 @@ get_header(); ?>
 				<div class="featured-disc-text">
 					<div class="featured-disc-inner">
 						<?php
-						$post_id;
 						$fd_params = array(
 							'posts_per_page' => 1,
 							'product_cat' => 'featured-disc',
@@ -55,9 +54,21 @@ get_header(); ?>
 					wp_reset_postdata();
 				endif; ?>
 			</section>
-
+			<?php
+				$taxonomy = array( 'disc-type' );
+				$dt_args = array(
+					'orderby' 	=> 'id',
+					'number'	=> 4,
+					'fields'	=> 'id=>slug',
+				);
+				$disc_types = get_terms( $taxonomy, $dt_args );
+			?>
 			<section class="shop-by-disc-type">
-
+			<?php
+				foreach ( $disc_types as $id => $slug ) {
+					echo '<img src="' . get_stylesheet_directory_uri() . '/images/' . $slug . '-profile-white.png" alt="' . $slug . '" />';
+				}
+			?>
 			</section>
 
 			<section class="shop-by-brand">
