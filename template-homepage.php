@@ -67,7 +67,7 @@ get_header(); ?>
 				<div class="disc-types-inner col-full">
 				<?php
 					foreach ( $disc_types as $id => $slug ) {
-						echo '<img src="' . get_stylesheet_directory_uri() . '/images/' . $slug . '-profile-white.png" alt="' . $slug . '" />';
+						echo '<img src="' . get_stylesheet_directory_uri() . '/images/disc-type-' . $slug . '.png" alt="' . $slug . '" />';
 					}
 				?>
 				</div>
