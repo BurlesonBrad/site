@@ -16,7 +16,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
  		<?php
- 		if ( $_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['bags'] ) {
+ 		if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['bags']) ) {
  			$byb_json = $_POST['bags'];
  			$user = wp_get_current_user();
 			$user_id = $user->ID;
