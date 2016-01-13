@@ -389,6 +389,18 @@ body.home #content { padding-top: 0; }
 .backgroundsize .disc-types-inner {
 	background: url("/wp-content/themes/storefront-child/images/shop-by-disc-type.png") no-repeat 50% 50%;
 	background-size: 100% auto;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.disc-types-inner > a {
+	text-align: center;
+}
+
+.disc-types-inner > a > img {
+	height: 58px;
+	width: auto;
+	display: inline;
 }
 
 
