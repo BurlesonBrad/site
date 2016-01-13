@@ -18,14 +18,14 @@ get_header(); ?>
  		<?php
  		if ( $_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['bags'] ) {
  			$byb_json = $_POST['bags'];
+ 			$user = wp_get_current_user();
+			$user_id = $user->ID;
  			if ( $byb_json === '' ) {
  				delete_user_meta($user_id, 'byb', $byb_json);
  			} else {
  				update_user_meta($user_id, 'byb', $byb_json);
  			}
  		}
-
- 		echo $byb_json;
 
  		function get_disc($s, $part) {
 			$args = array(
