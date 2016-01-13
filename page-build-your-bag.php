@@ -25,6 +25,8 @@ get_header(); ?>
  			}
  		}
 
+ 		echo $byb_json;
+
  		function get_disc($s, $part) {
 			$args = array(
 			  'name'        => $s,
