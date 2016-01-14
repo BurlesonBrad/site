@@ -659,6 +659,7 @@ button.add-to-bag {
 	text-align: center;
 	background: #00fa60;
 	color: #fff;
+	border-radius: 1px;
 }
 
 .add-to-bag-failure a, .add-to-bag-success a {
