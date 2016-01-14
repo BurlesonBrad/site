@@ -632,6 +632,10 @@ button.add-to-bag {
 	color: #666;
 }
 
+.add-to-bag.success {
+	opacity: 0.6;	
+}
+
 .add-to-bag img {
 	display: inline-block !important;
 	margin: 0 6px 0 0 !important;
