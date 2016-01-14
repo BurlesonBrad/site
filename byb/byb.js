@@ -27,12 +27,15 @@ function deleteBags() {
 }
 
 function getBags(v) {
+	var callback = function(v) {
+		return function(data, textStatus, jqXHR) {
+			v = data;
+			console.log(data);
+		};
+	};
 	$.get("/build-your-bag", {
 		byb: 'true'
-	}, function(data, v) {
-		v = data;
-		console.log(data);
-	}).fail(function(data, v) {
+	}, callback(v) ).fail(function(data, v) {
 		v = false;
 	});
 }
