@@ -77,7 +77,7 @@ get_header(); ?>
 			<div id="byb-wrapper" data-temp-user="0">
 				<div id="bags">
 					<?php
-					function getDiscBags() {
+					function getDiscBags($byb) {
 						// if ( is_user_logged_in() ) {
 						// 	$user = wp_get_current_user();
 						// 	$user_id = $user->ID;
