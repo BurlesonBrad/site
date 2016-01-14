@@ -226,7 +226,7 @@ if ( $("body").hasClass("single-product") ) {
 			});
 		}
 	}
-}();
+})();
 
 /***						***/
 /***	REMOVE FROM BAG 	***/
