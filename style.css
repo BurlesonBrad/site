@@ -675,7 +675,7 @@ button.add-to-bag {
 	text-align: center;
 	background: #00fa60;
 	color: #fff;
-	border-radius: 1px;
+	border-radius: 4px;
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 
