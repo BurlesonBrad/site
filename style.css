@@ -489,7 +489,7 @@ form.edit-bag-name {
 	box-shadow: none !important;
 
 	font-family: 'Rock Salt';
-	color: #ff3c7c;
+	color: #ccc;
 	letter-spacing: 0;
 	font-size: 5em;
 	line-height: 1.1;
@@ -500,6 +500,7 @@ form.edit-bag-name {
 .edit-bag-name input[type="text"]:focus {
 	background: #fff !important;
 	box-shadow: inset 1px 1px 6px rgba(0,0,0,0.2) !important;
+	color: #ff3c7c;
 }
 
 .no-js .edit-btn {
