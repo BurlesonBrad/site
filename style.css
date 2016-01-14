@@ -161,6 +161,10 @@ ul#menu-main-menu li:nth-child(2) > a {
 	width: 100%;
 	padding-top: 0;
 	padding-bottom: 0;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	box-shadow: none;
 }
 
 .widget_search form:before, .widget_product_search form:before {
