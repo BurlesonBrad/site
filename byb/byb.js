@@ -149,8 +149,8 @@ if ( !user_meta ) {
 	}
 }
 if ( the_bags ) {
-	console.log( the_bags );
-	console.log( the_bags[0] );
+	console.log( $.parseJSON(the_bags) );
+	console.log( $.parseJSON(the_bags)[0] );
 	for (i = 0; i < the_bags.length; i++ ) {
 		var bagSlug = the_bags[i]["name"];
 		var bagName = bagSlug.replace(/\-/g, " ");
