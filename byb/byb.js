@@ -30,7 +30,7 @@ function getBags(v) {
 	var callback = function(v) {
 		return function(data, textStatus, jqXHR) {
 			v = data;
-			console.log(data);
+			console.log(v);
 		};
 	};
 	$.get("/build-your-bag", {
