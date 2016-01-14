@@ -335,11 +335,11 @@ $removeBtn.click(function(e) {
 
 
 // EDIT BAG
-$(".bag-edit-btn").each(function() {
-	if ( $(this).siblings("form.edit-bag-name").length ) {
-		$(this).addClass("bag-name-edit-btn");
-	}
-});
+// $(".bag-edit-btn").each(function() {
+// 	if ( $(this).siblings("form.edit-bag-name").length ) {
+// 		$(this).addClass("bag-name-edit-btn");
+// 	}
+// });
 
 (function() {
 	var $this = $(this);
@@ -359,13 +359,13 @@ $(".bag-edit-btn").each(function() {
 		e.preventDefault();
 		e.stopPropagation();
 		var $this = $(this);
-		var $editBagBtn = $this.siblings(".bag-edit-btn");
+//		var $editBagBtn = $this.siblings(".bag-edit-btn");
 		var $bagNameInput = $this.find("input[type='text']");
 		var $bagTitle = $this.siblings("h2");
 		var bagName = $bagTitle.text();
 		var newName = $bagNameInput.val();
 
-		$editBagBtn.show();
+//		$editBagBtn.show();
 
 		if ( $bagNameInput.is(":focus") ) {
 			$bagNameInput.blur();
