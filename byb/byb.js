@@ -382,6 +382,15 @@ $(".disc").hover(function() {
 	}
 });
 
+$(".page-id-45 .options button").click(function() {
+	$(this).parent().toggleClass("expanded");
+});
+$(document).click(function(e) {
+	if ( !$(e).target.parents(".options").length ) {
+		$(".page-id-45 .options button").click();
+	}
+});
+
 
 
 
