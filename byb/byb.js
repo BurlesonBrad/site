@@ -359,7 +359,7 @@ $("form.edit-bag-name").submit(function(e) {
 	editBagName( newName, bagName );
 });
 
-$(".bag-edit-btn").click(function() {
+(function() {
 	var $this = $(this);
 	if ( $this.siblings("form.edit-bag-name").length ) {
 		var $bagNameForm = $this.siblings("form.edit-bag-name");
@@ -375,7 +375,7 @@ $(".bag-edit-btn").click(function() {
 			$bagNameForm.submit();
 		});
 	}
-});
+})();
 
 
 $(".disc").hover(function() {
