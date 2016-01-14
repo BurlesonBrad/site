@@ -1,6 +1,8 @@
 (function($) {
 $(document).ready(function() {
 
+Cookies.remove('byb', {domain: '.hyzershop.com'});
+
 $("#clear-bags").click(function() {
 	deleteBags();
 	Cookies.remove('byb', {domain: '.hyzershop.com'});
@@ -309,7 +311,7 @@ function removeFromBag(e, bag, disc) {
 		for ( i = 0; i < this_bag.discs.length; i++ ) {
 			if ( this_bag["discs"][i]["slug"] === disc ) {
 				the_bags[bagIndex]["discs"].splice(i, 1);
-				updateBags( JSON.stringify(the_bags) );
+				//updateBags( JSON.stringify(the_bags) );
 				Cookies.set("byb", the_bags, { expires: 1000, path: "/", domain: ".hyzershop.com" });
 				location.reload();
 			}
