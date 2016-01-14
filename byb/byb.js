@@ -28,7 +28,7 @@ function deleteBags() {
 
 function getBags(v) {
 	console.log(v);
-	$.get("../build-your-bag", {
+	$.get("/build-your-bag", {
 		byb: 'true'
 	}, function(data) {
 		v = data;
