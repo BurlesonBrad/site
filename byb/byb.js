@@ -222,10 +222,10 @@ if ( $("body").hasClass("single-product") ) {
 		$addToBagBtn = $(".add-to-bag");
 	}
 } else {
-	$(".product[data-product-slug] a.button").not(".page-id-45 .disc a").last().each(function() {
+	$(".product[data-product-slug]").not(".page-id-45 .disc").last().each(function() {
 		var $this = $(this);
-		$bagsMenu.clone(true).insertAfter($this);
-		$addToBagBtn.clone(true).insertAfter($this);
+		$bagsMenu.clone(true).appendTo($this);
+		$addToBagBtn.clone(true).appendTo($this);
 	});
 }
 
