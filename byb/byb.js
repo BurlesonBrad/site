@@ -371,7 +371,7 @@ $("form.edit-bag-name").submit(function(e) {
 	// $bagNameInput.focus();
 
 	$bagNameInput.blur(function() {
-		$bagNameForm.submit();
+		$(this).submit();
 	});
 })();
 
