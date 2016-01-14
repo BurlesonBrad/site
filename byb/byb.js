@@ -15,13 +15,13 @@ $("#clear_bags").click(function() {
 });
 
 function updateBags(data) {
-	$.post("../wp-content/themes/storefront-child/page-build-your-bag.php", {
+	$.post("/page-build-your-bag.php", {
 		bags: data
 	});
 }
 
 function deleteBags() {
-	$.post("../wp-content/themes/storefront-child/page-build-your-bag.php", {
+	$.post("/page-build-your-bag.php", {
 		bags: ''
 	});
 }
