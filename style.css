@@ -561,7 +561,7 @@ form.edit-bag-name {
 	text-align: center;
 	margin: 4.2em 0 0 0;
 	border: 1px solid #ddd;
-	background: #f5f5f5;
+	background: #f0f0f0;
 }
 
 .options-btn, .options-btn:hover {
@@ -591,7 +591,7 @@ form.edit-bag-name {
 }
 
 .options li:hover {
-	background: #eaeaea;
+	background: #eee;
 }
 
 .bag-edit-btn:hover span {
