@@ -39,7 +39,7 @@ get_header(); ?>
  		// 	}
  		// }
 
- 		if (isset($_COOKIE['byb']):
+ 		if ( isset($_COOKIE['byb']) ):
  			$byb = $_COOKIE['byb'];
  		else: $byb = false;
  			endif;
