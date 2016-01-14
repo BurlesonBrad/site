@@ -81,6 +81,13 @@ ul.menu li.current-menu-item > a.cart-contents, ul#menu-utility-menu li.current-
 	background: #00b0ff;
 }
 
+.backgroundsize ul.menu #menu-item-49 > a {
+	background-image: url('images/beta.png');
+	background-size: 20px auto;
+	background-repeat: no-repeat;
+	background-position: 75% 30%;
+}
+
 ul#menu-main-menu li:first-child > a {
 	visibility: hidden;
 	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50%;
