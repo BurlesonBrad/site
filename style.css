@@ -524,11 +524,6 @@ form.edit-bag-name {
 	color: #888;
 	font-weight: bold;
 	line-height: 23px;
-	opacity: 0.4;
-}
-
-.options:hover {
-	opacity: 1;
 }
 
 .js .options ul {
@@ -546,6 +541,11 @@ form.edit-bag-name {
 	position: absolute;
 	top: 0;
 	right: 0;
+	padding: 0;
+	background: transparent;
+	color: #00b0ff;
+	font-size: 8em;
+	letter-spacing: 0.5em;
 }
 
 .options.expanded ul {
