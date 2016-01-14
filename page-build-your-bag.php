@@ -88,13 +88,13 @@ get_header(); ?>
 						// }
 
 						if ( isset($byb) ) {
-							// if ( is_string($byb) ) {
-							// 	$byb_json = stripslashes($byb);
-							// 	$byb_array = json_decode( $byb_json, true );
-							// 	$bags = $byb_array;
-							// } else {
+							if ( is_string($byb) ) {
+								$byb_json = stripslashes($byb);
+								$byb_array = json_decode( $byb_json, true );
+								$bags = $byb_array;
+							} else {
 								$bags = $byb;
-							//}
+							}
 
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
