@@ -56,7 +56,7 @@ function editBagName( bag, name ) {
 				bagIndex = i;
 			}
 		}
-		console.log(this_bag + " and now we'll add" + name);
+		console.log(this_bag);
 		this_bag["name"] = name;
 		var bags_json = JSON.stringify(the_bags);
 		console.log( bags_json );
