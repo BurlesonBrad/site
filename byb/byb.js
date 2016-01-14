@@ -35,7 +35,7 @@ function getBags(v) {
 	};
 	$.get("/build-your-bag", {
 		byb: 'true'
-	}, callback(v), "json" ).fail(function(v) {
+	}, callback(v) ).fail(function(v) {
 		v = false;
 	});
 }
