@@ -94,7 +94,7 @@ get_header(); ?>
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
-								$edit_btn = '<div class="bag-edit-btn"><img class="edit-icon" src="' . get_stylesheet_directory_uri() . '/images/edit-icon-blue.png" alt="Edit bag name" /><span>Change your bag\'s name</span></div>';
+								$edit_btn = '<div class="bag-edit-btn">...<ul><li>Clear bag (start over)</li></ul></div>';
 								$dd_count = 0;
 								$fd_count = 0;
 								$mr_count = 0;
@@ -105,7 +105,7 @@ get_header(); ?>
 									echo '<div class="disc product ' . get_disc( $slug, 'slug' ) . '" data-product-slug="' . get_disc( $slug, 'slug' ) . '"><a href="' . get_disc( $slug, 'link' ) . '">' . get_disc( $slug, 'thumbnail' ) . '</a><img class="remove-from-bag" src="' . get_stylesheet_directory_uri() . '/images/trash-icon.gif" alt="remove" /></div>';
 								}
 
-								echo '<div class="bag bag-' . $bag_slug . '" data-bag-name="' . $bag["name"] . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2>' . $edit_btn . '</div>';
+								echo '<div class="bag bag-' . $bag_slug . '" data-bag-name="' . $bag["name"] . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2></div>';
 								
 								// Drivers
 								echo '<div class="distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
@@ -158,6 +158,8 @@ get_header(); ?>
 							    if ( $p_count === 0 ) {
 							    	echo '<style>.putters{display:none;}</style>';
 							    }
+
+							    echo $edit_btn . '</div>';
 
 							endforeach;
 						} else {
