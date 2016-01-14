@@ -622,8 +622,13 @@ form.edit-bag-name {
     right: 5px;
     width: 10px;
     height: 10px;
+    opacity: 0.4;
 }
 
 .disc:hover .remove-from-bag {
 	display: block;
+}
+
+.remove-from-bag:hover {
+	opacity: 1;
 }
