@@ -142,7 +142,6 @@ var user_meta = false;
 promise_bags.success(function(data) {
 	the_bags = data;
 	user_meta = true;
-	console.log( the_bags );
 });
 if ( !user_meta ) {
 	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
@@ -150,6 +149,8 @@ if ( !user_meta ) {
 	}
 }
 if ( the_bags ) {
+	console.log( the_bags );
+	console.log( the_bags[0] );
 	for (i = 0; i < the_bags.length; i++ ) {
 		var bagSlug = the_bags[i]["name"];
 		var bagName = bagSlug.replace(/\-/g, " ");
