@@ -24,10 +24,6 @@ function get_bags() {
 		byb: 'true'
 	});
 }
-var promise_bags = get_bags();
-promise_bags.success(function(data) {
-	setBags(bags, data);
-});
 
 function editBagName( bag, name ) {
 	var the_bags = false;
