@@ -361,20 +361,18 @@ $("form.edit-bag-name").submit(function(e) {
 
 (function() {
 	var $this = $(this);
-	if ( $this.siblings("form.edit-bag-name").length ) {
-		var $bagNameForm = $this.siblings("form.edit-bag-name");
-		var $bagName = $bagNameForm.siblings("h2");
-		var $bagNameInput = $bagNameForm.find("input[type='text']");
+	var $bagNameForm = $("form.edit-bag-name");
+	var $bagName = $bagNameForm.siblings("h2");
+	var $bagNameInput = $bagNameForm.find("input[type='text']");
 
-		$this.hide();
-		$bagName.hide();
-		$bagNameForm.show();
-		$bagNameInput.focus();
+	// $this.hide();
+	// $bagName.hide();
+	// $bagNameForm.show();
+	// $bagNameInput.focus();
 
-		$bagNameInput.blur(function() {
-			$bagNameForm.submit();
-		});
-	}
+	$bagNameInput.blur(function() {
+		$bagNameForm.submit();
+	});
 })();
 
 
