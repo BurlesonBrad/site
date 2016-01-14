@@ -448,10 +448,6 @@ body.home #content { padding-top: 0; }
 	width: 100% !important;
 }
 
-#bags form {
-	display: none;
-}
-
 .bag-title {
 	position: relative;
 }
