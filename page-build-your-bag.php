@@ -39,7 +39,10 @@ get_header(); ?>
  		// 	}
  		// }
 
- 		$byb = (isset($_COOKIE['byb']) ? $_COOKIE['byb'] : false;
+ 		if (isset($_COOKIE['byb']):
+ 			$byb = $_COOKIE['byb'];
+ 		else: $byb = false;
+ 			endif;
 
  		function get_disc($s, $part) {
 			$args = array(
