@@ -26,32 +26,29 @@ function deleteBags() {
 	});
 }
 
-function getBags(v) {
-	var callback = function(v) {
-		return function(data) {
-			v = data;
-			console.log("passed: " + v);
-		};
-	};
-
-	$.get("/build-your-bag", {
+function get_bags() {
+	return $.get("/build-your-bag", {
 		byb: 'true'
-	}, callback(v) ).fail(function(v) {
-		v = false;
 	});
-
-	console.log("through: " + v);
 }
+var promise_bags = get_bags();
+promise_bags.success(function(data) {
+	setBags(bags, data);
+});
 
 function editBagName( bag, name ) {
-	var the_bags;
-	getBags(the_bags);
-	console.log(the_bags);
-	if ( !the_bags ) {
+	var the_bags = false;
+	var user_meta = false;
+	promise_bags.success(function(data) {
+		the_bags = data;
+		user_meta = true;
+	});
+	if ( !user_meta ) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
 		}
 	}
+	console.log(the_bags);
 
 	var this_bag = the_bags[0];
 	var bagIndex = 0;
@@ -74,8 +71,10 @@ function editBagName( bag, name ) {
 
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
-	var the_bags;
-	getBags(the_bags);
+	var the_bags = false;
+	promise_bags.success(function(data) {
+		the_bags = data;
+	});
 	if ( !the_bags ) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			var the_bags = Cookies.getJSON('byb');
@@ -148,20 +147,27 @@ function addToBag(e, bag, disc, t) {
 // INSERT THE ADD BUTTON INTERFACE
 var $bagsMenu = $("<select class='bags-menu'></select>");
 
-var the_bags;
-getBags(the_bags);
-if ( !the_bags ) {
+var the_bags = false;
+var user_meta = false;
+promise_bags.success(function(data) {
+	the_bags = data;
+	user_meta = true;
+});
+if ( !user_meta ) {
 	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 		the_bags = Cookies.getJSON('byb');
-		for (i = 0; i < the_bags.length; i++ ) {
-			var bagSlug = the_bags[i]["name"];
-			var bagName = bagSlug.replace(/\-/g, " ");
-			$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
-		}
-	} else {
-		$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 	}
 }
+if ( the_bags ) {
+	for (i = 0; i < the_bags.length; i++ ) {
+		var bagSlug = the_bags[i]["name"];
+		var bagName = bagSlug.replace(/\-/g, " ");
+		$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
+	}
+} else {
+	$bagsMenu.append("<option value='My Bag'>My Bag</option>");
+}
+
 var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src='add-to-bag-icon.png' alt='Add' /><img class='added' src='add-to-bag-success.png' alt='Add' />Add<span class='added'>ed</span> to bag<span class='added'>!</span></button>");
 
 /***					***/
@@ -215,24 +221,30 @@ if ( $("body").hasClass("single-product") ) {
 
 // Deactivate 'add to bag' buttons for already-added discs
 (function() {
-	var the_bags;
-	getBags(the_bags);
-	if ( !the_bags ) {
+	var the_bags = false;
+	var user_meta = false;
+	promise_bags.success(function(data) {
+		the_bags = data;
+		user_meta = true;
+	});
+	if ( !user_meta ) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-			var the_bags = Cookies.getJSON('byb');
-			$(".add-to-bag").each(function() {
-				var $this = $(this);
-				var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
-				for (i = 0; i < the_bags.length; i++ ) {
-					for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
-						this_slug = the_bags[i]["discs"][index]["slug"];
-						if ( disc_slug === this_slug ) {
-							$this.addClass("success");
-						}
+			the_bags = Cookies.getJSON('byb');
+		}
+	}
+	if ( the_bags ) {
+		$(".add-to-bag").each(function() {
+			var $this = $(this);
+			var disc_slug = $this.parents("*[data-product-slug]").eq(0).data("product-slug");
+			for (i = 0; i < the_bags.length; i++ ) {
+				for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
+					this_slug = the_bags[i]["discs"][index]["slug"];
+					if ( disc_slug === this_slug ) {
+						$this.addClass("success");
 					}
 				}
-			});
-		}
+			}
+		});
 	}
 })();
 
@@ -240,9 +252,13 @@ if ( $("body").hasClass("single-product") ) {
 /***	REMOVE FROM BAG 	***/
 /***						***/
 function removeFromBag(e, bag, disc) {
-	var the_bags;
-	getBags(the_bags);
-	if ( !the_bags ) {
+	var the_bags = false;
+	var user_meta = false;
+	promise_bags.success(function(data) {
+		the_bags = data;
+		user_meta = true;
+	});
+	if ( !user_meta ) {
 		the_bags = Cookies.getJSON('byb');
 	}
 
