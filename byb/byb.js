@@ -313,7 +313,8 @@ function removeFromBag(e, bag, disc) {
 	}
 }
 
-var $removeBtn = $("<img class='remove-from-bag' src='/images/trash-icon.png' alt='remove' />");
+//var $removeBtn = $("<img class='remove-from-bag' src='/images/trash-icon.png' alt='remove' />");
+var $removeBtn = $(".remove-from-bag");
 $removeBtn.click(function(e) {
 	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
 
@@ -322,9 +323,9 @@ $removeBtn.click(function(e) {
 	removeFromBag( e, $bag, slug );
 });
 
-$(".page-id-45 .disc[data-product-slug]").each(function() {
-	$removeBtn.clone(true).appendTo($(this));
-});
+// $(".page-id-45 .disc[data-product-slug]").each(function() {
+// 	$removeBtn.clone(true).appendTo($(this));
+// });
 
 
 
