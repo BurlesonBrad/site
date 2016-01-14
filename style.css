@@ -617,11 +617,19 @@ button.add-to-bag {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 4em;
+	height: 4em;
 	background: transparent;
 	border-radius: 0;
 	padding: 0;
 	color: #666;
+}
+
+.add-to-bag img {
+	margin-right: 6px;
+}
+
+.add-to-bag > * {
+	vertical-align: middle;
 }
 
 .add-to-bag .added {
