@@ -32,7 +32,7 @@ function getBags(v) {
 	}, function(data, v) {
 		v = data;
 		console.log(data);
-	}).fail(function(data) {
+	}).fail(function(data, v) {
 		v = false;
 	});
 }
