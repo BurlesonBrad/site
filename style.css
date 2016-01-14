@@ -660,6 +660,7 @@ button.add-to-bag {
 	background: #00fa60;
 	color: #fff;
 	border-radius: 1px;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 
 .add-to-bag-failure a, .add-to-bag-success a {
