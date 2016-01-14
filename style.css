@@ -618,6 +618,7 @@ button.add-to-bag {
 	top: 0;
 	right: 0;
 	height: 4em;
+	line-height: 4em;
 	background: transparent;
 	border-radius: 0;
 	padding: 0;
