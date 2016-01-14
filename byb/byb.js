@@ -8,13 +8,13 @@ $("#clear_bags").click(function() {
 });
 
 function updateBags(data) {
-	$.post("/page-build-your-bag.php", {
+	$.post("/build-your-bag", {
 		bags: data
 	});
 }
 
 function deleteBags() {
-	$.post("/page-build-your-bag.php", {
+	$.post("/build-your-bag", {
 		bags: ''
 	});
 }
