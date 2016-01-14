@@ -349,7 +349,7 @@ $("form.edit-bag-name").submit(function(e) {
 //	$bagTitle.html( newName ).show();
 	$editBagBtn.show();
 //	$this.hide();
-	$this.find("input").blur();
+	$bagNameInput.blur();
 
 	editBagName( newName, bagName );
 });
