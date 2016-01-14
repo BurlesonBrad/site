@@ -28,16 +28,18 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
  		<?php
- 		if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['bags']) ) {
- 			$byb_json = $_POST['bags'];
- 			$user = wp_get_current_user();
-			$user_id = $user->ID;
- 			if ( $byb_json === '' ) {
- 				delete_user_meta($user_id, 'byb', $byb_json);
- 			} else {
- 				update_user_meta($user_id, 'byb', $byb_json);
- 			}
- 		}
+ 		// if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['bags']) ) {
+ 		// 	$byb_json = $_POST['bags'];
+ 		// 	$user = wp_get_current_user();
+			// $user_id = $user->ID;
+ 		// 	if ( $byb_json === '' ) {
+ 		// 		delete_user_meta($user_id, 'byb', $byb_json);
+ 		// 	} else {
+ 		// 		update_user_meta($user_id, 'byb', $byb_json);
+ 		// 	}
+ 		// }
+
+ 		$byb = (isset($_COOKIE['byb']) ? $_COOKIE['byb'] : false;
 
  		function get_disc($s, $part) {
 			$args = array(
@@ -72,23 +74,23 @@ get_header(); ?>
 				<div id="bags">
 					<?php
 					function getDiscBags() {
-						if ( is_user_logged_in() ) {
-							$user = wp_get_current_user();
-							$user_id = $user->ID;
-							$byb = get_user_meta($user_id, 'byb', true);
-							if ( !$byb ) {
-								$byb = $_COOKIE['byb'];
-							}
-						}
+						// if ( is_user_logged_in() ) {
+						// 	$user = wp_get_current_user();
+						// 	$user_id = $user->ID;
+						// 	$byb = get_user_meta($user_id, 'byb', true);
+						// 	if ( !$byb ) {
+						// 		$byb = $_COOKIE['byb'];
+						// 	}
+						// }
 
 						if ( isset($byb) ) {
-							if ( is_string($byb) ) {
-								$byb_json = stripslashes($byb);
-								$byb_array = json_decode( $byb_json, true );
-								$bags = $byb_array;
-							} else {
-								$bags = $byb;
-							}
+							// if ( is_string($byb) ) {
+							// 	$byb_json = stripslashes($byb);
+							// 	$byb_array = json_decode( $byb_json, true );
+							// 	$bags = $byb_array;
+							// } else {
+							// 	$bags = $byb;
+							// }
 
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
