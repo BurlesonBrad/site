@@ -544,8 +544,8 @@ form.edit-bag-name {
 	padding: 0;
 	background: transparent;
 	color: #00b0ff;
-	font-size: 8em;
-	letter-spacing: 0.5em;
+	font-size: 3em;
+	letter-spacing: 0.2em;
 }
 
 .options.expanded ul {
