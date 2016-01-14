@@ -1,19 +1,5 @@
 <?php
 
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package storefront
- */
-
-get_header(); ?>
-
-<?php
 if ( $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['byb']) ) {
 	if ( is_user_logged_in() ) {
 		$user = wp_get_current_user();
@@ -28,7 +14,19 @@ if ( $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['byb']) ) {
 	echo 'test';
 	return;
 }
-?>
+
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package storefront
+ */
+
+get_header(); ?>
 
 	<div id="primary" class="content-area build-your-bag">
 		<main id="main" class="site-main" role="main">
