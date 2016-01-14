@@ -4,7 +4,7 @@ $(document).ready(function() {
 var bags_log;
 getBags(bags_log);
 if (!bags_log) {
-	bags_log = Cookies.get('byb');
+	bags_log = Cookies.get('byb', );
 }
 console.log( bags_log );
 
@@ -27,7 +27,6 @@ function deleteBags() {
 }
 
 function getBags(v) {
-	console.log(v);
 	$.get("/build-your-bag", {
 		byb: 'true'
 	}, function(data) {
