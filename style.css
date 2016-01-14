@@ -653,8 +653,7 @@ button.add-to-bag {
 	margin-left: -150px;
 	width: 300px;
 	z-index: 999;
-	width: 100%;
-	padding: 1em 0;
+	padding: 1.4em 0;
 	line-height: 1;
 	text-align: center;
 	background: #00fa60;
