@@ -93,8 +93,8 @@ get_header(); ?>
 							// 	$byb_array = json_decode( $byb_json, true );
 							// 	$bags = $byb_array;
 							// } else {
-							// 	$bags = $byb;
-							// }
+								$bags = $byb;
+							//}
 
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
