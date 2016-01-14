@@ -313,7 +313,7 @@ function removeFromBag(e, bag, disc) {
 	}
 }
 
-var $removeBtn = $("<img class='remove-from-bag' src='remove-from-bag-icon.png' alt='remove' />");
+var $removeBtn = $("<img class='remove-from-bag' src='/wp-content/themes/storefront-child/images/trash-icon.png' alt='remove' />");
 $removeBtn.click(function(e) {
 	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
 
