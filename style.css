@@ -81,11 +81,21 @@ ul.menu li.current-menu-item > a.cart-contents, ul#menu-utility-menu li.current-
 	background: #00b0ff;
 }
 
-.backgroundsize ul.menu #menu-item-49 > a {
+/*.backgroundsize ul.menu #menu-item-49 > a {
 	background-image: url('images/beta.png');
 	background-size: 20px auto;
 	background-repeat: no-repeat;
 	background-position: 85% 63%;
+}*/
+
+.backgroundsize ul.menu #menu-item-49 > a:after {
+	display: block;
+	width: 20px;
+	height: 10px;
+	background-image: url('images/beta.png');
+	background-size: 20px auto;
+	background-repeat: no-repeat;
+	background-position: left top;
 }
 
 ul#menu-main-menu li:first-child > a {
