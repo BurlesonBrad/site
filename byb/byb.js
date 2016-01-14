@@ -178,7 +178,7 @@ promise_bags.success(function(data) {
 	$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 });
 
-var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' alt='Add' />Add<span class='added'>ed</span> to bag<span class='added'>!</span></button>");
+var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='14' height='14' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='16' height='13' alt='Add' />Add<span class='added'>ed</span> to bag<span class='added'>!</span></button>");
 
 /***					***/
 /***	ADD TO BAG 		***/
