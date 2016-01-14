@@ -457,6 +457,7 @@ body.home #content { padding-top: 0; }
 }
 
 .bag-title h2 {
+	display: none;
 	font-family: 'Rock Salt';
 	text-transform: lowercase;
     font-size: 5em;
