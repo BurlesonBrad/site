@@ -172,7 +172,7 @@ get_header(); ?>
 							echo '<div class="add-first-bag"><img src="' . get_stylesheet_directory_uri() . '/images/add-first-bag.png" alt="start building your bag" /></div>';
 						}
 					}
-					getDiscBags();
+					getDiscBags($byb);
 
 				?>
 
