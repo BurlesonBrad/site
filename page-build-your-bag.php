@@ -61,6 +61,11 @@ get_header(); ?>
 			endif;
 			wp_reset_postdata();
 		}
+
+		function isJson($string) {
+			json_decode($string);
+			return (json_last_error() == JSON_ERROR_NONE);
+		}
 		?>
 
 			<div id="byb-wrapper" data-temp-user="0">
@@ -77,9 +82,13 @@ get_header(); ?>
 						}
 
 						if ( isset($byb) ) {
-							$byb_json = stripslashes($byb);
-							$byb_array = json_decode( $byb_json, true );
-							$bags = $byb_array;
+							if ( !isJson($byb) ) {
+								$byb_json = stripslashes($byb);
+								$byb_array = json_decode( $byb_json, true );
+								$bags = $byb_array;
+							} else {
+								$bags = $byb;
+							}
 
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
