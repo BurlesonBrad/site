@@ -387,7 +387,7 @@ $(".page-id-45 .options button").click(function() {
 });
 $(document).click(function(e) {
 	if ( !$(e.target).parents(".options").length ) {
-		$(".page-id-45 .options button").click();
+		$(".page-id-45 .options").removeClass("expanded");
 	}
 });
 
