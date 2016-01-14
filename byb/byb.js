@@ -30,14 +30,17 @@ function getBags(v) {
 	var callback = function(v) {
 		return function(data) {
 			v = data;
-			console.log(v);
+			console.log("passed: " + v);
 		};
 	};
+
 	$.get("/build-your-bag", {
 		byb: 'true'
 	}, callback(v) ).fail(function(v) {
 		v = false;
 	});
+
+	console.log("through: " + v);
 }
 
 function editBagName( bag, name ) {
