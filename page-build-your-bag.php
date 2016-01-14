@@ -41,8 +41,9 @@ get_header(); ?>
 
  		if ( isset($_COOKIE['byb']) ):
  			$byb = $_COOKIE['byb'];
- 		else: $byb = false;
- 			endif;
+ 		else: 
+ 			$byb = false;
+ 		endif;
 
  		function get_disc($s, $part) {
 			$args = array(
