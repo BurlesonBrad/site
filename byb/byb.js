@@ -382,6 +382,9 @@ $(".disc").hover(function() {
 	}
 });
 
+
+// OPTIONS MENU
+
 $(".page-id-45 .options button").click(function() {
 	$(this).parent().toggleClass("expanded");
 });
@@ -389,6 +392,9 @@ $(document).click(function(e) {
 	if ( !$(e.target).parents(".options").length ) {
 		$(".page-id-45 .options").removeClass("expanded");
 	}
+});
+$(".edit-name-btn").click(function() {
+	$(".edit-bag-name input[type='text']").focus();
 });
 
 
