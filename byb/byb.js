@@ -142,6 +142,7 @@ var user_meta = false;
 promise_bags.success(function(data) {
 	the_bags = data;
 	user_meta = true;
+	console.log( the_bags );
 });
 if ( !user_meta ) {
 	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
