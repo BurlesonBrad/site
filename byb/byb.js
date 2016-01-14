@@ -138,7 +138,9 @@ function addToBag(e, bag, disc, t) {
 		var bags_json = JSON.stringify(the_bags);
 		updateBags(bags_json);
 		Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
+		console.log( the_bags );
 		console.log( bags_json );
+		console.log( Cookies.get('byb') );
 
 	// ON SUCCESS:
 		if ( $(".add-to-bag-success").length === 0 ) {
@@ -164,8 +166,6 @@ var the_bags = false;
 var user_meta = false;
 promise_bags.success(function(data) {
 	the_bags = data;
-	console.log( $.parseJSON(the_bags) );
-	console.log( $.parseJSON(the_bags)[0] );
 	for (i = 0; i < the_bags.length; i++ ) {
 		var bagSlug = the_bags[i]["name"];
 		var bagName = bagSlug.replace(/\-/g, " ");
@@ -238,8 +238,6 @@ if ( $("body").hasClass("single-product") ) {
 	var user_meta = false;
 	promise_bags.success(function(data) {
 		the_bags = data;
-		console.log( $.parseJSON(the_bags) );
-		console.log( $.parseJSON(the_bags)[0] );
 		for (i = 0; i < the_bags.length; i++ ) {
 			var bagSlug = the_bags[i]["name"];
 			var bagName = bagSlug.replace(/\-/g, " ");
