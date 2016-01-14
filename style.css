@@ -648,11 +648,13 @@ button.add-to-bag {
 
 .add-to-bag-failure, .add-to-bag-success {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 80px;
+	left: 50%;
+	margin-left: -150px;
+	width: 300px;
 	z-index: 999;
 	width: 100%;
-	padding: 2em 0;
+	padding: 1em 0;
 	line-height: 1;
 	text-align: center;
 	background: #00fa60;
