@@ -143,11 +143,11 @@ promise_bags.success(function(data) {
 	the_bags = $.parseJSON(data);
 	user_meta = true;
 });
-if ( !user_meta ) {
-	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-		the_bags = Cookies.getJSON('byb');
-	}
-}
+// if ( !user_meta ) {
+// 	if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+// 		the_bags = Cookies.getJSON('byb');
+// 	}
+// }
 if ( the_bags ) {
 	console.log( $.parseJSON(the_bags) );
 	console.log( $.parseJSON(the_bags)[0] );
