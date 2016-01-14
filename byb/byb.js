@@ -39,6 +39,7 @@ function getBags(v) {
 function editBagName( bag, name ) {
 	var the_bags;
 	getBags(the_bags);
+	console.log(the_bags);
 	if ( !the_bags ) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
