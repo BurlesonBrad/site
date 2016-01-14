@@ -626,6 +626,7 @@ button.add-to-bag {
 }
 
 .add-to-bag img {
+	display: inline-block;
 	margin: 0 6px 0 0 !important;
 }
 
