@@ -89,6 +89,7 @@ ul.menu li.current-menu-item > a.cart-contents, ul#menu-utility-menu li.current-
 }*/
 
 .backgroundsize ul.menu #menu-item-49 > a:after {
+	content: " ";
 	display: block;
 	width: 20px;
 	height: 10px;
