@@ -67,9 +67,9 @@ function addToBag(e, bag, disc, t) {
 	});
 	if ( !the_bags ) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-			var the_bags = Cookies.getJSON('byb');
+			the_bags = Cookies.getJSON('byb');
 		} else {
-			var the_bags = [
+			the_bags = [
 				{
 					"name": "My Bag",
 					"discs": []
