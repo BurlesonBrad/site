@@ -27,6 +27,7 @@ function deleteBags() {
 }
 
 function getBags(v) {
+	console.log(v);
 	$.get("../wp-content/themes/storefront-child/page-build-your-bag.php", {
 		byb: 'true'
 	}, function(data) {
