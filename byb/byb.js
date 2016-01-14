@@ -351,9 +351,8 @@ $("form.edit-bag-name").submit(function(e) {
 	var bagName = $bagTitle.text();
 	var newName = $bagNameInput.val();
 
-//	$bagTitle.html( newName ).show();
 	$editBagBtn.show();
-//	$this.hide();
+
 	if ( $bagNameInput.is(":focus") ) {
 		$bagNameInput.blur();
 	}
