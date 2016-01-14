@@ -20,7 +20,7 @@ function deleteBags() {
 }
 
 function get_bags() {
-	return $.get("/build-your-bag", {
+	return $.getJSON("/build-your-bag", {
 		byb: 'true'
 	});
 }
