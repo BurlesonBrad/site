@@ -140,7 +140,7 @@ var $bagsMenu = $("<select class='bags-menu'></select>");
 var the_bags = false;
 var user_meta = false;
 promise_bags.success(function(data) {
-	the_bags = $.parseJSON(data);
+	the_bags = data;
 	user_meta = true;
 });
 // if ( !user_meta ) {
