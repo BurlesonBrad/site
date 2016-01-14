@@ -627,6 +627,7 @@ button.add-to-bag {
 
 .add-to-bag img {
 	margin-right: 6px;
+	margin-bottom: 0 !important;
 }
 
 .add-to-bag > * {
