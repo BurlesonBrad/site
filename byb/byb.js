@@ -1,7 +1,7 @@
 (function($) {
 $(document).ready(function() {
 
-$("#clear_bags").click(function() {
+$("#clear-bags").click(function() {
 	deleteBags();
 	Cookies.remove('byb', {domain: '.hyzershop.com'});
 	location.reload();
