@@ -558,6 +558,7 @@ form.edit-bag-name {
 
 .bag {
 	text-align: left;
+	position: relative;
 }
 
 .bag .disc {
