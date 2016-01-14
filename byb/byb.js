@@ -29,7 +29,7 @@ function deleteBags() {
 function getBags(v) {
 	$.get("/build-your-bag", {
 		byb: 'true'
-	}, function(data) {
+	}, function(data, v) {
 		v = data;
 		console.log(data);
 	}).fail(function(data) {
