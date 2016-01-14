@@ -94,7 +94,7 @@ get_header(); ?>
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
 								$discs = $bag["discs"];
-								$edit_btn = '<div class="bag-edit-btn">...<ul><li>Clear bag (start over)</li></ul></div>';
+								$edit_btn = '<div class="bag-edit-btn">...<ul><li id="clear-bags">Clear bags (start over)</li></ul></div>';
 								$dd_count = 0;
 								$fd_count = 0;
 								$mr_count = 0;
@@ -176,7 +176,6 @@ get_header(); ?>
 				</form> -->
 				
 				</div>
-				<button id="clear_bags">Clear All</button>
 			</div>
 
 		</main><!-- #main -->
