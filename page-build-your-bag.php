@@ -180,8 +180,3 @@ get_header(); ?>
 ?>
 
 <?php get_footer(); ?>
-<?php 	$user = wp_get_current_user();
-		$user_id = $user->ID;
-		$bags = get_user_meta($user_id, 'byb', true);
-		echo '<script>console.log("' . $bags . '");</script>';
-?>

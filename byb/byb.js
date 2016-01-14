@@ -28,7 +28,7 @@ function deleteBags() {
 
 function getBags(v) {
 	var callback = function(v) {
-		return function(data, textStatus, jqXHR) {
+		return function(data) {
 			v = data;
 			console.log(v);
 		};
