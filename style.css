@@ -512,10 +512,10 @@ form.edit-bag-name {
 	display: none !important;
 }
 
-.bag-edit-btn {
+.options {
 	cursor: pointer;
 	position: absolute;
-		top: 0;
+		top: 0.7em;
 		right: 0;
 		z-index: 10;
 
@@ -527,17 +527,8 @@ form.edit-bag-name {
 	opacity: 0.4;
 }
 
-.bag-name-edit-btn {
-	top: 7em;
-}
-
-.bag-edit-btn:hover {
+.options:hover {
 	opacity: 1;
-}
-
-.bag-edit-btn span {
-	display: none;
-	text-shadow: -1px 1px 3px #fcfcfc;
 }
 
 .bag-edit-btn:hover span {
