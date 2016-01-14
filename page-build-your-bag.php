@@ -11,7 +11,6 @@ if ( $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['byb']) ) {
 	} elseif ( $_COOKIE['byb'] ) {
 		echo $_COOKIE['byb'];
 	}
-	echo 'test';
 	return;
 }
 
