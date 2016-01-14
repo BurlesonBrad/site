@@ -33,15 +33,21 @@ function editBagName( bag, name ) {
 		the_bags = data;
 		user_meta = true;
 
-		editName( the_bags );
-	});
-	if ( !user_meta ) {
+		editName( the_bags, bag, name );
+	}).error(function(jqXHR, textStatus, errorThrown) {
+		if (textStatus == 'timeout')
+		console.log('The server is not responding');
+
+		if (textStatus == 'error')
+		console.log(errorThrown);
+	
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
 			editName( the_bags, bag, name );
 		}
-	}
-	console.log(the_bags);
+
+		editName( the_bags, bag, name );
+	});
 
 	function editName( the_bags, bag, name ) {
 		var this_bag = the_bags[0];
