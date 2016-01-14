@@ -340,24 +340,6 @@ $(".bag-edit-btn").each(function() {
 		$(this).addClass("bag-name-edit-btn");
 	}
 });
-$("form.edit-bag-name").submit(function(e) {
-	e.preventDefault();
-	e.stopPropagation();
-	var $this = $(this);
-	var $editBagBtn = $this.siblings(".bag-edit-btn");
-	var $bagNameInput = $this.find("input[type='text']");
-	var $bagTitle = $this.siblings("h2");
-	var bagName = $bagTitle.text();
-	var newName = $bagNameInput.val();
-
-	$editBagBtn.show();
-
-	if ( $bagNameInput.is(":focus") ) {
-		$bagNameInput.blur();
-	}
-
-	editBagName( newName, bagName );
-});
 
 (function() {
 	var $this = $(this);
@@ -371,7 +353,24 @@ $("form.edit-bag-name").submit(function(e) {
 	// $bagNameInput.focus();
 
 	$bagNameInput.blur(function() {
-		$(this).submit();
+		$bagNameForm.submit(function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			var $this = $(this);
+			var $editBagBtn = $this.siblings(".bag-edit-btn");
+			var $bagNameInput = $this.find("input[type='text']");
+			var $bagTitle = $this.siblings("h2");
+			var bagName = $bagTitle.text();
+			var newName = $bagNameInput.val();
+
+			$editBagBtn.show();
+
+			if ( $bagNameInput.is(":focus") ) {
+				$bagNameInput.blur();
+			}
+
+			editBagName( bagName, newName );
+		});
 	});
 })();
 
