@@ -31,6 +31,7 @@ function getBags(v) {
 		byb: 'true'
 	}, function(data) {
 		v = data;
+		console.log(data);
 	}).fail(function(data) {
 		v = false;
 	});
