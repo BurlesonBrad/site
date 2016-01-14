@@ -57,10 +57,9 @@ function editBagName( bag, name ) {
 			}
 		}
 
-		console.log(this_bag);
-
 		this_bag["name"] = name;
 		var bags_json = JSON.stringify(the_bags);
+		console.log( bags_json );
 		updateBags(bags_json);
 		Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
 	}
