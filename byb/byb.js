@@ -8,19 +8,19 @@ $("#clear_bags").click(function() {
 });
 
 function updateBags(data) {
-	$.post("/build-your-bag", {
-		bags: data
-	});
+	// $.post("/build-your-bag", {
+	// 	bags: data
+	// });
 }
 
 function deleteBags() {
-	$.post("/build-your-bag", {
-		bags: ''
-	});
+	// $.post("/build-your-bag", {
+	// 	bags: ''
+	// });
 }
 
 function get_bags() {
-	return $.getJSON("/build-your-bag", {
+	return $.getJSON("/fake-location", {
 		byb: 'true'
 	});
 }
