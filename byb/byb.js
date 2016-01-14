@@ -20,7 +20,7 @@ function deleteBags() {
 }
 
 function get_bags() {
-	return $.getJSON("/fake-location", {
+	return $.getJSON("/location", {
 		byb: 'true'
 	});
 }
@@ -45,8 +45,6 @@ function editBagName( bag, name ) {
 			the_bags = Cookies.getJSON('byb');
 			editName( the_bags, bag, name );
 		}
-
-		editName( the_bags, bag, name );
 	});
 
 	function editName( the_bags, bag, name ) {
@@ -283,7 +281,7 @@ function removeFromBag(e, bag, disc) {
 	var user_meta = false;
 	promise_bags.success(function(data) {
 		the_bags = data;
-		removeTheDisc(data, e, bag, disc);
+		removeTheDisc(the_bags, e, bag, disc);
 	}).error(function(jqXHR, textStatus, errorThrown) {
 		if (textStatus == 'timeout')
 		console.log('The server is not responding');
@@ -294,11 +292,10 @@ function removeFromBag(e, bag, disc) {
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
 		}
-
-		removeTheDisc(data, e, bag, disc);
+		removeTheDisc(the_bags, e, bag, disc);
 	});
 
-	function removeTheDisc(data, e, bag, disc) {
+	function removeTheDisc(the_bags, e, bag, disc) {
 		var this_bag = the_bags[0];
 		var bagIndex = 0;
 		for ( i = 0; i < the_bags.length; i++ ) {
