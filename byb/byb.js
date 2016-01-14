@@ -222,7 +222,7 @@ if ( $("body").hasClass("single-product") ) {
 		$addToBagBtn = $(".add-to-bag");
 	}
 } else {
-	$(".product[data-product-slug]").not(".page-id-45 .disc").last().each(function() {
+	$(".product[data-product-slug]").not(".page-id-45 .disc").each(function() {
 		var $this = $(this);
 		$bagsMenu.clone(true).appendTo($this);
 		$addToBagBtn.clone(true).appendTo($this);
