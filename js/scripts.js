@@ -59,7 +59,7 @@ $(document).ready(function() {
 		var $cartContents = $(".site-header-cart .cart-contents");
 		var $basket = $('<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' + $cartItems + '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />').hide();
 		
-		if ( !$basket.is(":visible") ) {
+		if ( !$("#dynamic_basket").length ) {
 			$basket.appendTo( $cartContents ).show();
 		}
 	}
