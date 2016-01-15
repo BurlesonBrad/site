@@ -50,17 +50,19 @@ $(document).ready(function() {
 
 	function dynamicBasket(add) {
 		var $cartItems = $("#masthead").data("cart-items");
-		if ( $cartItems == 0 ) {
-			$cartItems = 'empty';
-		}
-		if ( $cartItems > 3 ) {
-			$cartItems = 3;
-		}
-		if ( $cartItems != 'empty' ) {
-			$cartItems = $cartItems + add;
-		} else {
-			if ( add > 0 ) {
-				$cartItems = add;
+		if ( add === 1 ) {
+			if ( $cartItems == 0 ) {
+				$cartItems = 'empty';
+			}
+			if ( $cartItems > 3 ) {
+				$cartItems = 3;
+			}
+			if ( $cartItems != 'empty' ) {
+				$cartItems = $cartItems + add;
+			} else {
+				if ( add > 0 ) {
+					$cartItems = add;
+				}
 			}
 		}
 		$("#masthead").attr("data-cart-items", $cartItems);
