@@ -522,6 +522,7 @@ form.edit-bag-name {
 	line-height: 1.1;
 	font-weight: bold;
 	text-transform: uppercase;
+	text-shadow: 0px 1px #fff;
 }
 
 .edit-bag-name input[type="text"]:hover {
