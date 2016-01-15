@@ -63,7 +63,7 @@ $(document).ready(function() {
 				$cartItems = add;
 			}
 		}
-		//$("#masthead").attr("data-cart-items", $cartItems);
+		$("#masthead").attr("data-cart-items", $cartItems);
 
 		var $cartContents = $(".site-header-cart .cart-contents");
 		var $basket = $('<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' + $cartItems + '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />').hide();
