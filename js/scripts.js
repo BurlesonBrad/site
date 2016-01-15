@@ -50,10 +50,10 @@ $(document).ready(function() {
 
 	function dynamicBasket(add) {
 		var $cartItems = $("#masthead").data("cart-items");
+		if ( $cartItems == 0 ) {
+			$cartItems = 'empty';
+		}
 		if ( add === 1 ) {
-			if ( $cartItems == 0 ) {
-				$cartItems = 'empty';
-			}
 			if ( $cartItems > 3 ) {
 				$cartItems = 3;
 			}
