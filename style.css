@@ -439,12 +439,12 @@ body.home #content { padding-top: 0; }
 	margin: 0 2em;
 }
 
-@media screen and (max-width: 71em) and (min-width: 45em) {
+@media screen and (max-width: 71em) and (min-width: 48em) {
 	.disc-types-inner > a > img {
 		margin: 2em 3em;
 	}
 	.disc-types-inner {
-		width: 45em;
+		width: 48em;
 	}
 }
 
