@@ -182,8 +182,11 @@ ul#menu-main-menu li:nth-child(2) > a {
 
 .widget_search form:before, .widget_product_search form:before {
 	z-index: 999;
-	top: 0.8em;
 	color: #00b0ff;
+}
+
+header .widget_search form:before {
+	top: 0.8em;
 }
 
 @media screen and (min-width: 768px) {
