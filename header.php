@@ -26,7 +26,7 @@
 	<?php
 	do_action( 'storefront_before_header' ); ?>
 
-	<header data-cart-items="<?php echo the_dynamic_basket(); ?>" id="masthead" class="site-header" role="banner" <?php if ( get_header_image() != '' ) { echo 'style="background-image: url(' . esc_url( get_header_image() ) . ');"'; } ?>>
+	<header data-cart-items="<?php echo dynamic_basket(); ?>" id="masthead" class="site-header" role="banner" <?php if ( get_header_image() != '' ) { echo 'style="background-image: url(' . esc_url( get_header_image() ) . ');"'; } ?>>
 		<div class="col-full">
 			<?php
 			/**

@@ -38,7 +38,7 @@ function dynamic_basket() {
 	// 	$the_basket = 'empty';
 	// }
 }
-add_action( 'woocommerce_add_to_cart', 'dynamic_basket', 10, 0 );
+add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
