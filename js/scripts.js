@@ -49,7 +49,7 @@ $(document).ready(function() {
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
-		var $cartItems = $("#masthead").data("data-cart-items");
+		var $cartItems = $("#masthead").data("cart-items");
 		if ( add === 1 ) {
 			if ( $cartItems == 0 ) {
 				$cartItems = 'empty';
