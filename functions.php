@@ -32,11 +32,9 @@ function dynamic_basket() {
 	global $woocommerce;
 	$cart_total = $woocommerce->cart->cart_contents_count;
 	return $cart_total;
-	// if ($cart_total > 0) {
-	// 	$the_basket = $cart_total;
-	// } else {
-	// 	$the_basket = 'empty';
-	// }
+	
+	sleep(1);
+	dynamic_basket();
 }
 add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
