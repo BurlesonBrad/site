@@ -87,7 +87,7 @@ get_header(); ?>
 						// 	}
 						// }
 
-						if ( isset($byb) ) {
+						if ( $byb ) {
 							if ( is_string($byb) ) {
 								$byb_json = stripslashes($byb);
 								$byb_array = json_decode( $byb_json, true );
