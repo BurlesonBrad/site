@@ -116,7 +116,7 @@ get_header(); ?>
 								// Drivers
 								echo '<div class="distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
-									if ( $disc['type'] === "distance-driver" ) {
+									if ( $disc['type'] === "distance-drivers" ) {
 										$dd_count++;
 										the_disc( $disc );
 							    	}
@@ -129,7 +129,7 @@ get_header(); ?>
 							    // Fairway
 								echo '<div class="fairway-drivers"><h3>Fairway Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
-									if ( $disc['type'] === "fairway-driver" ) {
+									if ( $disc['type'] === "fairway-drivers" ) {
 										$fd_count++;
 										the_disc( $disc );
 							    	}
@@ -142,7 +142,7 @@ get_header(); ?>
 							    // Mid-ranges
 								echo '<div class="midranges"><h3>Mid-ranges</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
-									if ( $disc['type'] === "midrange" ) {
+									if ( $disc['type'] === "midranges" ) {
 										$mr_count++;
 										the_disc( $disc );
 							    	}
@@ -155,7 +155,7 @@ get_header(); ?>
 								// Putters
 								echo '<div class="putters"><h3>Putters</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
-									if ( $disc['type'] === "putter" ) {
+									if ( $disc['type'] === "putters" ) {
 										$p_count++;
 										the_disc( $disc );
 							    	}
