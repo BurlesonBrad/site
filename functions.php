@@ -38,7 +38,7 @@ function the_dynamic_basket() {
 	}
 	return '<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' . $the_basket . '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />';
 }
-add_action( 'woocommerce_add_to_cart', 'dynamic_basket', 10, 0 );
+add_action( 'woocommerce_add_to_cart', 'the_dynamic_basket', 10, 0 );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
