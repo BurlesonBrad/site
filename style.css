@@ -661,6 +661,7 @@ button.add-to-bag {
 
 .single-product button.add-to-bag {
 	text-align: left;
+	margin-bottom: 0.6em;
 }
 
 .add-to-bag.success {
