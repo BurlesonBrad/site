@@ -58,9 +58,11 @@ $(document).ready(function() {
 		}
 		var $cartContents = $(".site-header-cart .cart-contents");
 		var $basket = $('<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' + $cartItems + '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />').hide();
-		
+
 		if ( !$("#dynamic_basket").length ) {
 			$basket.appendTo( $cartContents ).show();
+		} else {
+			$("#dynamic_basket").attr("src", "/wp-content/themes/storefront-child/images/basket-white-" + $cartItems + ".png");
 		}
 	}
 	setInterval( dynamicBasket, 1000 );
