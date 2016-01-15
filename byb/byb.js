@@ -218,14 +218,14 @@ $("form.checkout").submit(function(e) {
 });
 
 // Insert ADD-TO-BAG buttons
-if ( $("body").hasClass("single-product") ) {
+if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-disc").length ) {
 	if ( $(".add-to-bag").length < 1 ) {
 		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
 	} else {
 		$addToBagBtn = $(".add-to-bag");
 	}
 } else {
-	$(".product[data-product-slug]").not(".page-id-45 .disc").each(function() {
+	$(".product[data-product-slug].product-cat-disc").not(".page-id-45 .disc").each(function() {
 		var $this = $(this);
 		$bagsMenu.clone(true).appendTo($this);
 		$addToBagBtn.clone(true).appendTo($this);
