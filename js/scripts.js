@@ -76,7 +76,7 @@ $(document).ready(function() {
 			$("#dynamic_basket").attr("src", "/wp-content/themes/storefront-child/images/basket-white-" + $cartItems + ".png");
 		}
 	}
-	setInterval(function() {
+	setTimeout(function() {
 		dynamicBasket(0);
 	}, 1000);
 	$(".add_to_cart_button").on("click", function() {
