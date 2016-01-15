@@ -659,6 +659,10 @@ button.add-to-bag {
 	color: #666;
 }
 
+.single-product button.add-to-bag {
+	text-align: left;
+}
+
 .add-to-bag.success {
 	opacity: 0.6;	
 }
