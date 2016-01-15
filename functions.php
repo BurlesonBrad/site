@@ -36,7 +36,7 @@ function dynamic_basket() {
 	sleep(1);
 	dynamic_basket();
 }
-add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
+//add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
