@@ -49,7 +49,7 @@ $(document).ready(function() {
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
-		var $cartItems = $("#masthead").data("cart-items");
+		var $cartItems = $("#masthead").attr("data-cart-items");
 		if ( add === 1 ) {
 			if ( $cartItems == 0 ) {
 				$cartItems = 'empty';
@@ -76,7 +76,7 @@ $(document).ready(function() {
 			$("#dynamic_basket").attr("src", "/wp-content/themes/storefront-child/images/basket-white-" + $cartItems + ".png");
 		}
 	}
-	setTimeout(function() {
+	setInterval(function() {
 		dynamicBasket(0);
 	}, 1000);
 	$(".add_to_cart_button").on("click", function() {
