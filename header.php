@@ -39,8 +39,9 @@
 			 * @hooked storefront_header_cart - 60
 			 */
 			do_action( 'storefront_header' ); ?>
+
+			<?php the_dynamic_basket() ?>
 		</div>
-		
 	</header><!-- #masthead -->
 
 	<?php
