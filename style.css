@@ -422,7 +422,7 @@ body.home #content { padding-top: 0; }
 
 .backgroundsize .disc-types-inner {
 	background: url("/wp-content/themes/storefront-child/images/shop-by-disc-type.png") no-repeat 50% 50%;
-	background-size: contain;
+	background-size: 110% auto;
 	display: inline-block;
 	margin: 0 auto;
 	padding: 5em 0;
