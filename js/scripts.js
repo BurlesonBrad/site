@@ -49,11 +49,18 @@ $(document).ready(function() {
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket() {
+		var $cartItems = $("#masthead").data("cart-items");
+		if ( $cartItems == 0 ) {
+			$cartItems = 'empty';
+		}
 		var $cartContents = $(".site-header-cart .cart-contents");
-		var $basket = $("#dynamic_basket");
-		$basket.appendTo( $cartContents ).show();
+		var $basket = $('<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' + $cartItems + '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />').hide();
+		
+		if ( !$basket.is(":visible") ) {
+			$basket.appendTo( $cartContents ).show();
+		}
 	}
-	setTimeout( dynamicBasket, 1000 );
+	setInterval( dynamicBasket, 1000 );
 });
 
 

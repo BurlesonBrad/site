@@ -28,16 +28,17 @@ function hyzershop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
 
-function the_dynamic_basket() {
+function dynamic_basket() {
 	global $woocommerce;
 	$cart_total = $woocommerce->cart->cart_contents_count;
-	if ($cart_total > 0) {
-		$the_basket = $cart_total;
-	} else {
-		$the_basket = 'empty';
-	}
-	echo '<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' . $the_basket . '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />';
+	return $cart_total;
+	// if ($cart_total > 0) {
+	// 	$the_basket = $cart_total;
+	// } else {
+	// 	$the_basket = 'empty';
+	// }
 }
+add_action( 'woocommerce_add_to_cart', 'dynamic_basket', 10, 0 );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
