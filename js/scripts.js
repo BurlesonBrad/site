@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 	function dynamicBasket(add) {
 		var $cartItems = $("#masthead").attr("data-cart-items");
-		if ( add === 1 ) {
+		if ( add === 1 || add === '1' ) {
 			if ( $cartItems == 0 ) {
 				$cartItems = 'empty';
 			}
