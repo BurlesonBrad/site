@@ -56,7 +56,13 @@ $(document).ready(function() {
 		if ( $cartItems > 3 ) {
 			$cartItems = 3;
 		}
-		$cartItems = $cartItems + add;
+		if ( $cartItems != 'empty' ) {
+			$cartItems = $cartItems + add;
+		} else {
+			if ( add > 0 ) {
+				$cartItems = add;
+			}
+		}
 		$("#masthead").attr("data-cart-items", $cartItems);
 
 		var $cartContents = $(".site-header-cart .cart-contents");
