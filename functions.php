@@ -31,12 +31,12 @@ add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
 function dynamic_basket() {
 	global $woocommerce;
 	$cart_total = $woocommerce->cart->cart_contents_count;
-	return $cart_total;
+	echo $cart_total;
 	
 	sleep(1);
 	dynamic_basket();
 }
-add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
+//add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
