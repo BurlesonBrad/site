@@ -41,8 +41,6 @@
 			do_action( 'storefront_header' ); ?>
 		</div>
 		
-		<?php echo the_dynamic_basket(); ?>
-
 	</header><!-- #masthead -->
 
 	<?php
