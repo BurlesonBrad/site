@@ -441,7 +441,7 @@ body.home #content { padding-top: 0; }
 
 @media screen and (max-width: 71em) and (min-width: 45em) {
 	.disc-types-inner > a > img {
-		/*margin: 2em auto;*/
+		margin: 2em auto;
 	}
 	.disc-types-inner {
 		width: 45em;
