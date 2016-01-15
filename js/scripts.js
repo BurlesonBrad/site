@@ -49,8 +49,8 @@ $(document).ready(function() {
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
-		var $cartItems = $("#masthead").attr("data-cart-items");
-		if ( add === 1 || add === '1' ) {
+		var $cartItems = $("#masthead").data("data-cart-items");
+		if ( add === 1 ) {
 			if ( $cartItems == 0 ) {
 				$cartItems = 'empty';
 			}
@@ -65,7 +65,7 @@ $(document).ready(function() {
 				}
 			}
 		}
-		$("#masthead").attr("data-cart-items", $cartItems);
+		$("#masthead").attr("data-cart-items", $cartItems).data("cart-items", $cartItems);
 
 		var $cartContents = $(".site-header-cart .cart-contents");
 		var $basket = $('<img id="dynamic_basket" src="/wp-content/themes/storefront-child/images/basket-white-' + $cartItems + '.png" style="display:none; width:25px; height:37px;" width="25" height="37" />').hide();
