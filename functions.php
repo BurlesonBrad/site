@@ -47,7 +47,8 @@ function set_inbounds_meta_ids() {
 	while ( $discs->have_posts() ) : $discs->the_post(); 
 		$post_id = $post->ID;
 		$post_slug = $post->post_name;
-		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
+		$inbounds_id = $inbounds_ids_arr[$post_slug];
+		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 	endwhile;
 
 	var_dump( $inbounds_ids_arr['discraft-buzzz'] );
