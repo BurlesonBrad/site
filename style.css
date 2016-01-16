@@ -656,6 +656,7 @@ form.edit-bag-name {
 	display: inline-block;
 	position: relative;
 	margin-left: -60px;
+	opacity: 0.8;
 
 	-webkit-transition: margin 400ms;
 	-moz-transition: margin 400ms;
@@ -664,8 +665,13 @@ form.edit-bag-name {
 	transition: margin 400ms;
 }
 
+.bag .disc:hover {
+	opacity: 1;
+}
+
 .touchevents .bag .disc {
 	margin-left: 10px;
+	opacity: 1;
 }
 
 .bag .disc:first-child {
