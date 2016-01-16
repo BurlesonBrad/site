@@ -369,7 +369,7 @@ function checkTheBags() {
 			});
 		}
 	}
-});
+}
 checkTheBags();
 setTimeout(checkTheBags, 1400);
 
