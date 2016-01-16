@@ -52,10 +52,6 @@ $type = $type[0]->slug;
 	<a href="<?php the_permalink(); ?>">
 
 		<?php
-
-		// Set new meta
-		set_inbounds_meta_ids( $post->ID, $post->post_name );
-
 			/**
 			 * woocommerce_before_shop_loop_item_title hook
 			 *
