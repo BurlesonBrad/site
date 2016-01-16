@@ -44,9 +44,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 
 $type = wp_get_post_terms( $post->ID, 'disc-type' );
 $type = $type[0]->slug;
-
-// Set new meta
-//set_inbounds_meta_ids( $post->ID, $post->post_name );
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" <?php post_class( $classes ); ?>>
 
@@ -55,6 +52,10 @@ $type = $type[0]->slug;
 	<a href="<?php the_permalink(); ?>">
 
 		<?php
+
+		// Set new meta
+		set_inbounds_meta_ids( $post->ID, $post->post_name );
+
 			/**
 			 * woocommerce_before_shop_loop_item_title hook
 			 *
