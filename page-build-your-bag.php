@@ -183,7 +183,7 @@ get_header(); ?>
 				
 				</div>
 
-			<?php echo do_shortcode('[product_category category="discs"]'); ?>
+			<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
 
 			</div>
 
