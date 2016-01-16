@@ -187,6 +187,7 @@ var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src=
 /***	REMOVE FROM BAG 	***/
 /***						***/
 function removeFromBag(e, bag, disc) {
+	console.log("params: " + e + ", " + bag + ", " + disc);
 	var the_bags = false;
 	var user_meta = false;
 	promise_bags.success(function(data) {
