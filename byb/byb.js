@@ -217,7 +217,6 @@ $("form.checkout").submit(function(e) {
 	});
 });
 
-$(window).load( function() {
 // Insert ADD-TO-BAG buttons
 if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
 	if ( $(".add-to-bag").length < 1 ) {
@@ -226,13 +225,12 @@ if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].pr
 		$addToBagBtn = $(".add-to-bag");
 	}
 } else {
-	$(".product[data-product-slug].product-cat-discs").not(".page-id-45 .disc").each(function() {
+	$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
 		var $this = $(this);
 		$bagsMenu.clone(true).appendTo($this);
 		$addToBagBtn.clone(true).appendTo($this);
 	});
 }
-});
 
 // Deactivate 'add to bag' buttons for already-added discs
 (function() {
