@@ -505,7 +505,7 @@ body.home #content { padding-top: 0; }
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: #00b0ff !important;
-    border-bottom: 3px solid #00b0ff;
+    border-bottom: 3px solid #eee;
 }
 
 .disc-area {
