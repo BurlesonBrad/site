@@ -183,7 +183,8 @@ get_header(); ?>
 				
 				</div>
 
-				
+			<?php echo do_shortcode('[product_category category="discs"]'); ?>
+
 			</div>
 
 		</main><!-- #main -->
