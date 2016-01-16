@@ -298,8 +298,12 @@ function addToBagButtons() {
 	} else {
 		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
 			var $this = $(this);
-			$bagsMenu.clone(true).appendTo($this);
-			$addToBagBtn.clone(true).appendTo($this);
+			if ( $this.find(".bags-menu").length < 1 ) {
+				$bagsMenu.clone(true).appendTo($this);
+			}
+			if ( $this.find(".add-to-bag").length < 1 ) {
+				$addToBagBtn.clone(true).appendTo($this);
+			}
 		});
 	}
 }
@@ -317,8 +321,13 @@ function removeFromBagButtons() {
 	} else {
 		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
 			var $this = $(this);
-			$bagsMenu.clone(true).appendTo($this);
-			$removeFromBagBtn.clone(true).appendTo($this);
+
+			if ( $this.find(".bags-menu").length < 1 ) {
+				$bagsMenu.clone(true).appendTo($this);
+			}
+			if ( $this.find(".remove-from-bag").length < 1 ) {
+				$removeFromBagBtn.clone(true).appendTo($this);
+			}
 		});
 	}
 }
