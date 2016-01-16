@@ -241,7 +241,7 @@ function removeFromBag(e, bag, disc) {
 	}
 }
 
-var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> to bag</span></button>");
+var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> from bag</span></button>");
 
 /***					***/
 /***	ADD TO BAG 		***/
