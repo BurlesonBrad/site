@@ -37,6 +37,7 @@ add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 function set_inbounds_meta_ids() {
 	$discs = get_posts( array('category_name' => 'discs') );
+	var_dump( $discs );
 	foreach ( $discs as $post ) {
 		$post_id = $post->ID;
 		$post_slug = $post->post_name;
