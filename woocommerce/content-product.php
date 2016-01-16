@@ -45,7 +45,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 $type = wp_get_post_terms( $post->ID, 'disc-type' );
 $type = $type[0]->slug;
 $brand = get_brands( $post_id = $post->ID, $sep = ' ' );
-$brand = $brand[0];
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
 
