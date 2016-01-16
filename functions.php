@@ -44,7 +44,7 @@ function set_inbounds_meta_ids() {
 	$inbounds_ids_json = stripslashes($inbounds_ids_json);
 	$inbounds_ids_arr = json_decode( $inbounds_ids_json, true );
 
-	var_dump( $inbounds_ids_arr );
+	var_dump( $inbounds_ids_arr['discraft-buzzz'] );
 
 	while ( $discs->have_posts() ) : $discs->the_post(); 
 		$post_id = $post->ID;
