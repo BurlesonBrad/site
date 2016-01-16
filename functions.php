@@ -47,13 +47,9 @@ function set_inbounds_meta_ids() {
 	while ( $discs->have_posts() ) : $discs->the_post(); 
 		$post_id = $post->ID;
 		$post_slug = $post->post_name;
-		echo $post_slug;
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
-		var_dump($inbounds_id);
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 	endwhile;
-
-	var_dump( $inbounds_ids_arr['discraft-buzzz'] );
 }
 add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
 
