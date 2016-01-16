@@ -36,6 +36,10 @@ h2 {
 	color: #00b0ff;
 }
 
+.pink {
+	color: #ff3c7c;
+}
+
 .centered {
 	text-align: center;
 }
@@ -489,6 +493,10 @@ body.home #content { padding-top: 0; }
 
 .content-area.build-your-bag {
 	width: 100% !important;
+}
+
+#bags {
+	margin-bottom: 3em;
 }
 
 .bag-title {
