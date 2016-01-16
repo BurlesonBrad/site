@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
 
 <div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<?php get_brand( $post->ID, ' ' ); ?>
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
