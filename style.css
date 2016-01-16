@@ -663,7 +663,8 @@ form.edit-bag-name {
 
 .bags-menu { display: none; }
 
-button.add-to-bag {
+button.add-to-bag,
+button.remove-from-bag {
 	text-align: center;
 	width: 100%;
 	height: 2em;
@@ -675,7 +676,8 @@ button.add-to-bag {
 	color: #666;
 }
 
-.single-product button.add-to-bag {
+.single-product button.add-to-bag,
+.single-product button.remove-from-bag {
 	text-align: left;
 	margin-bottom: 0.6em;
 	margin-top: 0;
@@ -685,12 +687,14 @@ button.add-to-bag {
 	opacity: 0.6;	
 }
 
-.add-to-bag img {
+.add-to-bag img,
+.remove-from-bag img {
 	display: inline-block !important;
 	margin: 0 6px 0 0 !important;
 }
 
-.add-to-bag > * {
+.add-to-bag > *,
+.remove-from-bag > * {
 	vertical-align: middle;
 }
 
@@ -706,7 +710,20 @@ button.add-to-bag {
 	display: none !important;
 }
 
-.add-to-bag-failure, .add-to-bag-success {
+.remove-from-bag .removed {
+	display: none !important;
+}
+
+.remove-from-bag.success .removed {
+	display: inline-block !important;
+}
+
+.remove-from-bag.success .not-yet-removed {
+	display: none !important;
+}
+
+.add-to-bag-failure, .add-to-bag-success,
+.remove-from-bag-failure, .remove-from-bag-success {
 	position: absolute;
 	top: 80px;
 	left: 50%;
@@ -722,11 +739,15 @@ button.add-to-bag {
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 
+.remove-from-bag-failure, .remove-from-bag-success {
+	background: #aa0300;
+}
+
 .add-to-bag-failure a, .add-to-bag-success a {
 	color: #eee;
 }
 
-.remove-from-bag {
+.disc .remove-from-bag {
 	display: none;
 	cursor: pointer;
 	position: absolute;
@@ -745,7 +766,7 @@ button.add-to-bag {
 	display: block;
 }
 
-.remove-from-bag:hover {
+.disc .remove-from-bag:hover {
 	opacity: 1;
 }
 
@@ -759,7 +780,8 @@ button.add-to-bag {
 	overflow: visible;
 }
 
-.single-product div.product .add-to-bag {
+.single-product div.product .add-to-bag,
+.single-product div.product .remove-from-bag {
 	position: absolute;
 	top: -1.8em;
 	z-index: 999;

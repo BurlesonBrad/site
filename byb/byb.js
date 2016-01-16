@@ -236,6 +236,36 @@ function addToBagButtons() {
 addToBagButtons();
 setTimeout(addToBagButtons, 1200);
 
+function removeFromBagButtons() {
+	// Insert REMOVE-FROM-BAG buttons
+	var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> to bag</span></button>");
+
+	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
+		if ( $(".add-to-bag").length < 1 ) {
+			$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
+		} else {
+			$addToBagBtn = $(".add-to-bag");
+		}
+	} else {
+		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
+			var $this = $(this);
+			$bagsMenu.clone(true).appendTo($this);
+			$addToBagBtn.clone(true).appendTo($this);
+		});
+	}
+}
+addToBagButtons();
+setTimeout(addToBagButtons, 1200);
+
+var $removeBtn = $(".remove-from-bag");
+$removeBtn.click(function(e) {
+	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
+
+	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
+
+	removeFromBag( e, $bag, slug );
+});
+
 
 // Deactivate 'add to bag' buttons for already-added discs
 (function() {
@@ -323,7 +353,6 @@ function removeFromBag(e, bag, disc) {
 	}
 }
 
-//var $removeBtn = $("<img class='remove-from-bag' src='/images/trash-icon.png' alt='remove' />");
 var $removeBtn = $(".remove-from-bag");
 $removeBtn.click(function(e) {
 	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
