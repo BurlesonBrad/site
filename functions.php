@@ -35,13 +35,16 @@ function dynamic_basket() {
 }
 add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
-function set_inbounds_meta_ids( $post_id, $post_slug ) {
+function set_inbounds_meta_ids() {
+	global $post;
+	$post_id = $post->ID;
+	$post_slug = $post->post_name;
 	$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
 	$inbounds_ids_json = stripslashes($inbounds_ids_json);
 	$inbounds_ids_arr = json_decode( $inbounds_ids_json );
 	update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
 }
-//add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
+add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
