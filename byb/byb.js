@@ -243,9 +243,6 @@ function removeFromBag(e, bag, disc) {
 }
 
 var $removeFromBagBtn = $("<button class='remove-from-bag'><img class='not-yet-removed' src='/wp-content/themes/storefront-child/images/x-red.gif' width='14' height='14' alt='Remove' /><img class='removed' src='/wp-content/themes/storefront-child/images/check-green.gif' width='16' height='13' alt='Removed' /><span>Remove<span class='removed'>d</span> from bag</span></button>");
-if ( $(".page-id-45").length ) {
-	$removeFromBagBtn = $(".remove-from-bag");
-}
 
 /***					***/
 /***	ADD TO BAG 		***/
