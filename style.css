@@ -733,3 +733,12 @@ button.add-to-bag {
     float: left;
     width: 100%;
 }
+
+.single-product div.product .images {
+	width: 32%;
+	margin-right: 4%;
+}
+
+.single-product div.product .summary {
+	width: 64%;
+}
