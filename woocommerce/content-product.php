@@ -33,9 +33,6 @@ if ( ! $product || ! $product->is_visible() ) {
 // Increase loop count
 $woocommerce_loop['loop']++;
 
-// Set new meta
-set_inbounds_meta_ids( $post->ID, $post->post_name );
-
 // Extra post classes
 $classes = array();
 if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {
@@ -47,6 +44,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 
 $type = wp_get_post_terms( $post->ID, 'disc-type' );
 $type = $type[0]->slug;
+
+// Set new meta
+set_inbounds_meta_ids( $post->ID, $post->post_name );
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" <?php post_class( $classes ); ?>>
 
