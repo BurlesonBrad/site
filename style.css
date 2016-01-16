@@ -753,7 +753,7 @@ button.add-to-bag {
 
 .single-product div.product .add-to-bag {
 	position: absolute;
-	top: -1.6em;
+	top: -1.8em;
 	z-index: 999;
 }
 
