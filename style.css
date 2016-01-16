@@ -674,6 +674,7 @@ button.add-to-bag {
 .single-product button.add-to-bag {
 	text-align: left;
 	margin-bottom: 0.6em;
+	margin-top: 0;
 }
 
 .add-to-bag.success {
@@ -744,6 +745,16 @@ button.add-to-bag {
 .single-product .content-area {
     float: left;
     width: 100%;
+}
+
+.single-product div.product {
+	overflow: visible;
+}
+
+.single-product div.product .add-to-bag {
+	position: absolute;
+	top: -1.6em;
+	z-index: 999;
 }
 
 .single-product div.product .images {
