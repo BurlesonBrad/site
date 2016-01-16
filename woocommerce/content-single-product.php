@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 	<div class="summary entry-summary">
-		<h3 class="brand"><?php echo get_brands( $post->ID, ' ' ); ?></h3>
+		<h2 class="brand"><?php echo get_brands( $post->ID, ' ' ); ?></h2>
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook
