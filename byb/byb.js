@@ -375,7 +375,7 @@ function checkTheBags() {
 						if ( disc_slug === this_slug ) {
 							//$this.addClass("success");
 							$this.hide();
-							$this.siblings(".remove-from-bag").show();
+							$this.siblings(".remove-from-bag").css("display", "block");
 						}
 					}
 				}
