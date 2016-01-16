@@ -58,7 +58,7 @@ function remove_sidebar_single_product() {
 		remove_action( 'storefront_sidebar', 'storefront_get_sidebar' );
 	}
 }
-add_action( 'storefront_before_header', 'remove_sidebar_single_product', 10, 0 );
+add_action( 'plugins_loaded', 'remove_sidebar_single_product', 10, 0 );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
