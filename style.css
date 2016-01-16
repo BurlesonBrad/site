@@ -498,6 +498,7 @@ body.home #content { padding-top: 0; }
 	background: #fafafa;
     padding: 2em 3em 0.3em;
     margin-bottom: 1em;
+    border-radius: 3px;
 }
 
 .bag h3 {
