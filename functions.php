@@ -44,6 +44,8 @@ function set_inbounds_meta_ids() {
 		$inbounds_ids_json = stripslashes($inbounds_ids_json);
 		$inbounds_ids_arr = json_decode( $inbounds_ids_json, true );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
+
+		echo $post_slug;
 	}
 }
 add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
