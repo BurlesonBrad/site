@@ -33,6 +33,9 @@ if ( ! $product || ! $product->is_visible() ) {
 // Increase loop count
 $woocommerce_loop['loop']++;
 
+// Set new meta
+update_post_meta( $post->ID, 'inbounds_id', $inbounds_ids_arr[$post->post_name] );
+
 // Extra post classes
 $classes = array();
 if ( 0 == ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 == $woocommerce_loop['columns'] ) {

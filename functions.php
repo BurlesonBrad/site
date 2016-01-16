@@ -35,21 +35,13 @@ function dynamic_basket() {
 }
 add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
-function set_inbounds_meta_ids() {
-	$custom_query = new WP_Query( array('category_name' => 'discs') );
-	while($custom_query->have_posts()) :
-//		$custom_query->the_post();
-		$post = $custom_query->get_queried_object();
-		$post_id = get_the_ID();
-		$post_slug = $post->post_name;
+function set_inbounds_meta_ids( $post_id, $post_slug ) {
 		$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
 		$inbounds_ids_json = stripslashes($inbounds_ids_json);
 		$inbounds_ids_arr = json_decode( $inbounds_ids_json );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
-	endwhile;
-	wp_reset_postdata();
 }
-add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
+//add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
