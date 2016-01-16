@@ -277,8 +277,8 @@ $("form.checkout").submit(function(e) {
 /***  REMOVE FROM BAG 	***/
 /***					***/
 $removeFromBagBtn.click(function(e) {
-	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
-	var $bag = $(this).parents("div[data-bag-name]").data("bag-name");
+	var slug = $(this).parents("*[data-product-slug]").data("product-slug");
+	var $bag = $(this).parents("div[data-bag-name]").data("bag-name") || $bagsMenu.find("option").val();
 
 	removeFromBag( e, $bag, slug );
 });
