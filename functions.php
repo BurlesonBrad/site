@@ -53,6 +53,13 @@ function set_inbounds_meta_ids() {
 }
 add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
 
+function remove_sidebar_single_product() {
+	if ( is_product() ) {
+		remove_action( 'storefront_sidebar', 'storefront_get_sidebar' );
+	}
+}
+add_action( 'storefront_before_header', 'remove_sidebar_single_product', 10, 0 );
+
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
 // 		$user = wp_get_current_user();
