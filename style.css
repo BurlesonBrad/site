@@ -742,3 +742,16 @@ button.add-to-bag {
 .single-product div.product .summary {
 	width: 64%;
 }
+
+.single-product .summary h2.brand {
+	margin-bottom: 0;
+
+	text-transform: uppercase;
+}
+
+.single-product .summary h1.product_title {
+	color: #ff3c7c;
+    font-weight: bold;
+    font-size: 7em;
+    line-height: 0.5;
+}
