@@ -217,20 +217,25 @@ $("form.checkout").submit(function(e) {
 	});
 });
 
-// Insert ADD-TO-BAG buttons
-if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
-	if ( $(".add-to-bag").length < 1 ) {
-		$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
+function addToBagButtons() {
+	// Insert ADD-TO-BAG buttons
+	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
+		if ( $(".add-to-bag").length < 1 ) {
+			$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
+		} else {
+			$addToBagBtn = $(".add-to-bag");
+		}
 	} else {
-		$addToBagBtn = $(".add-to-bag");
+		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
+			var $this = $(this);
+			$bagsMenu.clone(true).appendTo($this);
+			$addToBagBtn.clone(true).appendTo($this);
+		});
 	}
-} else {
-	$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
-		var $this = $(this);
-		$bagsMenu.clone(true).appendTo($this);
-		$addToBagBtn.clone(true).appendTo($this);
-	});
 }
+addToBagButtons();
+setTimeout(addToBagButtons, 1200);
+
 
 // Deactivate 'add to bag' buttons for already-added discs
 (function() {
