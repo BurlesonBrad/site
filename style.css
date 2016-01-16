@@ -501,7 +501,7 @@ body.home #content { padding-top: 0; }
     border-radius: 3px;
     -webkit-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.3);
     -moz-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.3);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
 }
 
 .bag h3 {
