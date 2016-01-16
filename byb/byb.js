@@ -289,6 +289,9 @@ function addToBagButtons() {
 	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
 		if ( $(".add-to-bag").length < 1 ) {
 			$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
+			$("li[data-product-slug]").each(function() {
+				$addToBagBtn.clone(true).appendTo( $(this) );
+			});
 		} else {
 			$addToBagBtn = $(".add-to-bag");
 		}
@@ -312,6 +315,10 @@ function removeFromBagButtons() {
 	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
 		if ( $(".remove-from-bag").length < 1 ) {
 			$("main > div > .summary").prepend( $removeFromBagBtn ).prepend( $bagsMenu );
+			// Target all products (cross-sells, etc) that aren't the single product
+			$("li[data-product-slug]").each(function() {
+				$removeFromBagBtn.clone(true).appendTo( $(this) );
+			});
 		} else {
 			$removeFromBagBtn = $(".remove-from-bag");
 		}
