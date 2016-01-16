@@ -45,7 +45,7 @@ function set_inbounds_meta_ids() {
 		$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
 		$inbounds_ids_arr = json_decode( $inbounds_ids_json );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
-		echo get_post_meta( $post_id );
+		get_post_meta( $post_id );
 	endwhile;
 	wp_reset_postdata();
 }
