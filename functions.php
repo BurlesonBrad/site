@@ -38,7 +38,7 @@ add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 function set_inbounds_meta_ids() {
 	$custom_query = new WP_Query( array('category_name' => 'discs') );
 	while($custom_query->have_posts()) :
-		$custom_query->the_post();
+//		$custom_query->the_post();
 		$post = $custom_query->get_queried_object();
 		$post_id = get_the_ID();
 		$post_slug = $post->post_name;
@@ -46,7 +46,6 @@ function set_inbounds_meta_ids() {
 		$inbounds_ids_json = stripslashes($inbounds_ids_json);
 		$inbounds_ids_arr = json_decode( $inbounds_ids_json );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
-		update_post_meta( $post_id, 'test_meta', '1' );
 	endwhile;
 	wp_reset_postdata();
 }
