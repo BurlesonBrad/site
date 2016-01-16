@@ -21,7 +21,8 @@
 			output[value] = idNum;
 
 			if ( index === loop_len - 1 ) {
-				$("body").append(output);
+				output = JSON.stringify(output);
+				$("body").append("<div>" + output + "</div>");
 			}
 		});
 	});
