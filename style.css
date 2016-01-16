@@ -781,12 +781,12 @@ button.remove-from-bag,
     width: 100%;
 }
 
-.single-product div.product {
+.single-product main > div.product {
 	overflow: visible;
 }
 
-.single-product div.product .add-to-bag,
-.single-product div.product .remove-from-bag {
+.single-product main > div.product .add-to-bag,
+.single-product main > div.product .remove-from-bag {
 	position: absolute;
 	top: -1.8em;
 	z-index: 999;
@@ -796,12 +796,12 @@ button.remove-from-bag,
 	margin-top: 0;
 }
 
-.single-product div.product .images {
+.single-product main > div.product .images {
 	width: 32%;
 	margin-right: 4%;
 }
 
-.single-product div.product .summary {
+.single-product main > div.product .summary {
 	width: 64%;
 }
 
