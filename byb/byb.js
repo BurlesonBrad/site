@@ -278,7 +278,7 @@ $("form.checkout").submit(function(e) {
 });
 
 //* REMOVE FROM BAG *//
-$removeBtn.click(function(e) {
+$removeFromBagBtn.click(function(e) {
 	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
 
 	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
