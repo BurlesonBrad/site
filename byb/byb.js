@@ -363,7 +363,8 @@ setTimeout(removeFromBagButtons, 1200);
 					for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
 						this_slug = the_bags[i]["discs"][index]["slug"];
 						if ( disc_slug === this_slug ) {
-							$this.addClass("success");
+							//$this.addClass("success");
+							$this.hide();
 						}
 					}
 				}
