@@ -183,7 +183,8 @@ get_header(); ?>
 				
 				</div>
 
-			<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
+				<h2 class="handwritten">A few to get you going</h2>
+				<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
 
 			</div>
 
