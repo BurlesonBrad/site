@@ -499,7 +499,7 @@ body.home #content { padding-top: 0; }
     padding: 2em 3em 0.3em;
     margin-bottom: 1em;
     border-radius: 3px;
-    box-shadow: -1px -1px 1px inset rgba(0,0,0,0.1);
+    box-shadow: -1px -1px 1px inset rgba(0,0,0,0.3);
 }
 
 .bag h3 {
