@@ -50,9 +50,7 @@ function set_inbounds_meta_ids() {
 		$post_id = $post->ID;
 
 		$post_slug = $post->post_name;
-		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
-
-		var_dump( $post_slug );
+		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr['$post_slug'] );
 	endwhile;
 }
 add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
