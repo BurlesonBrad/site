@@ -32,6 +32,14 @@ h2 {
 	font-size: 3em;
 }
 
+.blue {
+	color: #00b0ff;
+}
+
+.centered {
+	text-align: center;
+}
+
 /* buttons */
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart {
 	box-shadow: none;
