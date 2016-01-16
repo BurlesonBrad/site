@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	$type = wp_get_post_terms( $post->ID, 'disc-type' );
 	$type = $type[0]->slug;
-	$brand = wp_get_post_terms( $post_id, 'product_brand' );
+	$brand = wp_get_post_terms( $post->ID, 'product_brand' );
 	$brand = $brand[0]->slug;
 ?>
 
