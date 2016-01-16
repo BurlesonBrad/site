@@ -38,8 +38,8 @@ add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 function set_inbounds_meta_ids() {
 	$custom_query = new WP_Query( array('category_name' => 'discs') );
 	while($custom_query->have_posts()) :
-		global $post;
 		$custom_query->the_post();
+		global $post;
 		$post_id = get_the_ID();
 		$post_slug = $post->post_name;
 		$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
