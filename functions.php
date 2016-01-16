@@ -50,6 +50,8 @@ function set_inbounds_meta_ids() {
 		echo $post_slug;
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
 	endwhile;
+
+	var_dump( $inbounds_ids_arr['discraft-buzzz'] );
 }
 add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
 
