@@ -36,10 +36,13 @@ function dynamic_basket() {
 add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 function set_inbounds_meta_ids() {
-	$discs = get_posts();
-	var_dump( $discs );
-	foreach ( $discs as $post ) {
+	global $post;
+	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' )
+	$discs = new WP_Query( $args );
+
+	while ( $discs->have_posts() ) : $discs->the_post(); 
 		$post_id = $post->ID;
+
 		$post_slug = $post->post_name;
 		$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
 		$inbounds_ids_json = stripslashes($inbounds_ids_json);
@@ -48,7 +51,7 @@ function set_inbounds_meta_ids() {
 
 		var_dump( $post_slug );
 		var_dump( $inbounds_ids_arr[0] );
-	}
+	endwhile;
 }
 add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
 
