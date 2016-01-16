@@ -23,6 +23,11 @@ h2, h2 a {
 	letter-spacing: 0;
 }
 
+.handwritten {
+	font-family: 'Rock Salt';
+	text-transform: lowercase;
+}
+
 h2 {
 	font-size: 3em;
 }
