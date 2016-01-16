@@ -46,7 +46,6 @@ $post_id = $post->ID;
 $type = wp_get_post_terms( $post_id, 'disc-type' );
 $type = $type[0]->slug;
 $brand = wp_get_post_terms( $post_id, 'product_brand' );
-//$brand = get_brands( $post_id, ' ' );
 $brand = $brand[0]->slug;
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
