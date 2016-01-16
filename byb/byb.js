@@ -242,22 +242,17 @@ function removeFromBag(e, bag, disc) {
 }
 
 var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> from bag</span></button>");
+if ( $(".page-id-45").length ) {
+	$removeFromBagBtn = $(".remove-from-bag");
+}
 
 /***					***/
 /***	ADD TO BAG 		***/
 /***					***/
 $addToBagBtn.click(function(e) {
-	var type;
-	var slug;
-
 // Set page-specific parameters
-	if ( $("body").hasClass("single-product") ) { // PDP
-		slug = $discSlug;
-		type = $("main > div > .summary .product_meta .disc_type a").html();
-	} else { // EVERYTHING ELSE
-		slug = $(this).parents(".product[data-product-slug]").data("product-slug");
-		type = $(this).parents(".product[data-disc-type]").data("disc-type");
-	}
+	var slug = $(this).parents(".product[data-product-slug]").data("product-slug");
+	var type = $(this).parents(".product[data-disc-type]").data("disc-type");
 
 	// applies to all
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
@@ -277,11 +272,12 @@ $("form.checkout").submit(function(e) {
 	});
 });
 
-//* REMOVE FROM BAG *//
+/***					***/
+/***  REMOVE FROM BAG 	***/
+/***					***/
 $removeFromBagBtn.click(function(e) {
 	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
-
-	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
+	var $bag = $(this).parents("div[data-bag-name]").data("bag-name");
 
 	removeFromBag( e, $bag, slug );
 });
