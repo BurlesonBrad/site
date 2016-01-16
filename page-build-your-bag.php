@@ -11,6 +11,20 @@ if ( $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['byb']) ) {
 	return;
 }
 
+$discs = get_posts( array('category_name' => 'discs') );
+var_dump( $discs );
+foreach ( $discs as $post ) {
+	$post_id = $post->ID;
+	$post_slug = $post->post_name;
+	$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
+	$inbounds_ids_json = stripslashes($inbounds_ids_json);
+	$inbounds_ids_arr = json_decode( $inbounds_ids_json, true );
+	update_post_meta( $post_id, 'inbounds_id', $inbounds_ids_arr[$post_slug] );
+
+	var_dump( $post_slug );
+	var_dump( $inbounds_ids_arr[0] );
+}
+
 /**
  * The template for displaying all pages.
  *
