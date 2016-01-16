@@ -656,6 +656,7 @@ form.edit-bag-name {
 	display: inline-block;
 	position: relative;
 	margin-left: -60px;
+	-webkit-filter: brightness(95%);
 	filter: brightness(95%);
 
 	-webkit-transition: margin 400ms;
@@ -666,11 +667,13 @@ form.edit-bag-name {
 }
 
 .bag .disc:hover {
+	-webkit-filter: brightness(100%);
 	filter: brightness(100%);
 }
 
 .touchevents .bag .disc {
 	margin-left: 10px;
+	-webkit-filter: brightness(100%);
 	filter: brightness(100%);
 }
 
