@@ -242,6 +242,7 @@ function removeFromBag(e, bag, disc) {
 }
 
 var $removeBtn = $(".remove-from-bag");
+var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> to bag</span></button>");
 
 
 /***					***/
@@ -312,8 +313,6 @@ setTimeout(addToBagButtons, 1200);
 
 function removeFromBagButtons() {
 	// Insert REMOVE-FROM-BAG buttons
-	var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> to bag</span></button>");
-
 	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
 		if ( $(".remove-from-bag").length < 1 ) {
 			$("main > div > .summary").prepend( $removeFromBagBtn ).prepend( $bagsMenu );
