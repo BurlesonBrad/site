@@ -666,7 +666,7 @@ form.edit-bag-name {
 button.add-to-bag,
 button.remove-from-bag {
 	text-align: center;
-	width: 100%;
+	width: auto;
 	height: 2em;
 	line-height: 2em;
 	background: transparent;
@@ -678,9 +678,7 @@ button.remove-from-bag {
 
 .single-product button.add-to-bag,
 .single-product button.remove-from-bag {
-	text-align: left;
-	margin-bottom: 0.6em;
-	margin-top: 0;
+	
 }
 
 .add-to-bag.success {
@@ -786,6 +784,10 @@ button.remove-from-bag {
 	position: absolute;
 	top: -1.8em;
 	z-index: 999;
+
+	text-align: left;
+	margin-bottom: 0.6em;
+	margin-top: 0;
 }
 
 .single-product div.product .images {
