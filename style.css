@@ -683,7 +683,7 @@ button.remove-from-bag {
 }
 
 button.remove-from-bag {
-	display: none;	
+	display: none !important;	
 }
 
 .add-to-bag.success {
