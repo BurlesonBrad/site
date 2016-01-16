@@ -327,7 +327,7 @@ setTimeout(removeFromBagButtons, 1200);
 
 
 // Deactivate 'add to bag' buttons for already-added discs
-(function() {
+function checkTheBags() {
 	var the_bags = false;
 	var user_meta = false;
 	promise_bags.success(function(data) {
@@ -369,7 +369,9 @@ setTimeout(removeFromBagButtons, 1200);
 			});
 		}
 	}
-})();
+});
+checkTheBags();
+setTimeout(checkTheBags, 1400);
 
 
 
