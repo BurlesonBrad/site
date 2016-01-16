@@ -785,8 +785,8 @@ button.remove-from-bag,
 	overflow: visible;
 }
 
-.single-product main > div.product .add-to-bag,
-.single-product main > div.product .remove-from-bag {
+.single-product .summary .add-to-bag,
+.single-product .summary .remove-from-bag {
 	position: absolute;
 	top: -1.8em;
 	z-index: 999;
@@ -796,12 +796,12 @@ button.remove-from-bag,
 	margin-top: 0;
 }
 
-.single-product main > div.product .images {
+.single-product .summary .images {
 	width: 32%;
 	margin-right: 4%;
 }
 
-.single-product main > div.product .summary {
+.single-product .summary {
 	width: 64%;
 }
 
