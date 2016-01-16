@@ -676,6 +676,12 @@ button.remove-from-bag {
 	color: #666;
 }
 
+.products .add-to-bag,
+.products .remove-from-bag {
+	display: block;
+	margin: 0.6em auto 0 auto;
+}
+
 button.remove-from-bag {
 	display: none;	
 }
