@@ -676,9 +676,8 @@ button.remove-from-bag {
 	color: #666;
 }
 
-.single-product button.add-to-bag,
-.single-product button.remove-from-bag {
-	
+button.remove-from-bag {
+	display: none;	
 }
 
 .add-to-bag.success {

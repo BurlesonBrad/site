@@ -365,6 +365,7 @@ setTimeout(removeFromBagButtons, 1200);
 						if ( disc_slug === this_slug ) {
 							//$this.addClass("success");
 							$this.hide();
+							$this.siblings(".remove-from-bag").show();
 						}
 					}
 				}
