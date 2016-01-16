@@ -37,7 +37,7 @@ add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 function set_inbounds_meta_ids() {
 	global $post;
-	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' )
+	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' );
 	$discs = new WP_Query( $args );
 
 	while ( $discs->have_posts() ) : $discs->the_post(); 
