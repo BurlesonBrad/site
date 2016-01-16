@@ -494,6 +494,12 @@ body.home #content { padding-top: 0; }
     opacity: 0.9;
 }
 
+.bag-section {
+	background: #fafafa;
+    padding: 2em 3em 0.3em;
+    margin-bottom: 1em;
+}
+
 .bag h3 {
     margin-bottom: 0.4em;
     text-transform: uppercase;
