@@ -727,3 +727,9 @@ button.add-to-bag {
 .remove-from-bag:hover {
 	opacity: 1;
 }
+
+/* SINGLE PRODUCT */
+.single-product .content-area {
+    float: left;
+    width: 100%;
+}
