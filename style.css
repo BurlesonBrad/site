@@ -643,6 +643,10 @@ form.edit-bag-name {
 	transition: margin 400ms;
 }
 
+.touchevents .bag .disc {
+	margin-left: 10px;
+}
+
 .bag .disc:first-child {
 	margin-left: 0;
 }
@@ -734,6 +738,10 @@ button.add-to-bag {
 }
 
 .disc:hover .remove-from-bag {
+	display: block;
+}
+
+.touchevents .disc .remove-from-bag {
 	display: block;
 }
 
