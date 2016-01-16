@@ -682,8 +682,9 @@ button.remove-from-bag {
 	margin: 0.6em auto 0 auto;
 }
 
-button.remove-from-bag {
-	display: none !important;	
+button.remove-from-bag,
+.products .remove-from-bag {
+	display: none;	
 }
 
 .add-to-bag.success {
