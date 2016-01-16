@@ -183,6 +183,67 @@ promise_bags.success(function(data) {
 
 var $addToBagBtn = $("<button class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='14' height='14' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='16' height='13' alt='Add' /><span>Add<span class='added'>ed</span> to bag<span class='added'>!</span></span></button>");
 
+/***						***/
+/***	REMOVE FROM BAG 	***/
+/***						***/
+function removeFromBag(e, bag, disc) {
+	var the_bags = false;
+	var user_meta = false;
+	promise_bags.success(function(data) {
+		the_bags = data;
+		removeTheDisc(the_bags, e, bag, disc);
+	}).error(function(jqXHR, textStatus, errorThrown) {
+		if (textStatus == 'timeout')
+		console.log('The server is not responding');
+
+		if (textStatus == 'error')
+		console.log(errorThrown);
+
+		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
+			the_bags = Cookies.getJSON('byb');
+		}
+		removeTheDisc(the_bags, e, bag, disc);
+	});
+
+	function removeTheDisc(the_bags, e, bag, disc) {
+		var this_bag = the_bags[0];
+		var bagIndex = 0;
+		for ( i = 0; i < the_bags.length; i++ ) {
+			if (the_bags[i]["name"] === bag ) {
+				this_bag = the_bags[i];
+				bagIndex = i;
+			}
+		}
+
+		for ( i = 0; i < this_bag.discs.length; i++ ) {
+			if ( this_bag["discs"][i]["slug"] === disc ) {
+				the_bags[bagIndex]["discs"].splice(i, 1);
+				//updateBags( JSON.stringify(the_bags) );
+				Cookies.set("byb", the_bags, { expires: 1000, path: "/", domain: ".hyzershop.com" });
+				location.reload();
+			}
+		}
+
+	// ON SUCCESS:
+		if ( $(".remove-from-bag-success").length === 0 ) {
+			var $success = $("<div class='remove-from-bag-success'>Removed from bag <a href='/build-your-bag'>view your bag</a></div>");
+			$success.appendTo("body").delay(5000).fadeOut(400, function() {
+				$(this).remove();
+			});
+		}
+
+		if ( $(e.target).hasClass("remove-from-bag") ) {
+			$(e.target).addClass("success");
+		}
+		if ( $(e.target).parents(".remove-from-bag").length === 1 ) {
+			$(e.target).parents(".remove-from-bag").addClass("success");
+		}
+	}
+}
+
+var $removeBtn = $(".remove-from-bag");
+
+
 /***					***/
 /***	ADD TO BAG 		***/
 /***					***/
@@ -217,6 +278,19 @@ $("form.checkout").submit(function(e) {
 	});
 });
 
+//* REMOVE FROM BAG *//
+$removeBtn.click(function(e) {
+	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
+
+	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
+
+	removeFromBag( e, $bag, slug );
+});
+
+/**							 **/
+/** PLACE ADD/REMOVE BUTTONS **/
+/**	------------------------ **/
+
 function addToBagButtons() {
 	// Insert ADD-TO-BAG buttons
 	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
@@ -241,30 +315,21 @@ function removeFromBagButtons() {
 	var $removeFromBagBtn = $("<button class='remove-from-bag'><span>Remove<span class='removed'>d</span> to bag</span></button>");
 
 	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
-		if ( $(".add-to-bag").length < 1 ) {
-			$("main > div > .summary").prepend( $addToBagBtn ).prepend( $bagsMenu );
+		if ( $(".remove-from-bag").length < 1 ) {
+			$("main > div > .summary").prepend( $removeFromBagBtn ).prepend( $bagsMenu );
 		} else {
-			$addToBagBtn = $(".add-to-bag");
+			$removeFromBagBtn = $(".remove-from-bag");
 		}
 	} else {
 		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
 			var $this = $(this);
 			$bagsMenu.clone(true).appendTo($this);
-			$addToBagBtn.clone(true).appendTo($this);
+			$removeFromBagBtn.clone(true).appendTo($this);
 		});
 	}
 }
-addToBagButtons();
-setTimeout(addToBagButtons, 1200);
-
-var $removeBtn = $(".remove-from-bag");
-$removeBtn.click(function(e) {
-	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
-
-	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
-
-	removeFromBag( e, $bag, slug );
-});
+removeFromBagButtons();
+setTimeout(removeFromBagButtons, 1200);
 
 
 // Deactivate 'add to bag' buttons for already-added discs
@@ -310,57 +375,8 @@ $removeBtn.click(function(e) {
 	}
 })();
 
-/***						***/
-/***	REMOVE FROM BAG 	***/
-/***						***/
-function removeFromBag(e, bag, disc) {
-	var the_bags = false;
-	var user_meta = false;
-	promise_bags.success(function(data) {
-		the_bags = data;
-		removeTheDisc(the_bags, e, bag, disc);
-	}).error(function(jqXHR, textStatus, errorThrown) {
-		if (textStatus == 'timeout')
-		console.log('The server is not responding');
 
-		if (textStatus == 'error')
-		console.log(errorThrown);
 
-		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
-			the_bags = Cookies.getJSON('byb');
-		}
-		removeTheDisc(the_bags, e, bag, disc);
-	});
-
-	function removeTheDisc(the_bags, e, bag, disc) {
-		var this_bag = the_bags[0];
-		var bagIndex = 0;
-		for ( i = 0; i < the_bags.length; i++ ) {
-			if (the_bags[i]["name"] === bag ) {
-				this_bag = the_bags[i];
-				bagIndex = i;
-			}
-		}
-
-		for ( i = 0; i < this_bag.discs.length; i++ ) {
-			if ( this_bag["discs"][i]["slug"] === disc ) {
-				the_bags[bagIndex]["discs"].splice(i, 1);
-				//updateBags( JSON.stringify(the_bags) );
-				Cookies.set("byb", the_bags, { expires: 1000, path: "/", domain: ".hyzershop.com" });
-				location.reload();
-			}
-		}
-	}
-}
-
-var $removeBtn = $(".remove-from-bag");
-$removeBtn.click(function(e) {
-	var slug = $(this).parents(".disc[data-product-slug]").data("product-slug");
-
-	$bag = $(this).parents("div[data-bag-name]").data("bag-name");
-
-	removeFromBag( e, $bag, slug );
-});
 
 // $(".page-id-45 .disc[data-product-slug]").each(function() {
 // 	$removeBtn.clone(true).appendTo($(this));
