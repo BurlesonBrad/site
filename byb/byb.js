@@ -447,7 +447,7 @@ $(".disc").hover(function() {
 
 // OPTIONS MENU
 
-$(".page-id-45 .options button").click(function() {
+$(".page-id-45 .options-btn").click(function() {
 	$(this).parent().toggleClass("expanded");
 });
 $(document).click(function(e) {
