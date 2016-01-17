@@ -603,6 +603,7 @@ form.edit-bag-name {
 
 .options-btn, .options-btn:hover {
 	position: absolute;
+	box-sizing: content-box;
 	width: 0.7em;
 	height: 0.7em;
 	top: 0.3em;
@@ -613,6 +614,7 @@ form.edit-bag-name {
 	font-size: 3em;
 	font-weight: bold;
 	letter-spacing: 1px;
+	border: 10px solid transparent;
 	border-radius: 0;
 }
 
@@ -625,7 +627,8 @@ form.edit-bag-name {
 }
 
 .options-btn:focus {
-	background: #eee;
+	background: #ddd;
+	border: 10px solid #ddd;
 	opacity: 1;
 }
 
