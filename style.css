@@ -626,7 +626,7 @@ form.edit-bag-name {
 	opacity: 1;
 }
 
-.options-btn:focus {
+.expanded .options-btn:focus {
 	background: #ddd;
 	border: 10px solid #ddd;
 	opacity: 1;
