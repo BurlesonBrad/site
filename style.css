@@ -722,6 +722,14 @@ button.remove-from-bag {
 	color: #666;
 }
 
+.remove-from-bag {
+	opacity: 0.5;
+}
+
+.remove-from-bag:hover {
+	opacity: 1;
+}
+
 .products .add-to-bag,
 .products .remove-from-bag {
 	display: block;
