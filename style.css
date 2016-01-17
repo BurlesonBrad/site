@@ -844,14 +844,16 @@ form.edit-bag-name {
 	overflow: visible;
 }
 
-.single-product .summary .cart {
+.single-product div.product form.cart {
 	position: relative;
+	padding: 2.2em 0 1.618em;
 }
 
 .single-product .summary .add-to-bag,
 .single-product .summary .remove-from-bag {
 	position: absolute;
-	top: -1.8em;
+	top: 0;
+	right: 0;
 	z-index: 999;
 
 	text-align: left;
