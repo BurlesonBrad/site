@@ -724,6 +724,7 @@ form.edit-bag-name {
 	font-size: 0.9em;
 	font-family: 'Montserrat';
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .remove-from-bag {
