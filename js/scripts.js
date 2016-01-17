@@ -53,6 +53,9 @@ $(document).ready(function() {
 		if ( $cartItems == 0 ) {
 			$cartItems = 'empty';
 		}
+		if ( $cartItems > 3 ) {
+			$cartItems = 3;
+		}
 		if ( add === 1 ) {
 			if ( $cartItems > 3 ) {
 				$cartItems = 3;
