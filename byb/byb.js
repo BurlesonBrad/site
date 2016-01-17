@@ -225,7 +225,10 @@ function removeFromBag(e, bag, disc) {
 				the_bags[bagIndex]["discs"].splice(i, 1);
 				//updateBags( JSON.stringify(the_bags) );
 				Cookies.set("byb", the_bags, { expires: 1000, path: "/", domain: ".hyzershop.com" });
-				location.reload();
+				
+				if ( $("body.page-id-45").length > 0 ) {
+					location.reload();
+				}
 			}
 		}
 
