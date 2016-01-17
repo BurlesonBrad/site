@@ -49,17 +49,11 @@ $(document).ready(function() {
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
-		var $cartItems = $("#masthead").data("cart-items");
+		var $cartItems = ( $("#masthead").data("cart-items") <= 3 || $("#masthead").data("cart-items") === 'empty' ) ? $("#masthead").data("cart-items") : 3;
 		if ( $cartItems == 0 ) {
 			$cartItems = 'empty';
 		}
-		if ( $cartItems > 3 ) {
-			$cartItems = 3;
-		}
 		if ( add === 1 ) {
-			if ( $cartItems > 3 ) {
-				$cartItems = 3;
-			}
 			if ( $cartItems != 'empty' ) {
 				$cartItems = $cartItems + add;
 			} else {
