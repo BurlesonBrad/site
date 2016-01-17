@@ -846,13 +846,13 @@ form.edit-bag-name {
 
 .single-product div.product form.cart {
 	position: relative;
-	padding: 2.2em 0 1.618em;
+	padding: 2.6em 0 1.618em;
 }
 
 .single-product .summary .add-to-bag,
 .single-product .summary .remove-from-bag {
 	position: absolute;
-	top: 0;
+	top: 0.4em;
 	right: 0;
 	z-index: 999;
 
