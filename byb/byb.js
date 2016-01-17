@@ -156,6 +156,10 @@ function addToBag(e, bag, disc, t) {
 		if ( $(e.target).parents(".add-to-bag").length === 1 ) {
 			$(e.target).parents(".add-to-bag").addClass("success");
 		}
+
+		if ( $("body.page-id-45").length > 0 ) {
+			location.reload();
+		}
 	}
 }
 
@@ -446,7 +450,6 @@ $(".disc").hover(function() {
 
 
 // OPTIONS MENU
-
 $(".page-id-45 .options-btn").click(function() {
 	$(this).parent().toggleClass("expanded");
 });
