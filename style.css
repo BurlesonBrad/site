@@ -882,4 +882,11 @@ form.edit-bag-name {
     font-weight: bold;
     font-size: 7em;
     line-height: 0.6;
+    margin-bottom: 0.3em;
+}
+
+.single-product div.product .price {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
 }
