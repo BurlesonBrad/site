@@ -92,6 +92,12 @@ $(document).ready(function() {
 	}
 	replaceCartWithBasket();
 
+	function hideMessage() {
+		$(".woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments").each(function() {
+
+		});
+	}
+
 });
 
 
