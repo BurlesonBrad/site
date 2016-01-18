@@ -891,3 +891,8 @@ form.edit-bag-name {
     font-size: 1.5em;
     margin-bottom: 0.8em;
 }
+
+.variations label {
+	font-family: 'Rock Salt';
+    text-transform: lowercase;
+}
