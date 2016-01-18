@@ -905,5 +905,6 @@ form.edit-bag-name {
 }
 
 .backgroundsize .variations select {
-	background: #ddd url('images/select-bg.gif') no-repeat 90% 50%;
+	background: #ddd url('images/select-bg.gif') no-repeat 93% 50%;
+	background-size: 6px auto;
 }
