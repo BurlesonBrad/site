@@ -79,6 +79,18 @@ $(document).ready(function() {
 	$(".add_to_cart_button").on("click", function() {
 		dynamicBasket(1);
 	});
+
+	function replaceCartWithBasket() {
+		$(".site-header-cart").find("li").each(function() {
+			var $this = $(this);
+			if ( $this.children().length < 1 ) {
+				var text = $this.html();
+				var newText = text.replace( "cart", "basket" );
+				$this.html( newText );
+			}
+		});
+	}
+
 });
 
 
