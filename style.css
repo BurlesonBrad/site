@@ -896,3 +896,14 @@ form.edit-bag-name {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
 }
+
+.variations select {
+	border-radius: 100px;
+	border: 10px solid #ddd;
+    background: #ddd;
+    -webkit-appearance: none;
+}
+
+.backgroundsize .variations select {
+	background: #ddd url('images/select-bg.gif') no-repeat 90% 50%;
+}
