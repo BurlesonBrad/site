@@ -908,3 +908,15 @@ form.edit-bag-name {
 	background: #ddd url('images/select-bg.gif') no-repeat 93% 50%;
 	background-size: 6px auto;
 }
+
+.single-product .quantity input {
+	border-radius: 100px;
+    box-shadow: none;
+    background: #ddd;
+    padding: 0.5em;
+    text-align: center;
+    height: 2.5em;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Viga';
+}
