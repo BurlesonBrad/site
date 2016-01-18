@@ -711,6 +711,7 @@ form.edit-bag-name {
 
 .add-to-bag,
 .remove-from-bag {
+	cursor: pointer;
 	text-align: center;
 	width: auto;
 	height: 2em;
