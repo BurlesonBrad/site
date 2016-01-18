@@ -920,3 +920,8 @@ form.edit-bag-name {
     font-weight: bold;
     font-family: 'Viga';
 }
+
+.single-product div.product .variations_button {
+	padding-top: 0.5em;
+	border-top: 0;
+}
