@@ -948,6 +948,10 @@ form.edit-bag-name {
 	max-width: 100% !important;
 }
 
+.page-id-71 #content > main > article > .entry-header {
+	display: none;
+}
+
 #about-col, #contact-col {
 	float: left;
 	width: 50%;
