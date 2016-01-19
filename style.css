@@ -980,9 +980,11 @@ form.edit-bag-name {
 #contact-col .col-inner { border-left: 3px solid #ffffff; }
 
 .about-contact-columns h2 {
-    font-weight: 300;
     margin-bottom: 10px;
     line-height: 1;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .about-contact-columns h3 {
