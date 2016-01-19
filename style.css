@@ -930,3 +930,14 @@ form.edit-bag-name {
 	padding-top: 0.5em;
 	border-top: 0;
 }
+
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    margin-top: 0;
+    background: #00ca40;
+}
