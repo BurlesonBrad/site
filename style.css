@@ -941,3 +941,143 @@ form.edit-bag-name {
     margin-top: 0;
     background: #00ca40;
 }
+
+
+/* ABOUT PAGE */
+#about-col, #contact-col {
+	float: left;
+	width: 50%;
+	background-position: center 50%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: cover;
+}
+
+#about-col {
+	background-image: url(http://blog.hyzershop.com/wp-content/uploads/about-bg.jpg);
+}
+
+#contact-col {
+	background-image: url(http://blog.hyzershop.com/wp-content/uploads/contact-bg.jpg);
+}
+
+.about-contact-columns .col-inner {
+	width: auto;
+	padding: 140px 14% 80px;
+	min-height: 1100px;
+
+	text-align: center;
+}
+
+#about-col .col-inner { border-right: 3px solid #ffffff; padding-top: 180px; }
+#contact-col .col-inner { border-left: 3px solid #ffffff; }
+
+.about-contact-columns h2 {
+    font-weight: 300;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.about-contact-columns h3 {
+    font-weight: 300;
+    font-size: 5.2em;
+    margin-bottom: 0.5em;
+}
+
+.about-contact-columns p {
+	color: white;
+	font-weight: normal;
+	line-height: 1.6;
+	font-size: 1.6em;
+}
+
+.about-contact-columns h3.contact-success {
+	margin-top: 20px;
+	margin-bottom: 12px;
+}
+
+#contact-col form label { display: none; }
+#contact-col form input {
+	text-align: center;
+}
+
+#contact-col form ::-webkit-input-placeholder { color: #ffffff; }
+#contact-col form :-moz-placeholder { color: #ffffff; }
+#contact-col form ::-moz-placeholder { color: #ffffff; }
+#contact-col form :-ms-input-placeholder { color: #ffffff; }
+
+#contact-col form input,
+#contact-col form textarea {
+	text-align: center;
+	text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.3em;
+
+    padding: 12px 0;
+    background: rgba(255,255,255,0.3);
+    border: 3px solid #00b0ff;    
+    border-radius: 50px;
+}
+
+.site-content #contact-form-46 { max-width: 480px; margin: 0 auto; }
+.site-content .contact-form > div { margin-bottom: 10px; }
+
+#contact-form-46 h5.rock-salt.blue {
+	font-size: 3em;
+    line-height: 1;
+    font-family: Montserrat !important;
+    color: #fff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#contact-col form textarea {
+	border-radius: 20px;
+}
+
+#contact-col input:focus::-webkit-input-placeholder { opacity: 0; }
+#contact-col input:focus:-moz-placeholder { opacity: 0; }
+#contact-col input:focus::-moz-placeholder { opacity: 0; }
+#contact-col input:focus:-ms-input-placeholder { opacity: 0; }
+#contact-col textarea:focus::-webkit-input-placeholder { opacity: 0; }
+#contact-col textarea:focus:-moz-placeholder { opacity: 0; }
+#contact-col textarea:focus::-moz-placeholder { opacity: 0; }
+#contact-col textarea:focus:-ms-input-placeholder { opacity: 0; }
+
+#contact-col blockquote.contact-form-submission {
+	display: none;
+}
+
+#contact-col form input[type="submit"] {
+	width: 80px;
+    height: 80px;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 auto;
+    background: #00b0ff;
+    border: none;
+}
+
+#contact-col form input[type="submit"]:hover,
+#contact-col form input[type="submit"]:focus {
+	background: #ff3c7c;
+}
+
+form.contact-form > div > input:not([type="submit"]),
+form.contact-form > div > textarea {
+	width: 100%;
+}
+
+@media only screen and (max-width:960px) {
+	#about-col, #contact-col {
+		width: 100%;
+	}
+
+	#about-col .col-inner,
+	#contact-col .col-inner {
+		padding: 10em 14% 10em !important;
+	    min-height: 0;
+	    border-left: 0 none;
+		border-right: 0 none;
+	}
+}
