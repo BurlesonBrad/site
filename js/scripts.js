@@ -94,7 +94,10 @@ $(document).ready(function() {
 
 	function hideMessage() {
 		$(".woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments").each(function() {
-
+			var $this = $(this);
+			setTimeout(function() {
+				$this.fadeOut(400);
+			}, 3000);
 		});
 	}
 
