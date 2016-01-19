@@ -1010,11 +1010,6 @@ form.edit-bag-name {
 	text-align: center;
 }
 
-#contact-col form ::-webkit-input-placeholder { color: #ffffff; }
-#contact-col form :-moz-placeholder { color: #ffffff; }
-#contact-col form ::-moz-placeholder { color: #ffffff; }
-#contact-col form :-ms-input-placeholder { color: #ffffff; }
-
 #contact-col form input,
 #contact-col form textarea {
 	font-family: 'Montserrat';
@@ -1025,7 +1020,7 @@ form.edit-bag-name {
     padding: 1.1em 0;
     background: rgba(255,255,255,0.3);
     border: 3px solid #00b0ff;    
-    border-radius: 50px;
+    border-radius: 10em;
 }
 
 .site-content #contact-form-46 { max-width: 480px; margin: 0 auto; }
@@ -1053,10 +1048,10 @@ form.edit-bag-name {
 #contact-col textarea:focus::-moz-placeholder { opacity: 0; }
 #contact-col textarea:focus:-ms-input-placeholder { opacity: 0; }
 
-form ::-webkit-input-placeholder { color: #00b0ff; }
-form :-moz-placeholder { color: #00b0ff; }
-form ::-moz-placeholder { color: #00b0ff; }
-form :-ms-input-placeholder { color: #00b0ff; }
+#contact-col form ::-webkit-input-placeholder { color: #00b0ff; }
+#contact-col form :-moz-placeholder { color: #00b0ff; }
+#contact-col form ::-moz-placeholder { color: #00b0ff; }
+#contact-col form :-ms-input-placeholder { color: #00b0ff; }
 
 #contact-col blockquote.contact-form-submission {
 	display: none;
