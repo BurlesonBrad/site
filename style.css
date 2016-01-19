@@ -944,6 +944,10 @@ form.edit-bag-name {
 
 
 /* ABOUT PAGE */
+.page-id-71 #content > .col-full {
+	max-width: 100% !important;
+}
+
 #about-col, #contact-col {
 	float: left;
 	width: 50%;
@@ -954,11 +958,11 @@ form.edit-bag-name {
 }
 
 #about-col {
-	background-image: url(http://blog.hyzershop.com/wp-content/uploads/about-bg.jpg);
+	background-image: url('http://blog.hyzershop.com/wp-content/uploads/about-bg.jpg');
 }
 
 #contact-col {
-	background-image: url(http://blog.hyzershop.com/wp-content/uploads/contact-bg.jpg);
+	background-image: url('http://blog.hyzershop.com/wp-content/uploads/contact-bg.jpg');
 }
 
 .about-contact-columns .col-inner {
