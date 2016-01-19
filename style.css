@@ -36,7 +36,7 @@ h2 {
 .blue {	color: #00b0ff; }
 .pink {	color: #ff3c7c; }
 .rocksalt { font-family: 'Rock Salt'; }
-.sans { font-family: 'Montserrat'; }
+.sans, .montserrat { font-family: 'Montserrat'; }
 .centered {	text-align: center; }
 
 /* buttons */
