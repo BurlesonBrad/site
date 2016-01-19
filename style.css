@@ -1048,10 +1048,10 @@ form.edit-bag-name {
 #contact-col textarea:focus::-moz-placeholder { opacity: 0; }
 #contact-col textarea:focus:-ms-input-placeholder { opacity: 0; }
 
-#contact-col form ::-webkit-input-placeholder { color: #00b0ff; }
-#contact-col form :-moz-placeholder { color: #00b0ff; }
-#contact-col form ::-moz-placeholder { color: #00b0ff; }
-#contact-col form :-ms-input-placeholder { color: #00b0ff; }
+#contact-col form ::-webkit-input-placeholder { color: #fff; opacity: 0.6; }
+#contact-col form :-moz-placeholder { color: #fff; opacity: 0.6; }
+#contact-col form ::-moz-placeholder { color: #fff; opacity: 0.6; }
+#contact-col form :-ms-input-placeholder { color: #fff; opacity: 0.6; }
 
 #contact-col blockquote.contact-form-submission {
 	display: none;
