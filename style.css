@@ -1005,7 +1005,7 @@ form.edit-bag-name {
 	margin-bottom: 12px;
 }
 
-#contact-col form label { display: none; }
+.placeholder #contact-col form label { display: none; }
 #contact-col form input {
 	text-align: center;
 }
