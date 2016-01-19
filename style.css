@@ -1017,6 +1017,7 @@ form.edit-bag-name {
 
 #contact-col form input,
 #contact-col form textarea {
+	font-family: 'Montserrat';
 	text-align: center;
 	text-transform: uppercase;
     color: #ffffff;
@@ -1052,6 +1053,11 @@ form.edit-bag-name {
 #contact-col textarea:focus:-moz-placeholder { opacity: 0; }
 #contact-col textarea:focus::-moz-placeholder { opacity: 0; }
 #contact-col textarea:focus:-ms-input-placeholder { opacity: 0; }
+
+form ::-webkit-input-placeholder { color: #00b0ff; }
+form :-moz-placeholder { color: #00b0ff; }
+form ::-moz-placeholder { color: #00b0ff; }
+form :-ms-input-placeholder { color: #00b0ff; }
 
 #contact-col blockquote.contact-form-submission {
 	display: none;
