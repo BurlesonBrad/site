@@ -32,17 +32,12 @@ h2 {
 	font-size: 3em;
 }
 
-.blue {
-	color: #00b0ff;
-}
-
-.pink {
-	color: #ff3c7c;
-}
-
-.centered {
-	text-align: center;
-}
+.white { color: #fff; }
+.blue {	color: #00b0ff; }
+.pink {	color: #ff3c7c; }
+.rocksalt { font-family: 'Rock Salt'; }
+.sans { font-family: 'Montserrat'; }
+.centered {	text-align: center; }
 
 /* buttons */
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart {
