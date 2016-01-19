@@ -948,6 +948,10 @@ form.edit-bag-name {
 	max-width: 100% !important;
 }
 
+.page-id-71 #content {
+	padding-top: 0 !important;
+}
+
 .page-id-71 main > article > .entry-header {
 	display: none;
 }
