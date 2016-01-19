@@ -976,7 +976,7 @@ form.edit-bag-name {
 	text-align: center;
 }
 
-#about-col .col-inner { border-right: 3px solid #ffffff; padding-top: 180px; }
+#about-col .col-inner { border-right: 3px solid #ffffff; }
 #contact-col .col-inner { border-left: 3px solid #ffffff; }
 
 .about-contact-columns h2 {
