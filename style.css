@@ -951,7 +951,7 @@ form.edit-bag-name {
 	display: none;
 }
 
-#about-col, #contact-col {
+.about-contact-columns {
 	float: left;
 	width: 33.33%;
 	background-position: center 50%;
