@@ -73,6 +73,14 @@ function custom_storefront_credit() {
 	<?php
 }
 
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function woo_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+    return $tabs;
+}
+
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
 // 		$user = wp_get_current_user();
