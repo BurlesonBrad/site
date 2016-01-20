@@ -1084,6 +1084,7 @@ form.contact-form > div > textarea {
 	overflow-y: scroll;
 	padding: 1.3em;
 	background: #fff;
+	background: rgba(255,255,255,0.8);
 	border-radius: 1em;
 	box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
