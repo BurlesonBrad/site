@@ -1079,6 +1079,15 @@ form.contact-form > div > textarea {
 	width: 100%;
 }
 
+#social-col #cff {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+#social-col #cff p {
+	color: #666;
+}
+
 @media only screen and (max-width:960px) {
 	.about-contact-columns {
 		width: 100%;
