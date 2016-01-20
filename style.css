@@ -927,6 +927,14 @@ form.edit-bag-name {
 	border-top: 0;
 }
 
+button.single_add_to_cart_button {
+	background-color: #00b0ff;
+    border-color: #00b0ff;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+
+
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
 	position: absolute;
