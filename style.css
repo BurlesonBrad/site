@@ -29,7 +29,7 @@ h2, h2 a {
 }
 
 h2 {
-	font-size: 3.2em;
+	font-size: 3.4em;
 	line-height: 1;
 }
 
@@ -360,8 +360,7 @@ body.home #content { padding-top: 0; }
 
 .featured-disc-area h2 {
 	position: relative;
-	top: -6px;
-	margin-bottom: 0;
+	margin-bottom: 0.15em;
 }
 
 .featured-disc-area > div.featured-disc-image img {
@@ -389,7 +388,8 @@ body.home #content { padding-top: 0; }
     opacity: 0.1;
     font-size: 2em;
     position: absolute;
-    top: -0.55em;
+    top: -0.4em;
+    z-index: -1;
 }
 
 .featured-disc-twitter h2 a {
