@@ -89,9 +89,32 @@ get_header(); ?>
 			 * @hooked storefront_popular_products - 50
 			 * @hooked storefront_on_sale_products - 60
 			 */
-			do_action( 'homepage' ); ?>
+			//do_action( 'homepage' ); 
+			?>
 			
-			<div class="weekly-tip">
+			<section class="tired-of-shopping">
+				<img src="/wp-content/themes/storefront-child/images/tired-of-shopping.png" alt="Tired of shopping?" />
+				<div class="featured-video">
+					<?php
+					$video_args = array(
+						'numberposts' 	=> 1,
+						'category_name' => 'featured-video',
+						'orderby' 		=> 'date'
+					);
+					$weekly_video = get_posts($video_args);
+					foreach ( $weekly_video as $post ) : setup_postdata( $post );
+						if ( has_post_video() ) {
+							the_post_video();
+						} else {
+							the_post_thumbnail();
+						}
+					endforeach;
+					wp_reset_postdata();
+					?>
+				</div>
+			</section>
+
+			<section class="weekly-tip">
 				<img src="/wp-content/themes/storefront-child/images/weekly-tip-bubble.png" alt="your weekly disc golf tip" />
 				<div class="weekly-tip-content">
 					<?php
@@ -108,7 +131,7 @@ get_header(); ?>
 					wp_reset_postdata();
 					?>
 				</div>
-			</div>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
