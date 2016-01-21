@@ -956,6 +956,10 @@ button.single_add_to_cart_button:hover {
     background: #00ca40;
 }
 
+.woocommerce-noreviews {
+	display: none;
+}
+
 
 /* ABOUT PAGE */
 .page-id-71 #content > .col-full {
