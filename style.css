@@ -461,21 +461,12 @@ body.home #content { padding-top: 0; }
 	margin: 0 2em;
 }
 
-@media screen and (max-width: 71em) and (min-width: 48em) {
+@media screen and (max-width: 71em) {
 	.disc-types-inner > a > img {
-		margin: 2em 3em;
+		display: none;
 	}
 	.disc-types-inner {
 		width: 48em;
-	}
-}
-
-@media screen and (max-width: 47.99em) {
-	.disc-types-inner > a > img {
-		height: 30px;
-	}
-	.disc-types-inner {
-		width: 100%;
 	}
 }
 
