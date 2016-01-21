@@ -93,7 +93,7 @@ $(document).ready(function() {
 	replaceCartWithBasket();
 
 	function hideMessage() {
-		if ( $("body").hasClass("woocommerce-checkout") ) {
+		if ( $("body").hasClass("woocommerce-checkout") || $("body").hasClass("woocommerce-cart") ) {
 			return;
 		}
 		$(".woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments").each(function() {
