@@ -330,6 +330,7 @@ body.home #content { padding-top: 0; }
 	.metaslider .caption {
 		width: 100% !important;
 		text-align: center !important;
+		padding: 0 5% !important;
 	}
 }
 
