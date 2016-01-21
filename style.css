@@ -520,6 +520,16 @@ body.home #content { padding-top: 0; }
     vertical-align: middle;
 }
 
+.brand-thumbnails li a {
+	opacity: 0.4;
+	-webkit-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+
+.brand-thumbnails li a:hover {
+	opacity: 1;
+}
+
 @media screen and (max-width: 51em) {
 	.brand-thumbnails {
 		max-width: 100%;
