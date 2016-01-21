@@ -95,7 +95,7 @@ get_header(); ?>
 			<section class="tired-of-shopping col-full">
 				<img src="/wp-content/themes/storefront-child/images/tired-of-shopping.png" alt="Tired of shopping?" />
 				<div class="read-the-blog">
-					<a href="http://blog.hyzershop.com"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
+					<a href="http://blog.hyzershop.com" target="_blank"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
 				</div>
 				<div class="featured-video">
 					<?php
@@ -138,9 +138,9 @@ get_header(); ?>
 
 			<section class="social-bar col-full">
 				<ul>
-					<li><a href="http://instagram.com/hyzershop"><img src="/wp-content/themes/storefront-child/images/instagram-circle-blue.png" alt="follow us on Instagram" /></a></li>
-					<li><a href="http://facebook.com/hyzershop"><img src="/wp-content/themes/storefront-child/images/facebook-circle-blue.png" alt="like us on Facebook" /></a></li>
-					<li><a href="http://twitter.com/hyzer_shop"><img src="/wp-content/themes/storefront-child/images/twitter-circle-blue.png" alt="follow us on Twitter" /></a></li>
+					<li><a href="http://instagram.com/hyzershop" target="_blank"><img src="/wp-content/themes/storefront-child/images/instagram-circle-blue.png" alt="follow us on Instagram" /></a></li>
+					<li><a href="http://facebook.com/hyzershop" target="_blank"><img src="/wp-content/themes/storefront-child/images/facebook-circle-blue.png" alt="like us on Facebook" /></a></li>
+					<li><a href="http://twitter.com/hyzer_shop" target="_blank"><img src="/wp-content/themes/storefront-child/images/twitter-circle-blue.png" alt="follow us on Twitter" /></a></li>
 					<li id="mc_embed_signup" class="email-bar">
 						<!-- Begin MailChimp Signup Form -->
 						<form action="//hyzershop.us10.list-manage.com/subscribe/post?u=c294e1f306a856df1d2ffaee5&amp;id=e402d02301" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
