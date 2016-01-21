@@ -602,6 +602,8 @@ body.home #content { padding-top: 0; }
 	height: 50px;
 	background: #00b0ff;
 	color: #fff;
+	padding: 0 4em;
+	line-height: 50px;
 }
 
 .social-bar #mc_embed_signup label {
