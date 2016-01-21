@@ -849,8 +849,8 @@ form.edit-bag-name {
 .single-product .summary .add-to-bag,
 .single-product .summary .remove-from-bag {
 	position: absolute;
-	top: 0.4em;
-	right: 0;
+	top: 0;
+	left: 0;
 	z-index: 999;
 
 	text-align: left;
