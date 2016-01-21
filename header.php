@@ -17,6 +17,7 @@
 <?php wp_head(); ?>
 <meta name="google-site-verification" content="fiBSqFZpsHgxiUpm7Ootz42dm9kjmE2iGeiimFo3WcM" />
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Viga|Rock+Salt' rel='stylesheet' type='text/css'>
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/wp-content/themes/storefront-child/js/modernizr/modernizr.js"></script>
 
 </head>
