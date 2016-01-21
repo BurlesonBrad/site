@@ -454,7 +454,7 @@ body.home #content { padding-top: 0; }
 	text-align: center;
 }
 
-.disc-types-inner > span {
+.disc-types-inner span {
 	display: none;
 }
 
@@ -469,8 +469,8 @@ body.home #content { padding-top: 0; }
 	.disc-types-inner > a > img {
 		display: none;
 	}
-	.disc-types-inner > span {
-		display: inline-block;
+	.disc-types-inner span {
+		display: block;
 	}
 	.disc-types-inner {
 		width: 48em;
