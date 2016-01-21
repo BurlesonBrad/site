@@ -436,11 +436,11 @@ body.home #content { padding-top: 0; }
 		padding-left: 0;
 	}
 
-	.featured-disc-text, .featured-disc-image {
+	.featured-disc-area > div {
 		width: 50%;
 	}
 
-	.featured-disc-twitter {
+	.featured-disc-area > .featured-disc-twitter {
 		width: 100%;
 	}
 }
