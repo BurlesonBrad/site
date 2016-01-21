@@ -598,6 +598,7 @@ body.home #content { padding-top: 0; }
 
 /* TIRED OF SHOPPING? */
 .tired-of-shopping > div {
+	float: left;
 	width: 48%;
 }
 
