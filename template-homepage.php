@@ -118,7 +118,7 @@ get_header(); ?>
 			</section>
 
 			<section class="weekly-tip col-full">
-				<img src="/wp-content/themes/storefront-child/images/weekly-tip-bubble.png" alt="your weekly disc golf tip" />
+				<img src="/wp-content/themes/storefront-child/images/weekly-tip.png" alt="your weekly disc golf tip" />
 				<div class="weekly-tip-content">
 					<?php
 					$wt_args = array(
