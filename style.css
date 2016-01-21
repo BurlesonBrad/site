@@ -599,15 +599,15 @@ body.home #content { padding-top: 0; }
 /* TIRED OF SHOPPING? */
 .tired-of-shopping > div {
 	float: left;
-	width: 48%;
+	width: 48.8%;
 }
 
 .tired-of-shopping .read-the-blog {
-	margin: 0 2% 0 0;
+	margin: 0 1.2% 0 0;
 }
 
 .tired-of-shopping .featured-video {
-	margin: 0 0 0 2%;
+	margin: 0 0 0 1.2%;
 }
 
 
