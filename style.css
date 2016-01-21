@@ -1159,7 +1159,7 @@ button.single_add_to_cart_button:hover {
 
 
 
-.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+.message-top {
 	position: absolute;
     top: 0;
     left: 0;

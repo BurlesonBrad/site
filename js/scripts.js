@@ -98,6 +98,7 @@ $(document).ready(function() {
 		}
 		$(".woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments").each(function() {
 			var $this = $(this);
+			$this.addClass("message-top");
 			setTimeout(function() {
 				$this.fadeOut(400);
 			}, 3000);
