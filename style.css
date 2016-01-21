@@ -610,6 +610,10 @@ body.home #content { padding-top: 0; }
 	margin: 0 0 0 1.2%;
 }
 
+.tired-of-shopping .featured-video iframe {
+	height: 294px;
+}
+
 
 /* HOMEPAGE SOCIAL BAR */
 .social-bar ul {
