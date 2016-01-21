@@ -185,7 +185,7 @@ promise_bags.success(function(data) {
 	$bagsMenu.append("<option value='My Bag'>My Bag</option>");
 });
 
-var $addToBagBtn = $("<div class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='14' height='14' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='16' height='13' alt='Add' /><span>Add<span class='added'>ed</span> to bag<span class='added'>!</span></span></div>");
+var $addToBagBtn = $("<div class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='12' height='12' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Add' /><span>Add<span class='added'>ed</span> to bag<span class='added'>!</span></span></div>");
 
 /***						***/
 /***	REMOVE FROM BAG 	***/
@@ -249,7 +249,7 @@ function removeFromBag(e, bag, disc) {
 	}
 }
 
-var $removeFromBagBtn = $("<div class='remove-from-bag'><img class='not-yet-removed' src='/wp-content/themes/storefront-child/images/x-red.gif' width='14' height='14' alt='Remove' /><img class='removed' src='/wp-content/themes/storefront-child/images/check-green.gif' width='16' height='13' alt='Removed' /><span>Remove<span class='removed'>d</span> from bag</span></div>");
+var $removeFromBagBtn = $("<div class='remove-from-bag'><img class='not-yet-removed' src='/wp-content/themes/storefront-child/images/x-red.gif' width='12' height='12' alt='Remove' /><img class='removed' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Removed' /><span>Remove<span class='removed'>d</span> from bag</span></div>");
 
 /***					***/
 /***	ADD TO BAG 		***/
