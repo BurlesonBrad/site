@@ -76,6 +76,7 @@ get_header(); ?>
 			</section>
 
 			<section class="shop-by-brand col-full">
+				<h2 class="rocksalt blue">Shop by brand</h2> 
 				<?php echo do_shortcode("[product_brand_thumbnails]"); ?>
 			</section>
 
