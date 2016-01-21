@@ -430,6 +430,19 @@ body.home #content { padding-top: 0; }
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
+
+	.featured-disc-text .featured-disc-inner,
+	.featured-disc-twitter .featured-disc-inner {
+		padding-left: 0;
+	}
+
+	.featured-disc-text, .featured-disc-image {
+		width: 50%;
+	}
+
+	.featured-disc-twitter {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 844px) {
