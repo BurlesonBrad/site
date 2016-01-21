@@ -869,7 +869,6 @@ form.edit-bag-name {
 
 .single-product .summary h2.brand {
 	margin-bottom: 0;
-
 	text-transform: uppercase;
 }
 
@@ -878,7 +877,7 @@ form.edit-bag-name {
     font-weight: bold;
     font-size: 7em;
     line-height: 1;
-    margin-top: -0.28em;
+    margin-top: -0.24em;
     margin-bottom: 0.3em;
 }
 
