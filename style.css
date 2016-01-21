@@ -448,7 +448,6 @@ body.home #content { padding-top: 0; }
 	display: inline-block;
 	margin: 0 auto;
 	padding: 5em 0;
-	perspective: 200px;
 }
 
 .disc-types-inner > a {
@@ -469,6 +468,10 @@ body.home #content { padding-top: 0; }
 @media screen and (max-width: 71em) {
 	.disc-types-inner > a > img {
 		display: none;
+	}
+
+	.disc-types-inner a {
+		perspective: 200px;
 	}
 
 	.disc-types-inner span {
