@@ -93,7 +93,7 @@ get_header(); ?>
 			?>
 			
 			<section class="tired-of-shopping">
-				<img src="/wp-content/themes/storefront-child/images/tired-of-shopping.png" alt="Tired of shopping?" />
+				<h3>Tired of shopping?</h3>
 				<div class="read-the-blog">
 					<a href="http://blog.hyzershop.com"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
 				</div>
