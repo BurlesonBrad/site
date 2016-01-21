@@ -594,6 +594,11 @@ body.home #content { padding-top: 0; }
 	text-align: center;
 }
 
+.social-bar form ::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
+.social-bar form :-moz-placeholder { color: #fff; opacity: 0.8; }
+.social-bar form ::-moz-placeholder { color: #fff; opacity: 0.8; }
+.social-bar form :-ms-input-placeholder { color: #fff; opacity: 0.8; }
+
 .social-bar #mc_embed_signup input[type="submit"] {
 	visibility: hidden;
 	position: absolute;
