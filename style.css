@@ -585,6 +585,15 @@ body.home #content { padding-top: 0; }
 
 
 /* HOMEPAGE SOCIAL BAR */
+.social-bar ul {
+	list-style: none;
+}
+
+.social-bar li {
+	display: inline-block;
+	text-align: center;
+}
+
 .social-bar #mc_embed_signup input[type="submit"] {
 	visibility: hidden;
 	position: absolute;
