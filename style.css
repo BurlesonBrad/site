@@ -570,9 +570,20 @@ body.home #content { padding-top: 0; }
     padding: 0 !important;
 }
 
+#sb_instagram #sbi_load {
+	padding-top: 0;
+}
+
+#sb_instagram .sbi_follow_btn,
+#sb_instagram .sbi_follow_btn a {
+	display: block;
+	margin: 0;
+}
+
 
 /* COLORS */
-.gradient-bg {
+.gradient-bg,
+#sb_instagram .sbi_follow_btn a {
 	background: #00b0ff; /* Old browsers */
 	background: -moz-linear-gradient(45deg, #00b0ff 0%, #ff3c7c 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%); /* Chrome10-25,Safari5.1-6 */
