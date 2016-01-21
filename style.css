@@ -484,8 +484,11 @@ body.home #content { padding-top: 0; }
 	}
 
 	.disc-types-inner span:hover {
-		-webkit-transform: translate3d(0,0,8px);
+		-webkit-transform: translate3d(0,0,20px);
 		transform: translate3d(0,0,20px);
+		
+		-webkit-transition: transform 400ms;
+		transition: transform 400ms;
 	}
 
 	.disc-types-inner {
