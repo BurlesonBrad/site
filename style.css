@@ -430,6 +430,12 @@ body.home #content { padding-top: 0; }
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
+}
+
+@media screen and (max-width: 844px) {
+	.site-search {
+		display: none;
+	}
 
 	.featured-disc-text .featured-disc-inner,
 	.featured-disc-twitter .featured-disc-inner {
@@ -444,12 +450,6 @@ body.home #content { padding-top: 0; }
 
 	.featured-disc-area > .featured-disc-twitter {
 		width: 100%;
-	}
-}
-
-@media screen and (max-width: 844px) {
-	.site-search {
-		display: none;
 	}
 }
 
