@@ -936,7 +936,7 @@ button.single_add_to_cart_button {
 button.single_add_to_cart_button:hover {
 	background-color: #ff3c7c !important;
     border-color: #ff3c7c !important;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
 }
 
 .single-product div.product .product_meta {
