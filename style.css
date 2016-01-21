@@ -436,7 +436,8 @@ body.home #content { padding-top: 0; }
 		padding-left: 0;
 	}
 
-	.featured-disc-area > div {
+	.featured-disc-area > div.featured-disc-image,
+	.featured-disc-area > div.featured-disc-text {
 		width: 50%;
 	}
 
