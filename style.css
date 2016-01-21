@@ -454,6 +454,10 @@ body.home #content { padding-top: 0; }
 	text-align: center;
 }
 
+.disc-types-inner > span {
+	display: none;
+}
+
 .disc-types-inner > a > img {
 	height: 58px;
 	width: auto;
@@ -464,6 +468,9 @@ body.home #content { padding-top: 0; }
 @media screen and (max-width: 71em) {
 	.disc-types-inner > a > img {
 		display: none;
+	}
+	.disc-types-inner > span {
+		display: inline-block;
 	}
 	.disc-types-inner {
 		width: 48em;
