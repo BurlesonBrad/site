@@ -92,7 +92,7 @@ get_header(); ?>
 			//do_action( 'homepage' ); 
 			?>
 			
-			<section class="tired-of-shopping">
+			<section class="tired-of-shopping col-full">
 				<img src="/wp-content/themes/storefront-child/images/tired-of-shopping.png" alt="Tired of shopping?" />
 				<div class="read-the-blog">
 					<a href="http://blog.hyzershop.com"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
@@ -117,7 +117,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="weekly-tip">
+			<section class="weekly-tip col-full">
 				<img src="/wp-content/themes/storefront-child/images/weekly-tip-bubble.png" alt="your weekly disc golf tip" />
 				<div class="weekly-tip-content">
 					<?php
