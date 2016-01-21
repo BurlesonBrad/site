@@ -322,9 +322,14 @@ body.home #content { padding-top: 0; }
     font-size: 6.7em;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1136px) {
 	.metaslider .slides img {
-		width: 1280px !important;
+		width: 1136px !important;
+	}
+
+	.metaslider .caption {
+		width: 100% !important;
+		text-align: center !important;
 	}
 }
 
