@@ -603,11 +603,11 @@ body.home #content { padding-top: 0; }
 }
 
 .tired-of-shopping .read-the-blog {
-	margin: 0 0 0 2%;
+	margin: 0 2% 0 0;
 }
 
 .tired-of-shopping .featured-video {
-	margin: 0 2% 0 0;
+	margin: 0 0 0 2%;
 }
 
 
