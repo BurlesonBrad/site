@@ -530,6 +530,11 @@ body.home #content { padding-top: 0; }
 	opacity: 1;
 }
 
+.shop-by-brand h2 {
+	text-align: center;
+	font-size: 4em;
+}
+
 @media screen and (max-width: 51em) {
 	.brand-thumbnails {
 		max-width: 100%;
