@@ -437,7 +437,8 @@ body.home #content { padding-top: 0; }
 	}
 }
 
-.shop-by-disc-type {
+.shop-by-disc-type,
+.shop-by-brand {
 	text-align: center;
 	margin: 3em 0;
 }
@@ -531,7 +532,6 @@ body.home #content { padding-top: 0; }
 }
 
 .shop-by-brand h2 {
-	text-align: center;
 	font-size: 4em;
 }
 
