@@ -596,6 +596,20 @@ body.home #content { padding-top: 0; }
 }
 
 
+/* TIRED OF SHOPPING? */
+.tired-of-shopping > div {
+	width: 48%;
+}
+
+.tired-of-shopping .read-the-blog {
+	margin: 0 0 0 2%;
+}
+
+.tired-of-shopping .featured-video {
+	margin: 0 2% 0 0;
+}
+
+
 /* HOMEPAGE SOCIAL BAR */
 .social-bar ul {
 	list-style: none;
