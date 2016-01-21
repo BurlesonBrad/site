@@ -470,6 +470,15 @@ body.home #content { padding-top: 0; }
 	}
 }
 
+@media screen and (max-width: 47.99em) {
+	.disc-types-inner > a > img {
+		height: 30px;
+	}
+	.disc-types-inner {
+		width: 100%;
+	}
+}
+
 
 
 
