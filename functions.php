@@ -35,7 +35,7 @@ function dynamic_basket() {
 }
 add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
-function set_inbounds_meta_ids() {
+function set_disc_flight_data() {
 	global $post;
 	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' );
 	$discs = new WP_Query( $args );
@@ -44,14 +44,27 @@ function set_inbounds_meta_ids() {
 	$inbounds_ids_json = stripslashes($inbounds_ids_json);
 	$inbounds_ids_arr = json_decode( $inbounds_ids_json, true );
 
-	while ( $discs->have_posts() ) : $discs->the_post(); 
+	$flight_ratings_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/flight-ratings.json' );
+	$flight_ratings_json = stripslashes($flight_ratings_json);
+	$flight_ratings_arr = json_decode( $flight_ratings_json, true );
+
+	while ( $discs->have_posts() ) : $discs->the_post();
 		$post_id = $post->ID;
 		$post_slug = $post->post_name;
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
+		$fr = $flight_ratings_arr[$post_slug];
+		$disc_speed = $fr["speed"];
+		$disc_glide = $fr["glide"];
+		$disc_turn = $fr["turn"];
+		$disc_fade = $fr["fade"];
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
+		update_post_meta( $post_id, 'speed', $disc_speed );
+		update_post_meta( $post_id, 'glide', $disc_glide );
+		update_post_meta( $post_id, 'turn', $disc_turn );
+		update_post_meta( $post_id, 'fade', $disc_fade );
 	endwhile;
 }
-add_action( 'wp_loaded', 'set_inbounds_meta_ids' );
+add_action( 'wp_loaded', 'set_disc_flight_data' );
 
 function remove_sidebar_single_product() {
 	if ( is_product() ) {
