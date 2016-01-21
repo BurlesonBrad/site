@@ -472,7 +472,8 @@ body.home #content { padding-top: 0; }
 	.disc-types-inner span {
 		display: block;
 		color: #fff;
-		font-size: 2em;
+		font-size: 1.9em;
+		text-transform: uppercase;
 		margin: 0.5em 0;
 	}
 	.disc-types-inner {
