@@ -481,7 +481,7 @@ body.home #content { padding-top: 0; }
 
 	.disc-types-inner span:hover {
 		-webkit-transform: translate3d(0,0,8px);
-		transform: translate3d(0,-5px,8px);
+		transform: translate3d(0,-6px,10px);
 	}
 
 	.disc-types-inner {
