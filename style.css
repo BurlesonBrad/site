@@ -520,13 +520,13 @@ body.home #content { padding-top: 0; }
     vertical-align: middle;
 }
 
-.brand-thumbnails li a {
+.brand-thumbnails li a img {
 	opacity: 0.4;
 	-webkit-transition: opacity 300ms;
 	transition: opacity 300ms;
 }
 
-.brand-thumbnails li a:hover {
+.brand-thumbnails li a:hover img {
 	opacity: 1;
 }
 
