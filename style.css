@@ -1169,6 +1169,10 @@ button.single_add_to_cart_button:hover {
     background: #00ca40;
 }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments {
+	background: #00a0ea;
+}
+
 .woocommerce-noreviews {
 	display: none;
 }
