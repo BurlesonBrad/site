@@ -291,6 +291,10 @@ body.home #content { padding-top: 0; }
 	margin: 0 !important;
 }
 
+.flex-control-paging {
+	display: none;
+}
+
 .no-js .metaslider .caption-wrap {
 	line-height: 17em !important;
 }
