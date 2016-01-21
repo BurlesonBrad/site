@@ -472,7 +472,8 @@ body.home #content { padding-top: 0; }
 	.disc-types-inner span {
 		display: block;
 		color: #fff;
-		margin: 1em 0;
+		font-size: 2em;
+		margin: 0.5em 0;
 	}
 	.disc-types-inner {
 		width: 48em;
