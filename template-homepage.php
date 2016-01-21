@@ -69,7 +69,7 @@ get_header(); ?>
 					foreach ( $disc_types as $id => $slug ) {
 						$disc_type = get_term( $id, 'disc-type' );
 						$disc_type_link = get_term_link( $id, 'disc-type' );
-						echo '<a href="' . $disc_type_link . '"><img src="' . get_stylesheet_directory_uri() . '/images/disc-type-' . $slug . '.png" alt="' . $disc_type->name . '" /></a>';
+						echo '<a href="' . $disc_type_link . '"><span>' . $disc_type->name . '</span><img src="' . get_stylesheet_directory_uri() . '/images/disc-type-' . $slug . '.png" alt="' . $disc_type->name . '" /></a>';
 					}
 				?>
 				</div>
