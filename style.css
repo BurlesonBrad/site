@@ -1120,6 +1120,7 @@ form.edit-bag-name {
 .backgroundsize .variations select {
 	background: #ddd url('images/select-bg.gif') no-repeat 93% 50%;
 	background-size: 6px auto;
+	padding-right: 2em;
 }
 
 .single-product .quantity input {
