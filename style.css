@@ -400,6 +400,10 @@ body.home #content { padding-top: 0; }
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 
+#twitter-widget-0 .timeline {
+	border-radius: 1em;
+}
+
 .featured-disc-pre {
 	font-family: 'Rock Salt';
 	margin-bottom: 0;
