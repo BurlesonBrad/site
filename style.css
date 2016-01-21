@@ -322,6 +322,12 @@ body.home #content { padding-top: 0; }
     font-size: 6.7em;
 }
 
+@media screen and (max-width: 1280px) {
+	.metaslider .slides img {
+		width: 1280px;
+	}
+}
+
 
 .page-template-template-homepage .site-main {
 	padding-top: 3em;
