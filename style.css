@@ -448,6 +448,7 @@ body.home #content { padding-top: 0; }
 	display: inline-block;
 	margin: 0 auto;
 	padding: 5em 0;
+	perspective: 100px;
 }
 
 .disc-types-inner > a {
@@ -469,6 +470,7 @@ body.home #content { padding-top: 0; }
 	.disc-types-inner > a > img {
 		display: none;
 	}
+
 	.disc-types-inner span {
 		display: block;
 		color: #fff;
@@ -476,6 +478,12 @@ body.home #content { padding-top: 0; }
 		text-transform: uppercase;
 		margin: 0.5em 0;
 	}
+
+	.disc-types-inner span:hover {
+		-webkit-transform: translate3d(0,0,8px);
+		transform: translate3d(0,0,8px);
+	}
+
 	.disc-types-inner {
 		width: 48em;
 	}
