@@ -93,6 +93,9 @@ $(document).ready(function() {
 	replaceCartWithBasket();
 
 	function hideMessage() {
+		if ( $("body").hasClass("woocommerce-checkout") ) {
+			return;
+		}
 		$(".woocommerce-error, .woocommerce-info, .woocommerce-message, .woocommerce-noreviews, p.no-comments").each(function() {
 			var $this = $(this);
 			setTimeout(function() {
