@@ -594,6 +594,7 @@ body.home #content { padding-top: 0; }
 }
 
 .social-bar #mc_embed_signup_scroll {
+	position: relative;
 	height: 50px;
 }
 
@@ -601,6 +602,14 @@ body.home #content { padding-top: 0; }
 	height: 50px;
 	background: #00b0ff;
 	color: #fff;
+}
+
+.social-bar #mc_embed_signup label {
+	float: left;
+    position: absolute;
+    top: 1.1em;
+    left: 1.5em;
+    width: 15px;
 }
 
 
