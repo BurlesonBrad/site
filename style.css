@@ -683,6 +683,7 @@ body.home #content { padding-top: 0; }
 	padding: 0 4em;
 	line-height: 50px;
 	font-weight: bold;
+	width: 100%;
 }
 
 .social-bar #mc_embed_signup label {
