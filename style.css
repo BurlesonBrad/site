@@ -471,6 +471,23 @@ body.home #content { padding-top: 0; }
 	}
 }
 
+@media screen and (max-width: 768px) {
+
+	.featured-disc-area > div.featured-disc-image, .featured-disc-area > div.featured-disc-text {
+		width: 100%;
+	}
+
+	.featured-disc-area > div.featured-disc-text {
+		margin: 1em 0 4em;
+		text-align: center;
+	}
+
+	.featured-disc-area > div.featured-disc-image img {
+	    padding: 4.2em;
+	    width: 100%;
+	}
+}
+
 .shop-by-disc-type {
 	text-align: center;
 	margin: 3em 0;
