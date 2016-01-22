@@ -234,7 +234,7 @@ function removeFromBag(e, bag, disc) {
 
 	// ON SUCCESS:
 		if ( $(".remove-from-bag-success").length === 0 ) {
-			var $success = $("<div class='remove-from-bag-success'>Removed from bag <a href='/build-your-bag'>view your bag</a></div>");
+			var $success = $("<div class='remove-from-bag-success'>Removed from bag. <a href='/build-your-bag'>view your bag</a></div>");
 			$success.appendTo("body").delay(5000).fadeOut(400, function() {
 				$(this).remove();
 			});
