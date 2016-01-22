@@ -618,7 +618,9 @@ body.home #content { padding-top: 0; }
 		width: 100%;
 	}
 
-	.brand-thumbnails li {
+	.brand-thumbnails li,
+	.brand-thumbnails li:first-child,
+	.brand-thumbnails li:nth-child(3) {
 		display: block;
 		margin: 3.5em auto;
 		width: 80% !important;
