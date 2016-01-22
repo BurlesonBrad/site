@@ -286,7 +286,6 @@ $removeFromBagBtn.click(function(e) {
 	console.log("ran");
 	console.log(slug);
 	console.log($bag);
-
 	removeFromBag( e, $bag, slug );
 });
 
