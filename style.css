@@ -693,7 +693,18 @@ body.home #content { padding-top: 0; }
     width: 15px;
 }
 
-#mce-EMAIL::-webkit-input-placeholder,
+#mce-EMAIL:focus::before,
+#mce-EMAIL:hover::before {
+	content: "Enter your email";
+	display: block;
+	color: white;
+	background-color: #00b0ff;
+	padding: 1em 2em;
+	height: 10px;
+	width: 100%;
+}
+
+/*#mce-EMAIL::-webkit-input-placeholder,
 #mce-EMAIL:-moz-placeholder,
 #mce-EMAIL::-moz-placeholder,
 #mce-EMAIL:-ms-input-placeholder {
@@ -708,7 +719,7 @@ body.home #content { padding-top: 0; }
 #mce-EMAIL.transparent::-moz-placeholder,
 #mce-EMAIL.transparent:-ms-input-placeholder {
 	opacity: 0 !important;
-}
+}*/
 
 
 /* INSTAGRAM WIDGET */
