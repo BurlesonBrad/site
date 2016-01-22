@@ -127,6 +127,7 @@ $(document).ready(function() {
 			$emailInput.removeClass("transparent");
 		}, 7900);
 	}
+	cycleEmailPlaceholder();
 	setInterval(cycleEmailPlaceholder, 10000);
 
 });
