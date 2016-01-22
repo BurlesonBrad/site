@@ -335,7 +335,7 @@ function removeFromBagButtons() {
 			$removeFromBagBtn = $(".remove-from-bag");
 		}
 	} else {
-		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
+		$(".product.product-cat-discs[data-product-slug]").each(function() {
 			var $this = $(this);
 
 			if ( $this.find(".bags-menu").length < 1 ) {
