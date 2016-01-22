@@ -693,8 +693,7 @@ body.home #content { padding-top: 0; }
     width: 15px;
 }
 
-#mce-EMAIL:focus::before,
-#mce-EMAIL:hover::before {
+.social-bar #mc-embedded-subscribe-form:hover::before {
 	content: "Enter your email";
 	display: block;
 	color: white;
