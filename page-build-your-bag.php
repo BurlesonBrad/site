@@ -167,9 +167,13 @@ get_header(); ?>
 
 							    echo $edit_btn . '</div>';
 
+							    if ( $p_count + $mr_count + $fd_count + $dd_count === 0 ) {
+							    	echo '<div class="bag-empty"><h3>No discs in your bag!</h3></div>';
+							    }
+
 							endforeach;
 						} else {
-							echo '<div class="add-first-bag"><img src="' . get_stylesheet_directory_uri() . '/images/add-first-bag.png" alt="start building your bag" /></div>';
+							echo '<div class="add-first-bag"><h3>Start building your bag.</h3><p>Use it to keep track of the discs you want, the discs you have, or just use it for fun. <strong>To start your bag, add your first disc from anywhere on the site.</strong> Look for the "add to bag" buttons&mdash;you can\'t miss \'em.</p></div>';
 						}
 					}
 					getDiscBags($byb);
