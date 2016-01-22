@@ -338,7 +338,7 @@ function removeFromBagButtons() {
 		$(".product.product-cat-discs[data-product-slug], .disc").each(function() {
 			var $this = $(this);
 
-			if ( $this.find(".bags-menu").length < 1 ) {
+			if ( $this.find(".bags-menu").length < 1 && !$this.hasClass("disc") ) {
 				$bagsMenu.clone(true).appendTo($this);
 			}
 			if ( $this.find(".remove-from-bag").length < 1 ) {
