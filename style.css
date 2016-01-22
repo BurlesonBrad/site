@@ -693,6 +693,23 @@ body.home #content { padding-top: 0; }
     width: 15px;
 }
 
+#mce-EMAIL::-webkit-input-placeholder,
+#mce-EMAIL:-moz-placeholder,
+#mce-EMAIL::-moz-placeholder,
+#mce-EMAIL:-ms-input-placeholder {
+	-webkit-transition: opacity 400ms;
+	-moz-transition: opacity 400ms;
+	-ms-transition: opacity: 400ms;
+	transition: opacity 400ms;
+}
+
+#mce-EMAIL.transparent::-webkit-input-placeholder,
+#mce-EMAIL.transparent:-moz-placeholder,
+#mce-EMAIL.transparent::-moz-placeholder,
+#mce-EMAIL.transparent:-ms-input-placeholder {
+	opacity: 0;
+}
+
 
 /* INSTAGRAM WIDGET */
 #sb_instagram.sbi_col_6 #sbi_images .sbi_item {

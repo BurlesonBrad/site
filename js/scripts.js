@@ -106,6 +106,29 @@ $(document).ready(function() {
 	}
 	hideMessage();
 
+	function cycleEmailPlaceholder() {
+		var $emailInput = $(".social-bar #mce-EMAIL");
+		setTimeout(function() {
+			$emailInput.addClass("transparent");
+		}, 3000);
+		setTimeout(function() {
+			$emailInput.attr("placeholder", "Enter your email");
+		}, 3400);
+		setTimeout(function() {
+			$emailInput.removeClass("transparent");
+		}, 3500);
+		setTimeout(function() {
+			$emailInput.addClass("transparent");
+		}, 7400);
+		setTimeout(function() {
+			$emailInput.attr("placeholder", "Get cool stuff in your inbox");
+		}, 7800);
+		setTimeout(function() {
+			$emailInput.removeClass("transparent");
+		}, 7900);
+	}
+	setInterval(cycleEmailPlaceholder, 10000);
+
 });
 
 
