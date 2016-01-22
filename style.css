@@ -705,9 +705,9 @@ body.home #content { padding-top: 0; }
 	height: 10px;
 	width: 100%;
 
-	-webkit-transition: all 500ms;
-	-moz-transition: all 500ms;
-	transition: all 500ms;
+	-webkit-transition: all 400ms;
+	-moz-transition: all 400ms;
+	transition: all 400ms;
 }
 
 .social-bar #mc-embedded-subscribe-form:hover::before {
