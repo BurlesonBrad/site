@@ -473,11 +473,13 @@ body.home #content { padding-top: 0; }
 
 @media screen and (max-width: 768px) {
 
-	.featured-disc-area > div.featured-disc-image, .featured-disc-area > div.featured-disc-text {
-		width: 100%;
+	.featured-disc-area > div.featured-disc-image {
+		width: 80%;
+		margin: 0 auto;
 	}
 
 	.featured-disc-area > div.featured-disc-text {
+		width: 100%;
 		margin: 1em 0 4em;
 		text-align: center;
 	}
