@@ -168,7 +168,7 @@ get_header(); ?>
 							    echo $edit_btn . '</div>';
 
 							    if ( $p_count + $mr_count + $fd_count + $dd_count === 0 ) {
-							    	echo '<div class="bag-empty"><h3>No discs in your bag!</h3></div>';
+							    	echo '<div class="bag-empty"><h3>No discs in your bag! :(</h3></div>';
 							    }
 
 							endforeach;
