@@ -715,6 +715,10 @@ body.home #content { padding-top: 0; }
 	border-radius: 0 !important;
 }
 
+#sb_instagram img {
+	width: 100%;
+}
+
 
 /* COLORS */
 .gradient-bg,
