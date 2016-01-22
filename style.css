@@ -702,8 +702,9 @@ body.home #content { padding-top: 0; }
 	content: "Enter your email";
 	display: block;
 	color: #00b0ff;
-	padding: 1em 2em;
-	height: 3em;
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
 	width: 100%;
 
 	text-transform: uppercase;
