@@ -283,9 +283,7 @@ $("form.checkout").submit(function(e) {
 $removeFromBagBtn.click(function(e) {
 	var slug = $(this).parents("*[data-product-slug]").data("product-slug");
 	var $bag = $(this).parents("div[data-bag-name]").data("bag-name") || false;
-	console.log("ran");
-	console.log(slug);
-	console.log($bag);
+
 	removeFromBag( e, $bag, slug );
 });
 
@@ -335,15 +333,24 @@ function removeFromBagButtons() {
 			$removeFromBagBtn = $(".remove-from-bag");
 		}
 	} else {
-		$(".product.product-cat-discs[data-product-slug], .disc").each(function() {
+		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
 			var $this = $(this);
 
-			if ( $this.find(".bags-menu").length < 1 && !$this.hasClass("disc") ) {
+			if ( $this.find(".bags-menu").length < 1 ) {
 				$bagsMenu.clone(true).appendTo($this);
 			}
 			if ( $this.find(".remove-from-bag").length < 1 ) {
 				$removeFromBagBtn.clone(true).appendTo($this);
 			}
+		});
+	}
+
+	if ( $("body").hasClass("page-id-45") ) {
+		$(".disc .remove-from-bag").click(function(e) {
+			var slug = $(this).parents("*[data-product-slug]").data("product-slug");
+			var $bag = $(this).parents("div[data-bag-name]").data("bag-name") || false;
+
+			removeFromBag( e, $bag, slug );
 		});
 	}
 }
