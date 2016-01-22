@@ -703,7 +703,8 @@ body.home #content { padding-top: 0; }
 	display: block;
 	color: #00b0ff;
 	height: 1em;
-	font-size: 1em;
+	font-size: 0.8em;
+	text-align: center;
 	line-height: 1;
 	width: 100%;
 
