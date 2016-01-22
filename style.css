@@ -698,13 +698,17 @@ body.home #content { padding-top: 0; }
 	position: relative;
 	top: 0;
 	opacity: 0;
+	box-sizing: border-box;
 	content: "Enter your email";
 	display: block;
-	color: white;
-	background-color: #00b0ff;
+	color: #00b0ff;
 	padding: 1em 2em;
-	height: 10px;
+	height: 3em;
 	width: 100%;
+
+	text-transform: uppercase;
+	font-weight: bold;
+
 
 	-webkit-transition: all 400ms;
 	-moz-transition: all 400ms;
