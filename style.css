@@ -696,6 +696,7 @@ body.home #content { padding-top: 0; }
 .social-bar #mc-embedded-subscribe-form::before {
 	position: relative;
 	top: 0;
+	opacity: 0;
 	content: "Enter your email";
 	display: block;
 	color: white;
@@ -704,13 +705,14 @@ body.home #content { padding-top: 0; }
 	height: 10px;
 	width: 100%;
 
-	-webkit-transition: top 500ms;
-	-moz-transition: top 500ms;
-	transition: top 500ms;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+	transition: all 500ms;
 }
 
 .social-bar #mc-embedded-subscribe-form:hover::before {
 	top: -6px;
+	opacity: 1;
 }
 
 /*#mce-EMAIL::-webkit-input-placeholder,
