@@ -474,11 +474,13 @@ body.home #content { padding-top: 0; }
 @media screen and (max-width: 768px) {
 
 	.featured-disc-area > div.featured-disc-image {
+		float: none;
 		width: 80%;
 		margin: 0 auto;
 	}
 
 	.featured-disc-area > div.featured-disc-text {
+		float: none;
 		width: 100%;
 		margin: 1em 0 4em;
 		text-align: center;
