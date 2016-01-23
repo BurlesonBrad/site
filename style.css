@@ -1178,13 +1178,16 @@ form.edit-bag-name {
     margin-bottom: 0.1em;
 }
 
-.single-product div.product .price,
-.single-product div.product .single_variation .price {
+.single-product div.product .price {
     font-weight: 300;
     font-size: 1.1em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.8em;
+}
+
+.single-product div.product .single_variation .price {
     font-weight: bold;
     font-size: 1.8em;
+    margin-bottom: 0.6em;
 }
 
 .variations label {
