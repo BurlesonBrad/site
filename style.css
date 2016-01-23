@@ -836,6 +836,12 @@ body.home #content { padding-top: 0; }
 	padding: 5.4em 0 1em;
 }
 
+.add-first-bag h3 {
+	font-size: 3.4em;
+    margin-bottom: 0;
+    color: #666;
+}
+
 .disc-area {
 	margin-bottom: 2em;
 }
