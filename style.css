@@ -60,7 +60,7 @@ a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.
 	outline: none;
 }
 
-button, input, textarea {
+button, input, textarea, select {
 	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
