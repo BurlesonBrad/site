@@ -1274,8 +1274,8 @@ button.single_add_to_cart_button:hover {
 	opacity: 1;
 }
 
-.js #flight-stats .number-bubble span {
-	display: inline-block;
+.js #flight-stats .number-bubble .bubble-inner {
+	display: block;
 	vertical-align: middle;
 }
 
