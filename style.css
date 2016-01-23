@@ -1253,8 +1253,9 @@ button.single_add_to_cart_button:hover {
 
 .js #flight-stats .number-bubble {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
 	text-align: center;
 	vertical-align: middle;
 	background-color: #00b0ff;
@@ -1277,6 +1278,7 @@ button.single_add_to_cart_button:hover {
 .js #flight-stats .bubble-inner {
 	display: inline-block;
 	vertical-align: middle;
+	line-height: 1;
 }
 
 .js #flight-stats .bubble-inner span {
