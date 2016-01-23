@@ -124,11 +124,11 @@ $(document).ready(function() {
 		var $bubbles = {};
 		var delay = 200;
 		$.each( stats, function( i, val ) {
-			$bubbles[i] = $("<li class='number-bubble " + i + "'><span>" + val + "</span></li>");
+			$bubbles[i] = $("<li class='bubble-wrap " + i + "'><span class='number-bubble'><span class='stat-name'>" + i + "</span><span class='stat-value'>" + val + "</span></span></li>");
 			$statsContainer.append( $bubbles[i] );
 			delay = delay + 130; 
 			setTimeout(function() {
-				$bubbles[i].find("span").addClass("animate-in");
+				$bubbles[i].find(".number-bubble").addClass("animate-in");
 			}, delay);
 		});
 	}
