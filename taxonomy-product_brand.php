@@ -40,6 +40,7 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 			echo term_description();
+			echo get_queried_object()->term_id;
 		?>
 
 		<?php if ( have_posts() ) : ?>
