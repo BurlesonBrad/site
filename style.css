@@ -1250,7 +1250,7 @@ button.single_add_to_cart_button:hover {
 	display: inline-block;
 }
 
-.js #flight-stats span {
+.js #flight-stats .number-bubble {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
@@ -1267,7 +1267,7 @@ button.single_add_to_cart_button:hover {
 	transition: all 300ms;
 }
 
-.js #flight-stats .animate-in {
+.js #flight-stats .number-bubble.animate-in {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	opacity: 1;
