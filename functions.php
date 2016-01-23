@@ -77,7 +77,7 @@ add_action( 'init', 'custom_remove_footer_credit', 10 );
 function custom_remove_footer_credit () {
     remove_action( 'storefront_footer', 'storefront_credit', 20 );
     add_action( 'storefront_footer', 'custom_storefront_credit', 20 );
-} 
+}
 function custom_storefront_credit() {
 	?>
 	<div class="site-info">
@@ -88,9 +88,7 @@ function custom_storefront_credit() {
 
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 function woo_remove_product_tabs( $tabs ) {
-
     unset( $tabs['additional_information'] );  	// Remove the additional information tab
-
     return $tabs;
 }
 
