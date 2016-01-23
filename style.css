@@ -1166,12 +1166,13 @@ form.edit-bag-name {
 .single-product .summary h2.brand {
 	margin-bottom: 0;
 	text-transform: uppercase;
+	font-size: 2.2em;
 }
 
 .single-product .summary h1.product_title {
 	color: #ff3c7c;
     font-weight: bold;
-    font-size: 7em;
+    font-size: 5.2em;
     line-height: 1;
     margin-top: -0.16em;
     margin-bottom: 0.1em;
@@ -1237,6 +1238,16 @@ button.single_add_to_cart_button:hover {
 
 .single-product div.product .product_meta {
 	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.single-product div.product .images {
+		width: 65.5%;
+	}
+	.single-product div.product .summary {
+		width: 30%;
+		margin-right: 4.5%;
+	}
 }
 
 
