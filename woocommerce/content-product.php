@@ -46,6 +46,7 @@ $post_id = $post->ID;
 $type = wp_get_post_terms( $post_id, 'disc-type' );
 $type = $type[0]->slug;
 $brand = wp_get_post_terms( $post_id, 'product_brand' );
+$brand_name = $brand[0]->name;
 $brand = $brand[0]->slug;
 ?>
 <li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
@@ -64,7 +65,7 @@ $brand = $brand[0]->slug;
 			do_action( 'woocommerce_before_shop_loop_item_title' );
 		?>
 
-		<h4><?php echo $brand[0]->slug; ?></h4>
+		<h4><?php echo $brand_name; ?></h4>
 
 		<?php
 			/**
