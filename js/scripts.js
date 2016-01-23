@@ -121,7 +121,7 @@ $(document).ready(function() {
 		};
 
 		$shortDesc.before( $statsContainer );
-		$.each( $stats, function( i, val ) {
+		$.each( stats, function( i, val ) {
 			$statsContainer.append("<li class='number-bubble " + i + "'><span>" + val + "</span></li>");
 		});
 		
