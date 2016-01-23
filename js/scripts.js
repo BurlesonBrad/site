@@ -121,6 +121,7 @@ $(document).ready(function() {
 		$shortDesc.before( $statsContainer );
 		$statsContainer.prepend("<div class='number-bubble speed'>" + speed + "</div><div class='number-bubble glide'>" + glide + "</div><div class='number-bubble turn'>" + turn + "</div><div class='number-bubble fade'>" + fade + "</div>");
 	}
+	singleProductFlightData();
 
 });
 
