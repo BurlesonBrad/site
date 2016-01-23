@@ -126,7 +126,7 @@ $(document).ready(function() {
 		});
 		
 		var delay = 0;
-		$statsContainer.find("li").each(function(index) {
+		$statsContainer.find("span").each(function(index) {
 			delay = 100 * (index + 1); 
 			setTimeout(function() {
 				$(this).addClass("animate-in");
