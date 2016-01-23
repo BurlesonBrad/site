@@ -199,6 +199,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 	outline: 0;
 	box-shadow: none;
 	line-height: 1.1;
+	color: #fff;
 }
 
 .widget_search form:before, .widget_product_search form:before {
