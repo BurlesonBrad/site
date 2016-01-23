@@ -60,6 +60,10 @@ a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.
 	outline: none;
 }
 
+button, input, textarea {
+	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
 /* LAYOUT */
 /* header */
 .site-header {
