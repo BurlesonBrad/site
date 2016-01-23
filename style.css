@@ -1346,14 +1346,14 @@ button.single_add_to_cart_button:hover {
 }
 
 /* ARCHIVE PRODUCTS */
-.products li h3 {
+ul.products li.product h3 {
 	line-height: 1;
 	text-transform: uppercase;
 	font-size: 1.9em;
 	color: #777;
 }
 
-.products li h4 {
+ul.products li.product h4 {
     margin-bottom: 0;
     color: #999;
     text-transform: uppercase;
