@@ -1248,7 +1248,6 @@ button.single_add_to_cart_button:hover {
 #flight-stats li {
 	perspective: 200px;
 	display: inline-block;
-	float: left;
 }
 
 .js #flight-stats span {
