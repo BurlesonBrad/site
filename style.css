@@ -64,6 +64,10 @@ button, input, textarea, select {
 	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+select {
+	color: #666;
+}
+
 /* LAYOUT */
 /* header */
 .site-header {
