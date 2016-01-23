@@ -1273,6 +1273,11 @@ button.single_add_to_cart_button:hover {
 	opacity: 1;
 }
 
+.js #flight-stats .number-bubble span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;
