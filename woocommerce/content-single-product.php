@@ -32,17 +32,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	$type = $type[0]->slug;
 	$brand = wp_get_post_terms( $post->ID, 'product_brand' );
 	$brand = $brand[0]->slug;
-	$inbounds_id = wp_get_post_terms( $post->ID, 'inbounds_id' );
-	print_r($inbounds_id);
-	$inbounds_id = $inbounds_id->slug;
-	$speed = wp_get_post_terms( $post->ID, 'speed' );
-	$speed = $speed->slug;
-	$glide = wp_get_post_terms( $post->ID, 'glide' );
-	$glide = $glide->slug;
-	$turn = wp_get_post_terms( $post->ID, 'turn' );
-	$turn = $turn->slug;
-	$fade = wp_get_post_terms( $post->ID, 'fade' );
-	$fade = $fade->slug;
+	$inbounds_id = get_post_meta( $post->ID, 'inbounds_id', true );
+	$speed = get_post_meta( $post->ID, 'speed', true );
+	$glide = get_post_meta( $post->ID, 'glide', true );
+	$turn = get_post_meta( $post->ID, 'turn', true );
+	$fade = get_post_meta( $post->ID, 'fade', true );
 ?>
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
