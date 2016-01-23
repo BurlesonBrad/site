@@ -39,6 +39,7 @@ get_header( 'shop' ); ?>
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
 			do_action( 'woocommerce_archive_description' );
+			echo term_description();
 		?>
 
 		<?php if ( have_posts() ) : ?>
