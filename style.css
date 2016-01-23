@@ -1300,7 +1300,6 @@ button.single_add_to_cart_button:hover {
 	font-family: 'Viga';
 	font-weight: bold;
     font-size: 1.5em;
-    line-height: 0.9;
 }
 
 @media screen and (min-width: 768px) {
