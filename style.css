@@ -1241,6 +1241,15 @@ button.single_add_to_cart_button:hover {
 	display: none;
 }
 
+#flight-stats {
+	perspective: 200px;
+}
+
+.js #flight-stats li {
+	-webkit-transform: translate3d(0,0,-100px);
+	transform: translate3d(0,0,-100px);
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;

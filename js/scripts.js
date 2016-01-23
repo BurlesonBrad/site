@@ -121,8 +121,12 @@ $(document).ready(function() {
 		$shortDesc.before( $statsContainer );
 		$statsContainer.prepend("<li class='number-bubble speed'>" + speed + "</li><li class='number-bubble glide'>" + glide + "</li><li class='number-bubble turn'>" + turn + "</li><li class='number-bubble fade'>" + fade + "</li>");
 		
-		$statsContainer.find("li").each(function() {
-			$(this).addClass("animate-in");
+		var delay = 0;
+		$statsContainer.find("li").each(function(index) {
+			delay = 100 * (index + 1); 
+			setTimeout(function() {
+				$(this).addClass("animate-in");
+			}, delay);
 		});
 	}
 	singleProductFlightData();
