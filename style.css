@@ -1253,9 +1253,9 @@ button.single_add_to_cart_button:hover {
 
 .js #flight-stats .number-bubble {
 	display: inline-block;
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
 	text-align: center;
 	vertical-align: middle;
 	background-color: #00b0ff;
@@ -1284,6 +1284,14 @@ button.single_add_to_cart_button:hover {
 .js #flight-stats .bubble-inner span {
 	display: inline-block;
 	width: 100%;
+
+	color: #fff;
+}
+
+#flight-stats .stat-name {
+	font-family: 'Viga';
+	text-transform: uppercase;
+	font-size: 0.8em;
 }
 
 @media screen and (min-width: 768px) {
