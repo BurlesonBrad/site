@@ -112,14 +112,14 @@ $(document).ready(function() {
 		var $product = $("main > .product[data-product-slug]");
 		var $shortDesc = $(".summary div[itemprop='description']");
 		var $longDesc = $("#tab-description");
-		var $statsContainer = $("<div id='flight-stats'></div>");
+		var $statsContainer = $("<ul id='flight-stats'></ul>");
 		var speed = $product.data("speed");
 		var glide = $product.data("glide");
 		var turn = $product.data("turn");
 		var fade = $product.data("fade");
 
 		$shortDesc.before( $statsContainer );
-		$statsContainer.prepend("<ul><li class='number-bubble speed'>" + speed + "</li><li class='number-bubble glide'>" + glide + "</li><li class='number-bubble turn'>" + turn + "</li><li class='number-bubble fade'>" + fade + "</li></ul>");
+		$statsContainer.prepend("<li class='number-bubble speed'>" + speed + "</li><li class='number-bubble glide'>" + glide + "</li><li class='number-bubble turn'>" + turn + "</li><li class='number-bubble fade'>" + fade + "</li>");
 	}
 	singleProductFlightData();
 
