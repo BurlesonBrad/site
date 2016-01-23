@@ -123,15 +123,20 @@ $(document).ready(function() {
 		$shortDesc.before( $statsContainer );
 		$.each( stats, function( i, val ) {
 			$statsContainer.append("<li class='number-bubble " + i + "'><span>" + val + "</span></li>");
+			if ( i = stats.length - 1 ) {
+				animateInStats();
+			}
 		});
 		
-		var delay = 0;
-		$statsContainer.find("li").each(function(index) {
-			delay = 100 * (index + 1); 
-			setTimeout(function() {
-				$(this).addClass("animate-in");
-			}, delay);
-		});
+		function animateInStats() {
+			var delay = 0;
+			$statsContainer.find("li").each(function(index) {
+				delay = 100 * (index + 1); 
+				setTimeout(function() {
+					$(this).addClass("animate-in");
+				}, delay);
+			});
+		}
 	}
 	singleProductFlightData();
 
