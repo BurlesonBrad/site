@@ -113,13 +113,17 @@ $(document).ready(function() {
 		var $shortDesc = $(".summary div[itemprop='description']");
 		var $longDesc = $("#tab-description");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
-		var speed = $product.data("speed");
-		var glide = $product.data("glide");
-		var turn = $product.data("turn");
-		var fade = $product.data("fade");
+		var stats = {
+			speed: $product.data("speed"),
+			glide: $product.data("glide"),
+			turn: $product.data("turn"),
+			fade: $product.data("fade")
+		};
 
 		$shortDesc.before( $statsContainer );
-		$statsContainer.prepend("<li class='number-bubble speed'>" + speed + "</li><li class='number-bubble glide'>" + glide + "</li><li class='number-bubble turn'>" + turn + "</li><li class='number-bubble fade'>" + fade + "</li>");
+		$.each( $stats, function( i, val ) {
+			$statsContainer.append("<li class='number-bubble " + i + "'><span>" + val + "</span></li>");
+		});
 		
 		var delay = 0;
 		$statsContainer.find("li").each(function(index) {
