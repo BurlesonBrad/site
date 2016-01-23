@@ -106,29 +106,21 @@ $(document).ready(function() {
 	}
 	hideMessage();
 
-	function cycleEmailPlaceholder() {
-		var $emailInput = $(".social-bar #mce-EMAIL");
-		setTimeout(function() {
-			$emailInput.addClass("transparent");
-		}, 3000);
-		setTimeout(function() {
-			$emailInput.attr("placeholder", "Enter your email");
-		}, 3400);
-		setTimeout(function() {
-			$emailInput.removeClass("transparent");
-		}, 3500);
-		setTimeout(function() {
-			$emailInput.addClass("transparent");
-		}, 7400);
-		setTimeout(function() {
-			$emailInput.attr("placeholder", "Get cool stuff in your inbox");
-		}, 7800);
-		setTimeout(function() {
-			$emailInput.removeClass("transparent");
-		}, 7900);
+	function singleProductFlightData() {
+		if ( !$("body").hasClass("single-product") ) { return; }
+		
+		var $product = $("main > .product[data-product-slug]");
+		var $shortDesc = $(".summary div[itemprop='description']");
+		var $longDesc = $("#tab-description");
+		var $statsContainer = $("<div id='flight-stats'></div>");
+		var speed = $product.data("speed");
+		var glide = $product.data("glide");
+		var turn = $product.data("turn");
+		var fade = $product.data("fade");
+
+		$shortDesc.before( $statsContainer );
+		$statsContainer.prepend("<div class='number-bubble speed'>" + speed + "</div><div class='number-bubble glide'>" + glide + "</div><div class='number-bubble turn'>" + turn + "</div><div class='number-bubble fade'>" + fade + "</div>");
 	}
-	// cycleEmailPlaceholder();
-	// setInterval(cycleEmailPlaceholder, 10000);
 
 });
 
