@@ -1243,6 +1243,7 @@ button.single_add_to_cart_button:hover {
 
 #flight-stats {
 	list-style: none;
+	margin: 0;
 }
 
 #flight-stats li {
