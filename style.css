@@ -1254,7 +1254,7 @@ button.single_add_to_cart_button:hover {
 	transition: all 300ms;
 }
 
-.js #flight-stats .animate-in span {
+.js #flight-stats .animate-in {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }

@@ -128,7 +128,7 @@ $(document).ready(function() {
 			$statsContainer.append( $bubbles[i] );
 			delay = delay + 100; 
 			setTimeout(function() {
-				$bubbles[i].addClass("animate-in");
+				$bubbles[i].find("span").addClass("animate-in");
 			}, delay);
 		});
 		
