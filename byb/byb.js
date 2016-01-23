@@ -255,11 +255,9 @@ var $removeFromBagBtn = $("<div class='remove-from-bag'><img class='not-yet-remo
 /***	ADD TO BAG 		***/
 /***					***/
 $addToBagBtn.click(function(e) {
-// Set page-specific parameters
 	var slug = $(this).parents(".product[data-product-slug]").data("product-slug");
 	var type = $(this).parents(".product[data-disc-type]").data("disc-type");
 
-	// applies to all
 	$bagsMenu = $(this).parents(".product").find(".bags-menu");
 	$bag = $bagsMenu.val();
 
@@ -293,28 +291,50 @@ $removeFromBagBtn.click(function(e) {
 
 function addToBagButtons() {
 	// Insert ADD-TO-BAG buttons
-	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
-		if ( $(".add-to-bag").length < 1 ) {
-			// append to main disc
-			$("main > div > .summary .cart").append( $addToBagBtn ).append( $bagsMenu );
-			// append to cross sells
-			$("li[data-product-slug]").each(function() {
-				$addToBagBtn.clone(true).appendTo( $(this) );
-			});
-		} else {
-			$addToBagBtn = $(".add-to-bag");
-		}
-	} else {
-		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
-			var $this = $(this);
-			if ( $this.find(".bags-menu").length < 1 ) {
-				$bagsMenu.clone(true).appendTo($this);
-			}
-			if ( $this.find(".add-to-bag").length < 1 ) {
-				$addToBagBtn.clone(true).appendTo($this);
-			}
-		});
-	}
+	var $singleProdBtns = $(".single-product main > div[data-product-slug].product-cat-discs").find(".add-to-bag, .remove-from-bag");
+	var $archiveProdBtns = $("li.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").find(".add-to-bag, .remove-from-bag");
+
+	$(".single-product main > div[data-product-slug].product-cat-discs > .summary .cart").append( $singleProdBtns );
+
+	$(".add-to-bag").click(function(e) {
+		var slug = $(this).parents(".product[data-product-slug]").data("product-slug");
+		var type = $(this).parents(".product[data-disc-type]").data("disc-type");
+
+		$bagsMenu = $(this).parents(".product").find(".bags-menu");
+		$bag = $bagsMenu.val();
+
+		addToBag( e, $bag, slug, type );
+	});
+
+	$(".remove-from-bag").click(function(e) {
+		var slug = $(this).parents("*[data-product-slug]").data("product-slug");
+		var $bag = $(this).parents("div[data-bag-name]").data("bag-name") || false;
+
+		removeFromBag( e, $bag, slug );
+	});
+
+	// if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
+	// 	if ( $(".add-to-bag").length < 1 ) {
+	// 		// append to main disc
+	// 		$("main > div > .summary .cart").append( $addToBagBtn ).append( $bagsMenu );
+	// 		// append to cross sells
+	// 		$("li[data-product-slug]").each(function() {
+	// 			$addToBagBtn.clone(true).appendTo( $(this) );
+	// 		});
+	// 	} else {
+	// 		$addToBagBtn = $(".add-to-bag");
+	// 	}
+	// } else {
+	// 	$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
+	// 		var $this = $(this);
+	// 		if ( $this.find(".bags-menu").length < 1 ) {
+	// 			$bagsMenu.clone(true).appendTo($this);
+	// 		}
+	// 		if ( $this.find(".add-to-bag").length < 1 ) {
+	// 			$addToBagBtn.clone(true).appendTo($this);
+	// 		}
+	// 	});
+	// }
 }
 addToBagButtons();
 setTimeout(addToBagButtons, 1200);
