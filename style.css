@@ -832,6 +832,10 @@ body.home #content { padding-top: 0; }
 	text-align: center;
 }
 
+.add-first-bag {
+	padding: 5.4em 0 1em;
+}
+
 .disc-area {
 	margin-bottom: 2em;
 }
