@@ -1241,8 +1241,13 @@ button.single_add_to_cart_button:hover {
 	display: none;
 }
 
+#flight-stats {
+	list-style: none;
+}
+
 #flight-stats li {
 	perspective: 200px;
+	display: inline-block;
 }
 
 .js #flight-stats span {
