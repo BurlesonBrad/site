@@ -1257,6 +1257,7 @@ button.single_add_to_cart_button:hover {
 .js #flight-stats .animate-in {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+	opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
