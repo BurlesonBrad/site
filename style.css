@@ -1285,6 +1285,7 @@ button.single_add_to_cart_button:hover {
 	vertical-align: middle;
 	background-color: #00b0ff;
 	border-radius: 100px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 
 	-webkit-transform: translate3d(0,0,-300px);
 	transform: translate3d(0,0,-300px);
