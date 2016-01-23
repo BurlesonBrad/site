@@ -68,7 +68,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-
+		<div class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='12' height='12' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Add' /><span>Add<span class='added'>ed</span> to bag<span class='added'>!</span></span></div>
+		<div class='remove-from-bag'><img class='not-yet-removed' src='/wp-content/themes/storefront-child/images/x-red.gif' width='12' height='12' alt='Remove' /><img class='removed' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Removed' /><span>Remove<span class='removed'>d</span> from bag</span></div>
 	</div><!-- .summary -->
 
 	<?php
