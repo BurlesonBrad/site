@@ -187,7 +187,7 @@ get_header(); ?>
 				
 				</div>
 
-				<h2 class="handwritten blue">A few to get you going</h2>
+				<h2 class="handwritten blue centered">A few to get you going</h2>
 				<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
 
 			</div>

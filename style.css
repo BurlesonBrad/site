@@ -806,11 +806,12 @@ body.home #content { padding-top: 0; }
     opacity: 0.9;
 }
 
-.bag-section {
+.bag-section,
+.bag-empty h3 {
 	background: #fafafa;
     padding: 2em 3em 0.3em;
     margin-bottom: 1em;
-    border-radius: 3px;
+    border-radius: 4px;
     -webkit-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.3);
     -moz-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.3);
     box-shadow: 1px 1px 0px #eaeaea;
@@ -822,6 +823,10 @@ body.home #content { padding-top: 0; }
     letter-spacing: 0.2em;
     color: #00b0ff !important;
     border-bottom: 3px solid #eee;
+}
+
+.bag-empty h3 {
+	color: #888;
 }
 
 .disc-area {
