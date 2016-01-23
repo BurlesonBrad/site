@@ -826,7 +826,7 @@ body.home #content { padding-top: 0; }
 }
 
 .bag-empty h3 {
-	font-family: 'Viga';
+	text-transform: uppercase;
 	color: #aaa;
 	padding: 2.5em;
 	font-size: 1.2em;
