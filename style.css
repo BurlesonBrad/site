@@ -1257,6 +1257,11 @@ form.edit-bag-name {
 	border-top: 0;
 }
 
+.single-product div.product form.cart .button {
+    float: left;
+    margin-left: 3em;
+}
+
 button.single_add_to_cart_button {
 	background-color: #00b0ff !important;
     border-color: #00b0ff !important;
