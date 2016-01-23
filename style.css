@@ -60,11 +60,11 @@ a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.
 	outline: none;
 }
 
-button, input, textarea, select {
+button, input, textarea, select, option {
 	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-select {
+select, option {
 	color: #666;
 }
 
