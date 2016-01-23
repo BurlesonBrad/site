@@ -1291,12 +1291,13 @@ button.single_add_to_cart_button:hover {
 }
 
 #flight-stats .stat-name {
-	font-family: 'Viga';
+	
 	text-transform: uppercase;
 	font-size: 0.8em;
 }
 
 #flight-stats .stat-value {
+	font-family: 'Viga';
 	font-weight: bold;
     font-size: 1.4em;
     line-height: 0.9;
