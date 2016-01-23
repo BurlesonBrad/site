@@ -1291,15 +1291,15 @@ button.single_add_to_cart_button:hover {
 }
 
 #flight-stats .stat-name {
-	
+	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 0.8em;
+	font-size: 0.75em;
 }
 
 #flight-stats .stat-value {
 	font-family: 'Viga';
 	font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.5em;
     line-height: 0.9;
 }
 
