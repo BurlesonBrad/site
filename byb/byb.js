@@ -289,7 +289,7 @@ $removeFromBagBtn.click(function(e) {
 /** PLACE ADD/REMOVE BUTTONS **/
 /**	------------------------ **/
 
-function addToBagButtons() {
+function bagButtons() {
 	// Insert ADD-TO-BAG buttons
 	var $singleProdBtns = $(".single-product main > div[data-product-slug].product-cat-discs > .summary").find(".add-to-bag, .remove-from-bag");
 	var $archiveProdBtns = $("li.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").find(".add-to-bag, .remove-from-bag");
@@ -313,58 +313,6 @@ function addToBagButtons() {
 		removeFromBag( e, $bag, slug );
 	});
 
-	// if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
-	// 	if ( $(".add-to-bag").length < 1 ) {
-	// 		// append to main disc
-	// 		$("main > div > .summary .cart").append( $addToBagBtn ).append( $bagsMenu );
-	// 		// append to cross sells
-	// 		$("li[data-product-slug]").each(function() {
-	// 			$addToBagBtn.clone(true).appendTo( $(this) );
-	// 		});
-	// 	} else {
-	// 		$addToBagBtn = $(".add-to-bag");
-	// 	}
-	// } else {
-	// 	$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
-	// 		var $this = $(this);
-	// 		if ( $this.find(".bags-menu").length < 1 ) {
-	// 			$bagsMenu.clone(true).appendTo($this);
-	// 		}
-	// 		if ( $this.find(".add-to-bag").length < 1 ) {
-	// 			$addToBagBtn.clone(true).appendTo($this);
-	// 		}
-	// 	});
-	// }
-}
-addToBagButtons();
-setTimeout(addToBagButtons, 1200);
-
-function removeFromBagButtons() {
-	// Insert REMOVE-FROM-BAG buttons
-	if ( $("body").hasClass("single-product") && $("main > div[data-product-slug].product-cat-discs").length ) {
-		if ( $(".remove-from-bag").length < 1 ) {
-			// append to main disc
-			$("main > div > .summary .cart").append( $removeFromBagBtn ).append( $bagsMenu );
-			// Target all products (cross-sells, etc) that aren't the single product
-			$("li[data-product-slug]").each(function() {
-				$removeFromBagBtn.clone(true).appendTo( $(this) );
-			});
-		} else {
-			$removeFromBagBtn = $(".remove-from-bag");
-		}
-	} else {
-		$(".product.product-cat-discs[data-product-slug]").not(".page-id-45 .disc").each(function() {
-			var $this = $(this);
-
-			if ( $this.find(".bags-menu").length < 1 ) {
-				$bagsMenu.clone(true).appendTo($this);
-			}
-			if ( $this.find(".remove-from-bag").length < 1 ) {
-				$removeFromBagBtn.clone(true).appendTo($this);
-			}
-		});
-	}
-
 	if ( $("body").hasClass("page-id-45") ) {
 		$(".disc .remove-from-bag").click(function(e) {
 			var slug = $(this).parents("*[data-product-slug]").data("product-slug");
@@ -374,8 +322,8 @@ function removeFromBagButtons() {
 		});
 	}
 }
-removeFromBagButtons();
-setTimeout(removeFromBagButtons, 1200);
+bagButtons();
+//setTimeout(bagButtons, 1200);
 
 
 // Deactivate 'add to bag' buttons for already-added discs
