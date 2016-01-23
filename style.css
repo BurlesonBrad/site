@@ -1194,7 +1194,11 @@ form.edit-bag-name {
 .single-product .summary h2.brand {
 	margin-bottom: 0;
 	text-transform: uppercase;
-	font-size: 2.2em;
+	font-size: 2em;
+}
+
+.single-product .summary h2.brand a {
+	color: #aaa;
 }
 
 .single-product .summary h1.product_title {
