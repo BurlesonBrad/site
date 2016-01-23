@@ -198,6 +198,7 @@ ul#menu-main-menu li:nth-child(2) > a {
 	border: 0;
 	outline: 0;
 	box-shadow: none;
+	line-height: 1.1;
 }
 
 .widget_search form:before, .widget_product_search form:before {
