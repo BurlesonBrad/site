@@ -126,7 +126,7 @@ $(document).ready(function() {
 		$.each( stats, function( i, val ) {
 			$bubbles[i] = $("<li class='bubble-wrap " + i + "'><span class='number-bubble'><span class='bubble-inner'><span class='stat-name'>" + i + "</span><span class='stat-value'>" + val + "</span></span></span></li>");
 			$statsContainer.append( $bubbles[i] );
-			delay = delay + 130; 
+			delay = delay + 100; 
 			setTimeout(function() {
 				$bubbles[i].find(".number-bubble").addClass("animate-in");
 			}, delay);
