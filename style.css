@@ -1251,8 +1251,8 @@ button.single_add_to_cart_button:hover {
 }
 
 .js #flight-stats span {
-	-webkit-transform: translate3d(0,0,-100px);
-	transform: translate3d(0,0,-100px);
+	-webkit-transform: translate3d(0,0,-300px);
+	transform: translate3d(0,0,-300px);
 	opacity: 0;
 
 	-webkit-transition: all 300ms;
