@@ -33,6 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	$brand = wp_get_post_terms( $post->ID, 'product_brand' );
 	$brand = $brand[0]->slug;
 	$inbounds_id = wp_get_post_terms( $post->ID, 'inbounds_id' );
+	print_r($inbounds_id);
 	$inbounds_id = $inbounds_id->slug;
 	$speed = wp_get_post_terms( $post->ID, 'speed' );
 	$speed = $speed->slug;
