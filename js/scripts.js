@@ -135,7 +135,7 @@ $(document).ready(function() {
 		function animateInStats() {
 			var delay = 0;
 			$statsContainer.find("li").each(function(index) {
-				delay = 100 * (index + 1); 
+				delay = 130 * (index + 1); 
 				setTimeout(function() {
 					$(this).addClass("animate-in");
 				}, delay);
