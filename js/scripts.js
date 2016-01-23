@@ -110,7 +110,7 @@ $(document).ready(function() {
 		if ( !$("body").hasClass("single-product") ) { return; }
 		
 		var $product = $("main > .product[data-product-slug]");
-		var $productTitle = $(".summary div[itemprop='name']");
+		var $productTitle = $(".summary h1[itemprop='name']");
 		var $longDesc = $("#tab-description");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
 		var stats = {
