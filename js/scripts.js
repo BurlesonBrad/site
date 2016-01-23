@@ -119,7 +119,7 @@ $(document).ready(function() {
 		var fade = $product.data("fade");
 
 		$shortDesc.before( $statsContainer );
-		$statsContainer.prepend("<div class='number-bubble speed'>" + speed + "</div><div class='number-bubble glide'>" + glide + "</div><div class='number-bubble turn'>" + turn + "</div><div class='number-bubble fade'>" + fade + "</div>");
+		$statsContainer.prepend("<ul><li class='number-bubble speed'>" + speed + "</li><li class='number-bubble glide'>" + glide + "</li><li class='number-bubble turn'>" + turn + "</li><li class='number-bubble fade'>" + fade + "</li></ul>");
 	}
 	singleProductFlightData();
 
