@@ -1294,6 +1294,12 @@ button.single_add_to_cart_button:hover {
 	font-size: 0.8em;
 }
 
+#flight-stats .stat-value {
+	font-weight: bold;
+    font-size: 1.6em;
+    line-height: 0.9;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;
