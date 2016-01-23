@@ -1242,11 +1242,11 @@ button.single_add_to_cart_button:hover {
 
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
-		width: 65.5%;
-	}
-	.single-product div.product .summary {
 		width: 30%;
 		margin-right: 4.5%;
+	}
+	.single-product div.product .summary {
+		width: 65.5%;
 	}
 }
 
