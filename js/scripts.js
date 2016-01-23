@@ -122,25 +122,15 @@ $(document).ready(function() {
 
 		$shortDesc.before( $statsContainer );
 		var $bubbles = {};
-		var delay = 100;
+		var delay = 200;
 		$.each( stats, function( i, val ) {
 			$bubbles[i] = $("<li class='number-bubble " + i + "'><span>" + val + "</span></li>");
 			$statsContainer.append( $bubbles[i] );
-			delay = delay + 100; 
+			delay = delay + 130; 
 			setTimeout(function() {
 				$bubbles[i].find("span").addClass("animate-in");
 			}, delay);
 		});
-		
-		function animateInStats() {
-			var delay = 0;
-			$statsContainer.find("li").each(function(index) {
-				delay = 130 * (index + 1); 
-				setTimeout(function() {
-					$(this).addClass("animate-in");
-				}, delay);
-			});
-		}
 	}
 	singleProductFlightData();
 
