@@ -32,11 +32,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	$type = $type[0]->slug;
 	$brand = wp_get_post_terms( $post->ID, 'product_brand' );
 	$brand = $brand[0]->slug;
+	$inbounds_id = wp_get_post_terms( $post->ID, 'inbounds_id' );
+	$inbounds_id = $inbounds_id[0]->slug;
+	$speed = wp_get_post_terms( $post->ID, 'speed' );
+	$speed = $speed[0]->slug;
+	$glide = wp_get_post_terms( $post->ID, 'glide' );
+	$glide = $glide[0]->slug;
+	$turn = wp_get_post_terms( $post->ID, 'turn' );
+	$turn = $turn[0]->slug;
+	$fade = wp_get_post_terms( $post->ID, 'fade' );
+	$fade = $fade[0]->slug;
 ?>
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
 
-<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" data-inbounds-id="<?php echo $inbounds_id; ?>" data-speed="<?php echo $speed; ?>" data-glide="<?php echo $glide; ?>" data-turn="<?php echo $turn; ?>" data-fade="<?php echo $fade; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
