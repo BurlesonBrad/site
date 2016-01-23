@@ -110,7 +110,7 @@ $(document).ready(function() {
 		if ( !$("body").hasClass("single-product") ) { return; }
 		
 		var $product = $("main > .product[data-product-slug]");
-		var $shortDesc = $(".summary div[itemprop='description']");
+		var $productTitle = $(".summary div[itemprop='name']");
 		var $longDesc = $("#tab-description");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
 		var stats = {
@@ -120,7 +120,7 @@ $(document).ready(function() {
 			fade: $product.data("fade")
 		};
 
-		$shortDesc.before( $statsContainer );
+		$productTitle.after( $statsContainer );
 		var $bubbles = {};
 		var delay = 200;
 		$.each( stats, function( i, val ) {
