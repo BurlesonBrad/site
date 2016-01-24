@@ -95,13 +95,13 @@ function woo_remove_product_tabs( $tabs ) {
 function woo_related_products_limit() {
   global $product;
 	
-	$args['posts_per_page'] = 5;
+	$args['posts_per_page'] = 6;
 	return $args;
 }
 add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
   function jk_related_products_args( $args ) {
-	$args['posts_per_page'] = 5; // 4 related products
-	$args['columns'] = 5; // arranged in 2 columns
+	$args['posts_per_page'] = 4; // 4 related products
+	$args['columns'] = 2; // arranged in 2 columns
 	return $args;
 }
 
