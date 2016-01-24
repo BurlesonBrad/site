@@ -145,7 +145,17 @@ $(document).ready(function() {
 		}
 	}
 	brandPageHeaders();
-	$(window).load( brandPageHeaders );
+
+	function videoAspectRatio() {
+		var $iframe = $(".featured-video-plus > iframe");
+		var frameWidth = $iframe.width();
+		$iframe.css({
+			height: frameWidth / 1.7816 + "px"
+		});
+	}
+	videoAspectRatio();
+	$(window).resize( videoAspectRatio );
+
 });
 
 
