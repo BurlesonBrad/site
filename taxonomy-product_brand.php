@@ -48,6 +48,41 @@ get_header( 'shop' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
+		<?php
+			$disc_types = get_terms( 'disc_types', array( 'orderby' => 'term_id', 'hide_empty' => 1 ) );
+			foreach ( $disc_types as $type ): ?>
+				<h2 class="brand-disc-type-title"><?php echo $type->name; ?> </h2>
+				<ul class="products brand-disc-type <?php echo $type->slug; ?>">
+
+				<?php
+					$query_args = array(
+						'post_type' => 'product',
+						'tax_query' => array(
+					        array(
+						        'taxonomy' 	=> 'disc-type',
+						        'field' 	=> 'slug',
+						        'terms' 	=> $type->slug,
+					        ),
+					        array(
+						        'taxonomy' 	=> 'product_brand',
+						        'field' 	=> 'id',
+						        'terms' 	=> $brand_id,
+					        )
+					    )
+					);
+					$loop = new WP_Query( $query_args );
+					if ( $loop->have_posts() ) {
+						while ( $loop->have_posts() ) : $loop->the_post();
+							wc_get_template_part( 'content', 'product' );
+						endwhile;
+					} else {
+						echo __( 'No products found' );
+					}
+					wp_reset_postdata();
+				?>
+				</ul><!--/.products-->
+			<?php endforeach; ?>
+
 			<h2 class="brand-disc-type-title">Distance Drivers</h2>
 			<ul class="products brand-disc-type distance-drivers">
 			<?php
