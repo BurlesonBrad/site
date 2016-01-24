@@ -292,7 +292,7 @@ body.home #content { padding-top: 0; }
 .archive.tax-product_brand #main > .page-title {
 	padding: 3em 0;
 	margin-bottom: 0;
-	border-radius: 0.4em 0.4em 0 0;
+	border-radius: 0.2em 0.2em 0 0;
 	background: transparent no-repeat 50% 50%;
 	background-size: cover;
 }
@@ -314,7 +314,7 @@ body.home #content { padding-top: 0; }
 	background: #00b0ff;
     padding: 4em 6em;
     border-bottom: 8px solid #00a0f7;
-    border-radius: 0 0 1em 1em;
+    border-radius: 0 0 0.5em 0.5em;
 }
 
 .brand-description p {
