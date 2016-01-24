@@ -59,13 +59,13 @@ get_header( 'shop' ); ?>
 			<?php
 				$dd_args = array(
 					'post_type' => 'product',
-					'tax_query' => array(
-				        array(
-					        'taxonomy' => 'disc_types',
-					        'field' => 'slug',
-					        'terms' => 'distance-drivers',
-				        )
-				    )
+					// 'tax_query' => array(
+				 //        array(
+					//         'taxonomy' => 'disc_types',
+					//         'field' => 'slug',
+					//         'terms' => 'distance-drivers',
+				 //        )
+				 //    )
 				);
 				$loop = new WP_Query( $dd_args );
 				if ( $loop->have_posts() ) {
