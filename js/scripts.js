@@ -139,6 +139,7 @@ $(document).ready(function() {
 			$(".page-title").html("<img src='" + $hs_disc_brand + "' alt='" + $hs_disc_brand + "' />");
 		}
 	}
+	brandPageHeaders();
 
 });
 
