@@ -136,7 +136,7 @@ $(document).ready(function() {
 
 	function brandPageHeaders() {
 		if ( $hs_disc_brand ) {
-			$(".page-title").html("<img src='" + $hs_disc_brand + "' alt='" + $hs_disc_brand + "' />");
+			$(".page-title").html("<img src='/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-logo-white.png' alt='" + $hs_disc_brand + "' />");
 		}
 	}
 	brandPageHeaders();
