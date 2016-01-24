@@ -138,7 +138,7 @@ $(document).ready(function() {
 		if ( $hs_disc_brand ) {
 			$(".page-title")
 				.html("<img src='/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-logo-white.png' alt='" + $hs_disc_brand + "' />")
-				.css({"background-image": "url('images/" + $hs_disc_brand + "-banner.jpg')"});
+				.css({"background-image": "url('/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-banner.jpg')"});
 		}
 	}
 	brandPageHeaders();
