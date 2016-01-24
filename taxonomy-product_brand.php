@@ -45,16 +45,6 @@ get_header( 'shop' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
-
 			<?php 
 				$dd_args = array(
 				    'post_type' => 'product',
@@ -72,6 +62,16 @@ get_header( 'shop' ); ?>
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 				<?php endforeach;
 				wp_reset_postdata();
+			?>
+
+			<?php
+				/**
+				 * woocommerce_before_shop_loop hook
+				 *
+				 * @hooked woocommerce_result_count - 20
+				 * @hooked woocommerce_catalog_ordering - 30
+				 */
+				do_action( 'woocommerce_before_shop_loop' );
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
