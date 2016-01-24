@@ -304,6 +304,10 @@ body.home #content { padding-top: 0; }
 .archive.term-axiom #main > .page-title {
 	background-image: url('images/axiom-banner.jpg');
 }
+.archive.tax-product_brand .page-title img {
+	margin: 0 auto;
+	width: 9em;
+}
 
 /* SLIDER */
 .wds_slider_0 > span > span {
