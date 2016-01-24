@@ -79,19 +79,6 @@ get_header( 'shop' ); ?>
 			?>
 			</ul><!--/.products-->
 
-			<?php
-				$dd_args = array(
-				    'post_type' => 'product',
-				    
-				);
-				$drivers = get_posts();
-				var_dump($drivers);
-				foreach ( $drivers as $post ) : setup_postdata( $post ); ?>
-					<?php wc_get_template_part( 'content', 'product' ); ?>
-				<?php endforeach;
-				wp_reset_postdata();
-			?>
-
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
