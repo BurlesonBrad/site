@@ -63,7 +63,7 @@ get_header( 'shop' ); ?>
 				        array(
 					        'taxonomy' => 'disc_types',
 					        'field' => 'slug',
-					        'terms' => 'distance-drivers',
+					        'terms' => 'putters',
 				        )
 				    )
 				);
