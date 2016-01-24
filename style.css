@@ -715,6 +715,12 @@ body.home #content { padding-top: 0; }
 	height: 294px;
 }
 
+.tired-of-shopping > img:first-child {
+	position: relative;
+	top: 1em;
+	z-index: -1;
+}
+
 
 /* HOMEPAGE SOCIAL BAR */
 .social-bar ul {
