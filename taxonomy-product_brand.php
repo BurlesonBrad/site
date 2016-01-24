@@ -63,7 +63,7 @@ get_header( 'shop' ); ?>
 				        array(
 					        'taxonomy' => 'disc_type',
 					        'field' => 'slug',
-					        'terms' => 'distance-drivers',
+					        'terms' => 'distance_drivers',
 				        )
 				    )
 				);
