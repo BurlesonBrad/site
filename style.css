@@ -279,6 +279,14 @@ header .widget_product_search form:before {
 #content { padding-top: 3em; }
 body.home #content { padding-top: 0; }
 
+.archive.tax-product_brand #secondary {
+	display: none;
+}
+
+.archive.tax-product_brand .content-area {
+	width: 100%;
+}
+
 /* SLIDER */
 .wds_slider_0 > span > span {
 	width: 100.1% !important;
