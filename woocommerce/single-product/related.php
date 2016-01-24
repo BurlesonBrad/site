@@ -25,7 +25,7 @@ if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
 
-$related = $product->get_related( 4 );
+$related = $product->get_related( 4 ); // $posts_per_page
 
 if ( sizeof( $related ) === 0 ) return;
 

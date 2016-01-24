@@ -1402,6 +1402,11 @@ button.single_add_to_cart_button:hover {
 	.single-product div.product .summary {
 		width: 65.5%;
 	}
+
+	.storefront-full-width-content.single-product .related ul.products li.product, .storefront-full-width-content.single-product .upsells ul.products li.product {
+		width: 22%;
+		margin-right: 4%;
+	}
 }
 
 /* ARCHIVE PRODUCTS */
