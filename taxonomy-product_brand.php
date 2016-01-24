@@ -40,7 +40,7 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 			echo term_description();
-			echo get_queried_object()->name;
+			$brand_id = get_queried_object()->term_id;
 		?>
 
 		<?php if ( have_posts() ) : ?>
@@ -53,6 +53,23 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
+			?>
+
+			<?php 
+				global $post;
+				$drivers = get_posts(array(
+				    'post_type' => 'product',
+				    'tax_query' => array(
+				        array(
+				        'taxonomy' => 'disc_type',
+				        'field' => 'slug',
+				        'terms' => 'distance-drivers');
+				    ));
+				);
+				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
+					<?php wc_get_template_part( 'content', 'product' ); ?>
+				<?php endforeach;
+				wp_reset_postdata();
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
