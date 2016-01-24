@@ -40,7 +40,7 @@ get_header( 'shop' ); ?>
 			 */
 			//	do_action( 'woocommerce_archive_description' );
 
-			echo '<div class="brand-description">' . term_description() . '</div>';
+			echo '<div class="hs-brand-description">' . term_description() . '</div>';
 			$brand_id = get_queried_object()->term_id;
 		?>
 
