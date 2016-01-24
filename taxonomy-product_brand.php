@@ -108,7 +108,7 @@ get_header( 'shop' ); ?>
 						wc_get_template_part( 'content', 'product' );
 					endwhile;
 				} else {
-					echo '<style>.' . $type->slug . '-title, .' . $type->slug . '-products { display: none; }</style>';
+					echo '<style>.other-stuff-title, .other-stuff-products { display: none; }</style>';
 				}
 				wp_reset_postdata();
 			?>
