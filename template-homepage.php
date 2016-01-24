@@ -30,8 +30,7 @@ get_header(); ?>
 						$wc_query = new WP_Query($fd_params);
 					
 						if ( $wc_query->have_posts() ) :
-							while ( $wc_query->have_posts() ) :
-								$wc_query->the_post(); 
+							while ( $wc_query->have_posts() ) : $wc_query->the_post(); 
 								$post_id = get_the_ID(); ?>
 						<p class="featured-disc-pre">This month's disc</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
@@ -50,9 +49,10 @@ get_header(); ?>
 					</div>
 				</div>
 				<?php
-				endwhile;
-					wp_reset_postdata();
-				endif; ?>
+							endwhile;
+							wp_reset_postdata();
+						endif; 
+				?>
 			</section>
 			<?php
 				$taxonomy = array( 'disc-type' );
