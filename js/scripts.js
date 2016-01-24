@@ -145,7 +145,7 @@ $(document).ready(function() {
 		}
 	}
 	brandPageHeaders();
-
+	$(window).load( brandPageHeaders );
 });
 
 
