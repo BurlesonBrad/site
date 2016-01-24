@@ -56,7 +56,6 @@ get_header( 'shop' ); ?>
 			?>
 
 			<?php 
-				global $post;
 				$dd_args = array(
 				    'post_type' => 'product',
 				    'tax_query' => array(
