@@ -139,6 +139,8 @@ $(document).ready(function() {
 			$(".page-title")
 				.html("<img src='/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-logo-white.png' alt='" + $hs_disc_brand + "' />")
 				.css({"background-image": "url('/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-banner.jpg')"});
+		} else {
+			console.log("brand not found");
 		}
 	}
 	brandPageHeaders();
