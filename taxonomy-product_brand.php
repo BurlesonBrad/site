@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 			$brand_id = get_queried_object()->term_id;
 		?>
 
-		<script>var $hs_disc_brand = "<?php echo get_queried_object()->slug; ?>";</script>
+		<script>var $hs_disc_brand = "<?php echo get_queried_object()->slug; ?>" || false;</script>
 
 		<?php if ( have_posts() ) : ?>
 
