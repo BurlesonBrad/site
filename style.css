@@ -279,6 +279,7 @@ header .widget_product_search form:before {
 #content { padding-top: 3em; }
 body.home #content { padding-top: 0; }
 
+/* ARCHIVE PAGES */
 .archive.tax-product_brand #content {
 	padding-top: 1em;
 }
@@ -287,6 +288,12 @@ body.home #content { padding-top: 0; }
 }
 .archive.tax-product_brand .content-area {
 	width: 100%;
+}
+.archive.tax-product_brand #main > .page-title {
+	padding: 5em 0;
+}
+body.archive.term-discraft #main > .page-title {
+
 }
 
 /* SLIDER */
