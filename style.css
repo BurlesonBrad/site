@@ -309,6 +309,12 @@ body.home #content { padding-top: 0; }
 	width: 9em;
 }
 
+.brand-description p {
+	font-size: 1.4em;
+    line-height: 1.3;
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
 	.tax-product_brand .site-main ul.products li.product {
 	    width: 21%;
