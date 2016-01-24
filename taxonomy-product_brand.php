@@ -45,16 +45,6 @@ get_header( 'shop' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
-
 			<h2 class="brand-disc-type-title">Distance Drivers</h2>
 			<ul class="products brand-disc-type distance-drivers">
 			<?php
