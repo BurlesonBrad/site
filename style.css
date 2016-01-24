@@ -309,6 +309,13 @@ body.home #content { padding-top: 0; }
 	width: 9em;
 }
 
+@media screen and (min-width: 768px) {
+	.tax-product_brand .site-main ul.products li.product {
+	    width: 21%;
+	    margin-right: 4%;
+	}
+}
+
 /* SLIDER */
 .wds_slider_0 > span > span {
 	width: 100.1% !important;
