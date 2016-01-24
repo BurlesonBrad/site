@@ -51,7 +51,7 @@ get_header( 'shop' ); ?>
 		<?php
 			$disc_types = get_terms( 'disc_types', array( 'orderby' => 'term_id', 'hide_empty' => 1 ) );
 			foreach ( $disc_types as $type ): ?>
-				<h2 class="brand-disc-type-title"><?php echo $type->name; ?> </h2>
+				<h2 class="brand-disc-type-title"><?php echo $type->name; ?></h2>
 				<ul class="products brand-disc-type <?php echo $type->slug; ?>">
 
 				<?php
@@ -83,126 +83,6 @@ get_header( 'shop' ); ?>
 				</ul><!--/.products-->
 			<?php endforeach; ?>
 
-			<h2 class="brand-disc-type-title">Distance Drivers</h2>
-			<ul class="products brand-disc-type distance-drivers">
-			<?php
-				$dd_args = array(
-					'post_type' => 'product',
-					'tax_query' => array(
-				        array(
-					        'taxonomy' 	=> 'disc-type',
-					        'field' 	=> 'slug',
-					        'terms' 	=> 'distance-drivers',
-				        ),
-				        array(
-					        'taxonomy' 	=> 'product_brand',
-					        'field' 	=> 'id',
-					        'terms' 	=> $brand_id,
-				        )
-				    )
-				);
-				$loop = new WP_Query( $dd_args );
-				if ( $loop->have_posts() ) {
-					while ( $loop->have_posts() ) : $loop->the_post();
-						wc_get_template_part( 'content', 'product' );
-					endwhile;
-				} else {
-					echo __( 'No products found' );
-				}
-				wp_reset_postdata();
-			?>
-			</ul><!--/.products-->
-
-			<h2 class="brand-disc-type-title">Fairway Drivers</h2>
-			<ul class="products brand-disc-type fairway-drivers">
-			<?php
-				$cd_args = array(
-					'post_type' => 'product',
-					'tax_query' => array(
-				        array(
-					        'taxonomy' 	=> 'disc-type',
-					        'field' 	=> 'slug',
-					        'terms' 	=> 'fairway-drivers',
-				        ),
-				        array(
-					        'taxonomy' 	=> 'product_brand',
-					        'field' 	=> 'id',
-					        'terms' 	=> $brand_id,
-				        )
-				    )
-				);
-				$loop = new WP_Query( $cd_args );
-				if ( $loop->have_posts() ) {
-					while ( $loop->have_posts() ) : $loop->the_post();
-						wc_get_template_part( 'content', 'product' );
-					endwhile;
-				} else {
-					echo __( 'No products found' );
-				}
-				wp_reset_postdata();
-			?>
-			</ul><!--/.products-->
-
-			<h2 class="brand-disc-type-title">Mid-ranges</h2>
-			<ul class="products brand-disc-type midranges">
-			<?php
-				$mr_args = array(
-					'post_type' => 'product',
-					'tax_query' => array(
-				        array(
-					        'taxonomy' 	=> 'disc-type',
-					        'field' 	=> 'slug',
-					        'terms' 	=> 'midranges',
-				        ),
-				        array(
-					        'taxonomy' 	=> 'product_brand',
-					        'field' 	=> 'id',
-					        'terms' 	=> $brand_id,
-				        )
-				    )
-				);
-				$loop = new WP_Query( $mr_args );
-				if ( $loop->have_posts() ) {
-					while ( $loop->have_posts() ) : $loop->the_post();
-						wc_get_template_part( 'content', 'product' );
-					endwhile;
-				} else {
-					echo __( 'No products found' );
-				}
-				wp_reset_postdata();
-			?>
-			</ul><!--/.products-->
-
-			<h2 class="brand-disc-type-title">Putters</h2>
-			<ul class="products brand-disc-type putters">
-			<?php
-				$p_args = array(
-					'post_type' => 'product',
-					'tax_query' => array(
-				        array(
-					        'taxonomy' 	=> 'disc-type',
-					        'field' 	=> 'slug',
-					        'terms' 	=> 'putters',
-				        ),
-				        array(
-					        'taxonomy' 	=> 'product_brand',
-					        'field' 	=> 'id',
-					        'terms' 	=> $brand_id,
-				        )
-				    )
-				);
-				$loop = new WP_Query( $p_args );
-				if ( $loop->have_posts() ) {
-					while ( $loop->have_posts() ) : $loop->the_post();
-						wc_get_template_part( 'content', 'product' );
-					endwhile;
-				} else {
-					echo __( 'No products found' );
-				}
-				wp_reset_postdata();
-			?>
-			</ul><!--/.products-->
-
 			<h2 class="other-stuff-title">Other Stuff</h2>
 			<ul class="products brand-disc-type putters">
 			<?php
@@ -212,7 +92,8 @@ get_header( 'shop' ); ?>
 				        array(
 					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
-					        'terms' 	=> 'putters',
+					        'terms' 	=> array( 'distance-drivers', 'fairway-drivers', 'midranges', 'putters' ),
+					        'operator'	=> 'NOT IN',
 				        ),
 				        array(
 					        'taxonomy' 	=> 'product_brand',
