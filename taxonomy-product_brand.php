@@ -51,8 +51,8 @@ get_header( 'shop' ); ?>
 		<?php
 			$disc_types = get_terms( 'disc-type', array( 'orderby' => 'term_id', 'hide_empty' => 1 ) );
 			foreach ( $disc_types as $type ): ?>
-				<h2 class="brand-disc-type-title"><?php echo $type->name; ?></h2>
-				<ul class="products brand-disc-type <?php echo $type->slug; ?>">
+				<h2 class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
+				<ul class="products brand-disc-type <?php echo $type->slug; ?>-products">
 
 				<?php
 					$query_args = array(
@@ -75,9 +75,9 @@ get_header( 'shop' ); ?>
 						while ( $loop->have_posts() ) : $loop->the_post();
 							wc_get_template_part( 'content', 'product' );
 						endwhile;
-					} else {
-						echo __( 'No products found' );
-					}
+					} else { ?>
+						<style>.<?php echo $type->slug; ?>-title, .<?php echo $type->slug; ?>-products { display: none; }</style>
+					<?php }
 					wp_reset_postdata();
 				?>
 				</ul><!--/.products-->
