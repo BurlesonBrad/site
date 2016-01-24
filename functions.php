@@ -92,17 +92,8 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 }
 
-function woo_related_products_limit() {
-  global $product;
-	
-	$args['posts_per_page'] = 6;
-	return $args;
-}
-add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
-  function jk_related_products_args( $args ) {
-	$args['posts_per_page'] = 4; // 4 related products
-	$args['columns'] = 2; // arranged in 2 columns
-	return $args;
+function woocommerce_output_related_products() {
+	woocommerce_related_products(5,5);   // Display 4 products in 4 columns
 }
 
 // if ( is_page_template( 'taxonomy-product_brand.php' ) ) {
