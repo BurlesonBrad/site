@@ -44,14 +44,14 @@ get_header( 'shop' ); ?>
 			$brand_id = get_queried_object()->term_id;
 		?>
 
-		<script>var $hs_disc_brand = "<?php echo get_queried_object()->slug; ?>" || false;</script>
+		<?php $hs_disc_brand = get_queried_object()->slug; ?>
 
 		<?php if ( have_posts() ) : ?>
 
 		<?php
 			$disc_types = get_terms( 'disc-type', array( 'orderby' => 'term_id', 'hide_empty' => 1 ) );
 			foreach ( $disc_types as $type ): ?>
-				<h2 class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
+				<h2 data-brand="<?php echo $hs_disc_brand; >?" class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
 				<ul class="products brand-disc-type <?php echo $type->slug; ?>-products">
 
 				<?php
