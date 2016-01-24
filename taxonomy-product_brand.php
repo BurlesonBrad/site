@@ -55,6 +55,11 @@ get_header( 'shop' ); ?>
 					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
 					        'terms' 	=> 'distance-drivers',
+				        ),
+				        array(
+					        'taxonomy' 	=> 'product_brand',
+					        'field' 	=> 'id',
+					        'terms' 	=> $brand_id,
 				        )
 				    )
 				);
@@ -80,6 +85,11 @@ get_header( 'shop' ); ?>
 					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
 					        'terms' 	=> 'fairway-drivers',
+				        ),
+				        array(
+					        'taxonomy' 	=> 'product_brand',
+					        'field' 	=> 'id',
+					        'terms' 	=> $brand_id,
 				        )
 				    )
 				);
@@ -105,6 +115,11 @@ get_header( 'shop' ); ?>
 					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
 					        'terms' 	=> 'midranges',
+				        ),
+				        array(
+					        'taxonomy' 	=> 'product_brand',
+					        'field' 	=> 'id',
+					        'terms' 	=> $brand_id,
 				        )
 				    )
 				);
@@ -130,6 +145,11 @@ get_header( 'shop' ); ?>
 					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
 					        'terms' 	=> 'putters',
+				        ),
+				        array(
+					        'taxonomy' 	=> 'product_brand',
+					        'field' 	=> 'id',
+					        'terms' 	=> $brand_id,
 				        )
 				    )
 				);
