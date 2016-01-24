@@ -38,10 +38,13 @@ get_header( 'shop' ); ?>
 			 * @hooked woocommerce_taxonomy_archive_description - 10
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
-			do_action( 'woocommerce_archive_description' );
+			//	do_action( 'woocommerce_archive_description' );
+
 			echo term_description();
 			$brand_id = get_queried_object()->term_id;
 		?>
+
+		<script>var $hs_disc_brand = "<?php echo get_queried_object()->slug; ?>";</script>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -136,6 +139,36 @@ get_header( 'shop' ); ?>
 			</ul><!--/.products-->
 
 			<h2 class="brand-disc-type-title">Putters</h2>
+			<ul class="products brand-disc-type putters">
+			<?php
+				$p_args = array(
+					'post_type' => 'product',
+					'tax_query' => array(
+				        array(
+					        'taxonomy' 	=> 'disc-type',
+					        'field' 	=> 'slug',
+					        'terms' 	=> 'putters',
+				        ),
+				        array(
+					        'taxonomy' 	=> 'product_brand',
+					        'field' 	=> 'id',
+					        'terms' 	=> $brand_id,
+				        )
+				    )
+				);
+				$loop = new WP_Query( $p_args );
+				if ( $loop->have_posts() ) {
+					while ( $loop->have_posts() ) : $loop->the_post();
+						wc_get_template_part( 'content', 'product' );
+					endwhile;
+				} else {
+					echo __( 'No products found' );
+				}
+				wp_reset_postdata();
+			?>
+			</ul><!--/.products-->
+
+			<h2 class="other-stuff-title">Other Stuff</h2>
 			<ul class="products brand-disc-type putters">
 			<?php
 				$p_args = array(

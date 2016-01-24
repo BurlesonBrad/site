@@ -134,6 +134,12 @@ $(document).ready(function() {
 	}
 	singleProductFlightData();
 
+	function brandPageHeaders() {
+		if ( $hs_disc_brand ) {
+			$(".page-title").html("<img src='" + $hs_disc_brand + "' alt='" + $hs_disc_brand + "' />");
+		}
+	}
+
 });
 
 
