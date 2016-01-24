@@ -136,7 +136,7 @@ $(document).ready(function() {
 
 	function brandPageHeaders() {
 		var $hs_disc_brand = $("h2[data-brand]").first().data("brand");
-		if ( !typeof $hs_disc_brand === 'undefined' ) {
+		if ( $hs_disc_brand ) {
 			$(".page-title")
 				.html("<img src='/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-logo-white.png' alt='" + $hs_disc_brand + "' />")
 				.css({"background-image": "url('/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-banner.jpg')"});
