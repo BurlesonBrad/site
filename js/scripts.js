@@ -134,7 +134,7 @@ $(document).ready(function() {
 	}
 	singleProductFlightData();
 
-	function brandPageHeaders() {
+	function brandPageHeaders( $hs_disc_brand ) {
 		if ( !typeof $hs_disc_brand === 'undefined' ) {
 			$(".page-title")
 				.html("<img src='/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-logo-white.png' alt='" + $hs_disc_brand + "' />")
@@ -143,7 +143,7 @@ $(document).ready(function() {
 			console.log("brand not found");
 		}
 	}
-	brandPageHeaders();
+	brandPageHeaders( $hs_disc_brand );
 
 });
 
