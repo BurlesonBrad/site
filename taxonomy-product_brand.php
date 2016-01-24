@@ -57,6 +57,10 @@ get_header( 'shop' ); ?>
 
 			<?php woocommerce_product_loop_start(); ?>
 
+				<?php woocommerce_product_subcategories(); ?>
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
 			<h2 class="brand-disc-type-title">Distance Drivers</h2>
 			<ul class="products brand-disc-type distance-drivers">
 			<?php
@@ -166,6 +170,8 @@ get_header( 'shop' ); ?>
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
+
+			<?php endwhile; // end of the loop. ?>
 
 			<?php woocommerce_product_loop_end(); ?>
 
