@@ -92,18 +92,73 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 }
 
-function woo_related_products_limit() {
-	global $product;
+// function woo_related_products_limit() {
+// 	global $product;
 	
-	$args['posts_per_page'] = 5;
-	return $args;
+// 	$args['posts_per_page'] = 5;
+// 	return $args;
+// }
+// add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+// function jk_related_products_args( $args ) {
+// 	$args['posts_per_page'] = 5; // 4 related products
+// 	$args['columns'] = 5; // arranged in 2 columns
+// 	return $args;
+// }
+
+if ( ! function_exists( 'woocommerce_output_related_products' ) ) {
+
+	/**
+	 * Output the related products.
+	 *
+	 * @subpackage	Product
+	 */
+	function woocommerce_output_related_products() {
+
+		$args = array(
+			'posts_per_page' 	=> 5,
+			'columns' 			=> 5,
+			'orderby' 			=> 'rand'
+		);
+
+		woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
+	}
 }
-add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
-function jk_related_products_args( $args ) {
-	$args['posts_per_page'] = 5; // 4 related products
-	$args['columns'] = 5; // arranged in 2 columns
-	return $args;
+
+if ( ! function_exists( 'woocommerce_related_products' ) ) {
+
+	/**
+	 * Output the related products.
+	 *
+	 * @param array Provided arguments
+	 * @param bool Columns argument for backwards compat
+	 * @param bool Order by argument for backwards compat
+	 */
+	function woocommerce_related_products( $args = array(), $columns = false, $orderby = false ) {
+		if ( ! is_array( $args ) ) {
+			_deprecated_argument( __FUNCTION__, '2.1', __( 'Use $args argument as an array instead. Deprecated argument will be removed in WC 2.2.', 'woocommerce' ) );
+
+			$argsvalue = $args;
+
+			$args = array(
+				'posts_per_page' => $argsvalue,
+				'columns'        => $columns,
+				'orderby'        => $orderby,
+			);
+		}
+
+		$defaults = array(
+			'posts_per_page' => 5,
+			'columns'        => 5,
+			'orderby'        => 'rand'
+		);
+
+		$args = wp_parse_args( $args, $defaults );
+
+		wc_get_template( 'single-product/related.php', $args );
+	}
 }
+
+
 
 // if ( is_page_template( 'taxonomy-product_brand.php' ) ) {
 // 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
