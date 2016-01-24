@@ -150,7 +150,7 @@ $(document).ready(function() {
 		var $iframe = $(".featured-video-plus > iframe");
 		var frameWidth = $iframe.width();
 		$iframe.css({
-			height: frameWidth / 1.7816 + "px"
+			height: frameWidth / 1.78 + "px"
 		});
 	}
 	videoAspectRatio();
