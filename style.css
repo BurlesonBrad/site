@@ -1627,3 +1627,11 @@ table.cart .product-thumbnail {
 table.cart .product-thumbnail img {
 	margin: 0;
 }
+table.shop_table_responsive tbody tr td, table.shop_table_responsive tbody tr th {
+	font-size: 1.1em;
+}
+table.shop_table_responsive tbody tr .product-name {
+	font-size: 1.4em;
+}
+
+
