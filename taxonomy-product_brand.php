@@ -57,7 +57,7 @@ get_header( 'shop' ); ?>
 
 			<?php 
 				global $post;
-				$drivers = get_posts(array(
+				$dd_args = array(
 				    'post_type' => 'product',
 				    'tax_query' => array(
 				        array(
@@ -67,6 +67,7 @@ get_header( 'shop' ); ?>
 				        )
 				    )
 				);
+				$drivers = get_posts( $dd_args );
 				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 				<?php endforeach;
