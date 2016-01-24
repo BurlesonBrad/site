@@ -55,16 +55,34 @@ get_header( 'shop' ); ?>
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
 
-			<?php 
+			<ul class="products">
+			<?php
 				$dd_args = array(
-				    'post_type' => 'product',
-				    'tax_query' => array(
+					'post_type' => 'product',
+					'tax_query' => array(
 				        array(
 					        'taxonomy' => 'disc_types',
 					        'field' => 'slug',
-					        'terms' => 'putters',
+					        'terms' => 'distance-drivers',
 				        )
 				    )
+				);
+				$loop = new WP_Query( $dd_args );
+				if ( $loop->have_posts() ) {
+					while ( $loop->have_posts() ) : $loop->the_post();
+						wc_get_template_part( 'content', 'product' );
+					endwhile;
+				} else {
+					echo __( 'No products found' );
+				}
+				wp_reset_postdata();
+			?>
+			</ul><!--/.products-->
+
+			<?php
+				$dd_args = array(
+				    'post_type' => 'product',
+				    
 				);
 				$drivers = get_posts();
 				var_dump($drivers);
