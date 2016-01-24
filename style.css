@@ -705,7 +705,7 @@ body.home #content { padding-top: 0; }
 
 .tired-of-shopping .read-the-blog {
 	margin: 0 1.2% 0 0;
-	box-shadow: 3px -2px 8px rgba(0,0,0,0.2);
+	box-shadow: -3px -2px 8px rgba(0,0,0,0.2);
 }
 
 .tired-of-shopping .featured-video {
@@ -714,7 +714,7 @@ body.home #content { padding-top: 0; }
 
 .tired-of-shopping .featured-video iframe {
 	height: 294px;
-	box-shadow: -3px -2px 8px rgba(0,0,0,0.2);
+	box-shadow: 3px -2px 8px rgba(0,0,0,0.2);
 }
 
 .tired-of-shopping > img:first-child {
