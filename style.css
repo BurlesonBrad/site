@@ -645,13 +645,13 @@ body.home #content { padding-top: 0; }
 .shop-by-brand h2 {
 	font-size: 4em;
 	font-weight: normal;
-	margin-bottom: 0.1em;
+	margin-bottom: 0.2em;
 }
 
 .brand-thumbnails {
 	text-align: center;
 	max-width: 51em;
-    margin: 0 auto 1em auto;
+    margin: 0 auto 3em;
 }
 
 .brand-thumbnails li {
