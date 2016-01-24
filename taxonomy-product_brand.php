@@ -61,10 +61,11 @@ get_header( 'shop' ); ?>
 				    'post_type' => 'product',
 				    'tax_query' => array(
 				        array(
-				        'taxonomy' => 'disc_type',
-				        'field' => 'slug',
-				        'terms' => 'distance-drivers');
-				    ));
+					        'taxonomy' => 'disc_type',
+					        'field' => 'slug',
+					        'terms' => 'distance-drivers'
+				        );
+				    );
 				);
 				foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
 					<?php wc_get_template_part( 'content', 'product' ); ?>
