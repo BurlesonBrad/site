@@ -61,9 +61,9 @@ get_header( 'shop' ); ?>
 					'post_type' => 'product',
 					'tax_query' => array(
 				        array(
-					        'taxonomy' 	=> 'disc_types',
+					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
-					        'terms' 	=> 'distance_drivers',
+					        'terms' 	=> 'distance-drivers',
 				        )
 				    )
 				);
