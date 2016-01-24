@@ -68,6 +68,7 @@ get_header( 'shop' ); ?>
 				    )
 				);
 				$drivers = get_posts( $dd_args );
+				var_dump($drivers);
 				foreach ( $drivers as $post ) : setup_postdata( $post ); ?>
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 				<?php endforeach;
