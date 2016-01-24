@@ -1616,3 +1616,14 @@ form.contact-form > div > textarea {
 		border-right: 0 none !important;
 	}
 }
+
+/*** CART ***/
+
+table.cart .product-thumbnail {
+	display: block;
+	padding-right: 0;
+	padding-left: 0;
+}
+table.cart .product-thumbnail img {
+	margin: 0;
+}
