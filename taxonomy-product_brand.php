@@ -75,9 +75,9 @@ get_header( 'shop' ); ?>
 						while ( $loop->have_posts() ) : $loop->the_post();
 							wc_get_template_part( 'content', 'product' );
 						endwhile;
-					} else { ?>
-						<style>.<?php echo $type->slug; ?>-title, .<?php echo $type->slug; ?>-products { display: none; }</style>
-					<?php }
+					} else {
+						echo '<style>.' . $type->slug . '-title, .' . $type->slug . '-products { display: none; }</style>';
+					}
 					wp_reset_postdata();
 				?>
 				</ul><!--/.products-->
@@ -108,7 +108,7 @@ get_header( 'shop' ); ?>
 						wc_get_template_part( 'content', 'product' );
 					endwhile;
 				} else {
-					echo __( 'No products found' );
+					echo '<style>.' . $type->slug . '-title, .' . $type->slug . '-products { display: none; }</style>';
 				}
 				wp_reset_postdata();
 			?>
