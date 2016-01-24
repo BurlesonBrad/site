@@ -33,7 +33,7 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 	'post_type'            => 'product',
 	'ignore_sticky_posts'  => 1,
 	'no_found_rows'        => 1,
-	'posts_per_page'       => 5,
+	'posts_per_page'       => 5, //$posts_per_page
 	'orderby'              => $orderby,
 	'post__in'             => $related,
 	'post__not_in'         => array( $product->id )
@@ -46,6 +46,7 @@ $woocommerce_loop['columns'] = $columns;
 if ( $products->have_posts() ) : ?>
 
 	<div class="related products">
+	<h1> Yahoo </h1>
 
 		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
