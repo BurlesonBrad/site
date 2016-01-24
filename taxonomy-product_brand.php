@@ -51,7 +51,7 @@ get_header( 'shop' ); ?>
 		<?php
 			$disc_types = get_terms( 'disc-type', array( 'orderby' => 'term_id', 'hide_empty' => 1 ) );
 			foreach ( $disc_types as $type ): ?>
-				<h2 data-brand="<?php echo $hs_disc_brand; >?" class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
+				<h2 data-brand="<?php echo $hs_disc_brand; ?>" class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
 				<ul class="products brand-disc-type <?php echo $type->slug; ?>-products">
 
 				<?php
