@@ -1633,5 +1633,7 @@ table.shop_table_responsive tbody tr td, table.shop_table_responsive tbody tr th
 table.shop_table_responsive tbody tr .product-name a {
 	font-size: 1.6em;
 }
-
+table.cart .product-remove {
+	vertical-align: middle;
+}
 
