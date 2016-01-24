@@ -92,9 +92,9 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 }
 
-if ( is_page_template( 'taxonomy-product_brand.php' ) ) {
-	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-}
+// if ( is_page_template( 'taxonomy-product_brand.php' ) ) {
+// 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+// }
 
 // function set_byb_cookie() {
 // 	if ( is_user_logged_in() ) {
