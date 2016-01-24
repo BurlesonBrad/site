@@ -216,7 +216,7 @@ header .widget_product_search form:before {
 }
 
 .main-navigation ul li a:hover, .main-navigation ul li:hover > a, .site-title a:hover, a.cart-contents:hover, .site-header-cart .widget_shopping_cart a:hover, .site-header-cart:hover > li > a {
-	color: #fafafa;
+	color: #fafafa !important;
 }
 
 @media screen and (min-width: 768px) {
