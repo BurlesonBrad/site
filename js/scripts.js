@@ -8,7 +8,7 @@ $(document).ready(function() {
 	function customMasthead() {
 		var $utilNavWrap = $("<div class='nav-top'></div>");
 		var $utilNav = $("<div class='col-full'></div>");
-		var $menuHome = $("ul#menu-main-menu li:first-child > a");
+		var $menuHome = $("ul#menu-main-menu > li:first-child > a");
 		var liHeight = $menuHome.parent().height();
 
 		if ( !$("body").hasClass("custom-masthead-set") ) {
