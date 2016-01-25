@@ -31,7 +31,15 @@ get_header(); ?>
 					
 						if ( $wc_query->have_posts() ) :
 							while ( $wc_query->have_posts() ) : $wc_query->the_post(); 
-								$post_id = get_the_ID(); ?>
+								$post_id = get_the_ID();
+								$twitter_header = $get_post_meta( $post_id, 'twitter_header', true ) ?: get_brands( $post_id );
+								if ( $get_post_meta( $post_id, 'twitter_header', true ):
+									$twitter_header = 
+								else:
+									$twitter_header = 
+								endif;
+
+						?>
 						<p class="featured-disc-pre">This month's disc</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
 						<?php the_excerpt(); ?>
@@ -43,7 +51,7 @@ get_header(); ?>
 				</div>
 				<div class="featured-disc-twitter twitter-feed">
 					<div class="featured-disc-inner">
-						<h2><span>@</span><?php echo get_brands( $post_id ); ?></h2>
+						<h2><span>@</span><?php echo $twitter_header; ?></h2>
 						<a class="twitter-timeline" href="https://twitter.com/search?q=%40discraftdg" data-widget-id="680632584016162816">Tweets about @discraftdg</a>
 						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 					</div>
