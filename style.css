@@ -64,6 +64,10 @@ button, input, textarea, select, option {
 	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+button.menu-toggle:hover, button.menu-toggle:focus {
+	background-color: #00b0ff;
+}
+
 select, option {
 	color: #666;
 }
@@ -262,7 +266,7 @@ header .widget_product_search form:before {
 		width: 70%;
 		margin-right: 1%;
 	}
-	
+
 	.site-description {
 		display: none !important;
 	}
