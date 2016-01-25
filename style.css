@@ -127,6 +127,7 @@ ul#menu-main-menu::after {
 	display: block;
 	height: 1px;
 	width: 1px;
+	clear: both;
 }
 
 ul#menu-main-menu > li:first-child > a {
