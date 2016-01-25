@@ -936,8 +936,13 @@ body.archive .page-title {
 }
 
 #sb_instagram .sbi_follow_btn a {
-	padding: 3em 0;
+	font-size: 1.4em;
+	padding: 2em 0;
 	border-radius: 0 !important;
+}
+
+#sb_instagram .sbi_follow_btn .fa {
+	font-size: 1em !important;
 }
 
 #sb_instagram img {
