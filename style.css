@@ -247,8 +247,16 @@ header .widget_product_search form:before {
 
 
 button.menu-toggle {
+	position: relative;
+	top: -5px;
 	text-align: left;
 	padding: 1em 0;
+}
+
+button.menu-toggle::before {
+	position: relative;
+	top: 5px;
+	font-size: 2em;
 }
 
 .site-header-cart .cart-contents {
