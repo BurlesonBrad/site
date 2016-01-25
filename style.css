@@ -121,6 +121,14 @@ ul.menu li.current-menu-item > a.cart-contents, ul#menu-utility-menu li.current-
 	background-position: left top;
 }
 
+ul#menu-main-menu::after {
+	content: " ";
+	visibility: hidden;
+	display: block;
+	height: 1px;
+	width: 1px;
+}
+
 ul#menu-main-menu > li:first-child > a {
 	visibility: hidden;
 	background: #00b0ff url('images/logo-white-1x.png') no-repeat 50% 50%;
