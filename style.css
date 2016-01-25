@@ -389,7 +389,7 @@ body.archive .page-title {
 }
 
 .js .metaslider .caption-wrap {
-	display: none;
+	opacity: 0;
 }
 
 .metaslider .caption-wrap {
