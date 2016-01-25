@@ -83,10 +83,6 @@ select, option {
 	font-size: 0.95em;
 }
 
-.main-navigation ul {
-	overflow: auto;
-}
-
 .main-navigation ul li a:before {
 	display: none;
 }
