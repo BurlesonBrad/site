@@ -882,7 +882,7 @@ body.archive .page-title {
 }
 
 .social-bar #mc-embedded-subscribe-form:hover::before {
-	top: -1.4em;
+	top: -1.6em;
 	opacity: 1;
 }
 
