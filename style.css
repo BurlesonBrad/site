@@ -265,7 +265,7 @@ button.menu-toggle::before {
 
 @media screen and (max-width: 768px) {
 	.site-header-cart .cart-contents {
-		top: 4px;
+		top: 6px;
 	}
 }
 
