@@ -932,6 +932,7 @@ body.archive .page-title {
 #sb_instagram .sbi_follow_btn a {
 	display: block;
 	margin: 0 !important;
+	text-transform: uppercase;
 }
 
 #sb_instagram .sbi_follow_btn a {
