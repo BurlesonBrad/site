@@ -1322,6 +1322,8 @@ form.edit-bag-name {
 	border: 10px solid #ddd;
     background: #ddd;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
 }
 
 .backgroundsize .variations select {
