@@ -32,8 +32,8 @@ get_header(); ?>
 						if ( $wc_query->have_posts() ) :
 							while ( $wc_query->have_posts() ) : $wc_query->the_post(); 
 								$post_id = get_the_ID();
-								$tw_header = $get_post_meta( $post_id, 'twitter_header', true );
-								var_dump($tw_header);
+								//$tw_header = $get_post_meta( $post_id, 'twitter_header', true );
+								//var_dump($tw_header);
 								$twitter_header =  get_brands( $post_id );
 						?>
 						<p class="featured-disc-pre">This month's disc</p>
