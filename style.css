@@ -388,6 +388,10 @@ body.archive .page-title {
 	line-height: 17em !important;
 }
 
+.js .metaslider .caption-wrap {
+	display: none;
+}
+
 .metaslider .caption-wrap {
 	background: transparent !important;
 	opacity: 1 !important;

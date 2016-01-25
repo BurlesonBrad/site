@@ -46,6 +46,7 @@ $(document).ready(function() {
 			"line-height": (height-40) + "px"
 		});
 	}
+	vAlignSliderCaption();
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
