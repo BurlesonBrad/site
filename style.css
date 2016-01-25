@@ -752,7 +752,7 @@ body.archive .page-title {
 
 /* WEEKLY TIP */
 .weekly-tip {
-	margin: 3em 0;
+	margin: 3em 0 3.2em;
 	text-align: center;
 	height: 17em;
 	line-height: 17em;
