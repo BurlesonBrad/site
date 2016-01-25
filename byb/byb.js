@@ -373,7 +373,7 @@ function checkTheBags() {
 	}
 }
 checkTheBags();
-setTimeout(checkTheBags, 1400);
+setInterval(checkTheBags, 1400);
 
 
 
