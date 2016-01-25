@@ -255,7 +255,7 @@ button.menu-toggle {
 
 button.menu-toggle::before {
 	position: relative;
-	top: 4px;
+	top: 3px;
 	font-size: 2em;
 }
 
@@ -265,7 +265,7 @@ button.menu-toggle::before {
 
 @media screen and (max-width: 768px) {
 	.site-header-cart .cart-contents {
-		top: 6px;
+		top: 7px;
 	}
 }
 
