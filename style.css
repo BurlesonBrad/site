@@ -143,16 +143,12 @@ ul#menu-main-menu > li:nth-child(2) > a {
 }
 
 .sub-menu {
-	border-top: 0.6em solid #00a5f0;
+	border-top: 0.6em solid #009ad5;
 }
 
 .sub-menu li, .sub-menu li a {
 	width: 100% !important;
 	border: 0;
-}
-
-.sub-menu li {
-	border-bottom: 4px solid #00aaf5;
 }
 
 .nav-top {
