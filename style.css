@@ -844,6 +844,7 @@ body.archive .page-title {
 	margin: 0;
 	padding: 0;
 	height: 50px;
+	width: 24em;
 }
 
 .social-bar #mc_embed_signup_scroll {
