@@ -252,7 +252,7 @@ header .widget_product_search form:before {
 	}*/
 
 	ul#menu-main-menu > li > a {
-		border: 0px none;
+		border: 0px none !important;
 		padding: 3.1em 0.8em 3.2em;
 	}
 }
