@@ -43,7 +43,7 @@ $(document).ready(function() {
 		var $captionWrap = $(".metaslider .caption-wrap");
 		var height = $captionWrap.height();
 		if ( !$captionWrap.is(":visible") ) {
-			$captionWrap.fadeIn(600);
+			$captionWrap.delay(1000).fadeIn(600);
 		}
 		$captionWrap.css({
 			"line-height": (height-40) + "px"
