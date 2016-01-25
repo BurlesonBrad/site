@@ -758,20 +758,28 @@ body.archive .page-title {
 	line-height: 17em;
 }
 
-.weekly-tip > img {
+.weekly-tip > img,
+.weekly-tip-content {
 	display: inline-block;
+	vertical-align: middle;
+}
+
+.weekly-tip > img {
 	width: 20%;
 	min-width: 12em;
 	max-width: 16.2em;
 }
 
 .weekly-tip-content {
-	display: inline-block;
 	line-height: 1.6;
 	width: 80%;
 	max-width: 44em;
 	padding-left: 3em;
 	text-align: left;
+}
+
+.weekly-tip-content p {
+	margin-bottom: 0;
 }
 
 
