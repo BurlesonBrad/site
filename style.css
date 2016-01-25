@@ -242,14 +242,14 @@ header .widget_product_search form:before {
 }
 
 @media screen and (max-width: 1336px) and (min-width: 768px) {
-	ul#menu-main-menu {
+/*	ul#menu-main-menu {
 		width: 71em;
 	}
 
 	.primary-navigation {
 		overflow-x: scroll;
 		overflow-y: visible;
-	}
+	}*/
 }
 
 @media screen and (min-width: 768px) {
