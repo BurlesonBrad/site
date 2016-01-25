@@ -471,6 +471,7 @@ body.archive .page-title {
 .featured-disc-area h2 {
 	position: relative;
 	margin-bottom: 0.15em;
+	letter-spacing: -1px;
 }
 
 .featured-disc-area > div.featured-disc-image img {
