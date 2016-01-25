@@ -143,7 +143,7 @@ ul#menu-main-menu > li:nth-child(2) > a {
 }
 
 .sub-menu {
-	padding: 1em 0;
+	border-top: 0.6em solid #00aaf5;
 }
 
 .sub-menu li, .sub-menu li a {
