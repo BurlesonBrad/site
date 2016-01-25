@@ -811,6 +811,7 @@ body.archive .page-title {
 
 .social-bar li {
 	display: inline-block;
+	height: 50px;
 	text-align: center;
 	vertical-align: middle;
 }
