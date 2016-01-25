@@ -131,7 +131,7 @@ get_header(); ?>
 					);
 					$weekly_tip = get_posts($wt_args);
 					foreach ( $weekly_tip as $post ) : setup_postdata( $post ); ?>
-						<h3><?php the_title(); ?></h3>
+						<h3 class="pink"><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
 					<?php endforeach;
 					wp_reset_postdata();
