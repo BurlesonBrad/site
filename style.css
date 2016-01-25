@@ -887,7 +887,7 @@ body.archive .page-title {
 
 	text-transform: uppercase;
 	font-weight: bold;
-	text-shadow: 0px 0px 10px rgba(255,255,255,0.9);
+	text-shadow: 0px 0px 8px rgba(255,255,255,0.9);
 
 	-webkit-transition: all 400ms;
 	-moz-transition: all 400ms;
