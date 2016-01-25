@@ -34,7 +34,11 @@ get_header(); ?>
 								$post_id = get_the_ID();
 								//$tw_header = $get_post_meta( $post_id, 'twitter_header', true );
 								//var_dump($tw_header);
-								$twitter_header =  get_brands( $post_id );
+								if ( $get_post_meta( $post_id, 'twitter_header', true ) ) {
+									$twitter_header = $get_post_meta( $post_id, 'twitter_header', true );
+								} else {
+									$twitter_header = get_brands( $post_id );
+								}
 						?>
 						<p class="featured-disc-pre">This month's disc</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
