@@ -769,6 +769,7 @@ body.archive .page-title {
 	display: inline-block;
 	line-height: 1.6;
 	width: 80%;
+	max-width: 44em;
 	padding-left: 3em;
 	text-align: left;
 }
