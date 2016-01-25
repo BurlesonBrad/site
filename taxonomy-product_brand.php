@@ -56,7 +56,7 @@ get_header( 'shop' ); ?>
 					$custom_field = 'product_brand_' . strval($brand_id);
 				?>
 				<h2 data-brand="<?php echo $hs_disc_brand; ?>" class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
-				<p><?php echo get_field( $type_description_meta, $custom_field ); ?></p>
+				<p class="<?php echo $type->slug; ?>-description"><?php echo get_field( $type_description_meta, $custom_field ); ?></p>
 				<ul class="products brand-disc-type <?php echo $type->slug; ?>-products">
 
 				<?php
@@ -81,7 +81,7 @@ get_header( 'shop' ); ?>
 							wc_get_template_part( 'content', 'product' );
 						endwhile;
 					} else {
-						echo '<style>.' . $type->slug . '-title, .' . $type->slug . '-products { display: none; }</style>';
+						echo '<style>.' . $type->slug . '-title, .' . $type->slug . '-products, .' . $type->slug . '-description { display: none; }</style>';
 					}
 					wp_reset_postdata();
 				?>
