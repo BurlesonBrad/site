@@ -32,7 +32,9 @@ get_header(); ?>
 						if ( $wc_query->have_posts() ) :
 							while ( $wc_query->have_posts() ) : $wc_query->the_post(); 
 								$post_id = get_the_ID();
-								$twitter_header = $get_post_meta( $post_id, 'twitter_header', true ) ?: get_brands( $post_id );
+								$tw_header = $get_post_meta( $post_id, 'twitter_header', true );
+								var_dump($tw_header);
+								$twitter_header =  get_brands( $post_id );
 						?>
 						<p class="featured-disc-pre">This month's disc</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
