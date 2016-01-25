@@ -251,6 +251,10 @@ button.menu-toggle {
 	padding: 1em 0;
 }
 
+.cart-contents {
+	background-color: transparent;
+}
+
 
 @media screen and (max-width: 1279px) and (min-width: 768px) {
 /*	ul#menu-main-menu {
