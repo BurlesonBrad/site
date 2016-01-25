@@ -323,7 +323,7 @@ function bagButtons() {
 	}
 }
 bagButtons();
-setInterval(bagButtons, 1200);
+//setInterval(bagButtons, 1200);
 
 
 // Deactivate 'add to bag' buttons for already-added discs
