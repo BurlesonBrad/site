@@ -115,6 +115,8 @@ function addToBag(e, bag, disc, t) {
 			}
 		}
 
+		console.log( this_bag );
+
 	// find if this disc is already set; if so, return before newDisc object is created and the cookie is set
 		for ( i = 0; i < this_bag.discs.length; i++ ) {
 			if ( this_bag["discs"][i]["slug"] === disc ) {
