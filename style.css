@@ -803,6 +803,7 @@ body.archive .page-title {
 .social-bar {
 	height: 9em;
 	line-height: 9em;
+	margin: 0.3em 0 0 0;
 }
 
 .social-bar ul {
