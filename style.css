@@ -251,7 +251,7 @@ button.menu-toggle {
 	padding: 1em 0;
 }
 
-.cart-contents {
+.site-header-cart .cart-contents {
 	background-color: transparent;
 }
 
