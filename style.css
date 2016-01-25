@@ -860,7 +860,7 @@ body.archive .page-title {
 
 .social-bar #mc-embedded-subscribe-form::before {
 	position: relative;
-	top: 0;
+	top: -1em;
 	opacity: 0;
 	box-sizing: border-box;
 	content: "Enter your email";
@@ -882,7 +882,7 @@ body.archive .page-title {
 }
 
 .social-bar #mc-embedded-subscribe-form:hover::before {
-	top: -6px;
+	top: -1.4em;
 	opacity: 1;
 }
 
