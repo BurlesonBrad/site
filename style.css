@@ -795,6 +795,11 @@ body.archive .page-title {
 
 
 /* HOMEPAGE SOCIAL BAR */
+.backgroundsize .social-bar {
+	background: url('images/hear-us-out.png') no-repeat 50% 50%;
+	background-size: cover;
+}
+
 .social-bar ul {
 	list-style: none;
 }
