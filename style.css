@@ -248,6 +248,7 @@ header .widget_product_search form:before {
 
 	.primary-navigation {
 		overflow-x: scroll;
+		overflow-y: visible;
 	}
 }
 
