@@ -491,7 +491,7 @@ body.archive .page-title {
 
 .featured-disc-twitter h2 {
 	text-transform: uppercase;
-	left: 10px;
+	left: 20px;
 }
 
 .featured-disc-twitter h2 span {
@@ -500,7 +500,7 @@ body.archive .page-title {
     font-size: 2em;
     position: absolute;
     top: -0.4em;
-    left: -10px;
+    left: -20px;
     z-index: -1;
 }
 
