@@ -809,6 +809,7 @@ body.archive .page-title {
 .social-bar ul {
 	list-style: none;
 	text-align: center;
+	margin: 0;
 }
 
 .social-bar li {
