@@ -800,6 +800,11 @@ body.archive .page-title {
 	background-size: contain;
 }
 
+.social-bar {
+	height: 9em;
+	line-height: 9em;
+}
+
 .social-bar ul {
 	list-style: none;
 }
@@ -807,6 +812,7 @@ body.archive .page-title {
 .social-bar li {
 	display: inline-block;
 	text-align: center;
+	vertical-align: middle;
 }
 
 .social-bar li > a img {
