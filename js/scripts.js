@@ -42,6 +42,9 @@ $(document).ready(function() {
 	function vAlignSliderCaption() {
 		var captionWrap = $(".metaslider .caption-wrap");
 		var height = captionWrap.height();
+		if ( !captionWrap.is(":visible") ) {
+			captionWrap.fadeIn(600);
+		}
 		captionWrap.css({
 			"line-height": (height-40) + "px"
 		});
