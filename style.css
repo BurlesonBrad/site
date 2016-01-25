@@ -844,7 +844,7 @@ body.archive .page-title {
 	background: #00b0ff;
 	color: #fff;
 	padding: 0 4em;
-	margin: 0;
+	margin: -1em 0 0 0;
 	line-height: 50px;
 	font-weight: bold;
 	width: 100%;
