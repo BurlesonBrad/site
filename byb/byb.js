@@ -324,28 +324,29 @@ setInterval(bagButtons, 1200);
 function checkTheBags() {
 	var the_bags = false;
 	var user_meta = false;
-	promise_bags.success(function(data) {
-		the_bags = data;
-		for (i = 0; i < the_bags.length; i++ ) {
-			var bagSlug = the_bags[i]["name"];
-			var bagName = bagSlug.replace(/\-/g, " ");
-			$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
-		}
-	}).error(function(jqXHR, textStatus, errorThrown) {
-		if (textStatus == 'timeout')
-		//console.log('The server is not responding');
+	// promise_bags.success(function(data) {
+	// 	the_bags = data;
+	// 	for (i = 0; i < the_bags.length; i++ ) {
+	// 		var bagSlug = the_bags[i]["name"];
+	// 		var bagName = bagSlug.replace(/\-/g, " ");
+	// 		$bagsMenu.append("<option value='" + bagName + "'>" + bagName + "</option>");
+	// 	}
+	// }).error(function(jqXHR, textStatus, errorThrown) {
+	// 	if (textStatus == 'timeout')
+	// 	//console.log('The server is not responding');
 
-		if (textStatus == 'error')
-		//console.log(errorThrown);
+	// 	if (textStatus == 'error')
+	// 	//console.log(errorThrown);
 
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
 		}
 
 		deactivateAddBtn( the_bags );
-	});
+	//});
 
 	function deactivateAddBtn( the_bags ) {
+		console.log( the_bags );
 		if ( the_bags ) {
 			$(".add-to-bag").each(function() {
 				var $this = $(this);
@@ -354,7 +355,6 @@ function checkTheBags() {
 					for (index = 0; index < the_bags[i]["discs"].length; index++ ) {
 						this_slug = the_bags[i]["discs"][index]["slug"];
 						if ( disc_slug === this_slug ) {
-							//$this.addClass("success");
 							$this.hide();
 							$this.siblings(".remove-from-bag").css("display", "block");
 						}
