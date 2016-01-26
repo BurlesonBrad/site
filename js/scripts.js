@@ -139,14 +139,19 @@ $(document).ready(function() {
 	singleProductFlightData();
 
 	function archivePageHeaders() {
-		var $hs_disc_brand = $("h2[data-brand]").first().data("brand");
-		if ( $hs_disc_brand ) {
+		var $tax_disc_brand = $("h2[data-brand]").first().data("brand");
+		var $tax_disc_type = $(".page-title[data-disc-type]").first().data("disc-type");
+		if ( $tax_disc_brand ) {
 			$(".page-title")
-				.html("<img src='/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-logo-white.png' alt='" + $hs_disc_brand + "' />")
-				.css({"background-image": "url('/wp-content/themes/storefront-child/images/" + $hs_disc_brand + "-banner.jpg')"})
+				.html("<img src='/wp-content/themes/storefront-child/images/" + $tax_disc_brand + "-logo-white.png' alt='" + $tax_disc_brand + "' />")
+				.css({"background-image": "url('/wp-content/themes/storefront-child/images/" + $tax_disc_brand + "-banner.jpg')"})
 				.prependTo("#content");
-		} else {
-			console.log("brand not found");
+		}
+		if ( $tax_disc_type ) {
+			$(".page-title")
+				.html("<img src='/wp-content/themes/storefront-child/images/disc-type-" + $tax_disc_type + ".png' alt='" + $tax_disc_type + "' />")
+				.css({"background-image": "url('/wp-content/themes/storefront-child/images/" + $tax_disc_type + "-banner.jpg')"})
+				.prependTo("#content");
 		}
 	}
 	archivePageHeaders();
