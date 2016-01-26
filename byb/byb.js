@@ -72,6 +72,8 @@ function editBagName( bag, name ) {
 
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
+	console.log(e + bag + disc + t);
+
 	var the_bags = false;
 	promise_bags.success(function(data) {
 		the_bags = data;
