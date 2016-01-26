@@ -298,9 +298,7 @@ function bagButtons() {
 	$(".add-to-bag").click(function(e) {
 		var slug = $(this).parents(".product[data-product-slug]").data("product-slug");
 		var type = $(this).parents(".product[data-disc-type]").data("disc-type");
-
-		$bagsMenu = $(this).parents(".product").find(".bags-menu");
-		$bag = $bagsMenu.val();
+		var $bag = $(this).parents("div[data-bag-name]").data("bag-name") || false;
 
 		addToBag( e, $bag, slug, type );
 	});
