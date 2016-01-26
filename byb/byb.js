@@ -72,8 +72,6 @@ function editBagName( bag, name ) {
 
 // BAG STRUCTURE:
 function addToBag(e, bag, disc, t) {
-	console.log(e + bag + disc + t);
-
 	var the_bags = false;
 	promise_bags.success(function(data) {
 		the_bags = data;
@@ -190,7 +188,6 @@ var $addToBagBtn = $("<div class='add-to-bag'><img class='not-yet-added' src='/w
 /***	REMOVE FROM BAG 	***/
 /***						***/
 function removeFromBag(e, bag, disc) {
-	console.log("params: " + e + ", " + bag + ", " + disc);
 	var the_bags = false;
 	var user_meta = false;
 	promise_bags.success(function(data) {
