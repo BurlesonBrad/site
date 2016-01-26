@@ -1076,7 +1076,7 @@ body.home #content { padding-top: 0; }
 
 .bag-section,
 .bag-empty h3 {
-	background: #d5d5d5;
+	background: #ddd;
 	border: 1px solid #ccc;
 	border-left: 8px solid #ccc;
     padding: 0;
