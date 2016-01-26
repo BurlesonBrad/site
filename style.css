@@ -892,13 +892,13 @@ body.home #content { padding-top: 0; }
 
 @media screen and (max-width: 1136px) {
 	.weekly-tip > img {
-		width: 27%;
+		width: 21%;
 		min-width: 0;
 		max-width: 100%;
 	}
 
 	.weekly-tip-content {
-		width: 69%;
+		width: 75%;
 		max-width: 100%;
 		padding-left: 0;
 		margin-left: 3%;
