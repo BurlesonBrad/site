@@ -341,10 +341,10 @@ function checkTheBags() {
 		}
 	}).error(function(jqXHR, textStatus, errorThrown) {
 		if (textStatus == 'timeout')
-		console.log('The server is not responding');
+		//console.log('The server is not responding');
 
 		if (textStatus == 'error')
-		console.log(errorThrown);
+		//console.log(errorThrown);
 
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
