@@ -55,8 +55,8 @@ get_header( 'shop' ); ?>
 					$type_description_meta = 'brand_' . $type->slug . '_description'; 
 					$custom_field = 'product_brand_' . strval($brand_id);
 				?>
-				<h2 data-brand="<?php echo $hs_disc_brand; ?>" class="brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
-				<p class="<?php echo $type->slug; ?>-description"><?php echo get_field( $type_description_meta, $custom_field ); ?></p>
+				<h2 data-brand="<?php echo $hs_disc_brand; ?>" class="block-header brand-disc-type-title <?php echo $type->slug; ?>-title"><?php echo $type->name; ?></h2>
+				<!--<p class="<?php echo $type->slug; ?>-description"><?php echo get_field( $type_description_meta, $custom_field ); ?></p>-->
 				<ul class="products brand-disc-type <?php echo $type->slug; ?>-products">
 
 				<?php
