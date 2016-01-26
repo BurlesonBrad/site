@@ -27,7 +27,16 @@ get_header( 'shop' ); ?>
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			<?php
+			if ( is_tax( 'disc-type' ) ) {
+				$disc_type = get_queried_object()->slug;
+				$disc_type = 'data-disc-type="' . $disc_type . '"';
+			} else {
+				$disc_type = null;
+			}
+			?>
+
+			<h1 class="page-title" <?php echo $disc_type; ?>><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
 

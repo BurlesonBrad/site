@@ -42,9 +42,8 @@ get_header( 'shop' ); ?>
 
 			echo '<div class="hs-brand-description">' . term_description() . '</div>';
 			$brand_id = get_queried_object()->term_id;
+			$hs_disc_brand = get_queried_object()->slug;
 		?>
-
-		<?php $hs_disc_brand = get_queried_object()->slug; ?>
 
 		<?php if ( have_posts() ) : ?>
 

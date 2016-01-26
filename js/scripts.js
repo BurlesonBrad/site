@@ -138,7 +138,7 @@ $(document).ready(function() {
 	}
 	singleProductFlightData();
 
-	function brandPageHeaders() {
+	function archivePageHeaders() {
 		var $hs_disc_brand = $("h2[data-brand]").first().data("brand");
 		if ( $hs_disc_brand ) {
 			$(".page-title")
@@ -149,7 +149,7 @@ $(document).ready(function() {
 			console.log("brand not found");
 		}
 	}
-	brandPageHeaders();
+	archivePageHeaders();
 
 	function videoAspectRatio() {
 		var $iframe = $(".featured-video-plus > iframe");
