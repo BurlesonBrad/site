@@ -190,21 +190,21 @@ var $addToBagBtn = $("<div class='add-to-bag'><img class='not-yet-added' src='/w
 function removeFromBag(e, bag, disc) {
 	var the_bags = false;
 	var user_meta = false;
-	promise_bags.success(function(data) {
-		the_bags = data;
-		removeTheDisc(the_bags, e, bag, disc);
-	}).error(function(jqXHR, textStatus, errorThrown) {
-		if (textStatus == 'timeout')
-		console.log('The server is not responding');
+	// promise_bags.success(function(data) {
+	// 	the_bags = data;
+	// 	removeTheDisc(the_bags, e, bag, disc);
+	// }).error(function(jqXHR, textStatus, errorThrown) {
+	// 	if (textStatus == 'timeout')
+	// 	console.log('The server is not responding');
 
-		if (textStatus == 'error')
-		console.log(errorThrown);
+	// 	if (textStatus == 'error')
+	// 	console.log(errorThrown);
 
 		if ( Cookies.get('byb') && Cookies.get('byb') != 'undefined' ) {
 			the_bags = Cookies.getJSON('byb');
 		}
 		removeTheDisc(the_bags, e, bag, disc);
-	});
+	//});
 
 	function removeTheDisc(the_bags, e, bag, disc) {
 		var this_bag = the_bags[0];
