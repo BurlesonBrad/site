@@ -894,7 +894,7 @@ body.home #content { padding-top: 0; }
 	}
 
 	.weekly-tip-content {
-		width: 72%;
+		width: 71%;
 		max-width: 100%;
 		padding-left: 0;
 		margin-left: 1%;
@@ -903,7 +903,7 @@ body.home #content { padding-top: 0; }
 
 @media screen and (max-width: 768px) {
 	.weekly-tip > img {
-		width: 40%;
+		width: 39%;
 	}
 
 	.weekly-tip-content {
