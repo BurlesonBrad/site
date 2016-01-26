@@ -346,7 +346,6 @@ function checkTheBags() {
 	//});
 
 	function deactivateAddBtn( the_bags ) {
-		console.log( the_bags );
 		if ( the_bags ) {
 			$(".add-to-bag").each(function() {
 				var $this = $(this);
