@@ -1095,11 +1095,12 @@ body.archive:not(.tax-product_brand) .page-title {
 .bag h3 {
 	font-family: 'Viga';
 	font-size: 1.8em;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.1em;
+    padding: 0.5em 1em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #00b0ff !important;
-    border-bottom: 3px solid #eee;
+    color: #fff;
+    background: #ccc;
+    border-bottom: 1px solid #c5c5c5;
 }
 
 .bag-empty h3 {
@@ -1121,7 +1122,7 @@ body.archive:not(.tax-product_brand) .page-title {
 
 .disc-area {
 	margin-bottom: 2em;
-	padding: 1.6em 2em 0.3em;
+	padding: 1.6em 2em;
 }
 
 form.edit-bag-name {
