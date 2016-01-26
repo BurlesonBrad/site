@@ -886,6 +886,32 @@ body.home #content { padding-top: 0; }
 	font-size: 1.2em;
 }
 
+@media screen and (max-width: 1136px) {
+	.weekly-tip > img {
+		width: 27%;
+		min-width: 0;
+		max-width: 100%;
+	}
+
+	.weekly-tip-content {
+		width: 72%;
+		max-width: 100%;
+		padding-left: 0;
+		margin-left: 1%;
+	}
+}
+
+@media screen and (max-width: 1136px) {
+	.weekly-tip > img {
+		width: 40%;
+	}
+
+	.weekly-tip-content {
+		width: 58%;
+		margin-left: 2%;
+	}
+}
+
 
 /* HOMEPAGE SOCIAL BAR */
 .backgroundsize .social-bar {
