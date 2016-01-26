@@ -404,7 +404,7 @@ body.home #content { padding-top: 0; }
 	padding: 0.7em 0.8em;
 	margin-bottom: 0;
 	border-left: 8px solid #ccc;
-	border-radius: 0.2em 0 0 0.2em;
+	border-radius: 0.2em 0.1em 0.1em 0.2em;
 	color: #555;
 }
 
@@ -420,7 +420,7 @@ body.home #content { padding-top: 0; }
     margin-top: 0.5em;
     margin-bottom: 1.8em;
     border-left: 8px solid #00a0f7;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 2px 2px 5px;
     box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
 }
 
