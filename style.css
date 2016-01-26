@@ -911,6 +911,12 @@ body.home #content { padding-top: 0; }
 	}
 }
 
+@media screen and (max-width: 480px) {
+	.weekly-tip-content {
+		width: 66%;
+	}
+}
+
 
 /* HOMEPAGE SOCIAL BAR */
 .backgroundsize .social-bar {
