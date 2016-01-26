@@ -1042,10 +1042,10 @@ body.home #content { padding-top: 0; }
 .gradient-bg,
 #sb_instagram .sbi_follow_btn a {
 	background: #00b0ff; /* Old browsers */
-	background: -moz-linear-gradient(45deg, #00b0ff 0%, #ff3c7c 100%) !important; /* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%) !important; /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ) !important; /* IE6-9 fallback on horizontal gradient */
+	background: -moz-linear-gradient(45deg, #00b0ff 0%, #ff3c7c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 
