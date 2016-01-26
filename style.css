@@ -420,9 +420,11 @@ body.archive:not(.tax-product_brand) .page-title {
 .hs-brand-description {
 	background: #00b0ff;
     padding: 3em 4em;
-    margin-bottom: 3em;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
     border-left: 8px solid #00a0f7;
     border-radius: 5px 0 0 5px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
 }
 
 .hs-brand-description p {
