@@ -365,12 +365,14 @@ body.home #content { padding-top: 0; }
 .archive.tax-product_brand .content-area {
 	width: 100%;
 }
-.archive.tax-product_brand .page-title {
+.archive.tax-product_brand .page-title
+.archive.tax-disc-type .page-title {
 	padding: 3em 0;
 	background: transparent no-repeat 50% 50%;
 	background-size: cover;
 }
-.archive.tax-product_brand .page-title img {
+.archive.tax-product_brand .page-title img
+.archive.tax-disc-type .page-title img {
 	margin: 0 auto;
 	width: 9em;
 }
@@ -390,8 +392,7 @@ body.home #content { padding-top: 0; }
     -webkit-filter: blur(2px);
 }*/
 
-.block-header,
-body.archive:not(.tax-product_brand) .page-title {
+.block-header {
 	font-family: 'Viga';
 	text-transform: uppercase;
 	font-size: 2em;
