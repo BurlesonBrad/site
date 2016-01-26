@@ -269,7 +269,7 @@ button.menu-toggle::before {
 	}
 }
 
-@media screen and (max-width: 1279px) and (min-width: 768px) {
+@media screen and (max-width: 1136px) and (min-width: 768px) {
 /*	ul#menu-main-menu {
 		width: 71em;
 	}
