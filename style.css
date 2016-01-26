@@ -907,12 +907,7 @@ body.home #content { padding-top: 0; }
 
 @media screen and (max-width: 768px) {
 	.weekly-tip > img {
-		width: 39%;
-	}
-
-	.weekly-tip-content {
-		width: 55%;
-		margin-left: 5%;
+		vertical-align: top;
 	}
 }
 
