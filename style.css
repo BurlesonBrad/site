@@ -370,15 +370,6 @@ body.home #content { padding-top: 0; }
 	background: transparent no-repeat 50% 50%;
 	background-size: cover;
 }
-.archive.term-discraft .page-title {
-	background-image: url('images/discraft-banner.jpg');
-}
-.archive.term-mvp .page-title {
-	background-image: url('images/mvp-banner.jpg');
-}
-.archive.term-axiom .page-title {
-	background-image: url('images/axiom-banner.jpg');
-}
 .archive.tax-product_brand .page-title img {
 	margin: 0 auto;
 	width: 9em;
