@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 //Cookies.remove('byb', {domain: '.hyzershop.com'});
-console.log( Cookies.get('byb') );
+//console.log( Cookies.get('byb') );
 
 $("#clear-bags").click(function() {
 	deleteBags();
@@ -59,10 +59,8 @@ function editBagName( bag, name ) {
 				bagIndex = i;
 			}
 		}
-		console.log(name);
 		this_bag["name"] = name;
 		var bags_json = JSON.stringify(the_bags);
-		console.log( bags_json );
 		updateBags(bags_json);
 		Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
 	}
@@ -117,7 +115,7 @@ function addToBag(e, bag, disc, t) {
 
 		console.log( this_bag );
 
-	// find if this disc is already set; if so, return before newDisc object is created and the cookie is set
+	// find if this disc is already set - if so, return before newDisc object is created and the cookie is set
 		for ( i = 0; i < this_bag.discs.length; i++ ) {
 			if ( this_bag["discs"][i]["slug"] === disc ) {
 				return; // PREVENTING DUPLICATES Part 1
@@ -140,9 +138,6 @@ function addToBag(e, bag, disc, t) {
 		var bags_json = JSON.stringify(the_bags);
 		updateBags(bags_json);
 		Cookies.set('byb', bags_json, { expires: 1000, path: "/", domain: ".hyzershop.com" });
-		console.log( the_bags );
-		console.log( bags_json );
-		console.log( Cookies.get('byb') );
 
 	// ON SUCCESS:
 		if ( $(".add-to-bag-success").length === 0 ) {
