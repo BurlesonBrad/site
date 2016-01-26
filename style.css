@@ -1083,6 +1083,7 @@ body.archive:not(.tax-product_brand) .page-title {
 .bag-section,
 .bag-empty h3 {
 	background: #d5d5d5;
+	border: 1px solid #ccc;
 	border-left: 8px solid #ccc;
     padding: 0;
     margin-bottom: 1em;
