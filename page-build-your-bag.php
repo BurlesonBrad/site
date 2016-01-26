@@ -114,7 +114,7 @@ get_header(); ?>
 								echo '<div class="bag bag-' . $bag_slug . '" data-bag-name="' . $bag["name"] . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2></div>';
 								
 								// Drivers
-								echo '<div class="bag-section distance-drivers"><h3>Distance Drivers</h3><div class="disc-area">';
+								echo '<div class="bag-section distance-drivers"><h3 class="block-header">Distance Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "distance-drivers" ) {
 										$dd_count++;
@@ -127,7 +127,7 @@ get_header(); ?>
 							    }
 
 							    // Fairway
-								echo '<div class="bag-section fairway-drivers"><h3>Fairway Drivers</h3><div class="disc-area">';
+								echo '<div class="bag-section fairway-drivers"><h3 class="block-header">Fairway Drivers</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "fairway-drivers" ) {
 										$fd_count++;
@@ -140,7 +140,7 @@ get_header(); ?>
 							    }
 
 							    // Mid-ranges
-								echo '<div class="bag-section midranges"><h3>Mid-ranges</h3><div class="disc-area">';
+								echo '<div class="bag-section midranges"><h3 class="block-header">Mid-ranges</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "midranges" ) {
 										$mr_count++;
@@ -153,7 +153,7 @@ get_header(); ?>
 							    }
 
 								// Putters
-								echo '<div class="bag-section putters"><h3>Putters</h3><div class="disc-area">';
+								echo '<div class="bag-section putters"><h3 class="block-header">Putters</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
 									if ( $disc['type'] === "putters" ) {
 										$p_count++;
