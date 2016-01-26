@@ -255,7 +255,7 @@ button.menu-toggle {
 
 button.menu-toggle::before {
 	position: relative;
-	top: 3px;
+	top: 4px;
 	font-size: 2em;
 }
 
