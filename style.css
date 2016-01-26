@@ -356,7 +356,7 @@ body.home #content { padding-top: 0; }
 
 /* ARCHIVE PAGES */
 .archive.tax-product_brand #content {
-	padding-top: 1em;
+	padding-top: 0;
 }
 .archive.tax-product_brand #secondary {
 	display: none;
