@@ -406,7 +406,7 @@ body.archive:not(.tax-product_brand) .page-title {
 	background: #d5d5d5;
 	padding: 0.7em 0.8em;
 	border-left: 8px solid #ccc;
-	border-radius: 0.2em;
+	border-radius: 0.2em 0 0 0.2em;
 	color: #555;
 }
 
@@ -435,7 +435,7 @@ body.archive:not(.tax-product_brand) .page-title {
 }
 
 .brand-disc-type-title {
-	margin-bottom: 0.1em;
+	margin-bottom: 0.9em;
 }
 
 @media screen and (min-width: 768px) {
