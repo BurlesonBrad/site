@@ -1084,7 +1084,7 @@ body.archive:not(.tax-product_brand) .page-title {
 .bag-empty h3 {
 	background: #d5d5d5;
 	border-left: 8px solid #ccc;
-    padding: 2em 2em 0.3em;
+    padding: 0;
     margin-bottom: 1em;
     border-radius: 5px;
     -webkit-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.3);
@@ -1093,6 +1093,8 @@ body.archive:not(.tax-product_brand) .page-title {
 }
 
 .bag h3 {
+	font-family: 'Viga';
+	font-size: 1.8em;
     margin-bottom: 0.6em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -1119,6 +1121,7 @@ body.archive:not(.tax-product_brand) .page-title {
 
 .disc-area {
 	margin-bottom: 2em;
+	padding: 1.6em 2em 0.3em;
 }
 
 form.edit-bag-name {
