@@ -957,8 +957,8 @@ body.home #content { padding-top: 0; }
 }
 
 .social-bar li > a:hover img {
-	-webkit-transform: translateZ(10px);
-	transform: translateZ(10px);
+	-webkit-transform: translateZ(20px);
+	transform: translateZ(20px);
 }
 
 .social-bar form ::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
