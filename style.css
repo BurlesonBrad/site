@@ -1091,13 +1091,13 @@ body.archive:not(.tax-product_brand) .page-title {
     box-shadow: 1px 1px 0px #eaeaea;
 }
 
-/*.bag h3 {
+.bag h3 {
     margin-bottom: 0.6em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: #00b0ff !important;
     border-bottom: 3px solid #eee;
-}*/
+}
 
 .bag-empty h3 {
 	color: #aaa;
