@@ -166,6 +166,16 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
+	function featuredVidTitle() {
+		var $vid = $(".no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center");
+		var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
+		$vid.append( $title );
+		$vid.find("iframe").focus(function() {
+			$(this).addClass("vid-in-focus");
+		}).blur(function() {
+			$(this).removeClass("vid-in-focus");
+		});
+	}
 });
 
 
