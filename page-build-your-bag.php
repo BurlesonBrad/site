@@ -96,6 +96,11 @@ get_header(); ?>
 								$bags = $byb;
 							}
 
+							$bag_exists = false;
+							if ( count($bag) <= 1 ) {
+								$bag_exists = true;
+							}
+
 							foreach ( $bags as $bag ):
 								$bag_slug = str_replace( " ", "-", $bag["name"] );
 								$bag_slug = strtolower( $bag_slug );
@@ -171,6 +176,18 @@ get_header(); ?>
 							    	echo '<div class="bag-empty"><h3>No discs in your bag! :(</h3></div>';
 							    }
 
+							    if ( $bag_exists ): ?>
+
+							    <h2 class="handwritten blue centered">A few to get you going</h2>
+								<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
+
+							<?php else: ?>
+
+									<h2 class="handwritten blue centered">Great choices</h2>
+								<?php echo do_shortcode('[featured_products per_page="8" columns="4"]');
+
+								endif;
+
 							endforeach;
 						} else {
 							echo '<div class="add-first-bag"><h3>Start building your bag.</h3><p>Use it to keep track of the discs you want, the discs you have, or just use it for fun. When you see a disc you want to add, just click "add to bag." <strong>To start your bag, add your first disc from anywhere on the site.</strong></p></div>';
@@ -187,8 +204,7 @@ get_header(); ?>
 				
 				</div>
 
-				<h2 class="handwritten blue centered">A few to get you going</h2>
-				<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
+				
 
 			</div>
 
