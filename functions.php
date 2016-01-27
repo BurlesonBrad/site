@@ -103,7 +103,7 @@ function woo_remove_product_tabs( $tabs ) {
 }
 
 /**
- * Default loop columns on product archives
+ * Custom loop columns on product archives
  * @return integer products per row
  * @since  1.0.0
  */
