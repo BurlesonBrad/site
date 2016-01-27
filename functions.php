@@ -61,6 +61,7 @@ function set_disc_flight_data() {
 				$val = round($val);
 				$val = strval($val);
 				$fr[$key] = $val;
+				var_dump( $fr[$key] );
 			}
 		}
 		
