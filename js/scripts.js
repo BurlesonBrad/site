@@ -170,9 +170,9 @@ $(document).ready(function() {
 		var $vid = $(".no-touchevents .featured-video-plus");
 		var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
 		$vid.append( $title );
-		$("body").blur(function() {
+		$("body").blur(function( $vid ) {
 			$vid.addClass("vid-in-focus");
-		}).focus(function() {
+		}).focus(function( $vid ) {
 			$vid.removeClass("vid-in-focus");
 		});
 	}
