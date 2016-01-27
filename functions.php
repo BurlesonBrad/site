@@ -54,21 +54,13 @@ function set_disc_flight_data() {
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
 
-		// function arr_round($f) {
-		// 	$i = 0;
-		// 	$len = count($f);
-		// 	foreach ($f as $flight => $rating) {
-		// 		$new_rating = round($rating);
-		// 		$f[$flight] = $new_rating;
-		// 		$i=$i+1;
-		// 		if ( $i === $len ) {
-		// 			return sprintf($f);
-		// 		}
-		// 	}
-		// }
-		// $function = new ReflectionFunction('arr_round');
-		// $fr = $function->invoke($fr);
-
+		foreach ($fr as $disc) {
+			foreach ($disc as $r) {
+				$r = round($r);
+				$fr[$disc] = $r;
+			}
+		}
+		
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
 		$disc_turn = $fr["turn"];
