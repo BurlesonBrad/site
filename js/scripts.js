@@ -139,7 +139,7 @@ $(document).ready(function() {
 		});
 
 		var $flightChart = $("<div class='flight-chart'><img src='http://www.inboundsdiscgolf.com/content/WebCharts/" + $product.data('inbounds-id') + ".png' alt='Inbounds flight chart for " + $product.data('product-slug') + "' />");
-		$longDesc.append($flightChart);
+		$longDesc.prepend($flightChart);
 	}
 	singleProductFlightData();
 
