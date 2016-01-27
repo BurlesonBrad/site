@@ -1552,6 +1552,19 @@ form.edit-bag-name {
     margin-bottom: 0.1em;
 }
 
+.single-product .summary h1.product_title sup {
+    font-size: 0.16em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    top: -0.7em;
+    left: 0.8em;
+    padding: 0.6em 1em;
+    color: #fff;
+    background: #0095de;
+    border-radius: 4px;
+}
+
 .single-product div.product .price {
     font-weight: 300;
     font-size: 1.1em;
