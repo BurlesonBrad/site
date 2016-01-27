@@ -183,14 +183,14 @@ get_header(); ?>
 
 							<?php else: ?>
 									</div>
-									<h2 class="handwritten blue centered">Keep building...</h2>
+									<h2 class="handwritten blue centered"><?php echo get_field( 'bag_featured_recs', get_the_ID() ); ?></h2>
 								<?php echo do_shortcode('[product_category category="featured-products" per_page="8" columns="4"]');
 
 								endif;
 
 							endforeach;
 						} else {
-							echo '<div class="add-first-bag"><h3>Start building your bag.</h3><p>Use it to keep track of the discs you want, the discs you have, or just use it for fun. When you see a disc you want to add, just click "add to bag." <strong>To start your bag, add your first disc from anywhere on the site.</strong></p></div>';
+							echo '<div class="add-first-bag"><h3>get_field( 'bag_initial_recs', get_the_ID()</h3><p>Use it to keep track of the discs you want, the discs you have, or just use it for fun. When you see a disc you want to add, just click "add to bag." <strong>To start your bag, add your first disc from anywhere on the site.</strong></p></div>';
 						}
 					}
 					getDiscBags($byb);
