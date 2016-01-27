@@ -54,8 +54,12 @@ function set_disc_flight_data() {
 		$post_slug = $post->post_name;
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
-		$fr = intval($fr);
-		$fr = round($fr);
+
+		foreach ($fr as $key => $val) {
+			$val = intval($val);
+			$val = round($val);
+			$fr->$key = $val;
+		}
 		
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
