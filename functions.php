@@ -58,7 +58,7 @@ function set_disc_flight_data() {
 		foreach ($fr as $val) {
 			$val = intval($val);
 			$val = round($val);
-			$fr[$key] = $val;
+			$fr = $val;
 		}
 		
 		$disc_speed = $fr["speed"];
