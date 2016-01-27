@@ -97,7 +97,7 @@ get_header(); ?>
 							}
 
 							$bag_exists = false;
-							if ( count($bag) <= 1 ) {
+							if ( count($bag) >= 1 ) {
 								$bag_exists = true;
 							}
 
