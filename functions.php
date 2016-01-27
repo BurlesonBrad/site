@@ -62,8 +62,6 @@ function set_disc_flight_data() {
 				$fr[$key] = $val;
 			}
 		}
-
-		echo "<script>console.log('" . var_dump($fr) . "');</script>";
 		
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
