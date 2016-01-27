@@ -848,9 +848,8 @@ body.home #content { padding-top: 0; }
 	box-shadow: 3px -2px 8px rgba(0,0,0,0.2);
 }
 
-.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center::after {
+.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center .video-of-the-week-title {
     display: block;
-    content: "Video of the week";
     position: absolute;
     top: 0;
     left: 14%;
