@@ -102,12 +102,13 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 }
 
-/**
- * Custom loop columns on product archives
- * @return integer products per row
- * @since  1.0.0
- */
-apply_filters( 'storefront_loop_columns', 3 ); // 3 products per row
+// Change number or products per row to 3
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 4;
+	}
+}
 
 // function woo_related_products_limit() {
 // 	global $product;
