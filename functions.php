@@ -62,11 +62,12 @@ function set_disc_flight_data() {
 				$f[$flight] = $new_rating;
 				$i=$i+1;
 				if ( $i === $len ) {
-					return $f;
+					return sprintf($f);
 				}
 			}
 		}
-		$fr = arr_round($fr);
+		$function = new ReflectionFunction('arr_round');
+		$fr = $function->invoke($fr);
 
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
