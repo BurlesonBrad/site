@@ -87,6 +87,10 @@ select, option {
 	font-size: 0.95em;
 }
 
+.main-navigation ul.menu > li.menu-item-has-children > a:after, .main-navigation ul.menu > li.page_item_has_children > a:after, .main-navigation ul.nav-menu > li.menu-item-has-children > a:after, .main-navigation ul.nav-menu > li.page_item_has_children > a:after {
+	margin-left: 0.5em;
+}
+
 .main-navigation ul li a:before {
 	display: none;
 }
