@@ -844,7 +844,7 @@ body.home #content { padding-top: 0; }
 	box-shadow: 3px -2px 8px rgba(0,0,0,0.2);
 }
 
-.featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center::after {
+.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center::after {
     display: block;
     content: "Video of the week";
     position: absolute;
@@ -862,6 +862,10 @@ body.home #content { padding-top: 0; }
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center:hover::after {
+	display: none;
 }
 
 .tired-of-shopping > img:first-child {
