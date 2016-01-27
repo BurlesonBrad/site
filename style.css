@@ -1129,9 +1129,9 @@ body.home #content { padding-top: 0; }
 
 .bag-section,
 .bag-empty h3 {
-	background: #ddd;
-	border: 1px solid #ccc;
-	border-left: 8px solid #ccc;
+	background: #dedede;
+	border: 1px solid #aaa;
+	border-left: 8px solid #aaa;
     padding: 0;
     margin-bottom: 1em;
     border-radius: 5px;
