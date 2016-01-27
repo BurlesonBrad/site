@@ -47,6 +47,19 @@ function set_disc_flight_data() {
 	$flight_ratings_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/flight-ratings.json' );
 	$flight_ratings_json = stripslashes($flight_ratings_json);
 	$flight_ratings_arr = json_decode( $flight_ratings_json, true );
+	function $arr_round($f) {
+		$i = 0;
+		$len = count($flight_ratings_arr);
+		foreach ($f as $flight => $rating) {
+			$new_rating = round($rating);
+			$f[$flight] = $new_rating;
+			$i=$i+1;
+			if ( $i === $len ) {
+				return $f;
+			}
+		}
+	}
+	$flight_ratings_arr = $arr_round($flight_ratings_arr);
 
 	while ( $discs->have_posts() ) : $discs->the_post();
 		$post_id = $post->ID;
