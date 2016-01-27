@@ -126,7 +126,7 @@ $(document).ready(function() {
 			fade: $product.data("fade")
 		};
 
-		$productTitle.append("<sup>" + $discType.replace("s", "") + "</sup>").after( $statsContainer );
+		$productTitle.append("<sup>" + $discType.replace(/s$/, "").replace(/-/g, " ") + "</sup>").after( $statsContainer );
 		var $bubbles = {};
 		var delay = 200;
 		$.each( stats, function( i, val ) {
