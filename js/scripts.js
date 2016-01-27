@@ -115,6 +115,7 @@ $(document).ready(function() {
 		
 		var $product = $("main > .product[data-product-slug]");
 		var $inboundsID = $product.data("inbounds-id");
+		var $discType = $product.data("disc-type");
 		var $productTitle = $(".summary h1[itemprop='name']");
 		var $longDesc = $("#tab-description");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
@@ -125,7 +126,7 @@ $(document).ready(function() {
 			fade: $product.data("fade")
 		};
 
-		$productTitle.after( $statsContainer );
+		$productTitle.append("<sup>" + $discType.replace("s", "") + "</sup>").after( $statsContainer );
 		var $bubbles = {};
 		var delay = 200;
 		$.each( stats, function( i, val ) {
