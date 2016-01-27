@@ -839,6 +839,10 @@ body.home #content { padding-top: 0; }
 	margin: 0 0 0 1.2%;
 }
 
+.featured-video .featured-video-plus {
+	position: relative;
+}
+
 .tired-of-shopping .featured-video iframe {
 	height: 294px;
 	box-shadow: 3px -2px 8px rgba(0,0,0,0.2);
