@@ -47,7 +47,6 @@ function set_disc_flight_data() {
 	$flight_ratings_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/flight-ratings.json' );
 	$flight_ratings_json = stripslashes($flight_ratings_json);
 	$flight_ratings_arr = json_decode( $flight_ratings_json, true );
-//	var_dump( $flight_ratings_arr );
 
 	while ( $discs->have_posts() ) : $discs->the_post();
 		$post_id = $post->ID;
@@ -68,8 +67,6 @@ function set_disc_flight_data() {
 		$disc_glide = $fr["glide"];
 		$disc_turn = $fr["turn"];
 		$disc_fade = $fr["fade"];
-
-		echo "<script type='text/javascript'>console.log('" . $post_slug . "');</script>";
 
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
