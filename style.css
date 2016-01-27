@@ -848,7 +848,7 @@ body.home #content { padding-top: 0; }
 	box-shadow: 3px -2px 8px rgba(0,0,0,0.2);
 }
 
-.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center .video-of-the-week-title {
+.no-touchevents .featured-video-plus .video-of-the-week-title {
     display: block;
     position: absolute;
     top: 0;
@@ -867,7 +867,8 @@ body.home #content { padding-top: 0; }
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
 
-.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center:hover::after {
+.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center:hover::after,
+.no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center::after {
 	display: none;
 }
 

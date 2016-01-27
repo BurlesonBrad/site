@@ -171,9 +171,9 @@ $(document).ready(function() {
 		var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
 		$vid.append( $title );
 		$vid.find("iframe").focus(function() {
-			$(this).addClass("vid-in-focus");
+			$(this).parents(".featured-video-plus").addClass("vid-in-focus");
 		}).blur(function() {
-			$(this).removeClass("vid-in-focus");
+			$(this).parents(".featured-video-plus").removeClass("vid-in-focus");
 		});
 	}
 });
