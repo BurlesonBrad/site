@@ -1697,6 +1697,19 @@ button.single_add_to_cart_button:hover {
     font-size: 1.5em;
 }
 
+#tab-description h2,
+#tab-description p {
+	float: left;
+	width: 70%;
+	clear: none;
+}
+
+#tab-description .flight-chart {
+	float: right;
+	width: 25%;
+	margin-left: 5%;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;
