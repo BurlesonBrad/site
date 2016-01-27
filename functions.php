@@ -59,6 +59,7 @@ function set_disc_flight_data() {
 			foreach ($fr as $key => $val) {
 				$val = intval($val);
 				$val = round($val);
+				$val = strval($val);
 				$fr[$key] = $val;
 			}
 		}
