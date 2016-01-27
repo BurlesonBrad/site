@@ -1144,8 +1144,8 @@ body.home #content { padding-top: 0; }
     padding: 0.5em 1em;
     text-transform: uppercase;
     color: #fff;
-    background: #ccc;
-    border-bottom: 1px solid #c5c5c5;
+    background: #aaa;
+    border-bottom: 1px solid #aaa;
 }
 
 .bag-empty h3 {
