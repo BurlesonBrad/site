@@ -177,12 +177,12 @@ get_header(); ?>
 							    }
 
 							    if ( $bag_exists ): ?>
-
+							    </div>
 							    <h2 class="handwritten blue centered">A few to get you going</h2>
 								<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
 
 							<?php else: ?>
-
+									</div>
 									<h2 class="handwritten blue centered">Great choices</h2>
 								<?php echo do_shortcode('[featured_products per_page="8" columns="4"]');
 
@@ -202,10 +202,6 @@ get_header(); ?>
 					<input type="submit" value="save">
 				</form> -->
 				
-				</div>
-
-				
-
 			</div>
 
 		</main><!-- #main -->
