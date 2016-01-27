@@ -55,7 +55,7 @@ function set_disc_flight_data() {
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
 
-		foreach ($fr as $key => $val) {
+		foreach ($fr as $val) {
 			$val = intval($val);
 			$val = round($val);
 			$fr[$key] = $val;
