@@ -114,6 +114,7 @@ $(document).ready(function() {
 		if ( !$("body").hasClass("single-product") ) { return; }
 		
 		var $product = $("main > .product[data-product-slug]");
+		var $inboundsID = $product.data("inbounds-id");
 		var $productTitle = $(".summary h1[itemprop='name']");
 		var $longDesc = $("#tab-description");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
@@ -135,6 +136,9 @@ $(document).ready(function() {
 				$bubbles[i].find(".number-bubble").addClass("animate-in");
 			}, delay);
 		});
+
+		var $flightChart = $("<div class='flight-chart'><img src='http://www.inboundsdiscgolf.com/content/WebCharts/" + $product.data('inbounds-id') + ".png' alt='Inbounds flight chart for " + $product.data('product-slug') + "' />");
+		$longDesc.append($flightChart);
 	}
 	singleProductFlightData();
 
@@ -165,6 +169,7 @@ $(document).ready(function() {
 	}
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
