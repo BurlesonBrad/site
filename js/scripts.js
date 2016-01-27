@@ -168,11 +168,12 @@ $(document).ready(function() {
 
 	function featuredVidTitle() {
 		var $vid = $(".no-touchevents .featured-video-plus");
+		console.log( $vid );
 		var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
 		$vid.append( $title );
-		$("body").blur(function( $vid ) {
+		$("body").blur(function() {
 			$vid.addClass("vid-in-focus");
-		}).focus(function( $vid ) {
+		}).focus(function() {
 			$vid.removeClass("vid-in-focus");
 		});
 	}
