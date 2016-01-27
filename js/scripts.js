@@ -166,18 +166,18 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
-	function featuredVidTitle() {
-		var $vid = $(".no-touchevents .featured-video-plus");
-		console.log( $vid );
-		var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
-		$vid.append( $title );
-		$("body").blur(function() {
-			$vid.addClass("vid-in-focus");
-		}).focus(function() {
-			$vid.removeClass("vid-in-focus");
-		});
-	}
-	featuredVidTitle();
+	// function featuredVidTitle() {
+	// 	var $vid = $(".no-touchevents .featured-video-plus");
+	// 	console.log( $vid );
+	// 	var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
+	// 	$vid.append( $title );
+	// 	$("body").blur(function() {
+	// 		$vid.addClass("vid-in-focus");
+	// 	}).focus(function() {
+	// 		$vid.removeClass("vid-in-focus");
+	// 	});
+	// }
+	// featuredVidTitle();
 });
 
 
