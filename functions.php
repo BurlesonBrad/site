@@ -62,11 +62,14 @@ function set_disc_flight_data() {
 				$fr[$key] = $val;
 			}
 		}
+
+		echo "<script>console.log("' . $fr . '");</script>";
 		
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
 		$disc_turn = $fr["turn"];
 		$disc_fade = $fr["fade"];
+
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
 		update_post_meta( $post_id, 'glide', $disc_glide );
