@@ -167,15 +167,16 @@ $(document).ready(function() {
 	$(window).resize( videoAspectRatio );
 
 	function featuredVidTitle() {
-		var $vid = $(".no-touchevents .featured-video-plus.post-thumbnail.fvp-responsive.fvp-youtube.fvp-center");
+		var $vid = $(".no-touchevents .featured-video-plus");
 		var $title = $("<div class='video-of-the-week-title'>Video of the week</div>");
 		$vid.append( $title );
-		$vid.find("iframe").focus(function() {
-			$(this).parents(".featured-video-plus").addClass("vid-in-focus");
-		}).blur(function() {
-			$(this).parents(".featured-video-plus").removeClass("vid-in-focus");
+		$body.blur(function() {
+			$vid.addClass("vid-in-focus");
+		}).focus(function() {
+			$vid.removeClass("vid-in-focus");
 		});
 	}
+	featuredVidTitle();
 });
 
 
