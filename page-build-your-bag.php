@@ -184,7 +184,7 @@ get_header(); ?>
 							<?php else: ?>
 									</div>
 									<h2 class="handwritten blue centered">Great choices</h2>
-								<?php echo do_shortcode('[featured_products per_page="8" columns="4"]');
+								<?php echo do_shortcode('[product_category category="featured-products" per_page="8" columns="4"]');
 
 								endif;
 
