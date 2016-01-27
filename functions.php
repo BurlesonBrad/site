@@ -69,7 +69,7 @@ function set_disc_flight_data() {
 		$disc_turn = $fr["turn"];
 		$disc_fade = $fr["fade"];
 
-		echo "<script>console.log('" . $disc_speed . $disc_glide . $disc_turn . $disc_fade . "');</script>";
+		echo "<script>console.log('" . $post_slug . "');</script>";
 
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
