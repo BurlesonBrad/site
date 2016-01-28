@@ -1705,9 +1705,9 @@ button.single_add_to_cart_button:hover {
 }
 
 #tab-description .flight-chart {
-	float: right;
+	float: left;
 	width: 25%;
-	margin-left: 5%;
+	margin-right: 5%;
 }
 
 @media screen and (min-width: 768px) {
