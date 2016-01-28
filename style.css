@@ -1709,6 +1709,18 @@ button.single_add_to_cart_button:hover {
 	margin-right: 5%;
 }
 
+.woocommerce-tabs ul.tabs li a {
+	background-color: #00b0ff;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.woocommerce-tabs ul.tabs li.active a {
+	background-color: #00a0ea;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;
