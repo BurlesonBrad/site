@@ -55,8 +55,6 @@ function set_disc_flight_data() {
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
 
-		$stability = $product->get_attribute( 'pa_stability' );
-
 		if ( is_array($fr) ) {
 			foreach ($fr as $key => $val) {
 				$val = intval($val);
