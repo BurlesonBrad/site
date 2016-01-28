@@ -79,7 +79,6 @@ function set_disc_flight_data() {
 			$stability = 'Overstable';
 		}
 
-		delete_post_meta_by_key( 'pa_stability' );
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
