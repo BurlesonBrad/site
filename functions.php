@@ -154,8 +154,9 @@ function woo_new_product_tab_content() {
 	if ( get_post_meta($post->ID, 'stability', true) ) {
 		$stability = '<li>Stability: ' . get_post_meta($post->ID, 'stability', true) . '</li>';
 	}
-	if ( get_the_terms($post->ID, 'disc-type') ) {
-		$disc_type = get_the_terms($post->ID, 'disc-type');
+	$disc_type = get_the_terms($post->ID, 'disc-type');
+	if ( count($disc_type) > 0 ) {
+		
 		$disc_type = '<li>Type: ' . $disc_type->slug . '</li>';
 	}
 	// The new tab content
