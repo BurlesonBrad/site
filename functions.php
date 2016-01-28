@@ -151,7 +151,7 @@ function woo_new_product_tab_content() {
 	global $post;
 	$stability = '';
 	$disc_type = '';
-	echo get_the_terms($post->ID, 'stability');
+	var_dump(get_the_terms($post->ID, 'stability'));
 	// if ( get_the_terms($post->ID, 'stability') ) {
 	// 	$stability = get_the_terms($post->ID, 'stability');
 	// }
