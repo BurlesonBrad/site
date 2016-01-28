@@ -132,7 +132,7 @@ function hs_add_specs_tab() {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 	}
 }
-add_action('init', 'hs_add_specs_tab');
+add_action('wp_loaded', 'hs_add_specs_tab');
 
 // global $post;
 // var_dump( wp_get_post_terms($post->ID, 'stability') );
