@@ -162,8 +162,8 @@ function woo_new_product_tab_content() {
 		$disc_type = '<li>Type: ' . str_replace('s', '', $disc_type[0]->name) . '</li>';
 	}
 	// The new tab content
-	echo '<h2>Specs</h2>';
-	echo '<ul>' . $stability . $disc_type . '</ul>';
+	echo '<div class="specs"><h2>Specs</h2>';
+	echo '<ul>' . $stability . $disc_type . '</ul></div>';
 }
 
 
