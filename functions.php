@@ -149,6 +149,7 @@ function woo_new_product_tab( $tabs ) {
 }
 function woo_new_product_tab_content() {
 	global $post;
+	global $product;
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
