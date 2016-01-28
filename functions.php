@@ -69,14 +69,14 @@ function set_disc_flight_data() {
 		$disc_turn = $fr["turn"];
 		$disc_fade = $fr["fade"];
 
-		$stability = intval($disc_turn) - intval($disc_fade);
+		$stability = intval($disc_fade) - intval($disc_turn);
 
-		if ( abs($stability) <= 1 ) {
+		if ( $stability < 2 && $stability > -1 ) {
 			$stability = 'Stable';
-		} elseif ( $stability > 1 ) {
-			$stability = 'Understable';
-		} elseif ( $stability < 1 ) {
+		} elseif ( $stability >= 2 ) {
 			$stability = 'Overstable';
+		} elseif ( $stability <= -1 ) {
+			$stability = 'Understable';
 		}
 
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
