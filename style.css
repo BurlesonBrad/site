@@ -1736,8 +1736,7 @@ button.single_add_to_cart_button:hover {
 
 .specs li strong {
 	font-family: 'Viga';
-	font-size: 2em;
-	color: #888;
+	color: #00b0ff;
 }
 
 .woocommerce-tabs ul.tabs li:after,
