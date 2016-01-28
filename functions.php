@@ -130,10 +130,10 @@ function hs_add_specs_tab() {
 	global $post;
 	if ( wp_get_post_terms($post->ID, 'stability') ) {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
-		var_dump( wp_get_post_terms($post->ID, 'stability') );
 	}
 }
 hs_add_specs_tab();
+var_dump( wp_get_post_terms($post->ID, 'stability') );
 
 function woo_new_product_tab( $tabs ) {
 	
