@@ -129,7 +129,7 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 function hs_add_specs_tab() {
 	global $post;
 	$disc_type = wp_get_post_terms($post->ID, 'disc-type');
-	if ( !is_wp_error( $disc_type ) ) {
+	if ( is_product() ) {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 	}
 }
