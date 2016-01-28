@@ -151,11 +151,11 @@ function woo_new_product_tab_content() {
 	global $post;
 	$stability = '';
 	$disc_type = '';
-	if ( wp_get_post_terms($post->ID, 'stability') ) {
-		$stability = wp_get_post_terms($post->ID, 'stability');
+	if ( get_the_terms($post->ID, 'stability') ) {
+		$stability = get_the_terms($post->ID, 'stability');
 	}
-	if ( wp_get_post_terms($post->ID, 'disc-type') ) {
-		$disc_type = wp_get_post_terms($post->ID, 'disc-type');
+	if ( get_the_terms($post->ID, 'disc-type') ) {
+		$disc_type = get_the_terms($post->ID, 'disc-type');
 	}
 	// The new tab content
 	echo '<h2>Specs</h2>';
