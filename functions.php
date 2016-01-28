@@ -151,7 +151,7 @@ function woo_new_product_tab_content() {
 	global $post;
 	$stability = '';
 	$disc_type = '';
-	$stability = get_the_terms($post->ID, 'stability');
+	$stability = get_post_meta($post->ID, 'stability');
 	var_dump($stability);
 	$stability = '<li>Stability: ' . str_replace('s', '', $stability->name) . '</li>';
 	
