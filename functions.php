@@ -156,7 +156,7 @@ function woo_new_product_tab_content() {
 	}
 	if ( get_the_terms($post->ID, 'disc-type') ) {
 		$disc_type = get_the_terms($post->ID, 'disc-type');
-		$disc_type = '<li>Type: ' . $disc_type->name . '</li>';
+		$disc_type = '<li>Type: ' . $disc_type->slug . '</li>';
 	}
 	// The new tab content
 	echo '<h2>Specs</h2>';
