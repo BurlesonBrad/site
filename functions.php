@@ -128,7 +128,7 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 
 function hs_add_specs_tab() {
 	global $post;
-	if ( wp_get_post_terms($post->ID, 'stability') ) {
+	if ( wp_get_post_terms($post->ID, 'disc-type') ) {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 	}
 }
