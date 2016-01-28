@@ -358,6 +358,23 @@ button.menu-toggle::before {
 #content { padding-top: 3em; }
 body.home #content { padding-top: 0; }
 
+/* All pages */
+.hentry .entry-header {
+	border: 0 none;
+	margin: 0;
+}
+
+.hentry .entry-header h1 {
+	border: 0 none;
+    font-size: 4em;
+    font-family: 'Viga';
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
 /* ARCHIVE PAGES */
 .js .archive.tax-product_brand #content,
 .js .archive.tax-disc-type #content {
