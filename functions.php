@@ -155,12 +155,12 @@ function woo_new_product_tab_content() {
 	$stability = get_the_terms($post->ID, 'pa_stability');
 
 	if ( count($stability) > 0 ) {
-		$stability = '<li>Stability: ' . $stability[0]->name . '</li>';
+		$stability = '<li><strong>Stability: </strong>' . $stability[0]->name . '</li>';
 	}
 	
 	$disc_type = get_the_terms($post->ID, 'disc-type');
 	if ( count($disc_type) > 0 ) {
-		$disc_type = '<li>Type: ' . str_replace('s', '', $disc_type[0]->name) . '</li>';
+		$disc_type = '<li><strong>Type: </strong>' . str_replace('s', '', $disc_type[0]->name) . '</li>';
 	}
 	// The new tab content
 	echo '<div class="specs"><h2>Specs</h2>';
