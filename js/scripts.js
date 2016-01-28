@@ -125,10 +125,10 @@ $(document).ready(function() {
 			turn: $product.data("turn"),
 			fade: $product.data("fade")
 		};
-		var typeLabel = "<sup>" + $discType.replace(/s$/, "").replace(/-/g, " ") + "</sup>";
+		var typeLabel = $discType.replace(/s$/, "").replace(/-/g, " ");
 		if ( typeLabel == "mid range" ) { typeLabel = "mid-range" }
 
-		$productTitle.append( typeLabel ).after( $statsContainer );
+		$productTitle.append( "<sup>" + typeLabel + "</sup>" ).after( $statsContainer );
 		var $bubbles = {};
 		var delay = 200;
 		$.each( stats, function( i, val ) {
