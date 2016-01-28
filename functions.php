@@ -109,13 +109,36 @@ return 4; // 4 products per row
 add_filter('loop_shop_columns', 'loop_columns', 999);
 
 
-if ( is_product )
-add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+// function the_meta() {
+// 	global $id;
+
+// 	if ( $keys = get_post_custom_keys() ) {
+// 		foreach ( $keys as $key ) {
+// 			$keyt = trim($key);
+// 			if ( '_' == $keyt{0} )
+// 				continue;
+// 			echo "<ul class='post-meta'>\n";
+// 			$values = array_map('trim', get_post_custom_values($key));
+// 			$value = implode($values,', ');
+// 			echo "<li><span class='post-meta-key'>$key:</span> $value</li>\n";
+// 			echo "</ul>\n";
+// 		}
+// 	}
+// }
+
+function hs_add_specs_tab() {
+	global $post;
+	if ( get_post_meta($post-ID, 'disc-type', true) ) {
+		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+	}
+}
+hs_add_specs_tab()
+
 function woo_new_product_tab( $tabs ) {
 	
 	// Adds the new tab
 	$tabs['specs_tab'] = array(
-		'title' 	=> __( 'New Product Tab', 'woocommerce' ),
+		'title' 	=> __( 'Specs', 'woocommerce' ),
 		'priority' 	=> 50,
 		'callback' 	=> 'woo_new_product_tab_content'
 	);
@@ -125,9 +148,12 @@ function woo_new_product_tab( $tabs ) {
 }
 function woo_new_product_tab_content() {
 
+	global $post;
+	$stability = get_post_meta($post-ID, 'stability', true);
+	$disc_type = get_post_meta($post-ID, 'disc-type', true)
 	// The new tab content
 	echo '<h2>Specs</h2>';
-	echo '<p>Here\'s your new product tab.</p>';
+	echo '<ul><li>Stability: ' . $stability . '</li><li>Disc Type: ' . $disc_type . '</li></ul>';
 	
 }
 
