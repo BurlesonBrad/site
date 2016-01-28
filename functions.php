@@ -128,7 +128,7 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 
 function hs_add_specs_tab() {
 	global $post;
-	if ( get_post_meta($post-ID, 'disc-type', true) ) {
+	if ( wp_get_post_terms($post->ID, 'stability') ) {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 	}
 }
@@ -154,7 +154,6 @@ function woo_new_product_tab_content() {
 	// The new tab content
 	echo '<h2>Specs</h2>';
 	echo '<ul><li>Stability: ' . $stability . '</li><li>Disc Type: ' . $disc_type . '</li></ul>';
-	
 }
 
 
