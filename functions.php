@@ -152,15 +152,15 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	var_dump(get_the_terms($post->ID, 'stability'));
-	// if ( get_the_terms($post->ID, 'stability') ) {
-	// 	$stability = get_the_terms($post->ID, 'stability');
-	// }
-	// if ( get_the_terms($post->ID, 'disc-type') ) {
-	// 	$disc_type = get_the_terms($post->ID, 'disc-type');
-	// }
+	if ( get_post_meta($post->ID, 'stability', true) ) {
+		$stability = '<li>Stability: ' . get_post_meta($post->ID, 'stability', true) . '</li>';
+	}
+	if ( get_the_terms($post->ID, 'disc-type') ) {
+		$disc_type = '<li>Stability: ' . get_the_terms($post->ID, 'disc-type') . '</li>';
+	}
 	// The new tab content
 	echo '<h2>Specs</h2>';
-	echo '<ul><li>Stability: ' . $stability . '</li><li>Disc Type: ' . $disc_type . '</li></ul>';
+	echo '<ul>' . $stability . $disc_type . '</ul>';
 }
 
 
