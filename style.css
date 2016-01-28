@@ -1715,7 +1715,7 @@ button.single_add_to_cart_button:hover {
 	text-transform: uppercase;
 	font-size: 0.9em;
 	font-weight: bold;
-	padding-left: 2em;
+	padding-left: 1.6em;
 }
 
 .woocommerce-tabs ul.tabs li.active a {
