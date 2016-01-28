@@ -152,8 +152,8 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
-	echo $stability;
-	$stability = '<li>Stability: ' . $stability->name . '</li>';
+	echo $stability[0];
+	$stability = '<li>Stability: ' . $stability[0]->name . '</li>';
 	
 	$disc_type = get_the_terms($post->ID, 'disc-type');
 	if ( count($disc_type) > 0 ) {
