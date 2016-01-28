@@ -71,9 +71,9 @@ function set_disc_flight_data() {
 
 		$stability = intval($disc_fade) - intval($disc_turn);
 
-		if ( $stability < 2 && $stability > -1 ) {
+		if ( $stability < 3 && $stability > -1 ) {
 			$stability = 'Stable';
-		} elseif ( $stability >= 2 ) {
+		} elseif ( $stability >= 3 ) {
 			$stability = 'Overstable';
 		} elseif ( $stability <= -1 ) {
 			$stability = 'Understable';
