@@ -1697,14 +1697,14 @@ button.single_add_to_cart_button:hover {
     font-size: 1.5em;
 }
 
-#tab-description h2,
-#tab-description p {
+#tab-specs_tab h2,
+#tab-specs_tab p {
 	float: left;
 	width: 70%;
 	clear: none;
 }
 
-#tab-description .flight-chart {
+#tab-specs_tab .flight-chart {
 	float: left;
 	width: 25%;
 	margin-right: 5%;
