@@ -152,7 +152,6 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
-	var_dump($stability);
 	$stability = '<li>Stability: ' . str_replace('s', '', $stability->name) . '</li>';
 	
 	$disc_type = get_the_terms($post->ID, 'disc-type');
