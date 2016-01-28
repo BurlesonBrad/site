@@ -150,7 +150,7 @@ function woo_new_product_tab_content() {
 
 	global $post;
 	$stability = get_post_meta($post-ID, 'stability', true);
-	$disc_type = get_post_meta($post-ID, 'disc-type', true)
+	$disc_type = get_post_meta($post-ID, 'disc-type', true);
 	// The new tab content
 	echo '<h2>Specs</h2>';
 	echo '<ul><li>Stability: ' . $stability . '</li><li>Disc Type: ' . $disc_type . '</li></ul>';
