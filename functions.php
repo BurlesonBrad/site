@@ -151,9 +151,10 @@ function woo_new_product_tab_content() {
 	global $post;
 	$stability = '';
 	$disc_type = '';
-	//if ( get_post_meta($post->ID, 'stability', true) ) {
-		$stability = '<li>Stability: ' . get_post_meta($post->ID, 'stability', true) . '</li>';
-	//}
+	$stability = get_the_terms($post->ID, 'stability');
+	if ( count($stability) > 0 ) {
+		$stability = '<li>Type: ' . str_replace('s', '', $stability[0]->name) . '</li>';
+	}
 	$disc_type = get_the_terms($post->ID, 'disc-type');
 	if ( count($disc_type) > 0 ) {
 		$disc_type = '<li>Type: ' . str_replace('s', '', $disc_type[0]->name) . '</li>';
