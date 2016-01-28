@@ -37,6 +37,7 @@ add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 
 function set_disc_flight_data() {
 	global $post;
+	global $product;
 	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' );
 	$discs = new WP_Query( $args );
 
@@ -54,6 +55,8 @@ function set_disc_flight_data() {
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
 
+		$stability = $product->get_attribute( 'pa_stability' );
+
 		if ( is_array($fr) ) {
 			foreach ($fr as $key => $val) {
 				$val = intval($val);
@@ -62,12 +65,27 @@ function set_disc_flight_data() {
 				$fr[$key] = $val;
 			}
 		}
+
+		wp_update_term( $stability[0]->term_id, 'pa_stability', array(
+			'name' => 
+		)
 		
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
 		$disc_turn = $fr["turn"];
 		$disc_fade = $fr["fade"];
 
+		$stability = intval($disc_turn) - intval($disc_fade);
+
+		if ( abs($stability) <= 2 ) {
+			$stability = 'Stable';
+		} elseif ( $stability > 2 ) {
+			$stability = 'Understable';
+		} elseif ( $stability < 2 ) {
+			$stability = 'Overstable';
+		}
+
+		update_post_meta( $post_id, 'pa_stability', $stability );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
 		update_post_meta( $post_id, 'glide', $disc_glide );
