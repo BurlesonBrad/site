@@ -126,7 +126,7 @@ $(document).ready(function() {
 			fade: $product.data("fade")
 		};
 		var typeLabel = "<sup>" + $discType.replace(/s$/, "").replace(/-/g, " ") + "</sup>";
-		if ( typeLabel === "mid range" ) { typeLabel = "mid-range" }
+		if ( typeLabel == "mid range" ) { typeLabel = "mid-range" }
 
 		$productTitle.append( typeLabel ).after( $statsContainer );
 		var $bubbles = {};
