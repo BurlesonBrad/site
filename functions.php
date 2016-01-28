@@ -108,6 +108,31 @@ return 4; // 4 products per row
 }
 add_filter('loop_shop_columns', 'loop_columns', 999);
 
+
+if ( is_product )
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+function woo_new_product_tab( $tabs ) {
+	
+	// Adds the new tab
+	$tabs['specs_tab'] = array(
+		'title' 	=> __( 'New Product Tab', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woo_new_product_tab_content'
+	);
+
+	return $tabs;
+
+}
+function woo_new_product_tab_content() {
+
+	// The new tab content
+	echo '<h2>Specs</h2>';
+	echo '<p>Here\'s your new product tab.</p>';
+	
+}
+
+
+
 // function woo_related_products_limit() {
 // 	global $product;
 	

@@ -145,16 +145,16 @@ get_header(); ?>
 							    }
 
 							    // Mid-ranges
-								echo '<div class="bag-section midranges"><h3>Mid-ranges</h3><div class="disc-area">';
+								echo '<div class="bag-section mid-ranges"><h3>Mid-ranges</h3><div class="disc-area">';
 								foreach ( $discs as $disc ):
-									if ( $disc['type'] === "midranges" ) {
+									if ( $disc['type'] === "mid-ranges" ) {
 										$mr_count++;
 										the_disc( $disc );
 							    	}
 							    endforeach;
 							    echo '</div></div>';
 							    if ( $mr_count === 0 ) {
-							    	echo '<style>.midranges{display:none;}</style>';
+							    	echo '<style>.mid-ranges{display:none;}</style>';
 							    }
 
 								// Putters
