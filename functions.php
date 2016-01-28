@@ -128,11 +128,12 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 
 function hs_add_specs_tab() {
 	global $post;
-	if ( wp_get_post_terms($post->ID, 'disc-type') ) {
+	if ( !is_wp_error( wp_get_post_terms($post->ID, 'disc-type') ) ) {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 	}
 }
-hs_add_specs_tab();
+add_action('init', 'hs_add_specs_tab');
+
 // global $post;
 // var_dump( wp_get_post_terms($post->ID, 'stability') );
 
