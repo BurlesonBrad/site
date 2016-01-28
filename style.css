@@ -1725,6 +1725,7 @@ button.single_add_to_cart_button:hover {
 
 .specs ul {
 	list-style: none;
+	margin-left: 0;
 }
 
 .specs li {
