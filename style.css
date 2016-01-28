@@ -1722,6 +1722,11 @@ button.single_add_to_cart_button:hover {
 	color: #fff;
 }
 
+.woocommerce-tabs ul.tabs li:after,
+.woocommerce-tabs ul.tabs li.active:after {
+	color: #fff;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;
