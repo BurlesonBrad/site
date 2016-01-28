@@ -133,8 +133,8 @@ function hs_add_specs_tab() {
 	}
 }
 hs_add_specs_tab();
-global $post;
-var_dump( wp_get_post_terms($post->ID, 'stability') );
+// global $post;
+// var_dump( wp_get_post_terms($post->ID, 'stability') );
 
 function woo_new_product_tab( $tabs ) {
 	
