@@ -149,8 +149,8 @@ function woo_new_product_tab( $tabs ) {
 function woo_new_product_tab_content() {
 
 	global $post;
-	$stability = get_post_meta($post-ID, 'stability', true);
-	$disc_type = get_post_meta($post-ID, 'disc-type', true);
+	$stability = wp_get_post_terms($post-ID, 'stability');
+	$disc_type = wp_get_post_terms($post-ID, 'disc-type');
 	// The new tab content
 	echo '<h2>Specs</h2>';
 	echo '<ul><li>Stability: ' . $stability . '</li><li>Disc Type: ' . $disc_type . '</li></ul>';
