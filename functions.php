@@ -65,10 +65,6 @@ function set_disc_flight_data() {
 				$fr[$key] = $val;
 			}
 		}
-
-		wp_update_term( $stability[0]->term_id, 'pa_stability', array(
-			'name' => 
-		)
 		
 		$disc_speed = $fr["speed"];
 		$disc_glide = $fr["glide"];
