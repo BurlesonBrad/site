@@ -140,7 +140,7 @@ function woo_new_product_tab( $tabs ) {
 	// Adds the new tab
 	$tabs['specs_tab'] = array(
 		'title' 	=> __( 'Specs', 'woocommerce' ),
-		'priority' 	=> 50,
+		'priority' 	=> 1,
 		'callback' 	=> 'woo_new_product_tab_content'
 	);
 
