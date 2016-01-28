@@ -1132,6 +1132,23 @@ body.home #content { padding-top: 0; }
 }
 
 
+/* CHECKOUT */
+#order_review_heading, #order_review {
+	border: 0 none;
+	background: #e0e0e0
+}
+
+#order_review {
+	border: 1px solid #d4d4d4;
+}
+
+h3#order_review_heading {
+    background: #555;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
 /* COLORS */
 .gradient-bg,
 #sb_instagram .sbi_follow_btn a {
