@@ -1719,6 +1719,7 @@ button.single_add_to_cart_button:hover {
 
 .woocommerce-tabs ul.tabs li.active a {
 	background-color: #00a0ea;
+	color: #fff;
 }
 
 @media screen and (min-width: 768px) {
