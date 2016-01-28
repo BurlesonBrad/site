@@ -364,7 +364,8 @@ body.home #content { padding-top: 0; }
 	margin: 0;
 }
 
-.hentry .entry-header h1 {
+.hentry .entry-header h1,
+#main > h1 {
 	border: 0 none;
     font-size: 4em;
     font-family: 'Viga';
