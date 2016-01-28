@@ -117,7 +117,7 @@ $(document).ready(function() {
 		var $inboundsID = $product.data("inbounds-id");
 		var $discType = $product.data("disc-type");
 		var $productTitle = $(".summary h1[itemprop='name']");
-		var $longDesc = $("#tab-specs");
+		var $longDesc = $("#tab-specs_tab");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
 		var stats = {
 			speed: $product.data("speed"),
