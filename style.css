@@ -1727,6 +1727,12 @@ button.single_add_to_cart_button:hover {
 	list-style: none;
 }
 
+.specs li {
+	font-weight: bold;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
 .specs li strong {
 	font-family: 'Viga';
 	font-size: 2em;
