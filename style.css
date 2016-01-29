@@ -992,11 +992,11 @@ body.home #content { padding-top: 0; }
 	}
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
 	.weekly-tip > img {
 		vertical-align: top;
 	}
-}
+}*/
 
 @media screen and (max-width: 480px) {
 	.weekly-tip-content {
