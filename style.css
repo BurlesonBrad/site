@@ -804,7 +804,8 @@ body.home #content { padding-top: 0; }
 		transform: translate3d(0,0,20px);
 	}
 
-	.disc-types-inner {
+	.disc-types-inner,
+	.backgroundsize .disc-types-inner {
 		width: 48em;
 		background: url("/wp-content/themes/storefront-child/images/shop-by-disc-type.png") no-repeat 50% 7%;
 	    background-size: contain;
