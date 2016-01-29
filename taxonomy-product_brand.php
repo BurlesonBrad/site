@@ -98,7 +98,7 @@ get_header( 'shop' ); ?>
 				        array(
 					        'taxonomy' 	=> 'disc-type',
 					        'field' 	=> 'slug',
-					        'terms' 	=> array( 'distance-drivers', 'fairway-drivers', 'midranges', 'putters' ),
+					        'terms' 	=> array( 'distance-drivers', 'fairway-drivers', 'mid-ranges', 'putters' ),
 					        'operator'	=> 'NOT IN',
 				        ),
 				        array(

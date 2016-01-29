@@ -1005,7 +1005,15 @@ body.home #content { padding-top: 0; }
 
 @media screen and (max-width: 480px) {
 	.weekly-tip-content {
-		width: 66%;
+		width: 100%;
+		float: left;
+		clear: both;
+	}
+
+	.weekly-tip > img {
+		width: 50%;
+	    display: block;
+	    margin: 0 auto 1em;
 	}
 }
 
