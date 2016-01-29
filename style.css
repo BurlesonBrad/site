@@ -198,10 +198,9 @@ ul#menu-main-menu > li:nth-child(2) > a {
 	position: absolute;
     top: 50%;
     right: 0;
-    margin-top: -1.94em;
-    line-height: 3em;
-    width: 100% !important;
-    height: auto !important;
+    margin-top: -18px;
+    line-height: 2.244;
+    width: 100%;
     text-align: center;
     text-indent: 0;
 }
@@ -270,10 +269,6 @@ button.menu-toggle::before {
 
 .site-description {
 	display: none !important;
-}
-
-.site-header-cart .cart-contents {
-	width: 3em;
 }
 
 @media screen and (max-width: 768px) {
