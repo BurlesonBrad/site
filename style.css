@@ -1159,6 +1159,16 @@ body.home #content { padding-top: 0; }
 		background: none;
 		margin-top: -2em;
 	}
+
+	.social-bar li#mc_embed_signup {
+		display: block;
+	    width: 100%;
+	    text-align: center;
+	}
+
+	.social-bar #mc_embed_signup form {
+		margin: 0 auto;
+	}
 }
 
 /*#mce-EMAIL::-webkit-input-placeholder,
