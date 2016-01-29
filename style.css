@@ -507,6 +507,13 @@ body.home #content { padding-top: 0; }
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.archive.tax-disc-type .page-title img {
+		height: auto;
+		width: 70%;
+	}
+}
+
 /* SLIDER */
 .wds_slider_0 > span > span {
 	width: 100.1% !important;
