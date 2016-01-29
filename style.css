@@ -1162,6 +1162,7 @@ body.home #content { padding-top: 0; }
 
 	.social-bar {
 		height: auto;
+		margin-bottom: 7em;
 	}
 
 	.social-bar li#mc_embed_signup {
