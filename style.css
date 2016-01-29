@@ -1641,6 +1641,7 @@ form.edit-bag-name {
 	.bag .disc {
 		margin-left: 0 !important;
 		margin-right: 10px;
+		margin-bottom: 10px;
 		-webkit-filter: brightness(100%);
 		filter: brightness(100%);
 	}
