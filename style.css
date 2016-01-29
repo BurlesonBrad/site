@@ -648,7 +648,7 @@ body.home #content { padding-top: 0; }
     top: -0.4em;
     left: -20px;
     z-index: -1;
-    text-shadow: 1px 1px 0px #ccc;
+    text-shadow: 1px 1px 0px #777;
 }
 
 .featured-disc-twitter h2 a {
