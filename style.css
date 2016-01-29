@@ -267,6 +267,10 @@ button.menu-toggle::before {
 	background-color: transparent;
 }
 
+.site-description {
+	display: none !important;
+}
+
 @media screen and (max-width: 768px) {
 	.site-header-cart .cart-contents {
 		top: 7px;
@@ -289,7 +293,7 @@ button.menu-toggle::before {
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
 	.woocommerce-active .site-header .main-navigation {
 		width: 70%;
 		margin-right: 1%;
@@ -343,6 +347,19 @@ button.menu-toggle::before {
 
 	ul#menu-main-menu li:nth-child(2) > a {
 		border-left: 1px solid #00aaf5;
+	}
+
+/*-*/
+	.primary-navigation {
+	    display: block;
+	}
+
+	.menu-toggle, .handheld-navigation, .main-navigation.toggled .handheld-navigation, .main-navigation.toggled div.menu {
+		display: none;
+	}
+
+	.handheld-navigation, .nav-menu, .main-navigation div.menu > ul:not(.nav-menu) {
+		display: none;
 	}
 	
 }
