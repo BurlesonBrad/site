@@ -47,6 +47,9 @@ $(document).ready(function() {
 				.parent().css({
 					"line-height": "7.1em"
 				});
+				$logo.css({
+					width: "6.4em"
+				});
 		}
 	}
 	customMasthead();
