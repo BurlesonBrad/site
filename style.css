@@ -1013,6 +1013,11 @@ body.home #content { padding-top: 0; }
 		text-align: center;
 	}
 
+	.weekly-tip-content h3 {
+		line-height: 0.9;
+		font-size: 3.8em;
+	}
+
 	.weekly-tip > img {
 		width: 50%;
 	    display: block;
