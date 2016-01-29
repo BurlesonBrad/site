@@ -646,17 +646,12 @@ body.home #content { padding-top: 0; }
 
 .featured-disc-twitter h2 span {
 	font-family: 'Montserrat';
-    opacity: 0.1;
-    font-size: 2em;
-    position: absolute;
-    top: -0.4em;
-    left: -20px;
-    z-index: -1;
-    text-shadow: 1px 1px 0px #333;
+    font-size: 1.1em;
+    color: #ff3c7c;
 }
 
 .featured-disc-twitter h2 a {
-	padding-left: 1em;
+	padding-left: 0;
 }
 
 #twitter-widget-0 {
@@ -738,10 +733,6 @@ body.home #content { padding-top: 0; }
 	#twitter-widget-0 {
 		margin: 0 auto;
    		display: block !important;
-	}
-
-	.featured-disc-twitter h2 {
-		text-align: center;
 	}
 }
 
