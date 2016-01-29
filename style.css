@@ -198,9 +198,9 @@ ul#menu-main-menu > li:nth-child(2) > a {
 	position: absolute;
     top: 50%;
     right: 0;
-    margin-top: -18px;
-    line-height: 2.244;
-    width: 100%;
+    margin-top: -2.1em;
+    width: 3em !important;
+    height: auto !important;
     text-align: center;
     text-indent: 0;
 }
