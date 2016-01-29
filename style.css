@@ -201,6 +201,7 @@ ul#menu-main-menu > li:nth-child(2) > a {
     margin-top: -2.25em;
     line-height: 3em;
     width: 100% !important;
+    height: auto !important;
     text-align: center;
     text-indent: 0;
 }
