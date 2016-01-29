@@ -38,6 +38,12 @@ $(document).ready(function() {
 				});
 		} else if ( 768 < $(window).width() < 1136 ) {
 			$menuHome.html($logo)
+				.css({
+					paddingTop: 0,
+				    paddingBottom: 0,
+				    "vertical-align": "middle",
+				    display: "inline-block"
+				})
 				.parent().css({
 					"line-height": "7.1em"
 				});
