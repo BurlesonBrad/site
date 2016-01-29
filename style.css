@@ -1176,6 +1176,12 @@ body.home #content { padding-top: 0; }
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.social-bar {
+		margin-top: 7em;
+	}
+}
+
 /*#mce-EMAIL::-webkit-input-placeholder,
 #mce-EMAIL:-moz-placeholder,
 #mce-EMAIL::-moz-placeholder,
