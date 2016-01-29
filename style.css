@@ -1670,7 +1670,7 @@ form.edit-bag-name {
 	margin-right: 4%;
 }
 
-@media screen and (min-width: 768px) 
+@media screen and (min-width: 768px) {
 	.single-product .summary {
 		width: 64%;
 	}
