@@ -954,6 +954,9 @@ body.home #content { padding-top: 0; }
 		width: 100%;
 		margin: 0 0 1em 0 !important;
 	}
+	.tired-of-shopping > img:first-child {
+		top: -0.6em;
+	}
 }
 
 
