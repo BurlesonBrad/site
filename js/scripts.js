@@ -22,9 +22,11 @@ $(document).ready(function() {
 			$("#woocommerce_product_search-2").prependTo($utilNav);
 			$(".header-widget-region").remove();
 		}
-		
-		if ( $(window).width() > 768 ) {
-			$menuHome.html("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />")
+
+		var $logo = $("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />");
+
+		if ( $(window).width() > 1136 ) {
+			$menuHome.html($logo)
 				.css({
 					paddingTop: 0,
 				    paddingBottom: 0,
@@ -33,6 +35,11 @@ $(document).ready(function() {
 				})
 				.parent().css({
 					"line-height": liHeight + "px"
+				});
+		} else if ( 768 < $(window).width() < 1136 ) {
+			$menuHome.html($logo)
+				.parent().css({
+					"line-height": "7.1em"
 				});
 		}
 	}
