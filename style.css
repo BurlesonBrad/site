@@ -1164,7 +1164,6 @@ body.home #content { padding-top: 0; }
 		content: " ";
 		clear: both;
 		height: 0;
-		width: 0;
 		visibility: hidden;
 		display: block;
 	}
