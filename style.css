@@ -1670,8 +1670,10 @@ form.edit-bag-name {
 	margin-right: 4%;
 }
 
-.single-product .summary {
-	width: 64%;
+@media screen and (min-width: 768px) 
+	.single-product .summary {
+		width: 64%;
+	}
 }
 
 .single-product .summary h2.brand {
