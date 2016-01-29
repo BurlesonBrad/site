@@ -288,7 +288,7 @@ button.menu-toggle::before {
 	}
 
 	.secondary-navigation ul.menu a {
-		padding: 1.2em 0.9em;
+		padding: 1.2em 0.9em !important;
 	}
 }
 
