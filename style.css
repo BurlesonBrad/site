@@ -1495,15 +1495,6 @@ form.edit-bag-name {
 	filter: brightness(100%);
 }
 
-@media screen and (max-width: 1136px) {
-	.bag .disc {
-		margin-left: 0 !important;
-		margin-right: 10px;
-		-webkit-filter: brightness(100%);
-		filter: brightness(100%);
-	}
-}
-
 .bag .disc:first-child {
 	margin-left: 0;
 }
@@ -1644,6 +1635,19 @@ form.edit-bag-name {
 
 .disc .remove-from-bag:hover {
 	opacity: 1;
+}
+
+@media screen and (max-width: 1136px) {
+	.bag .disc {
+		margin-left: 0 !important;
+		margin-right: 10px;
+		-webkit-filter: brightness(100%);
+		filter: brightness(100%);
+	}
+
+	.disc .remove-from-bag {
+		display: block;
+	}
 }
 
 /* SINGLE PRODUCT */
