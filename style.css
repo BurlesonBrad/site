@@ -367,6 +367,7 @@ button.menu-toggle::before {
 @media screen and (max-width: 999px) {
 	.primary-navigation {
 	    display: none;
+	}
 
 	.menu-toggle, .handheld-navigation, .main-navigation.toggled .handheld-navigation, .main-navigation.toggled div.menu {
 		display: block;
