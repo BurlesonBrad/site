@@ -364,6 +364,19 @@ button.menu-toggle::before {
 	
 }
 
+@media screen and (max-width: 999px) {
+	.primary-navigation {
+	    display: none;
+
+	.menu-toggle, .handheld-navigation, .main-navigation.toggled .handheld-navigation, .main-navigation.toggled div.menu {
+		display: block;
+	}
+
+	.handheld-navigation, .nav-menu, .main-navigation div.menu > ul:not(.nav-menu) {
+		display: block;
+	}
+}
+
 /* main content */
 .page-template-template-homepage #content > .col-full {
 	width: 100% !important;
