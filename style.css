@@ -1495,6 +1495,14 @@ form.edit-bag-name {
 	filter: brightness(100%);
 }
 
+@media screen and (max-width: 1136px) {
+	.bag .disc {
+		margin-left: 10px;
+		-webkit-filter: brightness(100%);
+		filter: brightness(100%);
+	}
+}
+
 .bag .disc:first-child {
 	margin-left: 0;
 }
