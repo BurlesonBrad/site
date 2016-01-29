@@ -1160,6 +1160,15 @@ body.home #content { padding-top: 0; }
 		margin-top: -2em;
 	}
 
+	.social-bar::after {
+		content: " ";
+		clear: both;
+		height: 0;
+		width: 0;
+		visibility: hidden;
+		display: block;
+	}
+
 	.social-bar li#mc_embed_signup {
 		display: block;
 	    width: 100%;
