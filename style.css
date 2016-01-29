@@ -1497,7 +1497,7 @@ form.edit-bag-name {
 
 @media screen and (max-width: 1136px) {
 	.bag .disc {
-		margin-left: 0;
+		margin-left: 0 !important;
 		margin-right: 10px;
 		-webkit-filter: brightness(100%);
 		filter: brightness(100%);
