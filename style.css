@@ -1174,6 +1174,7 @@ body.home #content { padding-top: 0; }
 		display: block;
 	    width: 100%;
 	    text-align: center;
+	    margin-top: -1em;
 	}
 
 	.social-bar #mc_embed_signup form {
