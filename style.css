@@ -424,6 +424,7 @@ body.home #content { padding-top: 0; }
 }
 .archive.tax-product_brand .page-title,
 .archive.tax-disc-type .page-title {
+	box-sizing: content-box;
 	text-align: center;
 	height: 9em;
 	line-height: 9em;
