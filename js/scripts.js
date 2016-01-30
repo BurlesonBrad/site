@@ -210,7 +210,9 @@ $(document).ready(function() {
 		});
 	}
 
-	textRespond(".flexslider .caption");
+	$(window).load(function() {
+		textRespond(".flexslider .caption");
+	});
 
 
 
