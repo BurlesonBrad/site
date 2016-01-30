@@ -193,6 +193,7 @@ $(document).ready(function() {
 	$(window).resize( videoAspectRatio );
 
 	function textRespond(t) {
+		console.log("respond ran");
 		var $t = $(t);
 		var sizeI = $t.css("font-size");
 		function setSize(text) {
