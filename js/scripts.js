@@ -192,6 +192,27 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
+	function textRespond(t) {
+		var $t = $(t);
+		var sizeI = $t.css("font-size");
+		function setSize(text) {
+			var winWidth = $(window).width();
+			var c = (winWidth/1800) < 1 ? winWidth/1800 : 1;
+			var sizeF = sizeI * c;
+			text.css({
+				"font-size": sizeF + "px"
+			})
+		}
+		setSize($t);
+		$(window).resize(function() {
+			setSize($t);
+		});
+	}
+
+	textRespond(".flexslider .caption");
+
+
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
