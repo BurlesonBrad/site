@@ -202,7 +202,7 @@ $(document).ready(function() {
 			var sizeF = sizeI * c;
 			text.css({
 				"font-size": sizeF + "px"
-			})
+			});
 		}
 		setSize($t);
 		$(window).resize(function() {
