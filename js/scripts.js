@@ -224,7 +224,7 @@ $(document).ready(function() {
 				prevSectionsHeight += $(this).outerHeight(true);
 			});
 			$(window).scroll(function() {
-				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight) ) {
+				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight - 200) ) {
 					console.log("success " + index);
 				}
 			});
