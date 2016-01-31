@@ -179,6 +179,8 @@ get_header(); ?>
 							    if ( $bag_exists ): ?>
 							    </div>
 
+							    <button class="add-more-discs">Add more</button>
+
 							<?php else: ?>
 								</div>
 								
