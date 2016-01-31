@@ -216,7 +216,7 @@ $(document).ready(function() {
 		var bannerHeight = $("#content > .metaslider").outerHeight(true);
 		var mainPadding = parseInt( $("main").css("padding-top"), 10 );
 		var winHeight = $(window).height();
-		var heightBefore = headerHeight + bannerHeight + mainPadding - winHeight;
+		var heightBefore = headerHeight + bannerHeight + mainPadding;
 
 		$section.each(function(index) {
 			var prevSectionsHeight = 0;
@@ -224,7 +224,7 @@ $(document).ready(function() {
 				prevSectionsHeight += $(this).outerHeight(true);
 			});
 			$(window).scroll(function() {
-				if ( $(window).scrollTop() > heightBefore + prevSectionsHeight ) {
+				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight) ) {
 					console.log("success " + index);
 				}
 			});
