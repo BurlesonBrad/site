@@ -195,9 +195,7 @@ $(document).ready(function() {
 		function setSize(text) {
 			var winWidth = $(window).width();
 			var c = winWidth > 960 && winWidth < 1600 ? winWidth/1600 : 1;
-			console.log(c);
 			var sizeF = (sizeI * c);
-			console.log(sizeF);
 			text.css({
 				"font-size": sizeF + "px"
 			});
@@ -208,7 +206,7 @@ $(document).ready(function() {
 		});
 	}
 	$(window).load(function() {
-		responsiveText(".home .metaslider .caption-wrap");
+		responsiveText(".metaslider .caption-wrap");
 	});
 
 	function feauxLazyLoad( section ) {
