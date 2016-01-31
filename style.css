@@ -573,7 +573,7 @@ body.home #content { padding-top: 0; }
 
 	font-family: 'Viga';
     text-transform: none;
-    font-size: 6.7em;
+    font-size: 1em;
 }
 
 @media screen and (max-width: 1136px) {
