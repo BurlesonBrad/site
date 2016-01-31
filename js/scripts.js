@@ -215,6 +215,7 @@ $(document).ready(function() {
 		var headerHeight = $("#masthead").outerHeight(true);
 		var bannerHeight = $("#content > .metaslider").outerHeight(true);
 		var mainPadding = parseInt( $("main").css("padding-top"), 10 );
+		var winHeight = $(window).height();
 		var heightBefore = headerHeight + bannerHeight + mainPadding;
 
 		$section.each(function(index) {
