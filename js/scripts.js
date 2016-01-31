@@ -201,10 +201,11 @@ $(document).ready(function() {
 			});
 		}
 		setSize($t);
+		$(window).resize(function() {
+			setSize($t);
+		});
 	}
-	$(window).resize(function() {
-		responsiveText(".metaslider .caption-wrap");
-	});
+	responsiveText(".metaslider .caption-wrap");
 	$(window).load(".metaslider .caption-wrap");
 
 	function feauxLazyLoad( section ) {
