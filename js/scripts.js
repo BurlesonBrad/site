@@ -211,6 +211,30 @@ $(document).ready(function() {
 	responsiveText(".flexslider .caption");
 
 
+	function feauxLazyLoad( section ) {
+		if ( !$("body").hasClass("home") ) { return; }
+
+		var $section = $(section);
+		var headerHeight = $("#masthead").outerHeight(true);
+		var bannerHeight = $("#content > .metaslider").outerHeight(true);
+		var mainPadding = parseInt( $("main").css("padding-top"), 10 );
+		var heightBefore = headerHeight + bannerHeight + mainPadding;
+
+		$section.each(function(index) {
+			var prevSectionsHeight = 0;
+			$(this).prevAll("section").each(function() {
+				prevSectionsHeight += $(this).outerHeight(true);
+			});
+			$(window).scroll(function() {
+				if ( $(window).scrollTop() > heightBefore + prevSectionsHeight ) {
+					alert("success!");
+				}
+			});
+		});
+
+	}
+	feauxLazyLoad("section");
+
 
 
 	// function featuredVidTitle() {
