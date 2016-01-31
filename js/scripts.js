@@ -62,7 +62,7 @@ $(document).ready(function() {
 			$captionWrap.delay(1000).fadeIn(600);
 		}
 		$captionWrap.css({
-			"line-height": (height-40) + "px !important"
+			"line-height": (height-40) + "px"
 		});
 	}
 	vAlignSliderCaption();
