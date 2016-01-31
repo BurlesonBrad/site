@@ -225,7 +225,7 @@ $(document).ready(function() {
 			});
 			$(window).scroll(function() {
 				if ( $(window).scrollTop() > heightBefore + prevSectionsHeight ) {
-					console.log("success");
+					console.log("success " + index);
 				}
 			});
 		});
