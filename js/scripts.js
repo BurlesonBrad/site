@@ -189,28 +189,28 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
-	function responsiveText(t) {
-		var $t = $(t);
-		var sizeI = parseInt( $t.css("font-size"), 10 );
-		function setSize(text) {
-			var winWidth = $(window).width();
-			var c = winWidth > 1000 && winWidth < 1600 ? winWidth/1280 : 1;
-			console.log(c);
-			var sizeF = (sizeI * c);
-			console.log(sizeF);
-			text.css({
-				"font-size": sizeF + "px"
-			});
-		}
-		setSize($t);
-		$(window).resize(function() {
-			setSize($t);
-		});
-	}
-	responsiveText(".metaslider .caption-wrap");
-	$(window).load(function() {
-		responsiveText(".metaslider .caption-wrap");
-	});
+	// function responsiveText(t) {
+	// 	var $t = $(t);
+	// 	var sizeI = parseInt( $t.css("font-size"), 10 );
+	// 	function setSize(text) {
+	// 		var winWidth = $(window).width();
+	// 		var c = winWidth > 1000 && winWidth < 1600 ? winWidth/1280 : 1;
+	// 		console.log(c);
+	// 		var sizeF = (sizeI * c);
+	// 		console.log(sizeF);
+	// 		text.css({
+	// 			"font-size": sizeF + "px"
+	// 		});
+	// 	}
+	// 	setSize($t);
+	// 	$(window).resize(function() {
+	// 		setSize($t);
+	// 	});
+	// }
+	// responsiveText(".metaslider .caption-wrap");
+	// $(window).load(function() {
+	// 	responsiveText(".metaslider .caption-wrap");
+	// });
 
 	function feauxLazyLoad( section ) {
 		if ( !$("body").hasClass("home") ) { return; }
