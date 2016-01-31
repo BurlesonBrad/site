@@ -206,7 +206,9 @@ $(document).ready(function() {
 		});
 	}
 	responsiveText(".metaslider .caption-wrap");
-	$(window).load(".metaslider .caption-wrap");
+	$(window).load(function() {
+		responsiveText(".metaslider .caption-wrap");
+	});
 
 	function feauxLazyLoad( section ) {
 		if ( !$("body").hasClass("home") ) { return; }
