@@ -1,15 +1,15 @@
 <?php
 
-if ( $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['byb']) ) {
-	if ( is_user_logged_in() ) {
-		$user = wp_get_current_user();
-		$user_id = $user->ID;
-		echo get_user_meta($user_id, 'byb', true);
-	} elseif ( $_COOKIE['byb'] ) {
-		echo $_COOKIE['byb'];
-	}
-	return;
-}
+// if ( $_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['byb']) ) {
+// 	if ( is_user_logged_in() ) {
+// 		$user = wp_get_current_user();
+// 		$user_id = $user->ID;
+// 		echo get_user_meta($user_id, 'byb', true);
+// 	} elseif ( $_COOKIE['byb'] ) {
+// 		echo $_COOKIE['byb'];
+// 	}
+// 	return;
+// }
 
 /**
  * The template for displaying all pages.
