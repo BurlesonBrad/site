@@ -197,7 +197,7 @@ $(document).ready(function() {
 		var sizeI = $t.css("font-size");
 		function setSize(text) {
 			var winWidth = $(window).width();
-			console.log( winWidth );
+			console.log( winWidth/1800 );
 			var c = (winWidth/1800) < 1 ? winWidth/1800 : 1;
 			var sizeF = sizeI * c;
 			text.css({
