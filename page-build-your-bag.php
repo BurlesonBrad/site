@@ -178,14 +178,15 @@ get_header(); ?>
 
 							    if ( $bag_exists ): ?>
 							    </div>
-							    <h2 class="handwritten blue centered"><?php echo get_field( 'bag_initial_recs_title', get_the_ID() ); ?></h2>
-								<?php echo do_shortcode('[product_category category="recommended-for-bag"]'); ?>
+							    
+							    <h2 class="handwritten blue centered"><?php echo get_field( 'bag_featured_recs_title', get_the_ID() ); ?></h2>
+								<?php echo do_shortcode('[product_category category="featured-products" per_page="8" columns="4"]'); ?>
 
 							<?php else: ?>
-									</div>
-									<h2 class="handwritten blue centered"><?php echo get_field( 'bag_featured_recs_title', get_the_ID() ); ?></h2>
-								<?php echo do_shortcode('[product_category category="featured-products" per_page="8" columns="4"]');
-
+								</div>
+								
+								<h2 class="handwritten blue centered"><?php echo get_field( 'bag_initial_recs_title', get_the_ID() ); ?></h2>
+								<?php echo do_shortcode('[product_category category="recommended-for-bag"]');
 								endif;
 
 							endforeach;
