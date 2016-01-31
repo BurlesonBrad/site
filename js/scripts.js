@@ -193,14 +193,13 @@ $(document).ready(function() {
 	$(window).resize( videoAspectRatio );
 
 	function textRespond(t) {
-		var sizeI = $(t).css("font-size");
+		var $t = $(t);
+		var sizeI = $t.css("font-size");
 		function setSize(text) {
-			var $text = $(text);
-			console.log("setSize ran");
 			var winWidth = $(window).width();
 			var c = (winWidth/1800) < 1 ? winWidth/1800 : 1;
 			var sizeF = sizeI * c;
-			$text.css({
+			text.css({
 				"font-size": sizeF + "px"
 			});
 		}
