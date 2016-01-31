@@ -1261,10 +1261,10 @@ body.home #content { padding-top: 0; }
 /* CHECKOUT */
 #order_review_heading, #order_review {
 	border: 0 none;
-	background: #e0e0e0
 }
 
 #order_review {
+	background: #fff;
 	border: 1px solid #fafafa;
 }
 
