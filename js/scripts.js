@@ -58,15 +58,15 @@ $(document).ready(function() {
 	function vAlignSliderCaption() {
 		var $captionWrap = $(".metaslider .caption-wrap");
 		var height = $captionWrap.height();
-		if ( !$captionWrap.is(":visible") ) {
-			$captionWrap.delay(1000).fadeIn(600);
-		}
 		$captionWrap.css({
 			"line-height": (height-40) + "px"
 		});
+		if ( !$captionWrap.is(":visible") ) {
+			$captionWrap.delay(1000).fadeIn(600);
+		}
 	}
 	vAlignSliderCaption();
-	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
+	$(window).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
 		var $cartItems = ( $("#masthead").data("cart-items") <= 3 || $("#masthead").data("cart-items") === 'empty' ) ? $("#masthead").data("cart-items") : 3;
