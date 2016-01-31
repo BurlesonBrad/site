@@ -67,7 +67,7 @@ $(document).ready(function() {
 		responsiveText($captionWrap);
 	}
 	vAlignSliderCaption();
-	$(window).resize(vAlignSliderCaption);
+	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
 
 	function dynamicBasket(add) {
 		var $cartItems = ( $("#masthead").data("cart-items") <= 3 || $("#masthead").data("cart-items") === 'empty' ) ? $("#masthead").data("cart-items") : 3;
