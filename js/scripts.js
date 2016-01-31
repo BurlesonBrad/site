@@ -62,7 +62,7 @@ $(document).ready(function() {
 			$captionWrap.delay(1000).fadeIn(600);
 		}
 		$captionWrap.css({
-			"line-height": (height-40) + "px"
+			"line-height": (height-40) + "px !important"
 		});
 	}
 	vAlignSliderCaption();
@@ -192,14 +192,13 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
-	function textRespond(t) {
+	function responsiveText(t) {
 		var $t = $(t);
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
 			var winWidth = $(window).width();
 			var c = (winWidth/1600) < 1 ? winWidth/1600 : 1;
 			var sizeF = (sizeI * c) > 52 ? (sizeI * c) : 52;
-
 			text.css({
 				"font-size": sizeF + "px"
 			});
@@ -209,10 +208,7 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-
-	$(window).load(function() {
-		textRespond(".flexslider .caption");
-	});
+	responsiveText(".flexslider .caption");
 
 
 
