@@ -190,7 +190,6 @@ $(document).ready(function() {
 	$(window).resize( videoAspectRatio );
 
 	function responsiveText(t) {
-		if ( !$("body").hasClass("home") ) { return; }
 		var $t = $(t);
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
@@ -209,7 +208,7 @@ $(document).ready(function() {
 		});
 	}
 	$(window).load(function() {
-		responsiveText(".metaslider .caption-wrap");
+		responsiveText(".home .metaslider .caption-wrap");
 	});
 
 	function feauxLazyLoad( section ) {
