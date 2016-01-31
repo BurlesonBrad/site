@@ -207,7 +207,6 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-//	responsiveText(".metaslider .caption-wrap");
 	$(window).load(function() {
 		responsiveText(".metaslider .caption-wrap");
 	});
