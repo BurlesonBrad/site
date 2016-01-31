@@ -338,6 +338,7 @@ button.menu-toggle::before {
 
 	ul#menu-main-menu li a {
 		border-right: 1px solid #00aaf5;
+		cursor: default;
 	}
 
 	ul#menu-main-menu li a:hover {
