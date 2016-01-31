@@ -61,8 +61,6 @@ $(document).ready(function() {
 		$captionWrap.css({
 			"line-height": (height-40) + "px"
 		});
-
-		responsiveText( $captionWrap.find(".caption") );
 	}
 	vAlignSliderCaption();
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
@@ -207,7 +205,8 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-
+	responsiveText(".metaslider .caption");
+	$(window).load(".metaslider .caption");
 
 	function feauxLazyLoad( section ) {
 		if ( !$("body").hasClass("home") ) { return; }
