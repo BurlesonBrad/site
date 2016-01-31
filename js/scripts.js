@@ -205,8 +205,8 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-	responsiveText(".metaslider .caption");
-	$(window).load(".metaslider .caption");
+	responsiveText(".metaslider .caption-wrap");
+	$(window).load(".metaslider .caption-wrap");
 
 	function feauxLazyLoad( section ) {
 		if ( !$("body").hasClass("home") ) { return; }
