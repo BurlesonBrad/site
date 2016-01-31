@@ -196,6 +196,7 @@ $(document).ready(function() {
 			var winWidth = $(window).width();
 			var c = (winWidth/1600) < 1 ? winWidth/1600 : 1;
 			var sizeF = (sizeI * c) > 52 ? (sizeI * c) : 52;
+			console.log(sizeF);
 			text.css({
 				"font-size": sizeF + "px"
 			});
@@ -203,7 +204,6 @@ $(document).ready(function() {
 		setSize($t);
 		$(window).resize(function() {
 			setSize($t);
-			console.log("ran");
 		});
 	}
 	responsiveText(".metaslider .caption-wrap");
