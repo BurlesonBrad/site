@@ -64,6 +64,7 @@ $(document).ready(function() {
 		if ( !$captionWrap.is(":visible") ) {
 			$captionWrap.delay(1000).fadeIn(600);
 		}
+		responsiveText($captionWrap);
 	}
 	vAlignSliderCaption();
 	$(window).resize(vAlignSliderCaption);
@@ -208,7 +209,6 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-	responsiveText(".flexslider .caption");
 
 
 	function feauxLazyLoad( section ) {
