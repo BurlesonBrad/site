@@ -203,6 +203,7 @@ $(document).ready(function() {
 		setSize($t);
 		$(window).resize(function() {
 			setSize($t);
+			console.log("ran");
 		});
 	}
 	responsiveText(".metaslider .caption-wrap");
