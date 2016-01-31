@@ -487,8 +487,7 @@ body.home #content { padding-top: 0; }
 .hs-brand-description {
 	background: #00b0ff;
     padding: 3em 4em;
-    margin-top: 0.5em;
-    margin-bottom: 1.8em;
+    margin: 1.6em 0;
     border-left: 8px solid #00a0f7;
     border-radius: 5px 2px 2px 5px;
     box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
