@@ -224,7 +224,7 @@ $(document).ready(function() {
 		$section.each(function(index) {
 			var prevSectionsHeight = 0;
 			var $this = $(this);
-			if ( index > 1 ) {
+			if ( index > 0 ) {
 				$this.css({
 					opacity: 0
 				});
