@@ -200,6 +200,7 @@ $(document).ready(function() {
 			var winWidth = $(window).width();
 			var c = (winWidth/1800) < 1 ? winWidth/1800 : 1;
 			var sizeF = sizeI * c;
+			console.log(sizeF);
 			text.css({
 				"font-size": sizeF + "px"
 			});
