@@ -198,7 +198,7 @@ $(document).ready(function() {
 		console.log( sizeI );
 		function setSize(text) {
 			var winWidth = $(window).width();
-			var c = (winWidth/1800) < 1 ? winWidth/1800 : 1;
+			var c = ((winWidth/1800) < 1) ? (winWidth/1800) : 1;
 			var sizeF = sizeI * c;
 			console.log(sizeF);
 			text.css({
