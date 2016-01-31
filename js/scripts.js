@@ -196,7 +196,7 @@ $(document).ready(function() {
 			var winWidth = $(window).width();
 			var c = winWidth > 1000 && winWidth < 1600 ? winWidth/1280 : 1;
 			console.log(c);
-			var sizeF = (sizeI * c) > 52 ? (sizeI * c) : 52;
+			var sizeF = (sizeI * c);
 			console.log(sizeF);
 			text.css({
 				"font-size": sizeF + "px"
