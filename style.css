@@ -430,7 +430,6 @@ body.home #content { padding-top: 0; }
 	text-align: center;
 	height: 9em;
 	line-height: 9em;
-	border-bottom: 3em solid #00b0ff;
 	margin: 0;
 	padding: 0;
 	background: transparent no-repeat 50% 50%;
@@ -446,6 +445,7 @@ body.home #content { padding-top: 0; }
 .archive.tax-disc-type .page-title img {
 	height: 2.8em;
 	width: auto;
+	border-bottom: 3em solid #00b0ff;
 }
 
 /*body.archive:not(.tax-product_brand) .page-title {
