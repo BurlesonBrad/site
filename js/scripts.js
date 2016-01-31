@@ -194,7 +194,7 @@ $(document).ready(function() {
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
 			var winWidth = $(window).width();
-			var c = winWidth > 1000 && winWidth < 1600 ? winWidth/1280 : 1;
+			var c = winWidth > 960 && winWidth < 1600 ? winWidth/1600 : 1;
 			console.log(c);
 			var sizeF = (sizeI * c);
 			console.log(sizeF);
@@ -207,7 +207,7 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-	responsiveText(".metaslider .caption-wrap");
+//	responsiveText(".metaslider .caption-wrap");
 	$(window).load(function() {
 		responsiveText(".metaslider .caption-wrap");
 	});
