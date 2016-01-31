@@ -192,7 +192,7 @@ $(document).ready(function() {
 	function responsiveText(t) {
 		var $t = $(t);
 		function setSize(text) {
-			var sizeI = parseInt( $t.css("font-size"), 10 );
+			var sizeI = parseInt( text.css("font-size"), 10 );
 			var winWidth = $(window).width();
 			var c = (winWidth/1600) < 1 ? winWidth/1600 : 1;
 			var sizeF = (sizeI * c) > 52 ? (sizeI * c) : 52;
