@@ -187,13 +187,14 @@ get_header(); ?>
 								
 								<h2 class="handwritten blue centered"><?php echo get_field( 'bag_initial_recs_title', get_the_ID() ); ?></h2>
 								<?php echo do_shortcode('[product_category category="recommended-for-bag"]');
+
 								endif;
 
 							endforeach;
 						} else {
 							echo '<div class="add-first-bag"><h3>Welcome to your bag.</h3><p>Use it to keep track of the discs you want, the discs you have, or just use it for fun. When you see a disc you want to add, just click "add to bag." <strong>To start your bag, add your first disc from anywhere on the site.</strong></p></div>';
 						?>
-						<h2 class="handwritten blue centered"><?php echo get_field( 'bag_initial_recs_title', get_the_ID() ); ?></h2>
+						<h2 class="handwritten blue"><?php echo get_field( 'bag_initial_recs_title', get_the_ID() ); ?></h2>
 						<?php echo do_shortcode('[product_category category="recommended-for-bag"]');
 
 						}
