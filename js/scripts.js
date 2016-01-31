@@ -61,10 +61,8 @@ $(document).ready(function() {
 		$captionWrap.css({
 			"line-height": (height-40) + "px"
 		});
-		if ( !$captionWrap.is(":visible") ) {
-			$captionWrap.delay(1000).fadeIn(600);
-		}
-		responsiveText($captionWrap);
+
+		responsiveText( $captionWrap.find(".caption") );
 	}
 	vAlignSliderCaption();
 	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
