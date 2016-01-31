@@ -97,7 +97,7 @@ get_header(); ?>
 							}
 
 							$bag_exists = false;
-							if ( count($bag) >= 1 ) {
+							if ( count($bags) >= 1 ) {
 								$bag_exists = true;
 							}
 
@@ -194,7 +194,7 @@ get_header(); ?>
 						?>
 						<h2 class="handwritten blue centered"><?php echo get_field( 'bag_initial_recs_title', get_the_ID() ); ?></h2>
 						<?php echo do_shortcode('[product_category category="recommended-for-bag"]');
-							
+
 						}
 					}
 					getDiscBags($byb);
