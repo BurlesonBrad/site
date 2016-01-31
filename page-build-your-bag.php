@@ -179,7 +179,7 @@ get_header(); ?>
 							    if ( $bag_exists ): ?>
 							    </div>
 
-							    <button class="add-more-discs">Add more</button>
+							    <a href="/shop"><button class="add-more-discs">Add more</button></a>
 
 							<?php else: ?>
 								</div>
