@@ -198,8 +198,8 @@ $(document).ready(function() {
 		function setSize(text) {
 			var winWidth = $(window).width();
 			var c = (winWidth/1600) < 1 ? winWidth/1600 : 1;
-			console.log( sizeI );
-			var sizeF = sizeI * c;
+			var sizeF = (sizeI * c) > 52 ? (sizeI * c) : 52;
+
 			text.css({
 				"font-size": sizeF + "px"
 			});
