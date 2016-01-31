@@ -194,8 +194,8 @@ $(document).ready(function() {
 		function setSize(text) {
 			var sizeI = parseInt( text.css("font-size"), 10 );
 			var winWidth = $(window).width();
-			var c = winWidth < 1600 ? winWidth/1600+0.5 : 1;
-			console.log( sizeI * c );
+			var c = winWidth < 1600 ? winWidth/1600 : 1;
+
 			var sizeF = (sizeI * c) > 52 ? (sizeI * c) : 52;
 			console.log(sizeF);
 			text.css({
