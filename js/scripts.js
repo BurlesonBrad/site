@@ -220,12 +220,20 @@ $(document).ready(function() {
 
 		$section.each(function(index) {
 			var prevSectionsHeight = 0;
-			$(this).prevAll("section").each(function() {
+			var $this = $(this);
+			if ( index > 1 ) {
+				$this.css({
+					opacity: 0
+				});
+			}
+			$this.prevAll("section").each(function() {
 				prevSectionsHeight += $(this).outerHeight(true);
 			});
 			$(window).scroll(function() {
-				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 100) ) {
-					console.log("success " + index);
+				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 200) ) {
+					$this.animate({
+						opacity: 1
+					}, 500);
 				}
 			});
 		});
