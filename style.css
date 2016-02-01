@@ -444,12 +444,16 @@ body.home #content { padding-top: 0; }
 }
 
 .archive.tax-disc-type .page-title {
-	border-bottom: 3em solid #555;
+	border-bottom: 0;
 }
 
 .archive.tax-disc-type .page-title img {
 	height: 2.8em;
 	width: auto;
+}
+
+.archive.tax-disc-type #secondary {
+	margin-top: -2.6em;
 }
 
 /*body.archive:not(.tax-product_brand) .page-title {
