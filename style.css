@@ -506,6 +506,17 @@ body.home #content { padding-top: 0; }
 	line-height: 3.2em;
 }
 
+
+.meta-slider .noUi-handle {
+	border: 0 none;
+    background: #ff3c7c;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.noUi-handle:after, .noUi-handle:before {
+	background: #de2964;
+}
+
 /*body.archive:not(.tax-product_brand) .page-title {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
