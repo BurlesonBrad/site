@@ -452,6 +452,9 @@ body.home #content { padding-top: 0; }
 	width: auto;
 }
 
+.archive.tax-disc-type #primary {
+	margin-top: -2.8em;
+}
 .archive.tax-disc-type #secondary {
 	margin-top: -2.6em;
 }
