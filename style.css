@@ -499,6 +499,7 @@ body.home #content { padding-top: 0; }
 	background-color: #fff !important;
 	border-color: #fff !important;
 	color: #555;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
 /*body.archive:not(.tax-product_brand) .page-title {
