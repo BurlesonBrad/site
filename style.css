@@ -630,8 +630,8 @@ body.home #content { padding-top: 0; }
 
 @media screen and (min-width: 768px) {
 	.tax-product_brand .site-main ul.products li.product {
-	    width: 21%;
-	    margin-right: 5%;
+	    width: 19%;
+	    margin-right: 7%;
 	}
 
 	.left-sidebar .content-area {
