@@ -506,6 +506,9 @@ body.home #content { padding-top: 0; }
 	line-height: 3.2em;
 }
 
+.searchandfilter .meta-slider {
+	max-width: 100%;
+}
 
 .searchandfilter .noUi-handle {
 	border: 0 none;
