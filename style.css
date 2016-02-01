@@ -502,6 +502,10 @@ body.home #content { padding-top: 0; }
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
+.storefront-sorting .woocommerce-result-count {
+	line-height: 3.2em;
+}
+
 /*body.archive:not(.tax-product_brand) .page-title {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
