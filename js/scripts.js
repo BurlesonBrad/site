@@ -235,9 +235,9 @@ $(document).ready(function() {
 			});
 			FFLinit($this);
 
-			function FFLinit(this) {
+			function FFLinit(t) {
 				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 200) ) {
-					this.animate({
+					t.animate({
 						opacity: 1
 					}, 500);
 				}
