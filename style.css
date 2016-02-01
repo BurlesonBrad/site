@@ -496,7 +496,7 @@ body.home #content { padding-top: 0; }
 
 
 .storefront-sorting select {
-	background-color: #555;
+	background-color: #555 !important;
 	color: #fff;
 }
 
