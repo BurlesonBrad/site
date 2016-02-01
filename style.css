@@ -513,6 +513,15 @@ body.home #content { padding-top: 0; }
 	line-height: 3.2em;
 }
 
+.searchandfilter li::after {
+	content: " ";
+	display: block;
+	clear: both;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
 .searchandfilter .meta-slider {
 	max-width: 100%;
 }
