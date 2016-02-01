@@ -526,6 +526,10 @@ body.home #content { padding-top: 0; }
 	max-width: 86%;
 }
 
+.sf-meta-range-slider label input {
+	background-color: #fff;
+}
+
 .searchandfilter .noUi-handle {
 	border: 0 none;
     background: #ff3c7c;
