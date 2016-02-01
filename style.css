@@ -553,7 +553,7 @@ body.home #content { padding-top: 0; }
 	display: none;
 }
 
-.search-filter-reset {
+.sf-field-reset .filter-icon + .search-filter-reset {
 	float: left;
 }
 
