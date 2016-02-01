@@ -522,6 +522,7 @@ body.home #content { padding-top: 0; }
 
 .searchandfilter .noUi-target.noUi-background {
 	border: none;
+	margin-left: 1.6em;
 }
 
 .searchandfilter .noUi-origin.noUi-background {
