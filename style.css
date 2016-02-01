@@ -473,7 +473,7 @@ body.home #content { padding-top: 0; }
 	margin-top: 0.5em;
 }
 
-.archive.tax-disc-type #search_filter_register_widget-3 h3 {
+#search_filter_register_widget-3 h3 {
 	border-bottom: 0;
 	position: relative;
 	z-index: 10;
@@ -486,7 +486,7 @@ body.home #content { padding-top: 0; }
 	background-color: #00b0ff;
 }
 
-.archive.tax-disc-type .storefront-sorting:first-child {
+.storefront-sorting:first-child {
 	position: relative;
 	z-index: 10;
 	text-transform: uppercase;
