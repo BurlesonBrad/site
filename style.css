@@ -485,6 +485,7 @@ body.home #content { padding-top: 0; }
 	padding: 1.3em 0;
 	background-color: #fff;
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+	border-radius: 3px;
 }
 
 .archive.tax-disc-type #search_filter_register_widget-3 h3 {
