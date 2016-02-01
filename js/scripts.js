@@ -247,6 +247,16 @@ $(document).ready(function() {
 	feauxLazyLoad("section");
 
 
+	function filterIcons() {
+		$("form.searchandfilter > ul > li").each(function() {
+			var $this = $(this),
+				fieldName = $this.data("sf-field-name");
+
+			$this.prepend("<img class='filter-icon' alt='" + fieldName + "' src='/wp-content/themes/storefront-child/images/" + fieldName + "-icon.png' />");
+	}
+	filterIcons();
+
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
