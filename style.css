@@ -459,6 +459,13 @@ body.home #content { padding-top: 0; }
 	margin-top: -2.6em;
 }
 
+.archive.tax-disc-type #search_filter_register_widget-3 h3 {
+	border-bottom: 0;
+	
+	font-family: 'Rock Salt';
+
+}
+
 /*body.archive:not(.tax-product_brand) .page-title {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
