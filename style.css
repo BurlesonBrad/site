@@ -545,8 +545,8 @@ body.home #content { padding-top: 0; }
 	width: 19%;
 	margin-right: 4%;
 }
-.filter-icon + div {
-	float: left;
+.filter-icon + * {
+	float: right;
 	width: 77%;
 	position: relative;
     top: 1.3em;
