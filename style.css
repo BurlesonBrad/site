@@ -590,6 +590,15 @@ body.home #content { padding-top: 0; }
 	    width: 22%;
 	    margin-right: 4%;
 	}
+
+	.left-sidebar .content-area {
+		width: 68%;
+	}
+
+	.left-sidebar .widget-area {
+		width: 29%;
+		margin-right: 3%;
+	}
 }
 
 @media screen and (max-width: 767px) {
