@@ -253,6 +253,7 @@ $(document).ready(function() {
 				fieldName = $this.data("sf-field-name");
 
 			$this.prepend("<img class='filter-icon' alt='" + fieldName + "' src='/wp-content/themes/storefront-child/images/" + fieldName + "-icon.png' />");
+		});
 	}
 	filterIcons();
 
