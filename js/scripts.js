@@ -231,12 +231,17 @@ $(document).ready(function() {
 				prevSectionsHeight += $(this).outerHeight(true);
 			});
 			$(window).scroll(function() {
+				FFLinit();
+			});
+			FFLinit();
+
+			function FFLinit() {
 				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 200) ) {
 					$this.animate({
 						opacity: 1
 					}, 500);
 				}
-			});
+			}
 		});
 	}
 	feauxLazyLoad("section");
