@@ -496,9 +496,9 @@ body.home #content { padding-top: 0; }
 
 
 .storefront-sorting select {
-	background-color: #555 !important;
-	border-color: #555 !important;
-	color: #fff;
+	background-color: #fff !important;
+	border-color: #fff !important;
+	color: #555;
 }
 
 /*body.archive:not(.tax-product_brand) .page-title {
