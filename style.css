@@ -456,8 +456,9 @@ body.home #content { padding-top: 0; }
 	left: 0;
 	bottom: 0;
 	z-index: 0;
-	background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4));
+/*	background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4));
 	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4));
+*/
 }
 
 .archive.tax-disc-type .page-title img {
@@ -466,10 +467,10 @@ body.home #content { padding-top: 0; }
 }
 
 .archive.tax-disc-type #primary {
-	margin-top: -2.7em;
+	/*margin-top: -2.7em;*/
 }
 .archive.tax-disc-type #secondary {
-	margin-top: -2.4em;
+	/*margin-top: -2.4em;*/
 }
 
 .archive.tax-disc-type #search_filter_register_widget-3 h3 {
@@ -480,11 +481,16 @@ body.home #content { padding-top: 0; }
 	font-family: 'Rock Salt';
 	color: #fff;
 	text-transform: lowercase;
+	text-align: center;
+	padding: 1em 0;
+	background-color: #00b0ff;
 }
 
 .archive.tax-disc-type .storefront-sorting:first-child {
 	position: relative;
 	z-index: 10;
+	text-transform: uppercase;
+	font-size: 0.9em;
 }
 
 /*body.archive:not(.tax-product_brand) .page-title {
