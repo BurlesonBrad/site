@@ -507,14 +507,26 @@ body.home #content { padding-top: 0; }
 }
 
 
-.meta-slider .noUi-handle {
+.searchandfilter .noUi-handle {
 	border: 0 none;
     background: #ff3c7c;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
 
-.noUi-handle:after, .noUi-handle:before {
+.searchandfilter .noUi-handle:after, .searchandfilter .noUi-handle:before {
 	background: #de2964;
+}
+
+.searchandfilter .noUi-target.noUi-background {
+	border: none;
+}
+
+.searchandfilter .noUi-origin.noUi-background {
+	background-color: #fff;
+}
+
+.searchandfilter .noUi-connect {
+	background-color: #00b0ff;
 }
 
 /*body.archive:not(.tax-product_brand) .page-title {
