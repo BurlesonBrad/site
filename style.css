@@ -467,10 +467,10 @@ body.home #content { padding-top: 0; }
 }
 
 .archive.tax-disc-type #primary {
-	margin-top: 1em;
+	margin-top: 1.5em;
 }
 .archive.tax-disc-type #secondary {
-	margin-top: 0.5em;
+	margin-top: 1em;
 }
 
 #search_filter_register_widget-3 h3 {
@@ -547,6 +547,14 @@ body.home #content { padding-top: 0; }
 
 .searchandfilter .noUi-connect {
 	background-color: #00b0ff;
+}
+
+.sf-field-reset img {
+	display: none;
+}
+
+.search-filter-reset {
+	float: left;
 }
 
 .filter-icon {
