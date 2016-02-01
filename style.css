@@ -444,7 +444,16 @@ body.home #content { padding-top: 0; }
 }
 
 .archive.tax-disc-type .page-title {
+	position: relative;
 	border-bottom: 0;
+}
+.archive.tax-disc-type .page-title::after {
+	display: block;
+	width: 100%;
+	height: 2em;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
 
 .archive.tax-disc-type .page-title img {
