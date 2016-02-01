@@ -250,7 +250,7 @@ $(document).ready(function() {
 	function filterIcons() {
 		$("form.searchandfilter > ul > li").each(function() {
 			var $this = $(this),
-				fieldName = $this.data("sf-field-name");
+				fieldName = $this.data("sf-field-name").replace(/\_/g, "");
 
 			$this.prepend("<img class='filter-icon' alt='" + fieldName + "' src='/wp-content/themes/storefront-child/images/" + fieldName + "-icon.png' />");
 		});
