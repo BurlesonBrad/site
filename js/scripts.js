@@ -231,13 +231,13 @@ $(document).ready(function() {
 				prevSectionsHeight += $(this).outerHeight(true);
 			});
 			$(window).scroll(function() {
-				FFLinit();
+				FFLinit($this);
 			});
-			FFLinit();
+			FFLinit($this);
 
-			function FFLinit() {
+			function FFLinit(this) {
 				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 200) ) {
-					$this.animate({
+					this.animate({
 						opacity: 1
 					}, 500);
 				}
