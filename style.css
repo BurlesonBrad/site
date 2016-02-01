@@ -533,6 +533,19 @@ body.home #content { padding-top: 0; }
 	background-color: #00b0ff;
 }
 
+.filter-icon {
+	float: left;
+	width: 19%;
+	margin-right: 4%;
+}
+.filter-icon + div {
+	float: left;
+	width: 77%;
+}
+
+
+
+
 /*body.archive:not(.tax-product_brand) .page-title {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
