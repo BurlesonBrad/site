@@ -474,6 +474,8 @@ body.home #content { padding-top: 0; }
 
 .archive.tax-disc-type #search_filter_register_widget-3 h3 {
 	border-bottom: 0;
+	position: relative;
+	z-index: 10;
 
 	font-family: 'Rock Salt';
 	color: #fff;
