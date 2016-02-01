@@ -479,10 +479,15 @@ body.home #content { padding-top: 0; }
 	z-index: 10;
 
 	font-family: 'Rock Salt';
-	color: #fff;
+	color: #555;
 	text-transform: lowercase;
 	text-align: center;
 	padding: 1.3em 0;
+	background-color: #ddd;
+}
+
+.archive.tax-disc-type #search_filter_register_widget-3 h3 {
+	color: #fff;
 	background-color: #00b0ff;
 }
 
