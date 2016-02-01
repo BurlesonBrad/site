@@ -482,6 +482,11 @@ body.home #content { padding-top: 0; }
 	text-transform: lowercase;
 }
 
+.archive.tax-disc-type .storefront-sorting:first-child {
+	position: relative;
+	z-index: 10;
+}
+
 /*body.archive:not(.tax-product_brand) .page-title {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
