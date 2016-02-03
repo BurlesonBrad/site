@@ -502,10 +502,6 @@ body.home #content { padding-top: 0; }
 }
 
 
-.chosen-container-single .chosen-single {
-	padding: 4px 0 3px 11px;
-}
-
 .chosen-container-single .chosen-single span {
     font-weight: bold;
     font-size: 0.8em;
@@ -1910,7 +1906,8 @@ form.edit-bag-name {
     text-transform: lowercase;
 }
 
-select {
+select,
+.chosen-container-single .chosen-single {
 	border-radius: 100px;
 	border: 10px solid #ddd;
     background: #ddd;
@@ -1919,7 +1916,8 @@ select {
     -o-appearance: none;
 }
 
-.backgroundsize select {
+.backgroundsize select,
+.backgroundsize .chosen-container-single .chosen-single {
 	background: #ddd url('images/select-bg.gif') no-repeat 93% 50%;
 	background-size: 6px auto;
 	padding-right: 2em;
