@@ -483,7 +483,7 @@ body.home #content { padding-top: 0; }
 	text-transform: lowercase;
 	text-align: center;
 	padding: 1.3em 0;
-	background-color: #555;
+	background-color: #aaa;
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 	border-radius: 3px;
 }
