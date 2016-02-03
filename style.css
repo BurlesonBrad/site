@@ -509,6 +509,10 @@ body.home #content { padding-top: 0; }
     font-family: 'Viga';
 }
 
+.chosen-container-single .chosen-single div {
+	display: none;
+}
+
 .storefront-sorting select {
 	background-color: #fff !important;
 	border-color: #fff !important;
