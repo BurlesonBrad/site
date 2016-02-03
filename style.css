@@ -1910,16 +1910,19 @@ form.edit-bag-name {
     text-transform: lowercase;
 }
 
-select {
+select,
+.chosen-container-single .chosen-single {
 	border-radius: 100px;
 	border: 10px solid #ddd;
     background: #ddd;
+    box-shadow: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
 }
 
-.backgroundsize select {
+.backgroundsize select,
+.backgroundsize .chosen-container-single .chosen-single {
 	background: #ddd url('images/select-bg.gif') no-repeat 93% 50%;
 	background-size: 6px auto;
 /*	padding-right: 2em;
