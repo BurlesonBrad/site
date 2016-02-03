@@ -502,6 +502,17 @@ body.home #content { padding-top: 0; }
 }
 
 
+.chosen-container-single .chosen-single {
+	padding: 4px 0 3px 11px;
+}
+
+.chosen-container-single .chosen-single span {
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: 'Viga';
+}
+
 .storefront-sorting select {
 	background-color: #fff !important;
 	border-color: #fff !important;
