@@ -502,7 +502,7 @@ body.home #content { padding-top: 0; }
 }
 
 
-/*.chosen-container-single .chosen-single span {
+.chosen-container-single .chosen-single span {
     font-weight: bold;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -511,7 +511,7 @@ body.home #content { padding-top: 0; }
 
 .chosen-container-single .chosen-single div {
 	display: none;
-}*/
+}
 
 .storefront-sorting select {
 	background-color: #fff !important;
