@@ -72,7 +72,7 @@ $(document).ready(function() {
 			setTimeout(function() {
 				var sliderExists = $(".metaslider .caption-wrap").length;
 				var sliderHeight = $(".metaslider .caption-wrap").height();
-				if ( sliderHeight > 0 ) {
+				if ( sliderExists && sliderHeight ) {
 					tweakSlider.fadeSliderIn( $(".metaslider") );
 
 					function vertAlign() {
