@@ -86,7 +86,7 @@ $(document).ready(function() {
 						vertAlign();
 					});
 
-					responsiveText(".metaslider .caption-wrap", 4.2, 6.8, "em");
+					responsiveText(".metaslider .caption-wrap", 4.2, 6.8, "em", 960, 1600);
 
 					return true;
 				} else {
@@ -222,19 +222,19 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
-	function responsiveText(t, min, max, unit) {
+	function responsiveText(t, min, max, unit, minWidth, maxWidth) {
 		var $t = t instanceof jQuery ? t : $(t);
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
 			var winWidth = $(window).width();
 			var c;
-			if ( winWidth > 960 && winWidth < 1600 ) {
+			if ( winWidth > minWidth && winWidth < maxWidth ) {
 				c = winWidth/1600;
 			}
-			if ( winWidth <= 960 ) {
+			if ( winWidth <= minWidth ) {
 				c = min/max;
 			}
-			if ( winWidth >= 1600 ) {
+			if ( winWidth >= maxWidth ) {
 				c = 1;
 			}
 			var newSize = max * c;
