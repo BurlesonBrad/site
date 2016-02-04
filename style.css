@@ -904,7 +904,8 @@ body.home #content { padding-top: 0; }
 
 	.featured-disc-area > .featured-disc-twitter {
 		width: 100%;
-		margin-top: 5em;
+		max-width: 580px;
+		margin: 2em auto 0;
 	}
 }
 
