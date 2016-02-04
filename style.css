@@ -775,6 +775,11 @@ body.home #content { padding-top: 0; }
 	/*.metaslider .caption-wrap {
 		font-size: 3em !important;
 	}*/
+
+	.metaslider .caption a {
+		display: block;
+		margin: 1em auto 0;
+	}
 }
 
 
