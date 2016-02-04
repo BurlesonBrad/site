@@ -223,7 +223,7 @@ $(document).ready(function() {
 	$(window).resize( videoAspectRatio );
 
 	function responsiveText(t, min, max, unit) {
-		var $t = $(t);
+		var $t = t instanceof jQuery ? t : $(t);
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
 			var winWidth = $(window).width();
