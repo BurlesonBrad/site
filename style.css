@@ -730,7 +730,9 @@ body.home #content { padding-top: 0; }
 	width: 90% !important;
 	text-align: center !important;
 	line-height: 1;
+}
 
+.metaslider h1 {
 	font-family: 'Viga';
     text-transform: none;
     font-size: 1em;
