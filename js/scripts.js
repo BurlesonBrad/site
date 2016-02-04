@@ -70,8 +70,9 @@ $(document).ready(function() {
 		},
 		testSlider: function () {
 			setTimeout(function() {
-				var sliderExists = $(".metaslider .captionWrap").height();
-				if ( sliderExists > 0 ) {
+				var sliderExists = $(".metaslider .caption-wrap").length;
+				var sliderHeight = $(".metaslider .caption-wrap").height();
+				if ( sliderHeight > 0 ) {
 					tweakSlider.fadeSliderIn( $(".metaslider") );
 
 					function vertAlign() {
