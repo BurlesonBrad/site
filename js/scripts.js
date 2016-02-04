@@ -68,7 +68,7 @@ $(document).ready(function() {
 				return true;
 			}
 		},
-		testSlider = function () {
+		testSlider: function () {
 			setTimeout(function() {
 				var sliderExists = $(".metaslider").length;
 				if ( sliderExists > 0 ) {
