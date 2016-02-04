@@ -736,6 +736,7 @@ body.home #content { padding-top: 0; }
 	font-family: 'Viga';
     text-transform: none;
     font-size: 1em;
+    color: #fafafa;
 }
 
 @media screen and (max-width: 1136px) {
