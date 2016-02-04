@@ -86,7 +86,7 @@ $(document).ready(function() {
 						vertAlign();
 					});
 
-					responsiveText(".metaslider .caption-wrap");
+					responsiveText(".metaslider .caption-wrap", 4, 6.2, "em");
 
 					return true;
 				} else {
