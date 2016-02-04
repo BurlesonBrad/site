@@ -124,7 +124,7 @@ ul.menu li.current-menu-item > a.cart-contents, ul#menu-utility-menu li.current-
 	content: " ";
 	display: block;
 	position: absolute;
-	right: 23px;
+	right: 16%;
 	width: 20px;
 	height: 10px;
 	background-image: url('images/beta.png');
