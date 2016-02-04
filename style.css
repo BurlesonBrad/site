@@ -899,7 +899,7 @@ body.home #content { padding-top: 0; }
 	.featured-disc-area > div.featured-disc-image,
 	.featured-disc-area > div.featured-disc-text {
 		width: 50%;
-		top: 0 !important;
+		top: -4.2em !important;
 	}
 
 	.featured-disc-area > .featured-disc-twitter {
