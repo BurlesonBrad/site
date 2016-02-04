@@ -748,7 +748,7 @@ body.home #content { padding-top: 0; }
     margin-left: 2em;
 }
 
-.metaslider .caption a button {
+.metaslider button {
 	background-color: transparent;
 	border-color: #fff;
 }
