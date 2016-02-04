@@ -59,11 +59,16 @@ $(document).ready(function() {
 	
 	var tweakSlider = {
 		fadeSliderIn: function (s) {
-			sliderExists = s.length;
-			console.log( sliderExists );
-			s.animate({
-				opacity: 1
-			}, 800);
+			var sliderExists = s.length;
+			if ( sliderExists < 1 ) {
+				return false;
+				tweakSlider.fadeSliderIn(s);
+			} else {
+				s.animate({
+					opacity: 1
+				}, 800);
+				return true;
+			}
 		},
 		vertAlign: function () {
 			var $captionWrap = $(".metaslider .caption-wrap");
@@ -74,11 +79,16 @@ $(document).ready(function() {
 		}
 	};
 
+	setTimeout(function() {
+		if ( !tweakSlider.fadeSliderIn( $(".metaslider") ) ) {
+			tweakSlider.fadeSliderIn( $(".metaslider") );
+		}
+	}, 500);
+
 	tweakSlider.vertAlign();
 	$(window).load(function() {
-		var $slider = $(".metaslider");
 		tweakSlider.vertAlign();
-		tweakSlider.fadeSliderIn( $slider );
+		
 	}).resize(function() {
 		tweakSlider.vertAlign();
 	});
