@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 					responsiveText(".metaslider .caption", 2, 3.3, "em", 960, 1600, "high");
 					responsiveText(".metaslider .caption", 1.2, 2, "em", 300, 959, "low");
-					responsiveText(".metaslider .caption button", 0.6, 0.3, "em", 300, 1600);
+					responsiveText(".metaslider .caption button", 0.6, 0.38, "em", 300, 1600);
 
 					return true;
 				} else {
