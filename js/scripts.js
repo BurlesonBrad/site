@@ -55,15 +55,27 @@ $(document).ready(function() {
 	customMasthead();
 	$(window).resize(customMasthead);
 
-	function vAlignSliderCaption() {
-		var $captionWrap = $(".metaslider .caption-wrap");
-		var height = $captionWrap.height();
-		$captionWrap.css({
-			"line-height": (height-40) + "px"
-		});
-	}
-	vAlignSliderCaption();
-	$(window).load(vAlignSliderCaption).resize(vAlignSliderCaption);
+	var tweakSlider = {
+		fadeSliderIn: function () {
+			var $slider = $(".metaslider");
+			$slider.fadeIn(800);
+		},
+		vertAlign: function () {
+			var $captionWrap = $(".metaslider .caption-wrap");
+			var height = $captionWrap.height();
+			$captionWrap.css({
+				"line-height": (height-40) + "px"
+			});
+		}
+	};
+
+	tweakSlider.vertAlign();
+	$(window).load(function() {
+		tweakSlider.vertAlign();
+		tweakSlider.fadeSliderIn();
+	}).resize(function() {
+		tweakSlider.vertAlign();
+	});
 
 	function dynamicBasket(add) {
 		var $cartItems = ( $("#masthead").data("cart-items") <= 3 || $("#masthead").data("cart-items") === 'empty' ) ? $("#masthead").data("cart-items") : 3;
