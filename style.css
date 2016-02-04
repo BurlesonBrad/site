@@ -692,6 +692,9 @@ body.home #content { padding-top: 0; }
 	margin: 0 auto;
 }
 
+.js .home .metaslider {
+	opacity: 0;
+}
 
 .metaslider .flexslider {
 	margin: 0 !important;
