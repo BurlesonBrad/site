@@ -87,6 +87,7 @@ $(document).ready(function() {
 					});
 
 					responsiveText(".metaslider .caption-wrap", 4.2, 6.8, "em", 960, 1600);
+					responsiveText(".metaslider .caption-wrap", 3.4, 4.2, "em", 300, 959);
 
 					return true;
 				} else {
