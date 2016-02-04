@@ -573,8 +573,6 @@ body.home #content { padding-top: 0; }
 .filter-icon + * {
 	float: right;
 	width: 77%;
-	position: relative;
-    top: 1.3em;
 }
 
 .sf-field-reset .filter-icon {
