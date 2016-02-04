@@ -756,7 +756,7 @@ body.home #content { padding-top: 0; }
 .metaslider button:hover {
 	background-color: rgba(255,255,255,0.2) !important;
 	border-color: #fff !important;
-	box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
 @media screen and (max-width: 1136px) {
