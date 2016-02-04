@@ -77,6 +77,7 @@ $(document).ready(function() {
 					function vertAlign() {
 						var $captionWrap = $(".metaslider .caption-wrap");
 						var height = $captionWrap.height();
+						console.log(height);
 						$captionWrap.css({
 							"line-height": (height-40) + "px"
 						});
