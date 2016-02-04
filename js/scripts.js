@@ -87,7 +87,7 @@ $(document).ready(function() {
 		}
 	};
 
-	
+	tweakSlider.testSlider();	
 
 	tweakSlider.vertAlign();
 	$(window).load(function() {
