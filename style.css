@@ -754,8 +754,8 @@ body.home #content { padding-top: 0; }
 }
 
 .metaslider button:hover {
-	background-color: #fff !important;
-	border-color: #fff !important;
+	background-color: rgba(255,255,255,0.9) !important;
+	border-color: rgba(255,255,255,0.9) !important;
 	color: #00b0ff;
 }
 
