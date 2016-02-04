@@ -722,6 +722,7 @@ body.home #content { padding-top: 0; }
 .metaslider .caption {
 	display: inline-block !important;
 	vertical-align: middle !important;
+	margin: 0 auto;
 	padding: 0 !important;
 	width: 90% !important;
 	text-align: center !important;
