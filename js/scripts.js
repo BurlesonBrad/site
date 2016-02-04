@@ -59,17 +59,9 @@ $(document).ready(function() {
 	
 	var tweakSlider = {
 		fadeSliderIn: function () {
-			var sliderExists = 0;
-			var checkForSlider = setInterval( function() {
-				var $slider = $(".metaslider");
-				sliderExists = $slider.length;
-				console.log( sliderExists );
-			}, 1000);
-			if ( sliderExists !== 0 ) {
-				console.log( sliderExists );
-				clearInterval( checkForSlider );
-			}
 			var $slider = $(".metaslider");
+			sliderExists = $slider.length;
+			console.log( sliderExists );
 			$slider.fadeIn(800);
 		},
 		vertAlign: function () {
