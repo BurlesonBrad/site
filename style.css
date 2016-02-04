@@ -48,16 +48,17 @@ h3 {
 /* buttons */
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .social-bar #mc_embed_signup input[type="email"] {
 	box-shadow: none;
-	padding: 1.8em 4em;
+	padding: 1.6em 3.8em;
 	font-size: 0.9em;
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 	border-radius: 5em;
-	border: 0;
+	border: 0.2em solid #00b0ff;
 }
 
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
 	background-color: #00a5f2;
+	border-color: #00a5f2;
 }
 
 a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.wc-forward:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
@@ -745,6 +746,11 @@ body.home #content { padding-top: 0; }
 	position: relative;
     top: -1.3em;
     margin-left: 2em;
+}
+
+.metaslider .caption a button {
+	background-color: transparent;
+	border-color: #fff;
 }
 
 @media screen and (max-width: 1136px) {
