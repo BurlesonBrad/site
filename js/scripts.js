@@ -79,7 +79,7 @@ $(document).ready(function() {
 						var $captionWrap = $(".metaslider .caption-wrap");
 						var height = $captionWrap.height();
 						$captionWrap.css({
-							"line-height": (height-40) + "px"
+							"line-height": height + "px"
 						});
 					}
 					vertAlign();
