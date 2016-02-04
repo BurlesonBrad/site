@@ -722,9 +722,9 @@ body.home #content { padding-top: 0; }
 .metaslider .caption {
 	display: inline-block !important;
 	vertical-align: middle !important;
-	padding: 0 0 0 1em !important;
-	width: 60% !important;
-	text-align: right !important;
+	padding: 0 !important;
+	width: 90% !important;
+	text-align: center !important;
 	line-height: 1;
 
 	font-family: 'Viga';
