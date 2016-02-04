@@ -55,8 +55,18 @@ $(document).ready(function() {
 	customMasthead();
 	$(window).resize(customMasthead);
 
+	var sliderExists = 0;
+	var checkForSlider = setInterval( function() {
+		var $slider = $(".metaslider");
+		sliderExists = $slider.length;
+	}, 1000);
 	var tweakSlider = {
 		fadeSliderIn: function () {
+			sliderExists = 0;
+			checkForSlider();
+			if ( sliderExists !== 0 ) {
+				clearInterval( checkForSlider );
+			}
 			var $slider = $(".metaslider");
 			$slider.fadeIn(800);
 		},
