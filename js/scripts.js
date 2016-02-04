@@ -55,15 +55,15 @@ $(document).ready(function() {
 	customMasthead();
 	$(window).resize(customMasthead);
 
-	var sliderExists = 0;
-	var checkForSlider = setInterval( function() {
-		var $slider = $(".metaslider");
-		sliderExists = $slider.length;
-	}, 1000);
+//	var sliderExists = 0;
+	
 	var tweakSlider = {
 		fadeSliderIn: function () {
-			sliderExists = 0;
-			checkForSlider();
+			var sliderExists = 0;
+			var checkForSlider = setInterval( function() {
+				var $slider = $(".metaslider");
+				sliderExists = $slider.length;
+			}, 1000);
 			if ( sliderExists !== 0 ) {
 				clearInterval( checkForSlider );
 			}
