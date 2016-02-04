@@ -230,7 +230,7 @@ $(document).ready(function() {
 			var winWidth = $(window).width();
 			var c;
 			if ( winWidth > minWidth && winWidth < maxWidth ) {
-				c = winWidth/max;
+				c = winWidth/maxWidth;
 			}
 			if ( winWidth <= minWidth && i !== "high" ) {
 				c = min/max;
