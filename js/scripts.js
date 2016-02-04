@@ -61,7 +61,9 @@ $(document).ready(function() {
 		fadeSliderIn: function (s) {
 			sliderExists = s.length;
 			console.log( sliderExists );
-			s.fadeIn(800);
+			s.animate({
+				opacity: 1
+			}, 800);
 		},
 		vertAlign: function () {
 			var $captionWrap = $(".metaslider .caption-wrap");
