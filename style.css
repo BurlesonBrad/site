@@ -741,7 +741,7 @@ body.home #content { padding-top: 0; }
     margin-bottom: 0;
 }
 
-.metaslider h1 + a {
+.metaslider .caption a {
 	position: relative;
     top: -1.3em;
     margin-left: 2em;
