@@ -344,7 +344,7 @@ button.menu-toggle::before {
 
 	ul#menu-main-menu li a:hover {
 		color: #fff;
-		background: #00aaf5 !important;
+		background: #00a4f0 !important;
 		/* background: -moz-linear-gradient(45deg, #00b0ff 0%, #8574ba 90%, #d25093 100%) !important; /* FF3.6-15
 		background: -webkit-linear-gradient(45deg, #00b0ff 0%, #8574ba 90%,#d25093 100%) !important; /* Chrome10-25,Safari5.1-6
 		background: linear-gradient(45deg, #00b0ff 0%, #8574ba 90%,#d25093 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
