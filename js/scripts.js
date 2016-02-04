@@ -229,6 +229,7 @@ $(document).ready(function() {
 		function setSize(text) {
 			var winWidth = $(window).width();
 			var newSize;
+			console.log( winWidth );
 			if ( winWidth > minWidth && winWidth < maxWidth ) {
 				var ratio = (winWidth - minWidth)/(maxWidth - minWidth);
 				newSize = ratio*(max-min) + minWidth;
