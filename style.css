@@ -753,6 +753,12 @@ body.home #content { padding-top: 0; }
 	border-color: #fff;
 }
 
+.metaslider button:hover {
+	background-color: #fff !important;
+	border-color: #fff !important;
+	color: #00b0ff;
+}
+
 @media screen and (max-width: 1136px) {
 	.metaslider .slides img {
 		width: 1136px !important;
