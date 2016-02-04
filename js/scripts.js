@@ -86,6 +86,8 @@ $(document).ready(function() {
 						vertAlign();
 					});
 
+					responsiveText(".metaslider .caption-wrap");
+
 					return true;
 				} else {
 					tweakSlider.testSlider();
@@ -236,9 +238,6 @@ $(document).ready(function() {
 			setSize($t);
 		});
 	}
-	$(window).load(function() {
-		responsiveText(".metaslider .caption-wrap");
-	});
 
 	function feauxLazyLoad( section ) {
 		if ( !$("body").hasClass("home") ) { return; }
