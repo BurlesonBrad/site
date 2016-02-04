@@ -918,7 +918,7 @@ body.home #content { padding-top: 0; }
 		float: none;
 		width: 80%;
 		margin: 0 auto;
-		top: 0;
+		top: 0 !important;
 	}
 
 	.featured-disc-area > div.featured-disc-text {
