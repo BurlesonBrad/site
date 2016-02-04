@@ -728,6 +728,7 @@ body.home #content { padding-top: 0; }
 	display: inline-block !important;
 	vertical-align: middle !important;
 	padding: 0 !important;
+	margin-top: -0.3em;
 	width: 90% !important;
 	text-align: center !important;
 	line-height: 1.3;
