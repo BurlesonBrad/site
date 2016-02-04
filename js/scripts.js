@@ -70,14 +70,13 @@ $(document).ready(function() {
 		},
 		testSlider: function () {
 			setTimeout(function() {
-				var sliderExists = $(".metaslider").length;
+				var sliderExists = $(".metaslider .captionWrap").height();
 				if ( sliderExists > 0 ) {
 					tweakSlider.fadeSliderIn( $(".metaslider") );
 
 					function vertAlign() {
 						var $captionWrap = $(".metaslider .caption-wrap");
 						var height = $captionWrap.height();
-						console.log(height);
 						$captionWrap.css({
 							"line-height": (height-40) + "px"
 						});
