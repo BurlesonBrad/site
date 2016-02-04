@@ -222,15 +222,24 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
-	function responsiveText(t) {
+	function responsiveText(t, min, max, unit) {
 		var $t = $(t);
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
 			var winWidth = $(window).width();
-			var c = winWidth > 960 && winWidth < 1600 ? winWidth/1600 : 1;
-			var sizeF = (sizeI * c);
+			var c;
+			if ( winWidth > 960 && winWidth < 1600 ) {
+				c = winWidth/1600;
+			}
+			if ( winWidth <= 960 ) {
+				c = min/max;
+			}
+			if ( winWidth >= 1600 ) {
+				c = 1;
+			}
+			var newSize = max * c;
 			text.css({
-				"font-size": sizeF + "px"
+				"font-size": newSize + unit
 			});
 		}
 		setSize($t);
