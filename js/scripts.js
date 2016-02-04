@@ -232,7 +232,7 @@ $(document).ready(function() {
 			console.log( winWidth );
 			if ( winWidth > minWidth && winWidth < maxWidth ) {
 				var ratio = (winWidth - minWidth)/(maxWidth - minWidth);
-				newSize = ratio*(max-min) + minWidth;
+				newSize = ratio*(max-min) + min;
 			}
 			if ( winWidth <= minWidth && i !== "high" ) {
 				newSize = min;
