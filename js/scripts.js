@@ -58,11 +58,10 @@ $(document).ready(function() {
 //	var sliderExists = 0;
 	
 	var tweakSlider = {
-		fadeSliderIn: function () {
-			var $slider = $(".metaslider");
-			sliderExists = $slider.length;
+		fadeSliderIn: function (s) {
+			sliderExists = s.length;
 			console.log( sliderExists );
-			$slider.fadeIn(800);
+			s.fadeIn(800);
 		},
 		vertAlign: function () {
 			var $captionWrap = $(".metaslider .caption-wrap");
@@ -75,8 +74,9 @@ $(document).ready(function() {
 
 	tweakSlider.vertAlign();
 	$(window).load(function() {
+		var $slider = $(".metaslider");
 		tweakSlider.vertAlign();
-		tweakSlider.fadeSliderIn();
+		tweakSlider.fadeSliderIn( $slider );
 	}).resize(function() {
 		tweakSlider.vertAlign();
 	});
