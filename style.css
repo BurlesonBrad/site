@@ -741,6 +741,12 @@ body.home #content { padding-top: 0; }
     margin-bottom: 0;
 }
 
+.metaslider h1 + a {
+	position: relative;
+    top: -1.3em;
+    margin-left: 2em;
+}
+
 @media screen and (max-width: 1136px) {
 	.metaslider .slides img {
 		width: 1136px !important;
