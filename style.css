@@ -348,7 +348,7 @@ button.menu-toggle::before {
 		background: -webkit-linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%) !important; /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(45deg, #00b0ff 0%,#ff3c7c 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ) !important; /* IE6-9 fallback on horizontal gradient */
-		border-right: 1px solid #ff3c7c;
+		/*border-right: 1px solid #ff3c7c;*/
 	}
 
 	.js ul#menu-main-menu li:first-child > a, ul#menu-main-menu li:first-child > a:hover {
