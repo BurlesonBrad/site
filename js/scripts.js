@@ -86,8 +86,8 @@ $(document).ready(function() {
 						vertAlign();
 					});
 
-					responsiveText(".metaslider .caption-wrap", 4.2, 6.8, "em", 960, 1600);
-					responsiveText(".metaslider .caption-wrap", 3.4, 4.2, "em", 300, 959);
+					responsiveText(".metaslider .caption-wrap", 4.2, 6.8, "em", 960, 1600, "high");
+					responsiveText(".metaslider .caption-wrap", 3.4, 4.2, "em", 300, 959, "low");
 
 					return true;
 				} else {
@@ -223,7 +223,7 @@ $(document).ready(function() {
 	videoAspectRatio();
 	$(window).resize( videoAspectRatio );
 
-	function responsiveText(t, min, max, unit, minWidth, maxWidth) {
+	function responsiveText(t, min, max, unit, minWidth, maxWidth, i) {
 		var $t = t instanceof jQuery ? t : $(t);
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
@@ -232,10 +232,10 @@ $(document).ready(function() {
 			if ( winWidth > minWidth && winWidth < maxWidth ) {
 				c = winWidth/1600;
 			}
-			if ( winWidth <= minWidth ) {
+			if ( winWidth <= minWidth && i !== "high" ) {
 				c = min/max;
 			}
-			if ( winWidth >= maxWidth ) {
+			if ( winWidth >= maxWidth && i !== "low" ) {
 				c = 1;
 			}
 			var newSize = max * c;
