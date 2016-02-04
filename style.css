@@ -749,9 +749,9 @@ body.home #content { padding-top: 0; }
 }
 
 @media screen and (max-width: 960px) {
-	.metaslider .caption-wrap {
+	/*.metaslider .caption-wrap {
 		font-size: 3em !important;
-	}
+	}*/
 }
 
 
