@@ -228,17 +228,16 @@ $(document).ready(function() {
 		var sizeI = parseInt( $t.css("font-size"), 10 );
 		function setSize(text) {
 			var winWidth = $(window).width();
-			var c;
+			var newSize;
 			if ( winWidth > minWidth && winWidth < maxWidth ) {
-				c = winWidth/maxWidth;
+				newSize = (max - min) * (winWidth / maxWidth);
 			}
 			if ( winWidth <= minWidth && i !== "high" ) {
-				c = min/max;
+				newSize = min;
 			}
 			if ( winWidth >= maxWidth && i !== "low" ) {
-				c = 1;
+				newSize = max;
 			}
-			var newSize = max * c;
 			text.css({
 				"font-size": newSize + unit
 			});
