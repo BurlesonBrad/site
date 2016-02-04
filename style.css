@@ -733,10 +733,12 @@ body.home #content { padding-top: 0; }
 }
 
 .metaslider h1 {
+	display: inline;
 	font-family: 'Viga';
     text-transform: none;
     font-size: 1em;
     color: #fafafa;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 1136px) {
