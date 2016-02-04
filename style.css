@@ -344,9 +344,9 @@ button.menu-toggle::before {
 	ul#menu-main-menu li a:hover {
 		color: #fff;
 		background: #ff3c7c !important;
-		background: -moz-linear-gradient(45deg, #00b0ff 0%, #8574ba 80%, #ff3c7c 100%) !important; /* FF3.6-15 */
-		background: -webkit-linear-gradient(45deg, #00b0ff 0%, #8574ba 80%,#ff3c7c 100%) !important; /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(45deg, #00b0ff 0%, #8574ba 80%,#ff3c7c 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: -moz-linear-gradient(45deg, #00b0ff 0%, #8574ba 80%, #d25093 100%) !important; /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg, #00b0ff 0%, #8574ba 80%,#d25093 100%) !important; /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg, #00b0ff 0%, #8574ba 80%,#d25093 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0ff', endColorstr='#ff3c7c',GradientType=1 ) !important; /* IE6-9 fallback on horizontal gradient */
 		/*border-right: 1px solid #ff3c7c;*/
 	}
