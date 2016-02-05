@@ -704,6 +704,14 @@ body.home #content { padding-top: 0; }
 	display: none;
 }
 
+.metaslider .slides li {
+	background: #000;
+}
+
+.metaslider .slides li img {
+	opacity: 0.8;
+}
+
 .no-js .metaslider .caption-wrap {
 	line-height: 17em !important;
 }
