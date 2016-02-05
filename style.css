@@ -35,6 +35,10 @@ h2 {
 	margin: 0.6em 0 0.218em;
 }
 
+.home h2 {
+	margin: 0 0 0.618em;
+}
+
 h3 {
 	line-height: 1;
 }
