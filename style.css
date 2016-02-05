@@ -495,11 +495,6 @@ body.home #content { padding-top: 0; }
 	border-radius: 3px;
 }
 
-.archive.tax-disc-type #search_filter_register_widget-3 h3 {
-	color: #fff;
-	background-color: #00b0ff;
-}
-
 .storefront-sorting:first-child {
 	position: relative;
 	z-index: 10;
