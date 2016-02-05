@@ -304,7 +304,7 @@ $(document).ready(function() {
 		parallaxBG: function(speed) {
 			var that = this;
 			var bgPos = this.css("background-position-y");
-			var s = speed ? speed : 3;
+			var s = speed || 3;
 			$(window).scroll(function() {
 				var scrollTop = $(this).scrollTop();
 				TweenMax.to( that, 0.1, {
