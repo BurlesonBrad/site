@@ -76,6 +76,7 @@ button, input, textarea, select, option {
 
 button.menu-toggle:hover, button.menu-toggle:focus {
 	background-color: #00b0ff !important;
+	border-color: #00b0ff !important;
 }
 
 select, option {
