@@ -308,7 +308,6 @@ $(document).ready(function() {
 			var $win = $(window);
 			$win.scroll(function() {
 				var scrollTop = $win.scrollTop();
-				console.log( scrollTop );
 				TweenMax.to( that, 0.1, {
 					css: {
 						"background-position-y": bgPos - (scrollTop*s)
@@ -318,7 +317,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".tax-disc-type .page-title").parallaxBG( 0.2 );
+	$(".tax-disc-type .page-title").parallaxBG( 0.9 );
 
 
 
