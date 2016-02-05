@@ -2136,6 +2136,11 @@ button.single_add_to_cart_button:hover {
 		width: 65.5%;
 	}
 
+	.storefront-full-width-content .woocommerce-tabs ul.tabs {
+		width: 34.7%;
+		margin-right: 0;
+	}
+
 	.storefront-full-width-content.single-product div.product .summary {
 		margin-bottom: 1em;
 	}
