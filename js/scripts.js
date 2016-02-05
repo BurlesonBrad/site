@@ -300,6 +300,22 @@ $(document).ready(function() {
 	}
 	filterIcons();
 
+	$.fn.extend({
+		parallaxBG: function(speed) {
+			var that = this;
+			var bgPos = this.css("background-position-y");
+			var s = speed ?: 3;
+			$(window).scroll(function() {
+				var scrollTop = $(this).scrollTop();
+				TweenMax.to( that, 0.1, {
+					css: {
+						"background-position-y": bgPos - (scrollTop/s)
+					}
+				});
+			});	
+		}
+	});
+
 
 
 	// function featuredVidTitle() {

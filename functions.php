@@ -25,6 +25,8 @@ function hyzershop_scripts() {
 	wp_enqueue_script( 'byb-scripts', get_stylesheet_directory_uri() . '/byb/byb.js', array( 'jquery' ), '0.1', true );
 
 	wp_enqueue_script( 'js-cookie', get_stylesheet_directory_uri() . '/byb/js.cookie.js', array() );
+
+	wp_enqueue_script( 'gsap', get_stylesheet_directory_uri() . '/js/gs/TweenMax.min.js', array() );
 }
 add_action( 'wp_enqueue_scripts', 'hyzershop_scripts' );
 
