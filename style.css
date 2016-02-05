@@ -2078,13 +2078,13 @@ button.single_add_to_cart_button:hover {
 
 #tab-specs_tab > .specs {
 	float: left;
-	width: 70%;
+	width: 65%;
 	clear: none;
 }
 
 #tab-specs_tab > .flight-chart {
 	float: left;
-	width: 25%;
+	width: 30%;
 	margin-right: 5%;
 }
 
@@ -2135,14 +2135,18 @@ button.single_add_to_cart_button:hover {
 	.single-product div.product .summary {
 		width: 65.5%;
 	}
+	.storefront-full-width-content.single-product div.product .summary {
+		margin-bottom: 1em;
+	}
 
 	.storefront-full-width-content .woocommerce-tabs ul.tabs {
 		width: 34.7%;
 		margin-right: 0;
 	}
 
-	.storefront-full-width-content.single-product div.product .summary {
-		margin-bottom: 1em;
+	.storefront-full-width-content .woocommerce-tabs .panel {
+		padding: 0 2em;
+		border-left: 4px solid #fcfcfc;
 	}
 
 /* main shop page recs, single product recs */
