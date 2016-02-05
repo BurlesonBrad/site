@@ -57,16 +57,12 @@ $(document).ready(function() {
 	
 	var tweakSlider = {
 		fadeSliderIn: function (s) {
-//			var sliderExists = s.length;
-//			if ( sliderExists < 1 ) {
-//				return false;
-//				tweakSlider.fadeSliderIn(s);
-//			} else {
-				s.animate({
+			TweenMax.to(s, 0.8, {
+				css: {
 					opacity: 1
-				}, 800);
-				return true;
-//			}
+				}
+			});
+			return true;
 		},
 		testSlider: function () {
 			setTimeout(function() {
@@ -274,15 +270,17 @@ $(document).ready(function() {
 				prevSectionsHeight += $(this).outerHeight(true);
 			});
 			$(window).scroll(function() {
-				FFLinit($this);
+				FLLinit($this);
 			});
-			FFLinit($this);
+			FLLinit($this);
 
-			function FFLinit(t) {
+			function FLLinit(t) {
 				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 200) ) {
-					t.animate({
-						opacity: 1
-					}, 500);
+					TweenMax.to(t, 0.5, {
+						css: {
+							opacity: 1
+						}
+					});
 				}
 			}
 		});
