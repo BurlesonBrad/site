@@ -317,8 +317,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".tax-disc-type .page-title").parallaxBG( 0.02 );
-
+	$(".tax-disc-type .page-title, .tax-product_brand .page-title").parallaxBG( 0.02 );
 
 
 	// function featuredVidTitle() {
