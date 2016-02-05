@@ -1965,8 +1965,8 @@ select,
 .backgroundsize .chosen-container-single .chosen-single {
 	background: #fff url('images/select-bg.gif') no-repeat 93% 50%;
 	background-size: 6px auto;
-/*	padding-right: 2em;
-*/}
+	padding-right: 2em;
+}
 
 .single-product .quantity input {
 	border-radius: 100px;
