@@ -277,9 +277,7 @@ $(document).ready(function() {
 			function FLLinit(t) {
 				if ( $(window).scrollTop() > (heightBefore + prevSectionsHeight - winHeight + 200) ) {
 					TweenMax.to(t, 1, {
-						css: {
-							opacity: 1
-						}
+						opacity: 1
 					});
 				}
 			}
