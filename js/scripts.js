@@ -303,7 +303,7 @@ $(document).ready(function() {
 	$.fn.extend({
 		parallaxBG: function(speed) {
 			var that = this;
-			var bgPos = this.css("background-position-y");
+			var bgPos = parseInt( this.css("background-position-y"), 10 );
 			var s = speed || 3;
 			var $win = $(window);
 			$win.scroll(function() {
