@@ -309,12 +309,14 @@ $(document).ready(function() {
 				var scrollTop = $(this).scrollTop();
 				TweenMax.to( that, 0.1, {
 					css: {
-						"background-position-y": bgPos - (scrollTop/s)
+						"background-position-y": bgPos - (scrollTop*s)
 					}
 				});
 			});	
 		}
 	});
+
+	$(".tax-disc-type .page-title").parallaxBG( 0.2 );
 
 
 
