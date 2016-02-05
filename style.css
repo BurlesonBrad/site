@@ -2147,7 +2147,7 @@ button.single_add_to_cart_button:hover {
 	.storefront-full-width-content .woocommerce-tabs .panel {
 		padding: 1em 2em;
 		border-left: 4px solid #f0f0f0;
-		background: #fcfcfc;
+		background: #fff;
 	}
 
 /* main shop page recs, single product recs */
