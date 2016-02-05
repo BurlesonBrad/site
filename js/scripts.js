@@ -305,8 +305,10 @@ $(document).ready(function() {
 			var that = this;
 			var bgPos = this.css("background-position-y");
 			var s = speed || 3;
-			$(window).scroll(function() {
-				var scrollTop = $(this).scrollTop();
+			var $win = $(window);
+			$win.scroll(function() {
+				var scrollTop = $win.scrollTop();
+				console.log( scrollTop );
 				TweenMax.to( that, 0.1, {
 					css: {
 						"background-position-y": bgPos - (scrollTop*s)
