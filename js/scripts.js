@@ -317,7 +317,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".tax-disc-type .page-title").parallaxBG( 0.1 );
+	$(".tax-disc-type .page-title").parallaxBG( 0.04 );
 
 
 
