@@ -2118,6 +2118,10 @@ button.single_add_to_cart_button:hover {
 	color: #00b0ff;
 }
 
+.woocommerce-tabs {
+	border: 0;
+}
+
 .woocommerce-tabs ul.tabs li:after,
 .woocommerce-tabs ul.tabs li.active:after {
 	color: #fff;
@@ -2138,6 +2142,10 @@ button.single_add_to_cart_button:hover {
 	.storefront-full-width-content.single-product .related ul.products li.product, .storefront-full-width-content.single-product .upsells ul.products li.product {
 		width: 22%;
 		margin-right: 4%;
+	}
+
+	.woocommerce-tabs {
+		padding-top: 0;
 	}
 }
 
