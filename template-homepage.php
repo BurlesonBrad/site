@@ -39,6 +39,7 @@ get_header(); ?>
 						<h2><a href="<?php the_permalink(); ?>"><?php echo get_brands( $post_id ); ?> <?php the_title(); ?></a></h2>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>"><button>Learn more</button></a>
+						<?php do_shortcode('[add_to_cart id="' . $post_id . '"]'); ?>
 					</div>
 				</div>
 				<div class="featured-disc-image">
