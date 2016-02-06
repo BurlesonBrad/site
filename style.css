@@ -2080,6 +2080,10 @@ button.single_add_to_cart_button:hover {
 	padding: 1.618em;
 }
 
+#tab-specs_tab {
+	background-color: transparent;
+}
+
 #tab-specs_tab > .specs {
 	float: left;
 	width: 69%;
