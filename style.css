@@ -2102,6 +2102,10 @@ button.single_add_to_cart_button:hover {
 	color: #fff;
 }
 
+.single-product h2 {
+	margin: 0 0 0.218em;
+}
+
 .specs ul {
 	list-style: none;
 	margin-left: 0;
@@ -2109,7 +2113,8 @@ button.single_add_to_cart_button:hover {
 
 .specs li {
 	font-weight: bold;
-	font-size: 0.9em;
+	font-size: 2.3em;
+	line-height: 1;
 	text-transform: uppercase;
 }
 
