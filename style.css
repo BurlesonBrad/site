@@ -2122,14 +2122,14 @@ button.single_add_to_cart_button:hover {
 
 .specs li {
 	font-family: 'Montserrat';
-	font-size: 2.3em;
+	font-weight: bold;
+	font-size: 1.5em;
 	line-height: 1;
 	text-transform: uppercase;
 }
 
 .specs li strong {
 	font-family: 'Viga';
-	font-weight: bold;
 	color: #00b0ff;
 	font-size: 1.4em;
 	margin-left: 0.1em;
