@@ -2082,14 +2082,14 @@ button.single_add_to_cart_button:hover {
 
 #tab-specs_tab > .specs {
 	float: left;
-	width: 65%;
+	width: 69%;
 	clear: none;
 }
 
 #tab-specs_tab > .flight-chart {
 	float: left;
 	width: 30%;
-	margin-right: 5%;
+	margin-right: 1%;
 }
 
 .woocommerce-tabs ul.tabs li a {
@@ -2108,6 +2108,10 @@ button.single_add_to_cart_button:hover {
 
 .single-product h2 {
 	margin: 0 0 0.218em;
+}
+
+.specs h2 {
+	display: none;
 }
 
 .specs ul {
