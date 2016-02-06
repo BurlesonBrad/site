@@ -2076,6 +2076,10 @@ button.single_add_to_cart_button:hover {
     font-size: 1.5em;
 }
 
+.panel .specs, .panel #comments {
+	padding: 1.618em;
+}
+
 #tab-specs_tab > .specs {
 	float: left;
 	width: 65%;
