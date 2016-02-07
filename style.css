@@ -211,6 +211,10 @@ header ul ul {
 	padding: 1em 0;
 }
 
+.product_list_widget li img {
+	max-width: 4em;
+}
+
 .cart-contents #dynamic_basket {
 	position: absolute;
     top: 50%;
