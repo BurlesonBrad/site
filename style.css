@@ -2180,8 +2180,8 @@ button.single_add_to_cart_button:hover {
 	.site-main ul.products li.product,
 	.single-product .related ul.products li.product, .single-product .upsells ul.products li.product,
 	.storefront-full-width-content.single-product .related ul.products li.product, .storefront-full-width-content.single-product .upsells ul.products li.product {
-		width: 22%;
-		margin-right: 4%;
+		width: 16%;
+		margin-right: 5%;
 	}
 
 	.woocommerce-tabs {
