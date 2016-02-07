@@ -2324,8 +2324,7 @@ ul.products li.product h4 {
 }
 
 #contact-col form span,
-#contact-col form input,
-#contact-col form textarea {
+#contact-col form input {
 	display: inline-block;
 	width: 100%;
 }
