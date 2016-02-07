@@ -206,7 +206,7 @@ header ul ul {
 	background-color: transparent;
 }
 
-.site-header .widget_shopping_cart .cart_list a {
+.site-header .widget_shopping_cart .buttons a {
 	border-radius: 0;
 	padding: 1em 0;
 }
