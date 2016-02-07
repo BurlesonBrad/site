@@ -2225,6 +2225,11 @@ ul.products li.product h4 {
 	display: none;
 }
 
+.woocommerce-info #pay_with_amazon {
+	width: 8em;
+	height: auto;
+}
+
 
 /* ABOUT PAGE */
 .page-id-71 #content > .col-full {
