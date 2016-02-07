@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
             	<tr>
                 	<td align="center" valign="top">
-                        <table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container">
+                        <table border="0" cellpadding="0" cellspacing="0" width="600">
                             <tr>
                                 <td align="center" valign="top">
                                     <!-- Header Image -->
