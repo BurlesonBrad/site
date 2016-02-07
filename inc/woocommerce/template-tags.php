@@ -76,7 +76,7 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
  */
 if ( ! function_exists( 'storefront_upsell_display' ) ) {
 	function storefront_upsell_display() {
-		woocommerce_upsell_display( -1, 3 );
+		woocommerce_upsell_display( -1, 5 );
 	}
 }
 
