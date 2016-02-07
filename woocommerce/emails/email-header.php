@@ -35,12 +35,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <tr>
                                 <td align="center" valign="top">
                                     <!-- Header Image -->
-                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="template_header">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600">
                                         <tr>
-                                            <td id="header_wrapper">
+                                            <td>
                 	                		<?php
                 	                			if ( $img = get_option( 'woocommerce_email_header_image' ) ) {
-                	                				echo '<img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" />';
+                	                				echo '<img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" width="100%" style="max-width:100%;" />';
                 	                			}
                 	                		?>
                                             </td>
