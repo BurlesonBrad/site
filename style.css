@@ -2388,7 +2388,7 @@ form.contact-form > div > textarea {
 }
 
 #social-col #cff {
-	max-height: 500px;
+	max-height: 220px;
 	overflow-y: scroll;
 	padding: 1.3em;
 	background: #fff;
