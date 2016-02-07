@@ -206,6 +206,11 @@ header ul ul {
 	background-color: transparent;
 }
 
+.site-header .widget_shopping_cart li a {
+	border-radius: 0;
+	padding: 1em 0;
+}
+
 .cart-contents #dynamic_basket {
 	position: absolute;
     top: 50%;
