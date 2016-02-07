@@ -31,13 +31,24 @@ if ( ! defined( 'ABSPATH' ) ) {
         	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
             	<tr>
                 	<td align="center" valign="top">
-						<div id="template_header_image" style="width:600px;">
-	                		<?php
-	                			if ( $img = get_option( 'woocommerce_email_header_image' ) ) {
-	                				echo '<p style="margin-top:0;"><img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" /></p>';
-	                			}
-	                		?>
-						</div>
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container">
+                            <tr>
+                                <td align="center" valign="top">
+                                    <!-- Header Image -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="template_header">
+                                        <tr>
+                                            <td id="header_wrapper">
+                	                		<?php
+                	                			if ( $img = get_option( 'woocommerce_email_header_image' ) ) {
+                	                				echo '<img src="' . esc_url( $img ) . '" alt="' . get_bloginfo( 'name', 'display' ) . '" />';
+                	                			}
+                	                		?>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+						</table>
                     	<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container">
                         	<tr>
                             	<td align="center" valign="top">
