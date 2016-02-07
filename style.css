@@ -2269,9 +2269,9 @@ ul.products li.product h4 {
 	text-align: center;
 }
 
-#about-col .col-inner { border-right: 3px solid #ffffff; }
-#contact-col .col-inner { border-left: 3px solid #ffffff; border-right: 3px solid #ffffff; }
-#social-col .col-inner { border-left: 3px solid #ffffff; }
+#about-col .col-inner { border-right: 2px solid #ffffff; }
+#contact-col .col-inner { border-left: 2px solid #ffffff; border-right: 2px solid #ffffff; }
+#social-col .col-inner { border-left: 2px solid #ffffff; }
 
 .about-contact-columns h2 {
     margin-bottom: 10px;
@@ -2313,7 +2313,7 @@ ul.products li.product h4 {
     font-weight: bold;
 
     padding: 1.3em 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
     background: rgba(255,255,255,0.3);
     border: 3px solid #00b0ff;    
     border-radius: 10em;
