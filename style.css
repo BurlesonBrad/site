@@ -2313,9 +2313,14 @@ ul.products li.product h4 {
     font-weight: bold;
 
     padding: 1.3em 0;
+    margin-bottom: 0.2em;
     background: rgba(255,255,255,0.3);
     border: 3px solid #00b0ff;    
     border-radius: 10em;
+}
+
+#contact-col form p {
+	margin: 0;
 }
 
 .site-content #contact-form-46 { max-width: 480px; margin: 0 auto; }
