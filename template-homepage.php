@@ -16,6 +16,13 @@ get_header(); ?>
 
 	<style> main > article > .entry-header { display:none; } </style>
 
+	<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<section class="featured-disc-area col-full">
