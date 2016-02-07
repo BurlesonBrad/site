@@ -2399,6 +2399,17 @@ form.contact-form > div > textarea {
 
 #social-col #cff p {
 	color: #666;
+	text-align: left;
+	font-size: 0.8em;
+}
+
+#cff .cff-author {
+	margin-bottom: 0;
+}
+
+#cff .cff-post-links {
+	padding: 0;
+	font-size: 0.8em;
 }
 
 @media only screen and (max-width:960px) {
