@@ -25,7 +25,11 @@ if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
 
-$related = $product->get_related( 5 ); // $posts_per_page
+// CUSTOM: set related products per page and # of colums
+$posts_per_page = 5;
+$related_columns = 5;
+
+$related = $product->get_related( $posts_per_page );
 
 if ( sizeof( $related ) === 0 ) return;
 
@@ -33,7 +37,7 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 	'post_type'            => 'product',
 	'ignore_sticky_posts'  => 1,
 	'no_found_rows'        => 1,
-	'posts_per_page'       => 4, //$posts_per_page
+	'posts_per_page'       => $posts_per_page,
 	'orderby'              => $orderby,
 	'post__in'             => $related,
 	'post__not_in'         => array( $product->id )
@@ -41,7 +45,7 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 
 $products = new WP_Query( $args );
 
-$woocommerce_loop['columns'] = 4;
+$woocommerce_loop['columns'] = $related_columns;
 
 if ( $products->have_posts() ) : ?>
 
