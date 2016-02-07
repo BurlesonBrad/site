@@ -2323,6 +2323,13 @@ ul.products li.product h4 {
 	margin: 0;
 }
 
+#contact-col form span,
+#contact-col form input,
+#contact-col form textarea {
+	display: inline-block;
+	width: 100%;
+}
+
 .site-content #contact-form-46 { max-width: 480px; margin: 0 auto; }
 .site-content .contact-form > div { margin-bottom: 10px; }
 
