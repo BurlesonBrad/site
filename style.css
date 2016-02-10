@@ -2185,8 +2185,8 @@ button.single_add_to_cart_button:hover {
 		padding: 1em 2em;
 	}
 
-/* main shop page recs, single product recs */
-	.site-main ul.products li.product,
+/* main shop page, single product recs */
+/*	.site-main ul.products li.product, */
 	.single-product .related ul.products li.product, .single-product .upsells ul.products li.product,
 	.storefront-full-width-content.single-product .related ul.products li.product, .storefront-full-width-content.single-product .upsells ul.products li.product {
 		width: 16%;
