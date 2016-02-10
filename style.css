@@ -2456,15 +2456,19 @@ table.cart .product-remove {
 
 
 /*** FOOTER ***/
+.site-footer .widget_wpcom_social_media_icons_widget {
+	text-align: center;
+}
+
 .site-footer .widget_wpcom_social_media_icons_widget li {
 	padding: 0 0.6em;
 }
 .site-footer .widget_wpcom_social_media_icons_widget a.genericon {
 	font-size: 2.5em;
-	color: #fff;
+	color: #00b0ff;
 }
 .site-footer .widget_wpcom_social_media_icons_widget a.genericon:hover {
-	color: #00b0ff;
+	color: #ff3c7c;
 }
 
 
