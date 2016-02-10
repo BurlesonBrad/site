@@ -2186,10 +2186,13 @@ button.single_add_to_cart_button:hover {
 	}
 
 /* main shop page, single product recs */
-	.site-main ul.products li.product,
+	.site-main ul.products li.product {
+		width: 21%;
+		margin-right: 5%;
+	}
 	.single-product .related ul.products li.product, .single-product .upsells ul.products li.product,
 	.storefront-full-width-content.single-product .related ul.products li.product, .storefront-full-width-content.single-product .upsells ul.products li.product {
-		width: 21%;
+		width: 16%;
 		margin-right: 5%;
 	}
 
