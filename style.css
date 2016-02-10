@@ -1311,8 +1311,8 @@ body.home #content { padding-top: 0; }
 	width: 50px;
 	height: 50px;
 
-	-webkit-transition: all 400ms;
-	transition: all 400ms;
+	-webkit-transition: -webkit-transform 400ms;
+	transition: transform 400ms;
 
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
