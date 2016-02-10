@@ -2461,6 +2461,10 @@ table.cart .product-remove {
 }
 .site-footer .widget_wpcom_social_media_icons_widget a.genericon {
 	font-size: 2.5em;
+	color: #fff;
+}
+.site-footer .widget_wpcom_social_media_icons_widget a.genericon:hover {
+	color: #00b0ff;
 }
 
 
