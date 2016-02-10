@@ -2454,3 +2454,14 @@ table.cart .product-remove {
 	vertical-align: middle;
 }
 
+
+/*** FOOTER ***/
+.site-footer .widget_wpcom_social_media_icons_widget li {
+	padding: 0 2em;
+}
+.site-footer .widget_wpcom_social_media_icons_widget a.genericon {
+	font-size: 2.5em;
+}
+
+
+
