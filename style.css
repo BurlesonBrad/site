@@ -1313,6 +1313,9 @@ body.home #content { padding-top: 0; }
 
 	-webkit-transition: all 400ms;
 	transition: all 400ms;
+
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
 .social-bar li > a img:hover {
