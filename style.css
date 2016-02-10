@@ -2474,5 +2474,10 @@ table.cart .product-remove {
 	color: #ff3c7c;
 }
 
+@media screen and (min-width: 768px) {
+	.footer-widgets {
+		padding-top: 3em;
+	}
+}
 
 
