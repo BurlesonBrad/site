@@ -1400,7 +1400,7 @@ body.home #content { padding-top: 0; }
 }
 
 /* 'Thank You' state */
-#mc_embed_signup h4, #mc_embed_signup p {
+#mc_embed_signup h3, #mc_embed_signup p {
 	line-height: 1;
 	color: #555555;
 	padding: 0 2em;
