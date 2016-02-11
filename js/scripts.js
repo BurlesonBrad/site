@@ -322,6 +322,24 @@ $(document).ready(function() {
 	}
 	customFooterSiteInfo();
 
+	function getQueryVariable(variable) {
+	    var query = window.location.search.substring(1);
+	    var vars = query.split('&');
+	    if ( vars.length < 1 ) {
+	    	return;
+	    }
+	    for (var i = 0; i < vars.length; i++) {
+	        var pair = vars[i].split('=');
+	        if (decodeURIComponent(pair[0]) == variable) {
+	            return decodeURIComponent(pair[1]);
+	        }
+	    }
+	    console.log('Query variable %s not found', variable);
+	}
+	if ( getQueryVariable('signedup') === 'true' ) {
+		$("#mc_embed_signup").html("<h4>Thanks!</h4><p>Just click on the link in your email, and you're good to go.</p>");
+	}
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
