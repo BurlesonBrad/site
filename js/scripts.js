@@ -337,7 +337,7 @@ $(document).ready(function() {
 	    console.log('Query variable %s not found', variable);
 	}
 	if ( getQueryVariable('signedup') === 'true' ) {
-		$("#mc_embed_signup").html("<h4>Thanks!</h4><p>Just click on the link in your email, and you're good to go.</p>");
+		$("#mc_embed_signup").html("<h4 class='rocksalt'>thanks!</h4><p class='blue'>Just click on the link in your email, and you're good to go.</p>");
 	}
 
 
