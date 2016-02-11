@@ -2466,6 +2466,10 @@ table.cart .product-remove {
 
 
 /*** FOOTER ***/
+.site-footer {
+	border-top: 10px solid #666;
+}
+
 .site-footer .widget_wpcom_social_media_icons_widget {
 	text-align: center;
 }
