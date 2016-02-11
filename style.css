@@ -1399,6 +1399,12 @@ body.home #content { padding-top: 0; }
 	opacity: 1;
 }
 
+/* 'Thank You' state */
+#mc_embed_signup h4, #mc_embed_signup p {
+	line-height: 1;
+	color: #555555;
+}
+
 @media screen and (max-width: 960px) {
 	.backgroundsize .social-bar {
 		background: none;
