@@ -1404,6 +1404,7 @@ body.home #content { padding-top: 0; }
 	line-height: 1;
 	color: #555555;
 	padding: 0 2em;
+	box-sizing: border-box;
 }
 
 @media screen and (max-width: 960px) {
