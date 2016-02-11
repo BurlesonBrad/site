@@ -2474,6 +2474,10 @@ table.cart .product-remove {
 	border-bottom: 0;
 }
 
+.footer-widgets section {
+	text-align: center;
+}
+
 .site-footer .widget_wpcom_social_media_icons_widget {
 	text-align: center;
 }
