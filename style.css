@@ -2497,7 +2497,7 @@ table.cart .product-remove {
 }
 
 .widget_recent_entries ul li, .widget_pages ul li {
-	float: left;
+	display: inline-block;
 	margin-bottom: 0;
 	margin-right: 0.3em;
 }
