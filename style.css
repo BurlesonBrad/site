@@ -2499,7 +2499,10 @@ table.cart .product-remove {
 
 
 .site-footer .footer-widget-2 h3 {
-	text-transform: 
+	font-family: 'Viga';
+    text-transform: uppercase;
+    font-size: 3em;
+    margin-bottom: 0.1em;
 }
 
 .widget_recent_entries ul li, .widget_pages ul li {
