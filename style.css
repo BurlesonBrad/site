@@ -2497,6 +2497,11 @@ table.cart .product-remove {
 	color: #ff3c7c;
 }
 
+
+.site-footer .footer-widget-2 h3 {
+	text-transform: 
+}
+
 .widget_recent_entries ul li, .widget_pages ul li {
 	display: inline-block;
 	margin-bottom: 0;
@@ -2511,9 +2516,14 @@ table.cart .product-remove {
 .widget_recent_entries ul li:nth-child(odd) a, .widget_pages ul li:nth-child(odd) a {
 	color: #fff;
 }
-
-.widget_recent_entries ul li a:hover, .widget_pages ul li a:hover {
-	color: #ff3c7c !important;
+.widget_recent_entries ul li:nth-child(odd) a:hover, .widget_pages ul li:nth-child(odd) a:hover {
+	color: #00b0ff;
+}
+.widget_recent_entries ul li:nth-child(even) a, .widget_pages ul li:nth-child(even) a {
+	color: #00b0ff;
+}
+.widget_recent_entries ul li:nth-child(even) a:hover, .widget_pages ul li:nth-child(even) a:hover {
+	color: #fff;
 }
 
 .widget_recent_entries ul li:before, .widget_pages ul li:before {
