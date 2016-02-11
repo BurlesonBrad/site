@@ -2499,6 +2499,10 @@ table.cart .product-remove {
 	color: #fff;
 }
 
+.widget_recent_entries ul li a:hover, .widget_pages ul li a:hover {
+	color: #ff3c7c !important;
+}
+
 .widget_recent_entries ul li:before, .widget_pages ul li:before {
 	display: none;
 }
