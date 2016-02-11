@@ -2521,12 +2521,14 @@ table.cart .product-remove {
 }
 .widget_recent_entries ul li:nth-child(odd) a:hover, .widget_pages ul li:nth-child(odd) a:hover {
 	color: #00b0ff;
+	text-decoration: underline;
 }
 .widget_recent_entries ul li:nth-child(even) a, .widget_pages ul li:nth-child(even) a {
 	color: #00b0ff;
 }
 .widget_recent_entries ul li:nth-child(even) a:hover, .widget_pages ul li:nth-child(even) a:hover {
 	color: #fff;
+	text-decoration: underline;
 }
 
 .widget_recent_entries ul li:before, .widget_pages ul li:before {
