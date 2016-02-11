@@ -418,6 +418,10 @@ button.menu-toggle::before {
 body.home #content { padding-top: 0; }
 
 /* All pages */
+.hentry {
+	border-bottom: 0 none;
+}
+
 .hentry .entry-header {
 	border: 0 none;
 	margin: 0;
@@ -2478,6 +2482,19 @@ table.cart .product-remove {
 }
 .site-footer .widget_wpcom_social_media_icons_widget a.genericon:hover {
 	color: #ff3c7c;
+}
+
+.widget_recent_entries ul li:before, .widget_pages ul li:before {
+	display: none;
+}
+
+.widget_recent_entries ul li ul, .widget_pages ul li ul {
+	display: none;
+}
+
+/* Hides "Thanks for signing up" */
+.widget_recent_entries ul li.page-item-88, .widget_pages ul li.page-item-88 {
+
 }
 
 @media screen and (min-width: 768px) {
