@@ -318,7 +318,7 @@ $(document).ready(function() {
 	function customFooterSiteInfo() {
 		var date = new Date();
 		var year = date.getFullYear();
-		$(".site-footer .site-info").html("&copy; Hyzer Shop, LLC. " + year + "All rights reserved.");
+		$(".site-footer .site-info").html("&copy; Hyzer Shop, LLC. " + year + " All rights reserved.");
 	}
 	customFooterSiteInfo();
 
