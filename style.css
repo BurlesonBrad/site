@@ -2484,6 +2484,20 @@ table.cart .product-remove {
 	color: #ff3c7c;
 }
 
+.widget_recent_entries ul li, .widget_pages ul li {
+	float: left;
+	margin-bottom: 0;
+	margin-right: 0.1em;
+}
+
+.widget_recent_entries ul li a, .widget_pages ul li a {
+	color: #00b0ff;
+}
+
+.widget_recent_entries ul li:nth-child(odd) a, .widget_pages ul li:nth-child(odd) a {
+	color: #fff;
+}
+
 .widget_recent_entries ul li:before, .widget_pages ul li:before {
 	display: none;
 }
@@ -2494,7 +2508,7 @@ table.cart .product-remove {
 
 /* Hides "Thanks for signing up" */
 .widget_recent_entries ul li.page-item-88, .widget_pages ul li.page-item-88 {
-
+	display: none;
 }
 
 @media screen and (min-width: 768px) {
