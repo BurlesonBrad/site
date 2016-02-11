@@ -2544,6 +2544,13 @@ table.cart .product-remove {
 	display: none;
 }
 
+.site-footer .site-info {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	opacity: 0.6;
+	text-align: center;
+}
+
 @media screen and (min-width: 768px) {
 	.footer-widgets {
 		padding-top: 3.8em;
