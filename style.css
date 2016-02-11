@@ -1001,8 +1001,8 @@ body.home #content { padding-top: 0; }
 	display: inline-block;
 	margin: 0 2em;
 
-	-webkit-transition: -webkit-transform 400ms;
-	transition: transform 400ms;
+	-webkit-transition: -webkit-transform 200ms;
+	transition: transform 200ms;
 }
 
 .disc-types-inner > a > img:hover {
