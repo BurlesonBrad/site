@@ -315,6 +315,13 @@ $(document).ready(function() {
 
 	$(".tax-disc-type .page-title, .tax-product_brand .page-title").parallaxBG( 0.02 );
 
+	function customFooterSiteInfo() {
+		var date = new Date();
+		var year = date.getFullYear();
+		$(".site-footer .site-info").html("&copy; Hyzer Shop, LLC. " + year + "All rights reserved.");
+	}
+	customFooterSiteInfo();
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
