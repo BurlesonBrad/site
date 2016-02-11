@@ -2467,7 +2467,11 @@ table.cart .product-remove {
 
 /*** FOOTER ***/
 .site-footer {
-	border-top: 10px solid #666;
+	border-top: 10px solid #4a4a4a;
+}
+
+.footer-widgets {
+	border-bottom: 0;
 }
 
 .site-footer .widget_wpcom_social_media_icons_widget {
