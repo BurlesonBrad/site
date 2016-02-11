@@ -1403,6 +1403,7 @@ body.home #content { padding-top: 0; }
 #mc_embed_signup h4, #mc_embed_signup p {
 	line-height: 1;
 	color: #555555;
+	padding: 0 2em;
 }
 
 @media screen and (max-width: 960px) {
