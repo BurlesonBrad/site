@@ -1406,6 +1406,10 @@ body.home #content { padding-top: 0; }
 	padding: 0 2em;
 	box-sizing: border-box;
 }
+#mc_embed_signup p {
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
 
 @media screen and (max-width: 960px) {
 	.backgroundsize .social-bar {
