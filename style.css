@@ -2492,6 +2492,7 @@ table.cart .product-remove {
 
 .widget_recent_entries ul li a, .widget_pages ul li a {
 	color: #00b0ff;
+	text-transform: uppercase;
 }
 
 .widget_recent_entries ul li:nth-child(odd) a, .widget_pages ul li:nth-child(odd) a {
