@@ -2114,14 +2114,17 @@ button.single_add_to_cart_button:hover {
 
 #tab-specs_tab {
 	background-color: #fff;
+	position: relative;
 }
 
 #tab-specs_tab > .specs {
 	float: left;
 	width: 69%;
 	clear: none;
-	padding-left: 0.5em;
+	padding-left: 0;
 	padding-top: 0;
+	position: relative;
+	bottom: 0;
 }
 
 #tab-specs_tab > .flight-chart {
