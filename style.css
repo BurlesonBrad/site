@@ -1661,7 +1661,7 @@ form.edit-bag-name {
 	top: 0;
 	right: 0;
 	padding: 0;
-	background: transparent;
+	background: transparent !important;
 	color: #00b0ff;
 	font-size: 3em;
 	font-weight: bold;
