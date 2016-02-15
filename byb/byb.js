@@ -287,7 +287,7 @@ $removeFromBagBtn.click(function(e) {
 
 function bagButtons() {
 	// Insert ADD-TO-BAG buttons
-	var $singleProdBtns = $(".single-product main > div[data-disc-type].product-cat-discs > .summary").find(".add-to-bag, .remove-from-bag");
+	var $singleProdBtns = $(".single-product main > div.product-cat-discs[data-disc-type] > .summary").find(".add-to-bag, .remove-from-bag");
 	var $archiveProdBtns = $("li.product-cat-discs[data-disc-type]").not(".page-id-45 .disc").find(".add-to-bag, .remove-from-bag");
 
 	$(".single-product main > div[data-product-slug].product-cat-discs > .summary .cart").append( $singleProdBtns );
