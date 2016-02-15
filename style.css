@@ -1989,6 +1989,12 @@ form.edit-bag-name {
     margin-bottom: 0.6em;
 }
 
+.single-product div.product:not(.product-type-variable) p.price {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 0.6em;
+}
+
 .variations label {
 	font-family: 'Rock Salt';
     text-transform: lowercase;
