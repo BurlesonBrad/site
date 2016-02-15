@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+
+<script>
+var output = {};
+
+var inboundsID = $("tr > td:first-child > input:first-child").attr("id").replace("x", "");
+inboundsId = '"' + inboundsID + '"';
+var slugArr = $("tr > td:first-child > input:first-child").attr("value").split("|");
+var slug = slugArr.join("-");
+slug += slugArr[0];
+slug += "-";
+slug += slugArr[1];
+slug = '"' + slug.toLowerCase() '"';
+
+output[slug] = inboundsID;
+
+body.append("<pre>" + output + "</pre>")
+</script>
+
+
+</body>
+</html>
