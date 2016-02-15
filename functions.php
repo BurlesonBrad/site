@@ -167,7 +167,7 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
-	$is_disc = wp_get_post_terms($post->ID, 'product_cat', array('fields' => 'names'));
+	$is_disc = get_the_terms($post->ID, 'product_cat');
 	$is_disc = implode( $is_disc );
 	$is_disc = strpos( $is_disc, 'discs' );
 	if ( $is_disc ) {
