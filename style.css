@@ -2175,6 +2175,7 @@ button.single_add_to_cart_button:hover {
 
 .flight-chart img {
 	min-width: 100%;
+	height: auto;
 }
 
 #tab-reviews h2 {
