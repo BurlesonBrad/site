@@ -2112,7 +2112,7 @@ button.single_add_to_cart_button:hover {
     font-size: 1.5em;
 }
 
-.panel .specs, .panel #comments {
+.panel .specs, .panel #comments, .panel #respond {
 	padding: 1.618em 2em;
 }
 
