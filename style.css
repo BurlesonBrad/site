@@ -2140,6 +2140,10 @@ button.single_add_to_cart_button:hover {
 	padding-top: 0.55em;
 }
 
+p.comment-subscription-form {
+	margin: 0.4em 0;
+}
+
 .woocommerce-tabs ul.tabs li a {
 	background-color: #00b0ff;
 	color: #fff;
