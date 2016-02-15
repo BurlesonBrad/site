@@ -342,7 +342,7 @@ $(document).ready(function() {
 	}
 
 	function removeSpecsTabForNonDiscs() {
-		$("main > div[data-product-slug]:not(div[data-category='discs'])").find(".specs_tab_tab, #tab-specs_tab").hide();
+		$("main > div[data-product-slug]").not("div[data-category='discs']").find(".specs_tab_tab, #tab-specs_tab").hide();
 		$("main > div[data-product-slug]:not(div[data-category='discs'])").find(".reviews_tab a").click();
 	}
 
