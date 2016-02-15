@@ -167,9 +167,12 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
-	$is_disc = get_the_terms($post->ID, 'product_cat');
-	$is_disc = implode( $is_disc );
-	$is_disc = strpos( $is_disc, 'discs' );
+	$product_cats = get_the_terms($post->ID, 'product_cat');
+	$cats_list = '';
+	foreach( $product_cats as $cat ) { 
+		$cats_list .= $cat->name;
+	}
+	$is_disc = strpos( $cats_list, 'discs' );
 	if ( $is_disc ) {
 		if ( count($stability) > 0 ) {
 			$stability = '<li>Stability: <strong>' . $stability[0]->name . '</strong></li>';
