@@ -174,7 +174,7 @@ function woo_new_product_tab_content() {
 	}
 	echo $cats_list;
 	$is_disc = strpos( $cats_list, 'disc' );
-	if ( $is_disc ) {
+	if ( $is_disc !== false ) {
 		if ( count($stability) > 0 ) {
 			$stability = '<li>Stability: <strong>' . $stability[0]->name . '</strong></li>';
 		}
