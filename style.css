@@ -2013,7 +2013,8 @@ select,
     -o-appearance: none;
 }
 
-.chosen-container-single a.chosen-single {
+.chosen-container-single a.chosen-single,
+.searchandfilter li select {
 	border-radius: 2px;
 }
 
