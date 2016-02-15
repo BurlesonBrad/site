@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
 
-<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" data-inbounds-id="<?php echo $inbounds_id; ?>" data-speed="<?php echo $speed; ?>" data-glide="<?php echo $glide; ?>" data-turn="<?php echo $turn; ?>" data-fade="<?php echo $fade; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" data-category"<?php echo '=' . (has_category('discs') ? 'product-cat-discs' : null); ?>" <?php post_class(); ?>>
+<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" data-inbounds-id="<?php echo $inbounds_id; ?>" data-speed="<?php echo $speed; ?>" data-glide="<?php echo $glide; ?>" data-turn="<?php echo $turn; ?>" data-fade="<?php echo $fade; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" data-category="<?php echo (has_category('discs') ? 'product-cat-discs' : null); ?>" <?php post_class(); ?>>
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
