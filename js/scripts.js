@@ -341,6 +341,11 @@ $(document).ready(function() {
 		$("#mc_embed_signup").html("<h3 class='rocksalt'>thanks!</h3><p class='blue'>Just click on the link in your email, and you're good to go.</p>");
 	}
 
+	function removeSpecsTabForNonDiscs() {
+		$("main > div[data-product-slug]:not(div[data-category='discs'])").find(".specs_tab_tab, #tab-specs_tab").hide();
+		$("main > div[data-product-slug]:not(div[data-category='discs'])").find(".reviews_tab a").click();
+	}
+
 	function smartPDPvariations() {
 
 	}
