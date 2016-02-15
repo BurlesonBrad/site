@@ -158,7 +158,7 @@ $(document).ready(function() {
 	function singleProductFlightData() {
 		if ( !$("body").hasClass("single-product") ) { return; }
 		
-		var $product = $("main > .product[data-product-slug]");
+		var $product = $("main > .product[data-disc-type]");
 		var $inboundsID = $product.data("inbounds-id");
 		var $discType = $product.data("disc-type");
 		var $productTitle = $(".summary h1[itemprop='name']");
