@@ -147,7 +147,7 @@ function hs_add_specs_tab() {
 	foreach( $product_cats as $cat ) { 
 		$cats_list .= $cat->name;
 	}
-	echo $is_disc;
+	echo $cats_list;
 	$is_disc = strpos( $cats_list, 'Disc' );
 	echo '<script type="text/javascript">console.log(' . $is_disc . ');</script>';
 	echo $is_disc;
