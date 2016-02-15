@@ -2173,6 +2173,10 @@ button.single_add_to_cart_button:hover {
 	box-shadow: -1px -1px 0px rgba(50,50,50,0.1);
 }
 
+.flight-chart img {
+	min-width: 100%;
+}
+
 #tab-reviews h2 {
 	padding-top: 0.55em;
 	margin-bottom: 0;
