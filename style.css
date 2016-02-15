@@ -987,6 +987,13 @@ ul.products li.product .button {
 	}
 }
 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+	.featured-disc-twitter {
+		margin-top: -2em;
+	}
+}
+
+
 .shop-by-disc-type {
 	text-align: center;
 	margin: 1em 0;
