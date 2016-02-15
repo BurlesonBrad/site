@@ -5609,7 +5609,7 @@ $("tr").each(function() {
 	var inboundsData = $(this).children("td > input").first().attr("id");
 	var inboundsID = inboundsData.replace("x", "");
 	inboundsId = inboundsID;
-	var slugArr = $(this).children("td > input").first().attr("value");.split("|");
+	var slugArr = $(this).children("td > input").first().attr("value").split("|");
 	var slug = slugArr.join("-");
 	slug += slugArr[0];
 	slug += "-";
