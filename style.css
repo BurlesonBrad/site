@@ -593,6 +593,8 @@ body.home #content { padding-top: 0; }
 	float: left;
 	width: 19%;
 	margin-right: 4%;
+	position: relative;
+	top: -3px;
 }
 .filter-icon + * {
 	float: right;
