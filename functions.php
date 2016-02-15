@@ -167,18 +167,20 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
-
-	if ( count($stability) > 0 ) {
-		$stability = '<li>Stability: <strong>' . $stability[0]->name . '</strong></li>';
+	$is_disc = wp_get_post_terms($post->ID, 'product_cat', array("fields" => "disc"));
+	if ( count($is_disc) > 0 ) {
+		if ( count($stability) > 0 ) {
+			$stability = '<li>Stability: <strong>' . $stability[0]->name . '</strong></li>';
+		}
+		
+		$disc_type = get_the_terms($post->ID, 'disc-type');
+		if ( count($disc_type) > 0 ) {
+			$disc_type = '<li>Type: <strong>' . str_replace('s', '', $disc_type[0]->name) . '</strong></li>';
+		}
+		// The new tab content
+		echo '<div class="specs"><h2>Specs</h2>';
+		echo '<ul>' . $stability . $disc_type . '</ul></div>';
 	}
-	
-	$disc_type = get_the_terms($post->ID, 'disc-type');
-	if ( count($disc_type) > 0 ) {
-		$disc_type = '<li>Type: <strong>' . str_replace('s', '', $disc_type[0]->name) . '</strong></li>';
-	}
-	// The new tab content
-	echo '<div class="specs"><h2>Specs</h2>';
-	echo '<ul>' . $stability . $disc_type . '</ul></div>';
 }
 
 
