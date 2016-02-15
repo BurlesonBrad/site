@@ -5605,19 +5605,20 @@
 
 <script>
 var output = {};
-$("tr").each(function() {
-	var inboundsData = $(this).children("td > input").first().attr("id") || 'x';
+
+$("tr > td > input").each(function() {
+	var inboundsData = $(this).attr("id") || 'x';
 	var inboundsID = inboundsData.replace("x", "");
 	inboundsId = inboundsID;
-	var slugArr = $(this).children("td > input").first().attr("value").split("|");
-	var slug = slugArr.join("-");
+	var slugArr = $(this).attr("value").split("|");
+	var slug = '';
 	slug += slugArr[0];
 	slug += "-";
 	slug += slugArr[1];
 	slug = slug.toLowerCase();
+	slug = slug.replace(" ", "-");
+	output[slug] = inboundsID;
 });
-
-output[slug] = inboundsID;
 
 $("body").append("<pre>" + JSON.stringify(output) + "</pre>")
 </script>
