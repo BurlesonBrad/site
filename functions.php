@@ -151,7 +151,7 @@ function hs_add_specs_tab() {
 	$is_disc = strpos( $cats_list, 'Disc' );
 	echo '<script type="text/javascript">console.log(' . $is_disc . ');</script>';
 	echo $is_disc;
-	if ( $is_disc !== false ) {
+	if ( !$is_disc == false ) {
 		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 	}
 }
