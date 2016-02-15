@@ -5607,7 +5607,7 @@
 var output = {};
 $("tr").each(function() {
 	var inboundsData = $(this).find("td:first-child > input:first-child").attr("id");
-	if ( inboundsData ) { var inboundsID = inboundsID.attr("id").replace("x", ""); }
+	if ( inboundsData ) { var inboundsID = inboundsData.replace("x", ""); }
 	inboundsId = '"' + inboundsID + '"';
 	var slugArr = $(this).find("td:first-child > input:first-child").attr("value").split("|");
 	var slug = slugArr.join("-");
