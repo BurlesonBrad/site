@@ -2000,8 +2000,8 @@ form.edit-bag-name {
     text-transform: lowercase;
 }
 
-select/*,
-.chosen-container-single .chosen-single*/ {
+select,
+.chosen-container-single .chosen-single {
 	border-radius: 100px;
 	border: 10px solid #fff;
     background: #fff;
@@ -2009,6 +2009,12 @@ select/*,
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
+}
+
+.chosen-container-single .chosen-single {
+	border-radius: 2px;
+	background: #555555;
+	color: #fff;
 }
 
 .backgroundsize select,
