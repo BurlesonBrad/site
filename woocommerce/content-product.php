@@ -49,7 +49,7 @@ $brand = wp_get_post_terms( $post_id, 'product_brand' );
 $brand_name = $brand[0]->name;
 $brand = $brand[0]->slug;
 ?>
-<li data-category"<?php echo '=' . (has_category('discs', $post->ID) ? 'product-cat-discs' : ''); ?>" data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
+<li data-category="<?php echo (has_category('discs', $post->ID) ? 'product-cat-discs' : ''); ?>" data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
