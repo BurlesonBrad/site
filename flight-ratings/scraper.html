@@ -5605,15 +5605,16 @@
 
 <script>
 var output = {};
-
-var inboundsID = $("tr > td:first-child > input:first-child").attr("id").replace("x", "");
-inboundsId = '"' + inboundsID + '"';
-var slugArr = $("tr > td:first-child > input:first-child").attr("value").split("|");
-var slug = slugArr.join("-");
-slug += slugArr[0];
-slug += "-";
-slug += slugArr[1];
-slug = '"' + slug.toLowerCase(); + '"';
+$("tr").each(function() {
+	var inboundsID = $(this).find("td:first-child > input:first-child").attr("id").replace("x", "");
+	inboundsId = '"' + inboundsID + '"';
+	var slugArr = $(this).find("td:first-child > input:first-child").attr("value").split("|");
+	var slug = slugArr.join("-");
+	slug += slugArr[0];
+	slug += "-";
+	slug += slugArr[1];
+	slug = '"' + slug.toLowerCase(); + '"';
+});
 
 output[slug] = inboundsID;
 
