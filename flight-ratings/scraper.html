@@ -5606,15 +5606,15 @@
 <script>
 var output = {};
 $("tr").each(function() {
-	var inboundsData = $(this).find("td:first-child > input:first-child").attr("id");
-	if ( inboundsData ) { var inboundsID = inboundsData.replace("x", ""); }
-	inboundsId = '"' + inboundsID + '"';
-	var slugArr = $(this).find("td:first-child > input:first-child").attr("value").split("|");
+	var inboundsData = $(this).children("td > input").first().attr("id");
+	var inboundsID = inboundsData.replace("x", "");
+	inboundsId = inboundsID;
+	var slugArr = $(this).children("td > input").first().attr("value");.split("|");
 	var slug = slugArr.join("-");
 	slug += slugArr[0];
 	slug += "-";
 	slug += slugArr[1];
-	slug = '"' + slug.toLowerCase(); + '"';
+	slug = slug.toLowerCase();
 });
 
 output[slug] = inboundsID;
