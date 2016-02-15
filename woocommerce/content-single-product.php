@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script type="text/javascript">var $discSlug = "<?php echo $post->post_name; ?>";</script>
 
-<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" data-inbounds-id="<?php echo $inbounds_id; ?>" data-speed="<?php echo $speed; ?>" data-glide="<?php echo $glide; ?>" data-turn="<?php echo $turn; ?>" data-fade="<?php echo $fade; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" data-category="<?php echo (has_category('discs') ? 'product-cat-discs' : null); ?>" <?php post_class(); ?>>
+<div data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" data-inbounds-id="<?php echo $inbounds_id; ?>" data-speed="<?php echo $speed; ?>" data-glide="<?php echo $glide; ?>" data-turn="<?php echo $turn; ?>" data-fade="<?php echo $fade; ?>" itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" data-category="<?php echo (has_term('discs', 'product_cat') ? 'product-cat-discs' : null); ?>" <?php post_class(); ?>>
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-		<?php if ( has_category('discs') ): ?>
+		<?php if ( has_term('discs', 'product_cat') ): ?>
 		<div class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='12' height='12' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Add' /><span>Add<span class='added'>ed</span> to bag<span class='added'>!</span></span></div>
 		<div class='remove-from-bag'><img class='not-yet-removed' src='/wp-content/themes/storefront-child/images/x-red.gif' width='12' height='12' alt='Remove' /><img class='removed' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Removed' /><span>Remove<span class='removed'>d</span> from bag</span></div>
 		<?php endif; ?>
