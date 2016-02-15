@@ -49,7 +49,7 @@ $brand = wp_get_post_terms( $post_id, 'product_brand' );
 $brand_name = $brand[0]->name;
 $brand = $brand[0]->slug;
 ?>
-<li data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
+<li data-category="<?php echo has_category('discs', $post->ID) ? 'product-cat-discs' : ''; ?>" data-product-slug="<?php echo $post->post_name; ?>" data-disc-type="<?php echo $type; ?>" data-brand="<?php echo $brand; ?>" <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
@@ -96,6 +96,8 @@ $brand = $brand[0]->slug;
 		do_action( 'woocommerce_after_shop_loop_item' );
 
 	?>
+
+	<?php if ( is_tax() )
 	<div class='add-to-bag'><img class='not-yet-added' src='/wp-content/themes/storefront-child/images/plus-pink.gif' width='12' height='12' alt='Add' /><img class='added' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Add' /><span>Add<span class='added'>ed</span> to bag<span class='added'>!</span></span></div>
 	<div class='remove-from-bag'><img class='not-yet-removed' src='/wp-content/themes/storefront-child/images/x-red.gif' width='12' height='12' alt='Remove' /><img class='removed' src='/wp-content/themes/storefront-child/images/check-green.gif' width='14' height='12' alt='Removed' /><span>Remove<span class='removed'>d</span> from bag</span></div>
 </li>
