@@ -2135,7 +2135,7 @@ button.single_add_to_cart_button:hover {
 }
 
 #tab-specs_tab {
-	background-color: #fff;
+	background-color: transparent;
 	position: relative;
 }
 
@@ -2143,7 +2143,7 @@ button.single_add_to_cart_button:hover {
 	float: left;
 	width: 69%;
 	clear: none;
-	padding-left: 0;
+	padding-left: 1em;
 	padding-top: 2.8em;
 }
 
@@ -2151,7 +2151,7 @@ button.single_add_to_cart_button:hover {
 	float: left;
 	width: 30%;
 	margin-right: 1%;
-	border: 12px solid #fff;
+	padding: 12px solid #fff;
 }
 
 #tab-reviews h2 {
