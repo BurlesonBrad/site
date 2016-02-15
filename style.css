@@ -2011,9 +2011,8 @@ select,
     -o-appearance: none;
 }
 
-.chosen-container-single .chosen-single {
+.chosen-container-single a.chosen-single {
 	border-radius: 2px;
-	background: #555555;
 	color: #fff;
 }
 
@@ -2022,6 +2021,10 @@ select,
 	background: #fff url('images/select-bg.gif') no-repeat 93% 50%;
 	background-size: 6px auto;
 	padding-right: 2em;
+}
+
+.backgroundsize .chosen-container-single .chosen-single {
+	background: #555555 url('images/select-bg.gif') no-repeat 93% 50%;
 }
 
 .single-product .quantity input {
