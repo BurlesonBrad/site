@@ -172,7 +172,8 @@ function woo_new_product_tab_content() {
 	foreach( $product_cats as $cat ) { 
 		$cats_list .= $cat->name;
 	}
-	$is_disc = strpos( $cats_list, 'discs' );
+	echo $cats_list;
+	$is_disc = strpos( $cats_list, 'disc' );
 	if ( $is_disc ) {
 		if ( count($stability) > 0 ) {
 			$stability = '<li>Stability: <strong>' . $stability[0]->name . '</strong></li>';
