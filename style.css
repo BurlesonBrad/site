@@ -2113,7 +2113,7 @@ button.single_add_to_cart_button:hover {
 }
 
 .panel .specs, .panel #comments {
-	padding: 1.618em;
+	padding: 1.618em 2em;
 }
 
 #tab-specs_tab {
