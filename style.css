@@ -2136,6 +2136,10 @@ button.single_add_to_cart_button:hover {
 	border: 12px solid #fff;
 }
 
+#tab-reviews h2 {
+	padding-top: 1em;
+}
+
 .woocommerce-tabs ul.tabs li a {
 	background-color: #00b0ff;
 	color: #fff;
