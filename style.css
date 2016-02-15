@@ -2011,7 +2011,7 @@ select,
 	border-radius: 100px;
 	border: 10px solid #fff;
     background: #fff;
-    box-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+    box-shadow: -1px -1px 0px rgba(0,0,0,0.2);
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
