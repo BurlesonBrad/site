@@ -2144,7 +2144,7 @@ button.single_add_to_cart_button:hover {
 	width: 69%;
 	clear: none;
 	padding-left: 1em;
-	padding-top: 2.8em;
+	padding-top: 0;
 }
 
 #tab-specs_tab > .flight-chart {
