@@ -171,6 +171,17 @@ $(document).ready(function() {
 			turn: $product.data("turn"),
 			fade: $product.data("fade")
 		};
+		var stability = function() {
+			if ( (stats.fade - stats.turn) / 2 >= 3 ) {
+				return "_sft_pa_stability=stable";
+			}
+			if ( (stats.fade - stats.turn) / 2 <= -1 ) {
+				return "_sft_pa_stability=understable";
+			}
+			else {
+				return "_sft_pa_stability=stable";
+			}
+		}();
 		var typeLabel = $discType.replace(/s$/, "").replace(/-/g, " ");
 		if ( typeLabel == "mid range" ) { typeLabel = "mid-range" }
 
@@ -179,6 +190,7 @@ $(document).ready(function() {
 		var delay = 200;
 		$.each( stats, function( i, val ) {
 			$bubbles[i] = $("<li class='bubble-wrap " + i + "'><span class='number-bubble'><span class='bubble-inner'><span class='stat-name'>" + i + "</span><span class='stat-value'>" + val + "</span></span></span></li>");
+			$bubbles[i] = $bubbles[i].wrapInner("<a href='/shop/?" + stability + "'></a>");
 			$statsContainer.append( $bubbles[i] );
 			delay = delay + 100; 
 			setTimeout(function() {
