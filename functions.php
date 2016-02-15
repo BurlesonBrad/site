@@ -142,13 +142,17 @@ add_filter('loop_shop_columns', 'loop_columns', 999);
 
 function hs_add_specs_tab() {
 	global $post;
-	add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+	$product_cats = get_the_terms($post->ID, 'product_cat');
+	$cats_list = '';
+	foreach( $product_cats as $cat ) { 
+		$cats_list .= $cat->name;
+	}
+	$is_disc = strpos( $cats_list, 'Disc' );
+	if ( $is_disc !== false ) {
+		add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+	}
 }
 add_action('wp_loaded', 'hs_add_specs_tab');
-
-// global $post;
-// var_dump( wp_get_post_terms($post->ID, 'stability') );
-
 function woo_new_product_tab( $tabs ) {
 	
 	// Adds the new tab
