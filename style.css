@@ -2144,6 +2144,10 @@ p.comment-subscription-form {
 	margin: 0.4em 0;
 }
 
+#review_form .form-submit {
+	margin-bottom: 1em;
+}
+
 .woocommerce-tabs ul.tabs li a {
 	background-color: #00b0ff;
 	color: #fff;
