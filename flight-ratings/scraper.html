@@ -5606,7 +5606,7 @@
 <script>
 var output = {};
 $("tr").each(function() {
-	var inboundsData = $(this).find("td:first-child > input:first-child");
+	var inboundsData = $(this).find("td:first-child > input:first-child").attr("id");
 	if ( inboundsData ) { var inboundsID = inboundsID.attr("id").replace("x", ""); }
 	inboundsId = '"' + inboundsID + '"';
 	var slugArr = $(this).find("td:first-child > input:first-child").attr("value").split("|");
