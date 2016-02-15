@@ -300,20 +300,20 @@ $(document).ready(function() {
 		parallaxBG: function(speed) {
 			var that = this;
 			var bgPos = parseInt( this.css("background-position-y"), 10 );
-			var s = speed || 3;
+			var s = speed || 0.3;
 			var $win = $(window);
 			$win.scroll(function() {
 				var scrollTop = $win.scrollTop();
 				TweenMax.to( that, 0.1, {
 					css: {
-						"background-position-y": bgPos - (scrollTop*s)
+						"background-position-y": bgPos-(scrollTop*s*0.1)
 					}
 				});
 			});	
 		}
 	});
 
-	$(".tax-disc-type .page-title, .tax-product_brand .page-title").parallaxBG( 0.02 );
+	$(".tax-disc-type .page-title, .tax-product_brand .page-title").parallaxBG( 0.2 );
 
 	function customFooterSiteInfo() {
 		var date = new Date();
@@ -338,6 +338,10 @@ $(document).ready(function() {
 	}
 	if ( getQueryVariable('signedup') === 'true' ) {
 		$("#mc_embed_signup").html("<h3 class='rocksalt'>thanks!</h3><p class='blue'>Just click on the link in your email, and you're good to go.</p>");
+	}
+
+	function smartPDPvariations() {
+
 	}
 
 
