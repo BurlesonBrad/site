@@ -295,7 +295,7 @@ $(document).ready(function() {
 			$this.prepend("<img class='filter-icon' alt='" + fieldName + "' src='/wp-content/themes/storefront-child/images/" + fieldName + "-icon.png' />");
 		});
 	}
-	filterIcons();
+	setTimeout( filterIcons, 500);
 
 	$.fn.extend({
 		parallaxBG: function(speed) {
