@@ -347,6 +347,7 @@ $(document).ready(function() {
 		});
 		$("main > div[data-product-slug]:not(div[data-category='discs'])").find(".reviews_tab a").click();
 	}
+	removeSpecsTabForNonDiscs();
 
 	function smartPDPvariations() {
 
