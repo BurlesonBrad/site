@@ -2018,7 +2018,8 @@ select,
 }
 
 .chosen-container-single a.chosen-single,
-.searchandfilter li select {
+.searchandfilter li select,
+.single-product .variations select {
 	border-radius: 2px;
 }
 
