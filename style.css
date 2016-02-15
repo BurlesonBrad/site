@@ -2154,6 +2154,7 @@ button.single_add_to_cart_button:hover {
 /*	padding: 12px solid #fff;
 */
 	border-left: 0.8em solid #fff;
+	box-shadow: -1px -1px 0px rgba(50,50,50,0.1);
 }
 
 #tab-reviews h2 {
