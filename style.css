@@ -2300,11 +2300,11 @@ p.comment-subscription-form {
 		margin-top: 2em;
 	}
 
-	.related .products li {
+	.products li {
 		font-size: 1.2em;
 	}
 
-	.related .products li > a > img {
+	.products li > a > img {
 		width: 70%;
 	}
 }
