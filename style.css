@@ -2288,6 +2288,11 @@ p.comment-subscription-form {
 		padding-top: 0;
 	}
 
+	.related .products h2 {
+		text-align: center;
+		margin-bottom: 0.3em;
+	}
+
 	.related .products li {
 		font-size: 1.2em;
 	}
