@@ -1956,6 +1956,10 @@ form.edit-bag-name {
 	margin-right: 4%;
 }
 
+.single-product .summary .woocommerce-review-link {
+	display: none;
+}
+
 .storefront-full-width-content.single-product div.product .images .thumbnails a.zoom {
 	margin-right: 4%;
 	width: 22%;
