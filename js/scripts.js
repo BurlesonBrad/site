@@ -360,8 +360,25 @@ $(document).ready(function() {
 	removeSpecsTabForNonDiscs();
 
 	function smartPDPvariations() {
-
+		$(".single-product .summary .variations_form option").each(function() {
+			$(this).click(function() {
+				setTimeout(function() {
+					var over = 0;
+					$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
+						if ( $(this).find("option").length > 1 ) {
+							over++;
+						}
+					});
+					if ( over < 1 ) {
+						$(".single-product .summary .variations_form select").each(function() {
+							$(this).val( $(this).find("option").attr("value") );
+						});
+					}
+				}, 1000);
+			});
+		});
 	}
+	smartPDPvariations();
 
 
 	// function featuredVidTitle() {
