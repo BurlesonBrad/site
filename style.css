@@ -2287,6 +2287,14 @@ p.comment-subscription-form {
 	.woocommerce-tabs {
 		padding-top: 0;
 	}
+
+	.related .products li {
+		font-size: 1.2em;
+	}
+
+	.related .products li > a > img {
+		width: 70%;
+	}
 }
 
 /* ARCHIVE PRODUCTS */
