@@ -381,7 +381,7 @@ $(document).ready(function() {
 			});
 		});
 	}
-	smartPDPvariations();
+	//smartPDPvariations();
 
 
 	// function featuredVidTitle() {
