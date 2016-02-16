@@ -371,8 +371,9 @@ $(document).ready(function() {
 					});
 					if ( over < 1 ) {
 						$(".single-product .summary .variations_form select").each(function() {
-							$(this).find("option").eq(1).select();
 							$(this).find("option").eq(0).removeAttr("selected");
+							$(this).find("option").eq(1).select();
+
 							$(this).val( $(this).find("option").eq(1).attr("value") );
 						});
 					}
