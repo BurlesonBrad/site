@@ -1971,6 +1971,13 @@ form.edit-bag-name {
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.single-product .summary .add-to-bag,
+	.single-product .summary .remove-from-bag {
+		margin-top: 1em;
+	}
+}
+
 .single-product .summary h2.brand {
 	margin-bottom: 0;
 	text-transform: uppercase;
