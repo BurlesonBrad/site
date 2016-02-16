@@ -1974,7 +1974,7 @@ form.edit-bag-name {
 @media screen and (max-width: 767px) {
 	.single-product .summary .add-to-bag,
 	.single-product .summary .remove-from-bag {
-		margin-top: 1em;
+		margin-top: 2em;
 	}
 }
 
