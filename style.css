@@ -2291,7 +2291,9 @@ p.comment-subscription-form {
 	.woocommerce-tabs {
 		padding-top: 0;
 	}
+}
 
+@media screen and (max-width: 767px) {
 	.related h2 {
 		text-align: center;
 		margin-bottom: 0.3em;
