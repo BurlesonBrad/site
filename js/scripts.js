@@ -365,7 +365,7 @@ $(document).ready(function() {
 				setTimeout(function() {
 					var over = 0;
 					$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
-						if ( $(this).find("option").length > 1 ) {
+						if ( $(this).find("option").length > 2 ) {
 							over++;
 						}
 					});
