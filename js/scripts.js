@@ -173,7 +173,7 @@ $(document).ready(function() {
 		};
 		var stability = function() {
 			if ( (stats.fade - stats.turn) / 2 >= 3 ) {
-				return "_sft_pa_stability=stable";
+				return "_sft_pa_stability=overstable";
 			}
 			if ( (stats.fade - stats.turn) / 2 <= -1 ) {
 				return "_sft_pa_stability=understable";
