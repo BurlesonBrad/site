@@ -360,33 +360,28 @@ $(document).ready(function() {
 	removeSpecsTabForNonDiscs();
 
 	function smartPDPvariations() {
-		var HSselectVariation = function HSIntervalSelect() {
-			setInterval( function() { HSselectVar() }, 1000);
-			function HSselectVar() {
-				var over = 0;
-				$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
-					if ( $(this).find("option").length > 2 ) {
-						over++;
-					}
-				});
-				if ( over < 1 ) {
-					$(".single-product .summary .variations_form select").each(function() {
-						$(this).find("option").eq(0).removeAttr("selected");
-						$(this).find("option").eq(1).select().addClass("enabled");
-
-						$(this).val( $(this).find("option").eq(1).attr("value") );
-						$(this).parent().trigger( 'woocommerce_variation_select_change' ).trigger( 'check_variations', [ '', false ] );
-					});
+		var HSselectVariation = setInterval( function() { HSselectVar() }, 1000);
+		function HSselectVar() {
+			var over = 0;
+			$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
+				if ( $(this).find("option").length > 2 ) {
+					over++;
 				}
+			});
+			if ( over < 1 ) {
+				$(".single-product .summary .variations_form select").each(function() {
+					$(this).find("option").eq(0).removeAttr("selected");
+					$(this).find("option").eq(1).select().addClass("enabled");
+
+					$(this).val( $(this).find("option").eq(1).attr("value") );
+					$(this).parent().trigger( 'woocommerce_variation_select_change' ).trigger( 'check_variations', [ '', false ] );
+				});
 			}
-		};
-		
+		}
 		$(".single-product .summary .variations_form select").each(function() {
-			$(this).click(function() {
-				HSselectVariation();
-			})
+			$(this).click( HSselectVariation );
 			.blur(function() {
-				clearInterval( HSIntervalSelect );
+				clearInterval( HSselectVariation );
 			});
 		});
 	}
