@@ -362,8 +362,6 @@ $(document).ready(function() {
 	function smartPDPvariations() {
 		var HSselectVariation = setInterval( function() { HSselectVar() }, 1000);
 		function HSselectVar() {
-			i++;
-
 			var over = 0;
 			$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
 				if ( $(this).find("option").length > 2 ) {
