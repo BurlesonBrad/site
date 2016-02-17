@@ -2323,12 +2323,21 @@ ul.products li.product h3 {
 	font-size: 1.9em;
 	color: #777;
 	font-family: 'Viga';
+	min-height: 3.2em;
 }
 
 ul.products li.product h4 {
     margin-bottom: 0;
     color: #999;
     text-transform: uppercase;
+}
+
+ul.products li.product .star-rating {
+	margin-top: -0.9em;
+}
+
+ul.products li.product .price {
+	margin-top: 1.4em;
 }
 
 
