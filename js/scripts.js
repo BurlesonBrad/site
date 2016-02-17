@@ -360,8 +360,8 @@ $(document).ready(function() {
 	removeSpecsTabForNonDiscs();
 
 	function smartPDPvariations() {
-		var HSselectVariation = setInterval( function() { HSselectVar() }, 1000);
-		function HSselectVar() {
+		//var HSselectVariation = setInterval( function() { HSselectVar() }, 1000);
+		function HSselectVariation() {
 			var over = 0;
 			$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
 				if ( $(this).find("option").length > 2 ) {
