@@ -380,9 +380,7 @@ $(document).ready(function() {
 		}
 		$(".single-product .summary .variations_form select").each(function() {
 			$(this).click( HSselectVariation )
-			.blur(function() {
-				clearInterval( HSselectVariation );
-			});
+			.blur( HSselectVariation );
 		});
 	}
 	smartPDPvariations();
