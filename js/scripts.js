@@ -360,7 +360,9 @@ $(document).ready(function() {
 	removeSpecsTabForNonDiscs();
 
 	function smartPDPvariations() {
-		var HSselectVariation = setInterval( function() { HSselectVar() }, 1000);
+		var HSselectVariation = function() {
+			setInterval( function() { HSselectVar() }, 1000);
+		};
 		function HSselectVar() {
 			var over = 0;
 			$(".single-product .summary .variations_form select").not( $(this) ).each(function() {
@@ -379,7 +381,9 @@ $(document).ready(function() {
 			}
 		}
 		$(".single-product .summary .variations_form select").each(function() {
-			$(this).click(function() { HSselectVariation })
+			$(this).click(function() {
+				HSselectVariation();
+			})
 			.blur(function() {
 				clearInterval( HSselectVariation );
 			});
