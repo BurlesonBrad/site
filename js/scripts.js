@@ -378,10 +378,12 @@ $(document).ready(function() {
 				});
 			}
 		}
-		$(".single-product .summary .variations_form select").each(function() {
-			$(this).click( HSselectVariation )
-			.blur( HSselectVariation );
-		});
+		setTimeout(function() {
+			$(".single-product .summary .variations_form select").each(function() {
+				$(this).click( HSselectVariation )
+				.blur( HSselectVariation );
+			});
+		}, 1000);
 	}
 	smartPDPvariations();
 
