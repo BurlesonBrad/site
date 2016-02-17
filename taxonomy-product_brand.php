@@ -89,7 +89,7 @@ get_header( 'shop' ); ?>
 				</ul><!--/.products-->
 			<?php endforeach; ?>
 
-			<h2 class="other-stuff-title">Other Stuff</h2>
+			<h2 class="other-stuff-title block-header">Other Stuff</h2>
 			<ul class="products brand-disc-type putters">
 			<?php
 				$p_args = array(
