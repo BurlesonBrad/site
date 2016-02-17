@@ -380,7 +380,7 @@ $(document).ready(function() {
 			}
 		}, 1000);
 		$(".single-product .summary .variations_form select").each(function() {
-			$(this).click(function() { HSselectVariation(); });
+			$(this).click(function() { HSselectVariation(); })
 			.blur(function() {
 				clearInterval( HSselectVariation );
 			});
