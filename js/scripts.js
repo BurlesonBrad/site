@@ -375,7 +375,7 @@ $(document).ready(function() {
 							$(this).find("option").eq(1).select().addClass("enabled");
 
 							$(this).val( $(this).find("option").eq(1).attr("value") );
-							$(this).parent().trigger( 'woocommerce_variation_select_change' );
+							$(this).parent().trigger( 'woocommerce_variation_select_change' ).trigger( 'check_variations', [ '', false ] );
 						});
 					}
 				}, 1000);
