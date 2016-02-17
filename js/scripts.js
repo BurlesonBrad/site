@@ -378,7 +378,7 @@ $(document).ready(function() {
 							$(this).parent().trigger( 'woocommerce_variation_select_change' ).trigger( 'check_variations', [ '', false ] );
 						});
 					}
-				}, 1000);
+				}, 2000);
 			});
 		});
 	}
