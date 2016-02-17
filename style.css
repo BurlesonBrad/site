@@ -664,7 +664,8 @@ body.home #content { padding-top: 0; }
 	font-weight: bold;
 }
 
-.brand-disc-type-title {
+.brand-disc-type-title,
+.other-stuff-title  {
 	margin-bottom: 0.9em;
 }
 
