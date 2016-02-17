@@ -379,7 +379,7 @@ $(document).ready(function() {
 			}
 		}
 		$(".single-product .summary .variations_form select").each(function() {
-			$(this).click( HSselectVariation );
+			$(this).click( HSselectVariation )
 			.blur(function() {
 				clearInterval( HSselectVariation );
 			});
