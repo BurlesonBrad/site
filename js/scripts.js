@@ -360,7 +360,8 @@ $(document).ready(function() {
 	removeSpecsTabForNonDiscs();
 
 	function smartPDPvariations() {
-		setInterval(function HSselectVariation() {
+		setInterval( HSselectVariation, 1000 );
+		function HSselectVariation() {
 			i++;
 
 			var over = 0;
@@ -378,7 +379,7 @@ $(document).ready(function() {
 					$(this).parent().trigger( 'woocommerce_variation_select_change' ).trigger( 'check_variations', [ '', false ] );
 				});
 			}
-		}, 1000);
+		}
 		$(".single-product .summary .variations_form select").each(function() {
 			$(this).click( HSselectVariation )
 			.blur(function() {
