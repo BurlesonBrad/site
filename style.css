@@ -613,6 +613,15 @@ body.home #content { padding-top: 0; }
 	float: left;
 }
 
+@media screen and (max-width: 767px) {
+	.filter-icon {
+		width: 11%;
+	}
+	.filter-icon + * {
+		width: 85%;
+	}
+}
+
 
 
 
