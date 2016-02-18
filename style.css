@@ -2330,6 +2330,9 @@ p.comment-subscription-form {
 	}
 
 	.woocommerce-tabs ul.tabs li a {
+		display: inline-block;
+		width: 100%
+		box-sizing: border-box;
 		padding: 1em 3em;
 		margin: 0;
 		background: #00b0ff;
