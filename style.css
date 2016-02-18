@@ -611,17 +611,21 @@ body.home #content { padding-top: 0; }
 
 .sf-field-reset .filter-icon + .search-filter-reset {
 	float: left;
-	width: 100%;
+	width: auto;
 	background: transparent;
 	border-color: transparent;
 	color: #ccc;
 	text-decoration: underline;
+	line-height: 2em;
 }
 
 .sf-field-reset::before {
 	content: "↻";
+	font-weight: bold;
 	display: inline-block;
 	margin-right: 6px;
+	float: left;
+	line-height: 2em;
 }
 
 @media screen and (max-width: 767px) {
