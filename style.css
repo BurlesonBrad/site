@@ -305,6 +305,9 @@ button.menu-toggle::before {
 	header ul ul {
 		border-top: 0 none !important;
 	}
+	header ul li.menu-item-has-children a {
+		background-color: rgba(0,0,0,0.1);
+	}
 }
 
 @media screen and (max-width: 1280px) and (min-width: 768px) {
