@@ -2330,6 +2330,7 @@ p.comment-subscription-form {
 
 	.woocommerce-tabs ul.tabs li a {
 		padding: 0;
+		background: transparent;
 	}
 }
 
