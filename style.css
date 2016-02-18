@@ -2300,6 +2300,21 @@ p.comment-subscription-form {
 	.woocommerce-tabs {
 		padding-top: 0;
 	}
+
+	.woocommerce-tabs ul.tabs {
+		text-align: left;
+	}
+
+	.woocommerce-tabs ul.tabs li {
+		text-align: center;
+	    margin-right: 0;
+	    padding: 1em 3em;
+	    background: #00b0ff;
+	}
+
+	.woocommerce-tabs ul.tabs li a {
+		padding: 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
