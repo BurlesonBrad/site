@@ -402,7 +402,7 @@ $(document).ready(function() {
 			});
 		}
 	}
-	$(document).scroll(function() {
+	$(window).scroll(function() {
 		footerParallax(0.6);
 	});
 
