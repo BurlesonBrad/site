@@ -618,6 +618,12 @@ body.home #content { padding-top: 0; }
 	text-decoration: underline;
 }
 
+.sf-field-reset .filter-icon + .search-filter-reset::before {
+	content: "\8635";
+	display: inline-block;
+	margin-right: 6px;
+}
+
 @media screen and (max-width: 767px) {
 	.filter-icon {
 		width: 11%;
