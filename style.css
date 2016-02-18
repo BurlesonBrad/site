@@ -302,6 +302,9 @@ button.menu-toggle::before {
 		height: 3.444em;
     	width: 2.5em;
 	}
+	header ul ul {
+		border-top: 0 none !important;
+	}
 }
 
 @media screen and (max-width: 1280px) and (min-width: 768px) {
