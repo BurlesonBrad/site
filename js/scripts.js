@@ -401,6 +401,8 @@ $(document).ready(function() {
 				"transform": "translateY(" + trans + "px)"
 			});
 		}
+
+		console.log("ran all");
 	}
 	footerParallax(0.6);
 	$(window).scroll(function() {
