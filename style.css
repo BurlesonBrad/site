@@ -2325,12 +2325,18 @@ p.comment-subscription-form {
 		text-align: center;
 	    margin-right: 0;
 	    background: transparent;
-	    border: 6px solid #00b0ff;
 	}
 
 	.woocommerce-tabs ul.tabs li a {
 		padding: 1em 3em;
+		margin: 0;
 		background: #00b0ff;
+		border: 6px solid #00b0ff;
+	}
+
+	.woocommerce-tabs ul.tabs li.active a {
+		background: #0090df;
+		border: 6px solid #0090df;
 	}
 }
 
