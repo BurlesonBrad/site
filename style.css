@@ -2319,7 +2319,13 @@ p.comment-subscription-form {
 
 	.woocommerce-tabs ul.tabs {
 		text-align: left;
-		overflow: auto;
+	}
+
+	.woocommerce-tabs ul.tabs::after {
+		content: " ";
+		display: block;
+		height: 0;
+		clear: both;
 	}
 
 	.woocommerce-tabs ul.tabs li {
