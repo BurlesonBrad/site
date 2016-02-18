@@ -398,7 +398,7 @@ $(document).ready(function() {
 			var trans = footerHeight - c * ( scrollDist - docMostOfHeight );
 			docHeight - footerHeight
 			$footer.css({
-				"transform": "translateY(" + trans + "px)"
+				"transform": "translateY(" + (-trans) + "px)"
 			});
 //		}
 	}
