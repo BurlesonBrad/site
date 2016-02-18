@@ -397,9 +397,9 @@ $(document).ready(function() {
 			});
 //		}
 	}
-	footerParallax(0.6);
+	footerParallax(0.3);
 	$(window).scroll(function() {
-		footerParallax(0.6);
+		footerParallax(0.3);
 	});
 
 
