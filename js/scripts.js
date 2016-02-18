@@ -404,6 +404,7 @@ $(document).ready(function() {
 			});
 		}
 	}
+	footerParallax(0.6);
 
 
 	// function featuredVidTitle() {
