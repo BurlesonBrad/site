@@ -616,6 +616,8 @@ body.home #content { padding-top: 0; }
 	border-color: transparent;
 	color: #ccc;
 	text-decoration: underline;
+	padding: 0;
+	border: 0;
 	line-height: 2em;
 }
 
