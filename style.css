@@ -2322,6 +2322,8 @@ p.comment-subscription-form {
 	}
 
 	.woocommerce-tabs ul.tabs li {
+		float: left;
+		width: 50%;
 		text-align: center;
 	    margin-right: 0;
 	    background: transparent;
