@@ -2391,6 +2391,10 @@ p.comment-subscription-form {
 		background: #00a5f2;
 		border: 6px solid #00a5f2;
 	}
+
+	.pagination .page-numbers, .woocommerce-pagination .page-numbers {
+		font-size: 1.5em;
+	}
 }
 
 /* ARCHIVE PRODUCTS */
