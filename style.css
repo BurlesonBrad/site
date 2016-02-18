@@ -2303,6 +2303,10 @@ p.comment-subscription-form {
 }
 
 @media screen and (max-width: 767px) {
+	.single-product .summary h1.product_title {
+		margin-bottom: 0.5em;
+	}
+
 	.related h2 {
 		text-align: center;
 		margin-bottom: 1em;
