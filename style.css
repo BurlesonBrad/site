@@ -617,7 +617,7 @@ body.home #content { padding-top: 0; }
 	color: #aaa;
 	padding: 0;
 	border: 0;
-	line-height: 2em;
+	line-height: 2.25em;
 }
 
 .sf-field-reset .filter-icon + .search-filter-reset:hover {
