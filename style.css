@@ -620,6 +620,12 @@ body.home #content { padding-top: 0; }
 	line-height: 2em;
 }
 
+.sf-field-reset .filter-icon + .search-filter-reset:hover {
+	background-color: transparent;
+	text-decoration: underline;
+	color: #888;
+}
+
 .sf-field-reset::before {
 	content: "↻";
 	font-weight: bold;
