@@ -2324,6 +2324,7 @@ p.comment-subscription-form {
 	.woocommerce-tabs ul.tabs::after {
 		content: " ";
 		display: block;
+		visibility: hidden;
 		height: 0;
 		clear: both;
 	}
