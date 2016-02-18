@@ -394,15 +394,13 @@ $(document).ready(function() {
 			footerHeight = $footer.outerHeight(),
 			docMostOfHeight = docHeight - footerHeight - 100;
 
-		if ( scrollDist >= docMostOfHeight ) {
+//		if ( scrollDist >= docMostOfHeight ) {
 			var trans = footerHeight - c * ( scrollDist - docMostOfHeight );
 			docHeight - footerHeight
 			$footer.css({
 				"transform": "translateY(" + trans + "px)"
 			});
-		}
-
-		console.log("ran all");
+//		}
 	}
 	footerParallax(0.6);
 	$(window).scroll(function() {
