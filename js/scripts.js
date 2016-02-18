@@ -393,7 +393,7 @@ $(document).ready(function() {
 			docHeight = $(document).height() - $footer.height();
 			
 			TweenMax.to( $footer, 0.1, {
-				css: { "transform": "translateY(" + (c *(docHeight - scrollDist))  + "px)" }
+				css: { "transform": "translateY(" + -(c *(docHeight - scrollDist))  + "px)" }
 			});
 //		}
 	}
