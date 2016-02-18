@@ -619,7 +619,7 @@ body.home #content { padding-top: 0; }
 }
 
 .sf-field-reset::before {
-	content: "\8635";
+	content: "↻";
 	display: inline-block;
 	margin-right: 6px;
 }
