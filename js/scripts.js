@@ -392,7 +392,7 @@ $(document).ready(function() {
 			$footer = $("#colophon"),
 			docHeight = $(document).height(),
 			a = (c < 0) ? -1 : 1,
-			trans = a*(c*(docHeight - scrollDist)) - a*(0.2*(docHeight - scrollDist));
+			trans = a*(c*(docHeight - scrollDist));
 
 		console.log(trans);
 		
