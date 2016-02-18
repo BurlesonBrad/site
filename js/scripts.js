@@ -396,7 +396,7 @@ $(document).ready(function() {
 		console.log(docHeight - scrollDist);
 		
 		TweenMax.to( $footer, 0.1, {
-			css: { "transform": "translateY(" + (a*(c*(docHeight - scrollDist )) + "px)" }
+			css: { "transform": "translateY(" + (a*(c*(docHeight - scrollDist ))) + "px)" }
 		});
 	}
 	footerParallax(0.2);
