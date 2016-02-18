@@ -390,7 +390,7 @@ $(document).ready(function() {
 	function footerParallax(c) {
 		var scrollDist = $(document).scrollTop(),
 			docHeight = $(document).height(),
-			$footer = $("#colophon");
+			$footer = $("#colophon"),
 			footerHeight = $footer.outerHeight(),
 			docMostOfHeight = docHeight - footerHeight - 100;
 
