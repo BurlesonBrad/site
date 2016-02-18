@@ -391,14 +391,9 @@ $(document).ready(function() {
 		var scrollDist = $(document).scrollTop(),
 			docHeight = $(document).height(),
 			$footer = $("#colophon"),
-			footerHeight = $footer.outerHeight(),
-			docMostOfHeight = docHeight - footerHeight - 100;
-
-//		if ( scrollDist >= docMostOfHeight ) {
-			var trans = footerHeight - c * ( scrollDist - docMostOfHeight );
-			docHeight - footerHeight
-			$footer.css({
-				"transform": "translateY(" + (-trans) + "px)"
+			
+			TweenMax.to( $footer, 0.1, {
+				css: { "transform": "translateY(" + (c *(docHeight - scrollDist))  + "px)" }
 			});
 //		}
 	}
