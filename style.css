@@ -306,7 +306,7 @@ button.menu-toggle::before {
 		border-top: 0 none !important;
 	}
 	header ul li.menu-item-has-children > a {
-		background-color: #00a5f2;
+		background-color: #00abfa;
 		margin-top: 0.2em;
 	}
 	header ul ul li.menu-item-has-children > a {
