@@ -388,7 +388,7 @@ $(document).ready(function() {
 	smartPDPvariations();
 
 	function footerParallax(c) {
-		var scrollDist = $(document).scrollTop(),
+		var scrollDist = $(document).scrollTop() + $(window).height(),
 			$footer = $("#colophon"),
 			docHeight = $(document).height(),
 			a = (c < 0) ? -1 : 1,
