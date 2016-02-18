@@ -390,7 +390,7 @@ $(document).ready(function() {
 	function footerParallax(c) {
 		var scrollDist = $(document).scrollTop(),
 			$footer = $("#colophon"),
-			docHeight = $(document).height() - $footer.height();
+			docHeight = $(document).height();
 			
 			TweenMax.to( $footer, 0.1, {
 				css: { "transform": "translateY(" + -(c *(docHeight - scrollDist))  + "px)" }
