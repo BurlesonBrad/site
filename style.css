@@ -783,7 +783,8 @@ ul.products li.product .button {
 }
 
 .metaslider .caption h4 {
-	line-height: 0.7;
+	line-height: 1;
+	margin-top: -0.6em;
     font-size: 0.6em;
     color: #f5f5f5;
     text-transform: lowercase;
