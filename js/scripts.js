@@ -397,10 +397,8 @@ $(document).ready(function() {
 		if ( scrollDist >= docMostOfHeight ) {
 			var trans = footerHeight - c * ( scrollDist - docMostOfHeight );
 			docHeight - footerHeight
-			TweenLite.to( $footer, 0.05, {
-				css: {
-					"transform": "translateY(" + trans + "px)"
-				}
+			$footer.css({
+				"transform": "translateY(" + trans + "px)"
 			});
 		}
 	}
