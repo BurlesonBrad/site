@@ -611,6 +611,7 @@ body.home #content { padding-top: 0; }
 
 .sf-field-reset .filter-icon + .search-filter-reset {
 	float: left;
+	width: 100%;
 }
 
 @media screen and (max-width: 767px) {
