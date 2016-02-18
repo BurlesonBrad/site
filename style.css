@@ -614,8 +614,7 @@ body.home #content { padding-top: 0; }
 	width: auto;
 	background: transparent;
 	border-color: transparent;
-	color: #ccc;
-	text-decoration: underline;
+	color: #aaa;
 	padding: 0;
 	border: 0;
 	line-height: 2em;
@@ -624,6 +623,7 @@ body.home #content { padding-top: 0; }
 .sf-field-reset::before {
 	content: "↻";
 	font-weight: bold;
+	color: #aaa;
 	display: inline-block;
 	margin-right: 6px;
 	float: left;
