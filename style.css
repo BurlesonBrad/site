@@ -615,6 +615,7 @@ body.home #content { padding-top: 0; }
 	background: transparent;
 	border-color: transparent;
 	color: #ccc;
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 767px) {
