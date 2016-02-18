@@ -390,15 +390,16 @@ $(document).ready(function() {
 	function footerParallax(c) {
 		var scrollDist = $(document).scrollTop(),
 			$footer = $("#colophon"),
-			docHeight = $(document).height();
+			docHeight = $(document).height(),
+			a = (c < 0) ? -1 : 1;
 		
 		TweenMax.to( $footer, 0.1, {
-			css: { "transform": "translateY(" + ((c *(docHeight - scrollDist )) + $footer.height())  + "px)" }
+			css: { "transform": "translateY(" + (a*(c *(docHeight - scrollDist )) + (a * $footer.height()))  + "px)" }
 		});
 	}
-	footerParallax(0.1);
+	footerParallax(-0.2);
 	$(window).scroll(function() {
-		footerParallax(0.1);
+		footerParallax(-0.2);
 	});
 
 
