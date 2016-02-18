@@ -2596,6 +2596,7 @@ table.cart .product-remove {
 
 .footer-widgets {
 	border-bottom: 0;
+	padding-top: 3.8em;
 }
 
 .footer-widgets section {
@@ -2676,9 +2677,7 @@ table.cart .product-remove {
 }
 
 @media screen and (min-width: 768px) {
-	.footer-widgets {
-		padding-top: 3.8em;
-	}
+
 }
 
 
