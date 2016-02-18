@@ -396,9 +396,9 @@ $(document).ready(function() {
 			css: { "transform": "translateY(" + -(c *(docHeight - scrollDist + $footer.height()))  + "px)" }
 		});
 	}
-	footerParallax(0.1);
+	footerParallax(0.3);
 	$(window).scroll(function() {
-		footerParallax(0.1);
+		footerParallax(0.3);
 	});
 
 
