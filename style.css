@@ -621,7 +621,7 @@ body.home #content { padding-top: 0; }
 }
 
 .sf-field-reset .filter-icon + .search-filter-reset:hover {
-	background-color: transparent;
+	background-color: transparent !important;
 	text-decoration: underline;
 	color: #888;
 }
