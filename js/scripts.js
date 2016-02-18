@@ -387,6 +387,24 @@ $(document).ready(function() {
 	}
 	smartPDPvariations();
 
+	function footerParallax(c) {
+		var scrollDist = $(document).scrollTop(),
+			docHeight = $(document).height(),
+			$footer = $("#colophon");
+			footerHeight = $footer.outerHeight(),
+			docMostOfHeight = docHeight - footerHeight - 100;
+
+		if ( scrollDist >= docMostOfHeight ) {
+			var trans = footerHeight - c * ( scrollDist - docMostOfHeight );
+			docHeight - footerHeight
+			TweenLite.to( $footer, 0.05, {
+				css: {
+					"transform": "translateY(" + trans + "px)"
+				}
+			});
+		}
+	}
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
