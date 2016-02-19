@@ -2644,6 +2644,7 @@ form.contact-form > div > textarea {
 
 #social-col h4 img {
 	display: inline-block;
+	vertical-align: middle;
 	width: 3em;
 	margin-right: 1em;
 }
