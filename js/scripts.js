@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 		var $logo = $("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />");
 
-		if ( $(window).width() > 1136 ) {
+		if ( $(window).width() > 1280 ) {
 			$menuHome.html($logo)
 				.css({
 					paddingTop: 0,
@@ -36,10 +36,7 @@ $(document).ready(function() {
 				.parent().css({
 					"line-height": liHeight + "px"
 				});
-				$logo.css({
-					width: "74px"
-				});
-		} else if ( 768 < $(window).width() < 1136 ) {
+		} else if ( 768 < $(window).width() < 1280 ) {
 			$menuHome.html($logo)
 				.css({
 					paddingTop: 0,
