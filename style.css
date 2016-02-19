@@ -2888,7 +2888,7 @@ table.cart .product-remove {
 .placeholder .site-footer #contact-form-widget-text-2 p label {
 	display: none;
 }
-.placeholder .site-footer #contact-form-widget-text-2 p label.grunion-field-label {
+.placeholder .site-footer #contact-form-widget-text-2 p label.checkbox {
 	display: inline-block;
 }
 
