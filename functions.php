@@ -95,7 +95,6 @@ function set_disc_flight_data() {
 		update_post_meta( $post_id, 'turn', $disc_turn );
 		update_post_meta( $post_id, 'fade', $disc_fade );
 
-		$stability
 	endwhile;
 }
 add_action( 'wp_loaded', 'set_disc_flight_data' );
