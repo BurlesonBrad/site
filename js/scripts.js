@@ -36,6 +36,9 @@ $(document).ready(function() {
 				.parent().css({
 					"line-height": liHeight + "px"
 				});
+				$logo.css({
+					width: "auto"
+				});
 		} else if ( 768 < $(window).width() < 1136 ) {
 			$menuHome.html($logo)
 				.css({
