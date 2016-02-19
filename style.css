@@ -2829,17 +2829,17 @@ table.cart .product-remove {
 	margin-bottom: 5px;
 }
 
-.site-footer .wpcf7 input,
-.site-footer .wpcf7 textarea {
+.site-footer .wpcf7 form input,
+.site-footer .wpcf7 form textarea {
 	width: 100%;
 	margin-bottom: 2px;
-	background: #00b0ff;
+	background-color: #00b0ff;
 	color: #fff;
 }
 
-.site-footer .wpcf7 input:focus,
-.site-footer .wpcf7 textarea:focus {
-	background: #fafafa;
+.site-footer .wpcf7 form input:focus,
+.site-footer .wpcf7 form textarea:focus {
+	background-color: #fafafa;
 	color: #666;
 }
 
