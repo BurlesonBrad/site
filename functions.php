@@ -72,7 +72,6 @@ function set_disc_flight_data() {
 		$disc_fade = $fr["fade"];
 
 		$stability = intval($disc_fade) + intval($disc_turn);
-//		echo $stability . '<br>';
 
 		if ( $stability < 3 && $stability > 0 ) {
 			$stability = 'Stable';
@@ -81,8 +80,6 @@ function set_disc_flight_data() {
 		} elseif ( $stability <= 0 ) {
 			$stability = 'Understable';
 		}
-
-		echo $stability . '<br>';
 
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
 		// wp_remove_object_terms( $post_id, 'Stable', 'pa_stability' );
