@@ -2508,7 +2508,7 @@ ul.products li.product .star-rating + .price {
 .about-contact-columns .col-inner {
 	width: auto;
 	padding: 10em 14% 6em;
-	min-height: 1100px;
+	min-height: 70em;
 
 	text-align: center;
 }
