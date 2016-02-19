@@ -172,7 +172,7 @@ $(document).ready(function() {
 			fade: $product.data("fade")
 		};
 		var stability = function() {
-			if ( (stats.fade + stats.turn) / 2 >= 3 ) {
+			if ( (stats.fade + stats.turn) / 2 > 3 ) {
 				return "_sft_pa_stability=overstable";
 			}
 			if ( (stats.fade + stats.turn) / 2 <= 0 ) {
