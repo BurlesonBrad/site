@@ -82,6 +82,8 @@ function set_disc_flight_data() {
 			$stability = 'Understable';
 		}
 
+		echo $stability . '<br>';
+
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
 		// wp_remove_object_terms( $post_id, 'Stable', 'pa_stability' );
 		// wp_remove_object_terms( $post_id, 'Understable', 'pa_stability' );
@@ -177,7 +179,6 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
-	var_dump($stability);
 	$product_cats = get_the_terms($post->ID, 'product_cat');
 	$cats_list = '';
 	foreach( $product_cats as $cat ) { 
