@@ -2665,6 +2665,7 @@ form.contact-form > div > textarea {
 }
 
 #about-col h4 {
+	font-size: 1.5em;
 	line-height: 1.1;
 	text-align: center;
 	margin: 0 0 0.3em;
