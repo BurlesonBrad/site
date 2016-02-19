@@ -2829,6 +2829,12 @@ table.cart .product-remove {
 	margin-bottom: 5px;
 }
 
+.site-footer .wpcf7 input,
+.site-footer .wpcf7 textarea {
+	width: 100%;
+	margin-bottom: 2px;
+}
+
 .placeholder .site-footer .wpcf7 p label {
 	display: none;
 }
