@@ -55,7 +55,7 @@ function set_disc_flight_data() {
 		$post_id = $post->ID;
 		$post_slug = $post->post_name;
 
-		echo $post_slug . '<br>';
+		//echo $post_slug . '<br>';
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
 
