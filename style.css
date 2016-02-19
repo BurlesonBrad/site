@@ -2527,7 +2527,7 @@ ul.products li.product .star-rating + .price {
 
 .about-contact-columns h3 {
     font-weight: 300;
-    font-size: 4em;
+    font-size: 3.1em;
     margin-bottom: 0.5em;
     line-height: 1;
 }
@@ -2546,6 +2546,10 @@ ul.products li.product .star-rating + .price {
 .placeholder #contact-col form label { display: none; }
 #contact-col form input {
 	text-align: center;
+}
+
+#contact-col form {
+	font-size: 0.85em;
 }
 
 #contact-col form input,
