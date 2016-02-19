@@ -2884,7 +2884,7 @@ table.cart .product-remove {
 .placeholder .site-footer #contact-form-widget-text-2 label {
 	display: none;
 }
-.placeholder .site-footer #contact-form-widget-text-2 label.checkbox {
+.placeholder .contact-form label.checkbox {
 	display: inline-block;
 }
 
