@@ -2653,7 +2653,7 @@ form.contact-form > div > textarea {
 	width: 100%;
 }
 
-#social-col h4 {
+.about-contact-columns h4 {
 	text-align: left;
 	vertical-align: middle;
 	font-size: 1em;
