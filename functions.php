@@ -77,9 +77,11 @@ function set_disc_flight_data() {
 
 		if ( $stability < 3 && $stability > 0 ) {
 			$stability = 'stable';
-		} elseif ( $stability >= 3 ) {
+		}
+		if ( $stability >= 3 ) {
 			$stability = 'overstable';
-		} elseif ( $stability <= 0 ) {
+		}
+		if ( $stability <= 0 ) {
 			$stability = 'understable';
 		}
 
