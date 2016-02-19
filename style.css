@@ -718,6 +718,11 @@ ul.products li.product .button {
 	font-size: 0.7em;
 }
 
+ul.products li.product > a > img {
+	width: 100% !important;
+	height: auto !important;
+}
+
 @media screen and (min-width: 768px) {
 	.tax-product_brand .site-main ul.products li.product {
 	    width: 22%;
