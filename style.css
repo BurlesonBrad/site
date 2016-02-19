@@ -2656,6 +2656,12 @@ form.contact-form > div > textarea {
 	line-height: 3em;
 	text-transform: uppercase;
 	color: #fff;
+
+	margin-top: 4em;
+}
+
+#social-col h4:first-child {
+	margin-top: 0;
 }
 
 #social-col h4 img {
