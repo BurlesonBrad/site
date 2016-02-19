@@ -404,7 +404,7 @@ $(document).ready(function() {
 	});
 
 	$(document).ready(function() {
-		$("form.searchandfilter").on("submit", function() {
+		$("form.searchandfilter").change(function() {
 			setTimeout(function() {
 				location.reload();
 			}, 100);
