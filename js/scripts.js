@@ -403,6 +403,14 @@ $(document).ready(function() {
 		footerParallax(-0.1);
 	});
 
+	$(document).ready(function() {
+		$("form.searchandfilter").on("submit", function() {
+			setTimeout(function() {
+				location.reload();
+			}, 2000);
+		});
+	});
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
