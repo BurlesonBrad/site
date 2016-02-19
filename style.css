@@ -2657,7 +2657,7 @@ form.contact-form > div > textarea {
 	text-transform: uppercase;
 	color: #fff;
 
-	margin-top: 4em;
+	margin: 4em 0 0.5em;
 }
 
 #social-col h4:first-child {
