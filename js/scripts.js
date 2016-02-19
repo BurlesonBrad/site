@@ -172,13 +172,13 @@ $(document).ready(function() {
 			fade: $product.data("fade")
 		};
 		var stability = function() {
-			if ( (stats.fade + stats.turn) / 2 >= 3 ) {
+			if ( parseInt((stats.fade + stats.turn), 10) / 2 >= 3 ) {
 				return "_sft_pa_stability=overstable";
 			}
-			else if ( (stats.fade + stats.turn) / 2 <= 0 ) {
+			else if ( parseInt((stats.fade + stats.turn), 10) / 2 <= 0 ) {
 				return "_sft_pa_stability=understable";
 			}
-			else if ( (stats.fade + stats.turn) / 2 < 3) {
+			else if ( parseInt((stats.fade + stats.turn), 10) / 2 < 3) {
 				return "_sft_pa_stability=stable";
 			}
 		}();
