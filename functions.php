@@ -43,8 +43,6 @@ function set_disc_flight_data() {
 	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' );
 	$discs = new WP_Query( $args );
 
-	var_dump($discs);
-
 	$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
 	$inbounds_ids_json = stripslashes($inbounds_ids_json);
 	$inbounds_ids_arr = json_decode( $inbounds_ids_json, true );
@@ -56,6 +54,8 @@ function set_disc_flight_data() {
 	while ( $discs->have_posts() ) : $discs->the_post();
 		$post_id = $post->ID;
 		$post_slug = $post->post_name;
+
+		echo $post_slug . '<br>';
 		$inbounds_id = $inbounds_ids_arr[$post_slug];
 		$fr = $flight_ratings_arr[$post_slug];
 
