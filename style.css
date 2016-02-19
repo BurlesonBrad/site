@@ -2881,26 +2881,29 @@ table.cart .product-remove {
 	border-radius: 2px;
 }
 
-.placeholder .site-footer #contact-form-widget-text-2 label {
+.placeholder .contact-form label {
 	display: none;
 }
 .placeholder .contact-form label.checkbox {
 	display: inline-block;
 }
 
-.site-footer #contact-form-widget-text-2 > h3 {
+.site-footer #contact-form-widget-text-2 > h3,
+.site-footer #contact-form-71 > h3 {
 	font-family: 'Montserrat';
     font-size: 1.4em;
     text-transform: uppercase;
 }
 
-.site-footer #contact-form-widget-text-2 > h3 a {
+.site-footer #contact-form-widget-text-2 > h3 a,
+.site-footer #contact-form-71 > h3 a {
     font-size: 0.8em;
     color: #eee !important;
     text-decoration: underline;
 }
 
-.site-footer #contact-form-widget-text-2 > blockquote {
+.site-footer #contact-form-widget-text-2 > blockquote,
+.site-footer #contact-form-71 > blockquote {
     border-left: 0 none;
     background: #5b5b5b;
     padding: 3em 3em 1.9em;
