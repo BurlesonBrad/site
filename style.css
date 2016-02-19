@@ -607,7 +607,7 @@ body.home #content { padding-top: 0; }
 	width: 15%;
 	margin-right: 4%;
 	position: relative;
-	top: -7px;
+	top: -5px;
 }
 .filter-icon + * {
 	float: right;
