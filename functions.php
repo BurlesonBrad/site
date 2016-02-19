@@ -75,13 +75,13 @@ function set_disc_flight_data() {
 
 		$stability = intval($disc_fade) + intval($disc_turn);
 
-		if ( $stability < 3 && $stability > 0 ) {
+		if ( intval($stability) < 3 && $stability > 0 ) {
 			$stability = 'stable';
 		}
-		if ( $stability >= 3 ) {
+		if ( intval($stability) >= 3 ) {
 			$stability = 'overstable';
 		}
-		if ( $stability <= 0 ) {
+		if ( intval($stability) <= 0 ) {
 			$stability = 'understable';
 		}
 
