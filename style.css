@@ -2824,6 +2824,15 @@ table.cart .product-remove {
 	padding-bottom: 1em;
 }
 
+/* Footer form */
+.site-footer .wpcf7 p {
+	margin-bottom: 5px;
+}
+
+.placeholder .site-footer .wpcf7 p label {
+	display: none;
+}
+
 @media screen and (min-width: 768px) {
 
 }
