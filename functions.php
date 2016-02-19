@@ -40,7 +40,7 @@ add_action( 'storefront_before_header', 'dynamic_basket', 10, 0 );
 function set_disc_flight_data() {
 	global $post;
 	global $product;
-	$args = array( 'posts_per_page' => 10000, 'post_type' => 'product', 'product_cat' => 'discs' );
+	$args = array( 'posts_per_page' => -1, 'post_type' => 'product', 'product_cat' => 'discs' );
 	$discs = new WP_Query( $args );
 
 	$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
