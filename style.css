@@ -2608,6 +2608,7 @@ ul.products li.product .star-rating + .price {
 	float: left;
 	width: auto;
 	margin-left: 0.5em;
+	text-transform: uppercase;
 }
 
 #contact-col input:focus::-webkit-input-placeholder { opacity: 0; }
