@@ -177,6 +177,7 @@ function woo_new_product_tab_content() {
 	$stability = '';
 	$disc_type = '';
 	$stability = get_the_terms($post->ID, 'pa_stability');
+	var_dump($stability);
 	$product_cats = get_the_terms($post->ID, 'product_cat');
 	$cats_list = '';
 	foreach( $product_cats as $cat ) { 
