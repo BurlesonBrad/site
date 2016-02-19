@@ -75,8 +75,6 @@ function set_disc_flight_data() {
 
 		$stability = intval($disc_fade) + intval($disc_turn);
 
-		echo $stability . '<br/>';
-
 		if ( $stability < 3 && $stability > 0 ) {
 			$stability = 'stable';
 		}
@@ -87,6 +85,8 @@ function set_disc_flight_data() {
 			$stability = 'understable';
 		}
 
+		echo $stability . '<br/>';
+
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
 
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
@@ -94,6 +94,8 @@ function set_disc_flight_data() {
 		update_post_meta( $post_id, 'glide', $disc_glide );
 		update_post_meta( $post_id, 'turn', $disc_turn );
 		update_post_meta( $post_id, 'fade', $disc_fade );
+
+		$stability
 	endwhile;
 }
 add_action( 'wp_loaded', 'set_disc_flight_data' );
