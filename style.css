@@ -2833,7 +2833,25 @@ table.cart .product-remove {
 .site-footer .wpcf7 textarea {
 	width: 100%;
 	margin-bottom: 2px;
+	background: #00b0ff;
+	color: #fff;
 }
+
+.site-footer .wpcf7 input:focus,
+.site-footer .wpcf7 textarea:focus {
+	background: #fafafa;
+	color: #666;
+}
+
+.site-footer .wpcf7 *::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *:-moz-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *::-moz-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *:-ms-input-placeholder { color: #fff; opacity: 0.8; }
+
+.site-footer .wpcf7 *:focus::-webkit-input-placeholder { color: #666; opacity: 0.8; }
+.site-footer .wpcf7 *:focus:-moz-placeholder { color: #666; opacity: 0.8; }
+.site-footer .wpcf7 *:focus::-moz-placeholder { color: #666; opacity: 0.8; }
+.site-footer .wpcf7 *:focus:-ms-input-placeholder { color: #666; opacity: 0.8; }
 
 .placeholder .site-footer .wpcf7 p label {
 	display: none;
