@@ -2533,8 +2533,12 @@ ul.products li.product .star-rating + .price {
 .about-contact-columns h3 {
     font-weight: 300;
     font-size: 3.1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
     line-height: 1;
+}
+
+#contact-col h3 {
+	font-size: 2em;
 }
 
 .about-contact-columns p {
