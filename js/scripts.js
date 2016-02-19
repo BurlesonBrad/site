@@ -166,19 +166,19 @@ $(document).ready(function() {
 		var $longDesc = $("#tab-specs_tab");
 		var $statsContainer = $("<ul id='flight-stats'></ul>");
 		var stats = {
-			speed: $product.data("speed"),
-			glide: $product.data("glide"),
-			turn: $product.data("turn"),
-			fade: $product.data("fade")
+			speed: parseInt($product.data("speed"), 10),
+			glide: parseInt($product.data("glide"), 10),
+			turn: parseInt($product.data("turn"), 10),
+			fade: parseInt($product.data("fade"), 10)
 		};
 		var stability = function() {
-			if ( parseInt((stats.fade + stats.turn), 10) / 2 >= 3 ) {
+			if ( (stats.fade + stats.turn) / 2 >= 3 ) {
 				return "_sft_pa_stability=overstable";
 			}
-			else if ( parseInt((stats.fade + stats.turn), 10) / 2 <= 0 ) {
+			else if ( (stats.fade + stats.turn) / 2 <= 0 ) {
 				return "_sft_pa_stability=understable";
 			}
-			else if ( parseInt((stats.fade + stats.turn), 10) / 2 < 3) {
+			else if ( (stats.fade + stats.turn) / 2 < 3) {
 				return "_sft_pa_stability=stable";
 			}
 		}();
