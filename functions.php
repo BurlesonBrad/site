@@ -85,7 +85,7 @@ function set_disc_flight_data() {
 			$stability = 'understable';
 		}
 
-		echo $stability . '<br/>';
+	//	echo $stability . '<br/>';
 
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
 
