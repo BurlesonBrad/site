@@ -407,6 +407,7 @@ $(document).ready(function() {
 		$("form.searchandfilter").change(function() {
 			setTimeout(function() {
 				location.reload();
+				alert("hi");
 			}, 100);
 		});
 	});
