@@ -2888,6 +2888,9 @@ table.cart .product-remove {
 .placeholder .site-footer #contact-form-widget-text-2 p label {
 	display: none;
 }
+.placeholder .site-footer #contact-form-widget-text-2 p label.grunion-field-label {
+	display: inline-block;
+}
 
 @media screen and (min-width: 768px) {
 
