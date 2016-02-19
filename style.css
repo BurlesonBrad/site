@@ -2833,25 +2833,28 @@ table.cart .product-remove {
 .site-footer .wpcf7 form textarea {
 	width: 100%;
 	margin-bottom: 2px;
-	background-color: #00b0ff;
-	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	background-color: #fafafa;
+	color: #888;
 }
 
 .site-footer .wpcf7 form input:focus,
 .site-footer .wpcf7 form textarea:focus {
-	background-color: #fafafa;
-	color: #666;
+	background-color: #00b0ff;
+	color: #fff;
 }
 
-.site-footer .wpcf7 *::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
-.site-footer .wpcf7 *:-moz-placeholder { color: #fff; opacity: 0.8; }
-.site-footer .wpcf7 *::-moz-placeholder { color: #fff; opacity: 0.8; }
-.site-footer .wpcf7 *:-ms-input-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *::-webkit-input-placeholder { color: #888; opacity: 0.8; }
+.site-footer .wpcf7 *:-moz-placeholder { color: #888; opacity: 0.8; }
+.site-footer .wpcf7 *::-moz-placeholder { color: #888; opacity: 0.8; }
+.site-footer .wpcf7 *:-ms-input-placeholder { color: #888; opacity: 0.8; }
 
-.site-footer .wpcf7 *:focus::-webkit-input-placeholder { color: #666; opacity: 0.8; }
-.site-footer .wpcf7 *:focus:-moz-placeholder { color: #666; opacity: 0.8; }
-.site-footer .wpcf7 *:focus::-moz-placeholder { color: #666; opacity: 0.8; }
-.site-footer .wpcf7 *:focus:-ms-input-placeholder { color: #666; opacity: 0.8; }
+.site-footer .wpcf7 *:focus::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *:focus:-moz-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *:focus::-moz-placeholder { color: #fff; opacity: 0.8; }
+.site-footer .wpcf7 *:focus:-ms-input-placeholder { color: #fff; opacity: 0.8; }
 
 .placeholder .site-footer .wpcf7 p label {
 	display: none;
