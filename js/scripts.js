@@ -403,14 +403,9 @@ $(document).ready(function() {
 		footerParallax(-0.1);
 	});
 
-	// $(document).ready(function() {
-	// 	$("form.searchandfilter").submit(function() {
-	// 		setTimeout(function() {
-	// 			//location.reload();
-	// 			alert("hi");
-	// 		}, 100);
-	// 	});
-	// });
+	$(document).ready(function() {
+		$(".single-product .related h2").addClass("block-header");
+	});
 
 
 	// function featuredVidTitle() {
