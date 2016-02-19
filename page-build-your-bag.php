@@ -117,7 +117,7 @@ get_header(); ?>
 
 								function the_disc($d) {
 									$slug = $d["slug"];
-									echo '<div class="disc product ' . get_disc( $slug, 'slug' ) . '" data-product-slug="' . get_disc( $slug, 'slug' ) . '"><a href="' . get_disc( $slug, 'link' ) . '">' . get_disc( $slug, 'thumbnail' ) . '</a><img class="remove-from-bag" src="' . get_stylesheet_directory_uri() . '/images/trash-icon.gif" alt="remove" /><span class="disc-name">' . get_disc( $slug, ) '</span></div>';
+									echo '<div class="disc product ' . get_disc( $slug, 'slug' ) . '" data-product-slug="' . get_disc( $slug, 'slug' ) . '"><a href="' . get_disc( $slug, 'link' ) . '">' . get_disc( $slug, 'thumbnail' ) . '</a><img class="remove-from-bag" src="' . get_stylesheet_directory_uri() . '/images/trash-icon.gif" alt="remove" /><span class="disc-name">' . get_disc( $slug, 'name' ) . '</span></div>';
 								}
 
 								echo '<div class="bag bag-' . $bag_slug . '" data-bag-name="' . $bag["name"] . '"><div class="bag-title"><form action="' . $_SERVER['PHP_SELF'] . '" method="post" name="edit-bag-name" class="edit-bag-name"><input type="text" value="' . $bag["name"] . '"><input type="submit" style="display:none;"></form><h2>' . $bag["name"] . '</h2></div>';
