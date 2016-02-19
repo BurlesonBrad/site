@@ -2632,6 +2632,21 @@ form.contact-form > div > textarea {
 	width: 100%;
 }
 
+#social-col h4 {
+	text-align: left;
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 1em;
+	line-height: 3em;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#social-col h4 img {
+	width: 3em;
+	margin-right: 1em;
+}
+
 #social-col #cff, #social-col .timeline {
 	border-radius: 2px;
 }
