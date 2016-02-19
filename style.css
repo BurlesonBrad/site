@@ -2845,6 +2845,10 @@ table.cart .product-remove {
 	color: #888;
 }
 
+.site-footer .wpcf7 form input[type='checkbox'] {
+	width: auto;
+}
+
 .site-footer .wpcf7 form input:focus,
 .site-footer .wpcf7 form textarea:focus {
 	background-color: #00b0ff;
