@@ -66,10 +66,10 @@ function set_disc_flight_data() {
 			}
 		}
 		
-		$disc_speed = $fr["speed"];
-		$disc_glide = $fr["glide"];
-		$disc_turn = $fr["turn"];
-		$disc_fade = $fr["fade"];
+		$disc_speed = $fr->speed;
+		$disc_glide = $fr->glide;
+		$disc_turn = $fr->turn;
+		$disc_fade = $fr->fade;
 
 		$stability = intval($disc_fade) + intval($disc_turn);
 
