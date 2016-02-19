@@ -2896,7 +2896,7 @@ table.cart .product-remove {
 
 .site-footer #contact-form-widget-text-2 > h3 a {
     font-size: 0.8em;
-    color: #eee;
+    color: #eee !important;
 }
 
 .site-footer #contact-form-widget-text-2 > blockquote {
