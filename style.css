@@ -2836,16 +2836,16 @@ table.cart .product-remove {
 }
 
 /* Footer form */
-.site-footer .wpcf7 form {
+.site-footer #contact-form-widget-text-2 form {
 	font-size: 0.85em;
 }
 
-.site-footer .wpcf7 p {
+.site-footer #contact-form-widget-text-2 p {
 	margin-bottom: 5px;
 }
 
-.site-footer .wpcf7 form input,
-.site-footer .wpcf7 form textarea {
+.site-footer #contact-form-widget-text-2 form input,
+.site-footer #contact-form-widget-text-2 form textarea {
 	width: 100%;
 	margin-bottom: 2px;
 	font-weight: bold;
@@ -2857,35 +2857,35 @@ table.cart .product-remove {
 	color: #fff;
 }
 
-.site-footer .wpcf7 form input:focus,
-.site-footer .wpcf7 form textarea:focus {
+.site-footer #contact-form-widget-text-2 form input:focus,
+.site-footer #contact-form-widget-text-2 form textarea:focus {
 	background-color: #fafafa;
 	color: #555;
 }
 
-.site-footer .wpcf7 *::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
-.site-footer .wpcf7 *:-moz-placeholder { color: #fff; opacity: 0.8; }
-.site-footer .wpcf7 *::-moz-placeholder { color: #fff; opacity: 0.8; }
-.site-footer .wpcf7 *:-ms-input-placeholder { color: #fff; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *:-moz-placeholder { color: #fff; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *::-moz-placeholder { color: #fff; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *:-ms-input-placeholder { color: #fff; opacity: 0.8; }
 
-.site-footer .wpcf7 *:focus::-webkit-input-placeholder { color: #999; opacity: 0.8; }
-.site-footer .wpcf7 *:focus:-moz-placeholder { color: #999; opacity: 0.8; }
-.site-footer .wpcf7 *:focus::-moz-placeholder { color: #999; opacity: 0.8; }
-.site-footer .wpcf7 *:focus:-ms-input-placeholder { color: #999; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *:focus::-webkit-input-placeholder { color: #999; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *:focus:-moz-placeholder { color: #999; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *:focus::-moz-placeholder { color: #999; opacity: 0.8; }
+.site-footer #contact-form-widget-text-2 *:focus:-ms-input-placeholder { color: #999; opacity: 0.8; }
 
-.site-footer .wpcf7 form textarea {
+.site-footer #contact-form-widget-text-2 form textarea {
 	max-height: 3em;
 }
 
-.site-footer .wpcf7 form input[type='checkbox'] {
+.site-footer #contact-form-widget-text-2 form input[type='checkbox'] {
 	width: auto;
 }
 
-.site-footer .wpcf7 form input[type='submit'] {
+.site-footer #contact-form-widget-text-2 form input[type='submit'] {
 	border-radius: 2px;
 }
 
-.placeholder .site-footer .wpcf7 p label {
+.placeholder .site-footer #contact-form-widget-text-2 p label {
 	display: none;
 }
 
