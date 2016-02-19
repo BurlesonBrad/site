@@ -2671,10 +2671,6 @@ form.contact-form > div > textarea {
 	margin-right: 1em;
 }
 
-#social-col #cff, #social-col .timeline {
-	border-radius: 2px !important;
-}
-
 #social-col #cff {
 	max-height: 220px;
 	overflow-y: scroll;
@@ -2683,6 +2679,7 @@ form.contact-form > div > textarea {
 	background: rgba(255,255,255,0.95);
 	box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 	border: 1px solid #fefdfd;
+	border-radius: 5px;
 }
 
 #social-col #cff p {
