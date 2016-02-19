@@ -298,9 +298,9 @@ $(document).ready(function() {
 	}
 	feauxLazyLoad("section");
 
-
 	function filterIcons() {
-		$("form.searchandfilter > ul > li").each(function() {
+		var $filterLi = $("form.searchandfilter > ul > li");
+		!$filterLi.find(".filter-icon").length && $filterLi.each(function() {
 			var $this = $(this),
 				fieldName = $this.data("sf-field-name").replace(/\_/g, "");
 
