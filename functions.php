@@ -72,6 +72,7 @@ function set_disc_flight_data() {
 		$disc_fade = $fr["fade"];
 
 		$stability = intval($disc_fade) + intval($disc_turn);
+		var_dump($stability);
 
 		if ( $stability < 3 && $stability > 0 ) {
 			$stability = 'Stable';
@@ -183,7 +184,6 @@ function woo_new_product_tab_content() {
 	}
 	$is_disc = strpos( $cats_list, 'Disc' );
 	if ( $is_disc !== false ) {
-		var_dump($stability);
 		if ( count($stability) > 0 ) {
 			$stability = '<li>Stability: <strong>' . $stability[0]->name . '</strong></li>';
 		}
