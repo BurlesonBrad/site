@@ -2750,12 +2750,13 @@ table.cart .product-remove {
 	text-align: center;
 }
 
-.site-footer .widget_wpcom_social_media_icons_widget {
-	text-align: center;
-}
-.site-footer .widget_wpcom_social_media_icons_widget h3 {
+.site-footer h3 {
 	font-family: 'Rock Salt';
 	font-size: 2em;
+}
+
+.site-footer .widget_wpcom_social_media_icons_widget {
+	text-align: center;
 }
 .site-footer .widget_wpcom_social_media_icons_widget li {
 	padding: 0 0.6em;
