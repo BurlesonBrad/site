@@ -78,9 +78,9 @@ function set_disc_flight_data() {
 		if ( $stability < 3 && $stability > 0 ) {
 			$stability = 'stable';
 		} elseif ( $stability >= 3 ) {
-			$stability = 'stable';
+			$stability = 'overstable';
 		} elseif ( $stability <= 0 ) {
-			$stability = 'stable';
+			$stability = 'understable';
 		}
 
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
