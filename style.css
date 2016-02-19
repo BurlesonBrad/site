@@ -2467,6 +2467,11 @@ ul.products li.product .star-rating + .price {
 
 
 /* ABOUT PAGE */
+.page-id-71 .hentry {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 .page-id-71 #content > .col-full {
 	max-width: 100% !important;
 }
