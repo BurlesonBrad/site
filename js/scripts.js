@@ -304,10 +304,10 @@ $(document).ready(function() {
 			var $this = $(this),
 				fieldName = $this.data("sf-field-name").replace(/\_/g, "");
 
-			$this.prepend("<img class='filter-icon' alt='" + fieldName + "' src='/wp-content/themes/storefront-child/images/" + fieldName + "-icon.png' />");
+			!$this.find(".filter-icon").length && $this.prepend("<img class='filter-icon' alt='" + fieldName + "' src='/wp-content/themes/storefront-child/images/" + fieldName + "-icon.png' />");
 		});
 	}
-	setTimeout( filterIcons, 500 );
+	setInterval( filterIcons, 1000 );
 
 	$.fn.extend({
 		parallaxBG: function(speed) {
@@ -403,14 +403,14 @@ $(document).ready(function() {
 		footerParallax(-0.1);
 	});
 
-	$(document).ready(function() {
-		$("form.searchandfilter").submit(function() {
-			setTimeout(function() {
-				location.reload();
-				alert("hi");
-			}, 100);
-		});
-	});
+	// $(document).ready(function() {
+	// 	$("form.searchandfilter").submit(function() {
+	// 		setTimeout(function() {
+	// 			//location.reload();
+	// 			alert("hi");
+	// 		}, 100);
+	// 	});
+	// });
 
 
 	// function featuredVidTitle() {
