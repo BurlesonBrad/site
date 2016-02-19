@@ -1835,7 +1835,7 @@ form.edit-bag-name {
     font-size: 0.8em;
     text-transform: uppercase;
     font-weight: bold;
-    margin-top: 0.3em;
+    margin-top: 0;
 }
 
 .bag .disc:hover .disc-name {
