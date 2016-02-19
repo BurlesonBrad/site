@@ -2893,6 +2893,7 @@ table.cart .product-remove {
 	font-family: 'Montserrat';
     font-size: 1.4em;
     text-transform: uppercase;
+    color: #fafafa;
 }
 
 .site-footer #contact-form-widget-text-2 > h3 a,
