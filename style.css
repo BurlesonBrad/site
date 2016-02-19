@@ -2839,6 +2839,7 @@ table.cart .product-remove {
 	margin-bottom: 2px;
 	font-weight: bold;
 	text-transform: uppercase;
+	border-radius: 2px;
 
 	background-color: #fafafa;
 	color: #888;
@@ -2859,6 +2860,14 @@ table.cart .product-remove {
 .site-footer .wpcf7 *:focus:-moz-placeholder { color: #fff; opacity: 0.8; }
 .site-footer .wpcf7 *:focus::-moz-placeholder { color: #fff; opacity: 0.8; }
 .site-footer .wpcf7 *:focus:-ms-input-placeholder { color: #fff; opacity: 0.8; }
+
+.site-footer .wpcf7 form textarea {
+	max-height: 3em;
+}
+
+.site-footer .wpcf7 form input[type='submit'] {
+	border-radius: 2px;
+}
 
 .placeholder .site-footer .wpcf7 p label {
 	display: none;
