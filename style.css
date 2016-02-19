@@ -604,14 +604,14 @@ body.home #content { padding-top: 0; }
 
 .filter-icon {
 	float: left;
-	width: 19%;
+	width: 15%;
 	margin-right: 4%;
 	position: relative;
 	top: -7px;
 }
 .filter-icon + * {
 	float: right;
-	width: 77%;
+	width: 80%;
 }
 
 .sf-field-reset .filter-icon {
