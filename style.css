@@ -2518,6 +2518,7 @@ ul.products li.product .star-rating + .price {
 #social-col .col-inner { border-left: 2px solid #ffffff; }
 
 .about-contact-columns h2 {
+	margin-top: 0;
     margin-bottom: 10px;
     line-height: 1;
     text-transform: uppercase;
