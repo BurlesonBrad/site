@@ -185,7 +185,7 @@ function woo_new_product_tab_content() {
 		
 		$disc_type = get_the_terms($post->ID, 'disc-type');
 		if ( count($disc_type) > 0 ) {
-			$disc_type = '<li>Type: <strong>' . str_replace('s', '', $disc_type[0]->name) . '</strong></li>';
+			$disc_type = '<li>Type: <strong>' . preg_replace('/s(?!.*s)/', '', $disc_type[0]->name) . '</strong></li>';
 		}
 		// The new tab content
 		echo '<div class="specs"><h2>Specs</h2>';
