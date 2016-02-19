@@ -82,6 +82,7 @@ function set_disc_flight_data() {
 		}
 
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
+		echo $stability;
 		//wp_remove_object_terms( $post_id, $stability, 'pa_stability' );
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
