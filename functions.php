@@ -75,6 +75,8 @@ function set_disc_flight_data() {
 
 		$stability = intval($disc_fade) + intval($disc_turn);
 
+		echo $stability . '<br/>';
+
 		if ( $stability < 3 && $stability > 0 ) {
 			$stability = 'stable';
 		}
