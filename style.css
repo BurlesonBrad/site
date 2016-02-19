@@ -2570,7 +2570,7 @@ ul.products li.product .star-rating + .price {
     font-weight: bold;
 
     padding: 1.3em 0;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.6em;
     background: rgba(255,255,255,0.3);
     border: 3px solid #00b0ff;    
     border-radius: 10em;
