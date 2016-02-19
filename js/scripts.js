@@ -394,7 +394,7 @@ $(document).ready(function() {
 			a = (c < 0) ? -1 : 1,
 			trans = a*(c*(docHeight - scrollDist));
 		
-		TweenMax.to( $footer, 0.1, {
+		TweenMax.to( $footer, 0.02, {
 			css: { "transform": "translateY(" + trans + "px)" }
 		});
 	}
