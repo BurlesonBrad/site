@@ -2899,6 +2899,13 @@ table.cart .product-remove {
     color: #eee;
 }
 
+.site-footer #contact-form-widget-text-2 > blockquote {
+    border-left: 0 none;
+    background: #5b5b5b;
+    padding: 3em 3em 1.8em;
+    line-height: 1.2;
+}
+
 @media screen and (min-width: 768px) {
 
 }
