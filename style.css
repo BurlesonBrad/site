@@ -2888,6 +2888,17 @@ table.cart .product-remove {
 	display: inline-block;
 }
 
+.site-footer #contact-form-widget-text-2 > h3 {
+	font-family: 'Montserrat';
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.site-footer #contact-form-widget-text-2 > h3 a {
+    font-size: 0.8em;
+    color: #eee;
+}
+
 @media screen and (min-width: 768px) {
 
 }
