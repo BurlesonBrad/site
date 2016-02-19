@@ -43,6 +43,8 @@ function set_disc_flight_data() {
 	$args = array( 'post_type' => 'product', 'product_cat' => 'discs' );
 	$discs = new WP_Query( $args );
 
+	var_dump($discs);
+
 	$inbounds_ids_json = file_get_contents( get_stylesheet_directory_uri() . '/flight-ratings/inbounds-id-list.json' );
 	$inbounds_ids_json = stripslashes($inbounds_ids_json);
 	$inbounds_ids_arr = json_decode( $inbounds_ids_json, true );
@@ -82,9 +84,6 @@ function set_disc_flight_data() {
 		}
 
 		wp_set_object_terms( $post_id, $stability, 'pa_stability', false );
-		// wp_remove_object_terms( $post_id, 'Stable', 'pa_stability' );
-		// wp_remove_object_terms( $post_id, 'Understable', 'pa_stability' );
-		// wp_remove_object_terms( $post_id, 'Overstable', 'pa_stability' );
 
 		update_post_meta( $post_id, 'inbounds_id', $inbounds_id );
 		update_post_meta( $post_id, 'speed', $disc_speed );
