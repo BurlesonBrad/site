@@ -2840,14 +2840,10 @@ table.cart .product-remove {
 	font-size: 0.85em;
 }
 
-.site-footer #contact-form-widget-text-2 p {
-	margin-bottom: 5px;
-}
-
 .site-footer #contact-form-widget-text-2 form input,
 .site-footer #contact-form-widget-text-2 form textarea {
 	width: 100%;
-	margin-bottom: 2px;
+	margin-bottom: 10px;
 	font-weight: bold;
 	text-transform: uppercase;
 	border-radius: 1px;
@@ -2885,10 +2881,10 @@ table.cart .product-remove {
 	border-radius: 2px;
 }
 
-.placeholder .site-footer #contact-form-widget-text-2 p label {
+.placeholder .site-footer #contact-form-widget-text-2 label {
 	display: none;
 }
-.placeholder .site-footer #contact-form-widget-text-2 p label.checkbox {
+.placeholder .site-footer #contact-form-widget-text-2 label.checkbox {
 	display: inline-block;
 }
 
