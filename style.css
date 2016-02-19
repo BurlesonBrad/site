@@ -2664,6 +2664,11 @@ form.contact-form > div > textarea {
 	margin: 4em 0 0.8em;
 }
 
+#about-col h4 {
+	line-height: 1.1;
+	text-align: center;
+}
+
 #social-col h4:first-child {
 	margin-top: 0;
 }
