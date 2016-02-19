@@ -2594,9 +2594,14 @@ ul.products li.product .star-rating + .price {
 	border-radius: 20px;
 }
 
+#contact-col form .opt-in {
+	margin: 0.8em 0 1.2em;
+}
+
 #contact-col form input[type='checkbox'] {
 	float: left;
 	width: auto;
+	margin: 0.2em 0 0;
 }
 
 #contact-col form input[type='checkbox'] + span {
