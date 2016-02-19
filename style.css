@@ -2849,7 +2849,7 @@ table.cart .product-remove {
 .site-footer .wpcf7 form input:focus,
 .site-footer .wpcf7 form textarea:focus {
 	background-color: #fafafa;
-	color: #888;
+	color: #555;
 }
 
 .site-footer .wpcf7 *::-webkit-input-placeholder { color: #fff; opacity: 0.8; }
