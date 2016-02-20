@@ -46,7 +46,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 <!--End mc_embed_signup-->
 
 <script type="text/javascript">
-	$("form").submit();
+	$(document).ready(funtion() {
+		$("form").submit();
+	});
 </script>
 </body>
 </html>
