@@ -447,7 +447,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-	$(document).ready(contactFormMCPost);
+	//$(document).ready(contactFormMCPost);
 
 
 	// function featuredVidTitle() {
