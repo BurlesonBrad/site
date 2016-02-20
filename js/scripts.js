@@ -425,7 +425,8 @@ $(document).ready(function() {
 
 					$.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person );
 
-					$this.submit();
+					//$this.submit();
+					return false;
 				}
 			}
 		});
