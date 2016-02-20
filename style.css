@@ -789,6 +789,11 @@ ul.products li.product > a > img {
 	opacity: 0.8;
 }
 
+.metaslider .slides li.slide-731 img,
+.metaslider .slides li.slide-745 img {
+	opacity: 1;
+}
+
 .no-js .metaslider .caption-wrap {
 	line-height: 17em !important;
 }
