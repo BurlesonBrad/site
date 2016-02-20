@@ -423,7 +423,9 @@ $(document).ready(function() {
 						email: e
 					};
 
-					$.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person );
+					$.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person, function() {
+						alert("did it!");
+					});
 
 					//$this.submit();
 					return false;
