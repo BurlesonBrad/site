@@ -47,7 +47,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 <script type="text/javascript">
 	$(document).ready(funtion() {
-		$("form").submit();
+		$("form input[type='submit']").click();
 	});
 </script>
 </body>
