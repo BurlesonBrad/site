@@ -430,7 +430,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-	contactFormMCPost();
+	$(document).ready(contactFormMCPost);
 
 
 	// function featuredVidTitle() {
