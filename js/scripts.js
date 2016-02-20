@@ -407,6 +407,30 @@ $(document).ready(function() {
 		$(".single-product .related h2").addClass("block-header");
 	});
 
+	function contactFormMCPost() {
+		$(".contact-form").submit(function(e) {
+			var $this = $(this);
+			if ( !$this.hasClass("mc-submitted") ) {
+				var $optIn = $this.find("input[name='gwidget-text-2-getupdatesfromhyzershop']");
+				$this.addClass("mc-submitted");
+
+				if ( $optIn.is(":checked") ) {
+					e.preventDefault();
+					var n = $this.find("#gwidget-text-2-yourname").val();
+					var e = $this.find("#gwidget-text-2-youremail").val();
+					var person = {
+						name: n,
+						email: e
+					};
+
+					$.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person );
+
+					$this.submit();
+				}
+			}
+		});
+	}
+
 
 	// function featuredVidTitle() {
 	// 	var $vid = $(".no-touchevents .featured-video-plus");
