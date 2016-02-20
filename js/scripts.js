@@ -198,7 +198,7 @@ $(document).ready(function() {
 			}, delay);
 		});
 
-		var $flightChart = $("<div class='flight-chart'><img src='http://ths09.inboundsdiscgolf.com/" + $product.data('inbounds-id') + ".png' alt='Inbounds flight chart for " + $product.data('product-slug') + "' />");
+		var $flightChart = $("<div class='flight-chart'><a href='http://inboundsdiscgolf.com'><img src='http://ths09.inboundsdiscgolf.com/" + $product.data('inbounds-id') + ".png' alt='Inbounds flight chart for " + $product.data('product-slug') + "' /></a>");
 		$longDesc.prepend($flightChart);
 	}
 	singleProductFlightData();
