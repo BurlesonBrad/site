@@ -15,7 +15,6 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
-
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="//hyzershop.us10.list-manage.com/subscribe/post?u=c294e1f306a856df1d2ffaee5&amp;id=216402b312" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
