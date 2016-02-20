@@ -832,6 +832,10 @@ ul.products li.product > a > img {
     margin-left: 0.8em;
 }
 
+.metaslider .slide-564 .caption a {
+	margin-left: 0;
+}
+
 .metaslider .caption h4 {
 	line-height: 1;
 	margin-top: -0.3em;
