@@ -421,25 +421,26 @@ $(document).ready(function() {
 					n = n.split(" ");
 					var fname = n[0];
 					var lname = n.length > 1 ? n[1] : '';
-					var $mc_form = $("#mc_embed_signup form");
-					var $fname_field = $mc_form.find("#mce-FNAME");
-					var $lname_field = $mc_form.find("#mce-LNAME");
-					var $email_field = $mc_form.find("#mce-EMAIL");
+					
+					// var $mc_form = $("#mc_embed_signup form");
+					// var $fname_field = $mc_form.find("#mce-FNAME");
+					// var $lname_field = $mc_form.find("#mce-LNAME");
+					// var $email_field = $mc_form.find("#mce-EMAIL");
 
-					$fname_field.val(fname);
-					$lname_field.val(lname);
-					$email_field.val(e);
+					// $fname_field.val(fname);
+					// $lname_field.val(lname);
+					// $email_field.val(e);
 
-					$mc_form.submit();
+					// $mc_form.submit();
 
-					// var person = {
-					// 	name: n,
-					// 	email: e
-					// };
+					var person = {
+						name: n,
+						email: e
+					};
 
-					// $.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person, function() {
-					// 	console.log(person);
-					// });
+					$.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person, function() {
+						console.log(person);
+					});
 
 					//$this.submit();
 					return false;
