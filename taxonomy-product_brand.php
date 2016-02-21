@@ -73,7 +73,13 @@ get_header( 'shop' ); ?>
 						        'taxonomy' 	=> 'product_brand',
 						        'field' 	=> 'id',
 						        'terms' 	=> $brand_id,
-					        )
+					        ),
+					        array(
+					            'taxonomy'  => 'product_cat',
+					            'field'     => 'slug',
+					            'terms'     => 'misprints', // exclude media posts in the news-cat custom taxonomy
+					            'operator'  => 'NOT IN',
+					        ),
 					    )
 					);
 					$loop = new WP_Query( $query_args );
