@@ -2047,6 +2047,10 @@ form.edit-bag-name {
 	width: 22%;
 }
 
+.single-product .in-stock {
+	display: none;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product .summary {
 		width: 64%;
