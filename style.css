@@ -2352,6 +2352,10 @@ p.comment-subscription-form {
 	color: #fff;
 }
 
+.woocommerce-product-rating {
+	border-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product div.product .images {
 		width: 30%;
