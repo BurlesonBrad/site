@@ -2003,6 +2003,11 @@ form.edit-bag-name {
 .single-product .content-area {
     float: left;
     width: 100%;
+    margin-bottom: 0;
+}
+
+.single-product .site-main {
+	margin-bottom: 0;
 }
 
 .single-product main > div.product {
