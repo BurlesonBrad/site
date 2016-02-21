@@ -2115,6 +2115,10 @@ form.edit-bag-name {
     text-transform: lowercase;
 }
 
+.chosen-container {
+	max-width: 100% !important;
+}
+
 select,
 .chosen-container-single .chosen-single {
 	border-radius: 100px;
