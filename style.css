@@ -2119,6 +2119,10 @@ form.edit-bag-name {
 	max-width: 100% !important;
 }
 
+.searchandfilter select.sf-input-select {
+	min-width: 100% !important;
+}
+
 select,
 .chosen-container-single .chosen-single {
 	border-radius: 100px;
