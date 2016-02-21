@@ -211,7 +211,7 @@ function setStockToOne() {
 	endwhile;
 	wp_reset_postdata();	 
 }
-setStockToOne();
+//setStockToOne();
 
 
 
