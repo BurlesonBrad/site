@@ -36,7 +36,15 @@ get_header( 'shop' ); ?>
 			}
 			?>
 
+			<?php if ( is_search() ) : ?>
+
+			<h1 class="page-title"><?php echo get_search_query(); ?></h1>
+
+			<?php else : ?>
+
 			<h1 class="page-title" <?php echo $disc_type; ?>><?php woocommerce_page_title(); ?></h1>
+
+			<?php endif; ?>
 
 		<?php endif; ?>
 
