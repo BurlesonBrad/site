@@ -2116,7 +2116,7 @@ form.edit-bag-name {
 }
 
 .chosen-container {
-	max-width: 100% !important;
+	width: 100% !important;
 }
 
 .searchandfilter select.sf-input-select {
