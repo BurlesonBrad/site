@@ -2354,6 +2354,7 @@ p.comment-subscription-form {
 
 .single-product div.product .woocommerce-product-rating {
 	border-bottom: 0;
+	padding-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
