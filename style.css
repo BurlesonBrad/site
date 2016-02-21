@@ -2343,6 +2343,8 @@ p.comment-subscription-form {
 
 .woocommerce-tabs {
 	border: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 .woocommerce-tabs ul.tabs li:after,
