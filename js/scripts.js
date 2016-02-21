@@ -407,6 +407,10 @@ $(document).ready(function() {
 		$(".single-product .related h2").addClass("block-header");
 	});
 
+	$(document).ready(function() {
+		$(".menu-item-163 a").attr("target", "_blank");
+	});
+
 	// function contactFormMCPost() {
 	// 	$(".contact-form").submit(function(e) {
 	// 		var $this = $(this);
