@@ -2051,6 +2051,10 @@ form.edit-bag-name {
 	display: none;
 }
 
+.description p {
+	margin-bottom: 0.9em;
+}
+
 @media screen and (min-width: 768px) {
 	.single-product .summary {
 		width: 64%;
