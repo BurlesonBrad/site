@@ -175,7 +175,7 @@ $(document).ready(function() {
 			if ( stats.fade + stats.turn >= 3 ) {
 				return "_sft_pa_stability=overstable";
 			}
-			else if ( stats.fade + stats.turn <= 0 ) {
+			else if ( stats.fade + stats.turn < 0 ) {
 				return "_sft_pa_stability=understable";
 			}
 			else if ( stats.fade + stats.turn < 3) {
