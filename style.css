@@ -2352,7 +2352,7 @@ p.comment-subscription-form {
 	color: #fff;
 }
 
-.woocommerce-product-rating {
+.single-product div.product .woocommerce-product-rating {
 	border-bottom: 0;
 }
 
