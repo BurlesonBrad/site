@@ -407,46 +407,46 @@ $(document).ready(function() {
 		$(".single-product .related h2").addClass("block-header");
 	});
 
-	function contactFormMCPost() {
-		$(".contact-form").submit(function(e) {
-			var $this = $(this);
-			if ( !$this.hasClass("mc-submitted") ) {
-				var $optIn = $this.find("input[name='gwidget-text-2-getupdatesfromhyzershop']");
-				$this.addClass("mc-submitted");
+	// function contactFormMCPost() {
+	// 	$(".contact-form").submit(function(e) {
+	// 		var $this = $(this);
+	// 		if ( !$this.hasClass("mc-submitted") ) {
+	// 			var $optIn = $this.find("input[name='gwidget-text-2-getupdatesfromhyzershop']");
+	// 			$this.addClass("mc-submitted");
 
-				if ( $optIn.is(":checked") ) {
-					e.preventDefault();
-					var n = $this.find("#gwidget-text-2-yourname").val();
-					var e = $this.find("#gwidget-text-2-youremail").val();
-					n = n.split(" ");
-					var fname = n[0];
-					var lname = n.length > 1 ? n[1] : '';
-					var $mc_form = $("#mc_embed_signup form");
-					var $fname_field = $mc_form.find("#mce-FNAME");
-					var $lname_field = $mc_form.find("#mce-LNAME");
-					var $email_field = $mc_form.find("#mce-EMAIL");
+	// 			if ( $optIn.is(":checked") ) {
+	// 				e.preventDefault();
+	// 				var n = $this.find("#gwidget-text-2-yourname").val();
+	// 				var e = $this.find("#gwidget-text-2-youremail").val();
+	// 				n = n.split(" ");
+	// 				var fname = n[0];
+	// 				var lname = n.length > 1 ? n[1] : '';
+	// 				var $mc_form = $("#mc_embed_signup form");
+	// 				var $fname_field = $mc_form.find("#mce-FNAME");
+	// 				var $lname_field = $mc_form.find("#mce-LNAME");
+	// 				var $email_field = $mc_form.find("#mce-EMAIL");
 
-					$fname_field.val(fname);
-					$lname_field.val(lname);
-					$email_field.val(e);
+	// 				$fname_field.val(fname);
+	// 				$lname_field.val(lname);
+	// 				$email_field.val(e);
 
-					$mc_form.submit();
+	// 				$mc_form.submit();
 
-					// var person = {
-					// 	name: n,
-					// 	email: e
-					// };
+	// 				// var person = {
+	// 				// 	name: n,
+	// 				// 	email: e
+	// 				// };
 
-					// $.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person, function() {
-					// 	console.log(person);
-					// });
+	// 				// $.post( 'http://stage.hyzershop.com/wp-content/themes/storefront-child/contactform-mc-post.php', person, function() {
+	// 				// 	console.log(person);
+	// 				// });
 
-					$this.submit();
-					return false;
-				}
-			}
-		});
-	}
+	// 				$this.submit();
+	// 				return false;
+	// 			}
+	// 		}
+	// 	});
+	// }
 	//$(document).ready(contactFormMCPost);
 
 
