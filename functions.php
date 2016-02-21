@@ -201,6 +201,18 @@ function woo_new_product_tab_content() {
 	}
 }
 
+function setStockToOne() {
+	$args = array( 'post_type' => 'product_variation', 'post_count' =>'9999','meta_key' => '_stock',  'meta_value' => '1', 'meta_compare' => '<');
+	$variationloop = new WP_Query( $args );
+	while ( $variationloop->have_posts() ) : $variationloop->the_post();
+
+		set_stock(1, 'set');
+
+	endwhile;
+	wp_reset_postdata();	 
+}
+setStockToOne();
+
 
 
 // function woo_related_products_limit() {
