@@ -2482,7 +2482,7 @@ p.comment-subscription-form {
 	}
 
 	.specs h2 {
-	    font-size: 3em;
+	    display: none;
 	}
 
 	#tab-specs_tab > .specs {
