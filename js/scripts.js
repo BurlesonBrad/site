@@ -262,7 +262,7 @@ $(document).ready(function() {
 	}
 
 	function feauxLazyLoad( section ) {
-		if ( !$("body").hasClass("home") ) { return; }
+		if ( !$("body").hasClass("home") || $(window).height() > $(window).width() || $(window).width() < 1136 ) { return; }
 
 		var $section = $(section);
 		var headerHeight = $("#masthead").outerHeight(true);
