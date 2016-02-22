@@ -2340,6 +2340,7 @@ p.comment-subscription-form {
     font-size: 7em;
     color: #f5f5f5;
     z-index: 0;
+    white-space: nowrap;
 }
 
 .specs ul {
