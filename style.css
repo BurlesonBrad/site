@@ -2424,10 +2424,6 @@ p.comment-subscription-form {
 	.woocommerce-tabs {
 		padding-top: 0;
 	}
-
-	.specs h2 {
-	    font-size: 3em;
-	}
 }
 
 @media screen and (max-width: 767px) {
@@ -2486,6 +2482,10 @@ p.comment-subscription-form {
 
 	.pagination .page-numbers, .woocommerce-pagination .page-numbers {
 		font-size: 1.5em;
+	}
+
+	.specs h2 {
+	    font-size: 3em;
 	}
 }
 
