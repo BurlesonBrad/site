@@ -2279,11 +2279,8 @@ button.single_add_to_cart_button:hover {
 	float: left;
 	width: 30%;
 	margin-right: 1%;
-/*	padding: 12px solid #fff;
-*/
 	border-left: 0.8em solid #fff;
-/*	box-shadow: -1px -1px 0px rgba(50,50,50,0.1);
-*/}
+}
 
 .flight-chart img {
 	min-width: 100%;
@@ -2486,6 +2483,14 @@ p.comment-subscription-form {
 
 	.specs h2 {
 	    font-size: 3em;
+	}
+
+	#tab-specs_tab > .specs {
+		width: 39%;
+	}
+
+	#tab-specs_tab > .flight-chart {
+		width: 60%;
 	}
 }
 
