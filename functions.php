@@ -218,9 +218,9 @@ function setStockToOne() {
     		var_dump($p);
     	endif;
 
-		if ( ( ! metadata_exists( 'post', $product_id, '_stock' ) || $p->get_stock_quantity() !== $new_stock_level ) ) {
-			$p->set_stock( $new_stock_level );
-		}
+		// if ( ( ! metadata_exists( 'post', $product_id, '_stock' ) || $p->get_stock_quantity() !== $new_stock_level ) ) {
+		// 	$p->set_stock( $new_stock_level );
+		// }
     }	 
 }
 setStockToOne();
