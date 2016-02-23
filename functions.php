@@ -224,16 +224,16 @@ function woo_new_product_tab_content() {
 //   if ( ( $pagenow == 'post-new.php' || $pagenow == 'post.php' || $pagenow == 'edit.php' ) && $screen->post_type == 'product' ) {
  
 //     ob_start();
-//     ?>
+//     php open tag
 //     $('.woocommerce_variations').bind('woocommerce_variations_added',function() {
 //       $('.woocommerce_variations input').each(function(index,el) {
 //         el = $(el);
 //         if(el.attr('name') && el.attr('name').substr(0,14) == 'variable_stock' && el.val() == '') {
-//           el.val(<?php echo $default_stock_quantity; ?>);
+//           el.val(<?php echo $default_stock_quantity; [php close tag]);
 //         }
 //       });
 //     });
-//     <?php
+//     php open tag
 //     $javascript = ob_get_clean();
 //     $woocommerce->add_inline_js( $javascript );
 //   }
