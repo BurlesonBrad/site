@@ -215,7 +215,9 @@ function setStockToOne() {
 		while ( $loop->have_posts() ) : $loop->the_post();
 			$product_id = $product->ID;
 	    	$new_stock_level = 1;
-			$product->wc_update_product_stock( $product_id, $new_stock_level );
+	    	if ( $product ):
+				$product->wc_update_product_stock( $product_id, $new_stock_level );
+			endif;
 		endwhile;
 	} else {
 		//echo __( 'No products found' );
