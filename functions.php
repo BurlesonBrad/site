@@ -203,13 +203,19 @@ function woo_new_product_tab_content() {
 
 function setStockToOne() {
 	$variations = get_posts( array(
-      'posts_per_page'=> -1,
-      'post_type'   => 'product_variation',
-      'post_status'  => 'publish'
+      'posts_per_page'	=> -1,
+      'post_type'   	=> 'product_variation',
+      'post_status'  	=> 'publish'
     ) );
 
-    foreach ( $variations as $product ) {
-    	wc_update_product_stock( $product->ID, 1 );
+    foreach ( $variations as $prod ) {
+    	$product_id = $prod->ID;
+    	$new_stock_level = 1;
+    	$product = wc_get_product( $product_id );
+
+		if ( ! metadata_exists( 'post', $product_id, '_stock' ) || $product->get_stock_quantity() !== $new_stock_level ) {
+		$product->set_stock( $new_stock_level );
+		}
     }	 
 }
 setStockToOne();
