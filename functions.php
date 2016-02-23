@@ -204,36 +204,22 @@ function woo_new_product_tab_content() {
 function setStockToOne() {
 	global $product;
 
-	$args = array(
+	$variations = get_posts( array(
       'posts_per_page'	=> -1,
       'post_type'   	=> 'product_variation',
       'post_status'  	=> 'publish'
-    );
+    ) );
 
-    $loop = new WP_Query( $args );
-	if ( $loop->have_posts() ) {
-		while ( $loop->have_posts() ) : $loop->the_post();
-			$product_id = $product->ID;
-	    	$new_stock_level = 1;
-	    	if ( $product ):
-				$product->wc_update_product_stock( $product_id, $new_stock_level );
-			endif;
-		endwhile;
-	} else {
-		//echo __( 'No products found' );
-	}
-	wp_reset_postdata();
+    foreach ( $variations as $product ) {
+    	$product_id = $product->ID;
+    	$new_stock_level = 1;
+    	$p = wc_get_product( $product_id );
 
-  //   foreach ( $variations as $prod ) {
-  //   	$product_id = $prod->ID;
-  //   	$new_stock_level = 1;
-  //   	$product = wc_get_product( $product_id );
-
-		// if ( $product && ( ! metadata_exists( 'post', $product_id, '_stock' ) || $product->get_stock_quantity() !== $new_stock_level ) ) {
-		// 	$product->set_stock( $new_stock_level );
-		// 	var_dump($product);
-		// }
-  //   }	 
+		if ( $p && ( ! metadata_exists( 'post', $product_id, '_stock' ) || $product->get_stock_quantity() !== $new_stock_level ) ) {
+			$p->set_stock( $new_stock_level );
+			var_dump($product);
+		}
+    }	 
 }
 setStockToOne();
 
