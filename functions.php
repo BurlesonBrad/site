@@ -203,6 +203,7 @@ function woo_new_product_tab_content() {
 
 function setStockToOne() {
 	global $product;
+	global $woocommerce;
 
 	$variations = get_posts( array(
       'posts_per_page'	=> -1,
