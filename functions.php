@@ -203,7 +203,7 @@ function woo_new_product_tab_content() {
 
 function setStockToOne() {
 	if ( !function_exists( 'wc_update_product_stock' ) ) { 
-	    require_once '/includes/wc-product-functions.php'; 
+	    require_once 'http://stage.hyzershop.com/wp-content/plugins/woocommerce/includes/wc-product-functions.php'; 
 	}
 
 	$variations = get_posts( array(
