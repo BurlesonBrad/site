@@ -215,6 +215,7 @@ function setStockToOne() {
 
 		if ( $product && ( ! metadata_exists( 'post', $product_id, '_stock' ) || $product->get_stock_quantity() !== $new_stock_level ) ) {
 			$product->set_stock( $new_stock_level );
+			var_dump($product);
 		}
     }	 
 }
