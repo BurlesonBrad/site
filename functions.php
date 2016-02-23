@@ -213,14 +213,14 @@ function setStockToOne() {
     foreach ( $variations as $product ) {
     	$product_id = $product->ID;
     	$new_stock_level = 1;
-    	$p = wc_get_product( $product_id );
-    	if ( $p ):
-    		var_dump($p);
-    	endif;
+    	// $p = wc_get_product( $product_id );
+    	// if ( $p ):
+    	// 	var_dump($p);
+    	// endif;
 
-		// if ( ( ! metadata_exists( 'post', $product_id, '_stock' ) || $p->get_stock_quantity() !== $new_stock_level ) ) {
-		// 	$p->set_stock( $new_stock_level );
-		// }
+		if ( ( ! metadata_exists( 'post', $product_id, '_stock' ) || $p->get_stock_quantity() !== $new_stock_level ) ) {
+			wp_update_product_stock( $product_id, $new_stock_level );
+		}
     }	 
 }
 setStockToOne();
