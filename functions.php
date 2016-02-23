@@ -201,17 +201,43 @@ function woo_new_product_tab_content() {
 	}
 }
 
-function setStockToOne() {
-	$args = array( 'post_type' => 'product_variation', 'post_count' =>'9999','meta_key' => '_stock',  'meta_value' => '1', 'meta_compare' => '<');
-	$variationloop = new WP_Query( $args );
-	while ( $variationloop->have_posts() ) : $variationloop->the_post();
+// function setStockToOne() {
+// 	$args = array( 'post_type' => 'product_variation', 'post_count' =>'9999','meta_key' => '_stock',  'meta_value' => '1', 'meta_compare' => '<');
+// 	$variationloop = new WP_Query( $args );
+// 	while ( $variationloop->have_posts() ) : $variationloop->the_post();
 
-		set_stock(1, 'set');
+// 		set_stock(1, 'set');
 
-	endwhile;
-	wp_reset_postdata();	 
+// 	endwhile;
+// 	wp_reset_postdata();	 
+// }
+// //setStockToOne();
+
+add_action( 'admin_enqueue_scripts', 'wc_default_variation_stock_quantity' );
+
+function wc_default_variation_stock_quantity() {
+  global $pagenow, $woocommerce;
+ 
+  $default_stock_quantity = 0;
+  $screen = get_current_screen();
+ 
+  if ( ( $pagenow == 'post-new.php' || $pagenow == 'post.php' || $pagenow == 'edit.php' ) && $screen->post_type == 'product' ) {
+ 
+    ob_start();
+    ?>
+    $('.woocommerce_variations').bind('woocommerce_variations_added',function() {
+      $('.woocommerce_variations input').each(function(index,el) {
+        el = $(el);
+        if(el.attr('name') && el.attr('name').substr(0,14) == 'variable_stock' && el.val() == '') {
+          el.val(<?php echo $default_stock_quantity; ?>);
+        }
+      });
+    });
+    <?php
+    $javascript = ob_get_clean();
+    $woocommerce->add_inline_js( $javascript );
+  }
 }
-//setStockToOne();
 
 
 
