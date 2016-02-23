@@ -208,10 +208,9 @@ function setStockToOne() {
       'post_status'  	=> 'publish'
     ) );
 
-    var_dump($variations);
-
     foreach ( $variations as $prod ) {
     	$product_id = $prod->ID;
+    	var_dump($product_id);
     	$new_stock_level = 1;
     	$product = wc_get_product( $product_id );
 
