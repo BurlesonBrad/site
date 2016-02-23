@@ -202,8 +202,9 @@ function woo_new_product_tab_content() {
 }
 
 function setStockToOne() {
-	global $product;
-	global $woocommerce;
+	if ( !function_exists( 'wc_update_product_stock' ) ) { 
+	    require_once '/includes/wc-product-functions.php'; 
+	}
 
 	$variations = get_posts( array(
       'posts_per_page'	=> -1,
