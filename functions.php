@@ -213,9 +213,7 @@ function setStockToOne() {
     	$new_stock_level = 1;
     	$product = wc_get_product( $product_id );
 
-    	var_dump($product);
-
-		if ( ! metadata_exists( 'post', $product_id, '_stock' ) || $product->get_stock_quantity() !== $new_stock_level ) {
+		if ( $product && ( ! metadata_exists( 'post', $product_id, '_stock' ) || $product->get_stock_quantity() !== $new_stock_level ) ) {
 			$product->set_stock( $new_stock_level );
 		}
     }	 
