@@ -213,31 +213,31 @@ function woo_new_product_tab_content() {
 // }
 // //setStockToOne();
 
-add_action( 'admin_enqueue_scripts', 'wc_default_variation_stock_quantity' );
+// add_action( 'admin_enqueue_scripts', 'wc_default_variation_stock_quantity' );
 
-function wc_default_variation_stock_quantity() {
-  global $pagenow, $woocommerce;
+// function wc_default_variation_stock_quantity() {
+//   global $pagenow, $woocommerce;
  
-  $default_stock_quantity = 0;
-  $screen = get_current_screen();
+//   $default_stock_quantity = 0;
+//   $screen = get_current_screen();
  
-  if ( ( $pagenow == 'post-new.php' || $pagenow == 'post.php' || $pagenow == 'edit.php' ) && $screen->post_type == 'product' ) {
+//   if ( ( $pagenow == 'post-new.php' || $pagenow == 'post.php' || $pagenow == 'edit.php' ) && $screen->post_type == 'product' ) {
  
-    ob_start();
-    ?>
-    $('.woocommerce_variations').bind('woocommerce_variations_added',function() {
-      $('.woocommerce_variations input').each(function(index,el) {
-        el = $(el);
-        if(el.attr('name') && el.attr('name').substr(0,14) == 'variable_stock' && el.val() == '') {
-          el.val(<?php echo $default_stock_quantity; ?>);
-        }
-      });
-    });
-    <?php
-    $javascript = ob_get_clean();
-    $woocommerce->add_inline_js( $javascript );
-  }
-}
+//     ob_start();
+//     ?>
+//     $('.woocommerce_variations').bind('woocommerce_variations_added',function() {
+//       $('.woocommerce_variations input').each(function(index,el) {
+//         el = $(el);
+//         if(el.attr('name') && el.attr('name').substr(0,14) == 'variable_stock' && el.val() == '') {
+//           el.val(<?php echo $default_stock_quantity; ?>);
+//         }
+//       });
+//     });
+//     <?php
+//     $javascript = ob_get_clean();
+//     $woocommerce->add_inline_js( $javascript );
+//   }
+// }
 
 
 
