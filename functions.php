@@ -216,7 +216,7 @@ function setStockToOne() {
     	$product_id = $product->ID;
     	$new_stock_level = 1;
     	$product = new WC_Product( $product_id );
-    	$product->set_stock(1);
+    	$product->set_stock( $new_stock_level );
 		//wc_update_product_stock( $product_id, $new_stock_level );
     }	 
 }
