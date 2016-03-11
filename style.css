@@ -865,6 +865,10 @@ ul.products li.product > a > img {
 }
 
 @media screen and (max-width: 1136px) {
+	body {
+		overflow-x: hidden;
+	}
+	
 	.metaslider .slides img {
 		width: 1136px !important;
 	}
