@@ -104,7 +104,7 @@ get_header(); ?>
 								url: "http://blog.hyzershop.com/api/get_post/?id=535",
 								dataType: "jsonp",
 								success: function(data) {
-									console.log(data)
+									console.log(data.post.excerpt);
 								}
 							});
 						};
