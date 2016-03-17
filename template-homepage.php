@@ -103,7 +103,7 @@ get_header(); ?>
 							jQuery.ajax({
 								type: "GET",
 								dataType: "json",
-								url: "http://blog.hyzershop.com/?json=get_post&post_id=535"
+								url: "http://blog.hyzershop.com/api/get_post/?id=535"
 							}).done(function(data) {
 								console.log(data);
 							});
