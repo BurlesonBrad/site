@@ -108,9 +108,7 @@ get_header(); ?>
 								}
 							});
 						};
-						jQuery(document).ready(function() {
-							console.log( getFeaturedBlogPost() );
-						});
+						jQuery(document).ready(getFeaturedBlogPost);
 					</script>
 					<a href="http://blog.hyzershop.com" target="_blank"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
 				</div>
