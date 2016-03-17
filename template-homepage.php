@@ -103,7 +103,7 @@ get_header(); ?>
 				<script type="text/javascript">
 					var getFeaturedBlogPost = function ($) {
 						$.ajax({
-							url: "http://blog.hyzershop.com/api/get_post/?slug=discraft-disc-golf-clinic-throwing-basics",
+							url: "http://blog.hyzershop.com/api/get_post/?slug=<?php echo get_post_meta(2, 'featured_blog_post', true); ?>discraft-disc-golf-clinic-throwing-basics",
 							dataType: "jsonp",
 							success: function(data) {
 								featuredBlogPost(data);
