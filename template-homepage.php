@@ -116,7 +116,7 @@ get_header(); ?>
 								.html("<div style='background-image'>" + data.post.excerpt + "</div>")
 								.attr("href", data.post.url)
 								.parent().css({
-									backgroundImage: data.post.thumbnails[0]
+									backgroundImage: data.post.thumbnails
 								});
 						}
 					}(jQuery);
