@@ -102,7 +102,7 @@ get_header(); ?>
 						var getFeaturedBlogPost = function () {
 							jQuery.get( "http://www.your-web-site.com/wp-json/wp/v2/posts/{id}" )
 						};
-						$(window).load(function() {
+						window.onload = (function() {
 							console.log( getFeaturedBlogPost() );
 						});
 					</script>
