@@ -101,7 +101,7 @@ get_header(); ?>
 					<script type="text/javascript">
 						var getFeaturedBlogPost = function () {
 							jQuery.ajax({
-								url: "http://blog.hyzershop.com/api/get_post/?filter[s]=basics",
+								url: "http://blog.hyzershop.com/api/get_post/?id=discraft-winter-putter-plastics",
 								dataType: "jsonp",
 								success: function(data) {
 									console.log(data);
