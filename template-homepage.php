@@ -108,7 +108,7 @@ get_header(); ?>
 								}
 							});
 						};
-						jQuery(document).ready = (function() {
+						jQuery(document).ready(function() {
 							console.log( getFeaturedBlogPost() );
 						});
 					</script>
