@@ -101,10 +101,10 @@ get_header(); ?>
 					<script type="text/javascript">
 						var getFeaturedBlogPost = function () {
 							jQuery.ajax({
-								url: "http://blog.hyzershop.com/api/get_post/?id=535",
+								url: "http://blog.hyzershop.com/api/get_post/?filter[s]=basics",
 								dataType: "jsonp",
 								success: function(data) {
-									console.log(data.post);
+									console.log(data);
 								}
 							});
 						};
