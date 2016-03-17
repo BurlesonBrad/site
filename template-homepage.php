@@ -107,6 +107,7 @@ get_header(); ?>
 							dataType: "jsonp",
 							success: function(data) {
 								featuredBlogPost(data);
+								console.log(data);
 							}
 						});
 
