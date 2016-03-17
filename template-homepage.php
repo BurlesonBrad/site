@@ -102,7 +102,7 @@ get_header(); ?>
 						var getFeaturedBlogPost = function () {
 							jQuery.ajax({
 								type: "GET",
-								dataType: 'jsonp',
+								dataType: "json",
 								url: "http://blog.hyzershop.com/?json=get_post&post_id=535"
 							}).done(function(data) {
 								console.log(data);
