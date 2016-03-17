@@ -101,7 +101,7 @@ get_header(); ?>
 					<a href="http://blog.hyzershop.com" target="_blank"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
 				</div>
 				<script type="text/javascript">
-					function getFeaturedBlogPost($) {
+					var getFeaturedBlogPost = function ($) {
 						$.ajax({
 							url: "http://blog.hyzershop.com/api/get_post/?slug=discraft-disc-golf-clinic-throwing-basics",
 							dataType: "jsonp",
@@ -113,8 +113,8 @@ get_header(); ?>
 						function featuredBlogPost(data) {
 							$(".read-the-blog").html("<div>" + data.post.excerpt + "</div>");
 						}
-					}
-					jQuery(document).ready(function() { getFeaturedBlogPost(jQuery) });
+					}(jQuery);
+					jQuery(document).ready(getFeaturedBlogPost);
 				</script>
 				<div class="featured-video">
 					<?php
