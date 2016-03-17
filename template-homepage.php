@@ -118,7 +118,8 @@ get_header(); ?>
 								.attr("href", data.post.url)
 								.parent().css({
 									backgroundImage: "url(<?php echo get_post_meta(2, 'featured_blog_post_image', true); ?>)",
-									backgroundSize: "100% auto"
+									backgroundSize: "100% auto",
+									position: "relative"
 								});
 							$(".read-the-blog img").css({
 								opacity: 0
