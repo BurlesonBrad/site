@@ -112,12 +112,16 @@ get_header(); ?>
 						});
 
 						function featuredBlogPost(data) {
+							var oldHTML = $(".read-the-blog a").html();
 							$(".read-the-blog a")
-								.html("<div style='background-image'>" + data.post.excerpt + "</div>")
+								.html(oldHTML + "<span>" + data.post.excerpt + "</span")
 								.attr("href", data.post.url)
 								.parent().css({
 									backgroundImage: data.post.thumbnails
 								});
+							$(".read-the-blog img").css({
+								opacity: 0
+							});
 						}
 					}(jQuery);
 					jQuery(document).ready(getFeaturedBlogPost);
