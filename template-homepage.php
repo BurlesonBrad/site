@@ -114,13 +114,18 @@ get_header(); ?>
 						function featuredBlogPost(data) {
 							var oldHTML = $(".read-the-blog a").html();
 							$(".read-the-blog a")
-								.html(oldHTML + "<span>" + data.post.excerpt + "</span")
+								.html(oldHTML + "<div class='featured-blog-post-excerpt'>" + data.post.excerpt + "</div>")
 								.attr("href", data.post.url)
 								.parent().css({
-									backgroundImage: "url(<?php echo get_post_meta(2, 'featured_blog_post_image', true); ?>)"
+									backgroundImage: "url(<?php echo get_post_meta(2, 'featured_blog_post_image', true); ?>)",
+									backgroundSize: "100% auto"
 								});
 							$(".read-the-blog img").css({
 								opacity: 0
+							}).next("div").css({
+								position: "absolute",
+								top: 0,
+								width: "100%"
 							});
 						}
 					}(jQuery);
