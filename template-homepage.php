@@ -117,7 +117,7 @@ get_header(); ?>
 								.html(oldHTML + "<span>" + data.post.excerpt + "</span")
 								.attr("href", data.post.url)
 								.parent().css({
-									backgroundImage: "<?php echo get_post_meta(2, 'featured_blog_post_image', true); ?>"
+									backgroundImage: "url(<?php echo get_post_meta(2, 'featured_blog_post_image', true); ?>)"
 								});
 							$(".read-the-blog img").css({
 								opacity: 0
