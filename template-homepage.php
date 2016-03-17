@@ -100,9 +100,9 @@ get_header(); ?>
 				<div class="read-the-blog">
 					<script type="text/javascript">
 						var getFeaturedBlogPost = function () {
-							$.get( "http://www.your-web-site.com/wp-json/wp/v2/posts/{id}" )
+							jQuery.get( "http://www.your-web-site.com/wp-json/wp/v2/posts/{id}" )
 						};
-						$(document).ready(function() {
+						$(window).load(function() {
 							console.log( getFeaturedBlogPost() );
 						});
 					</script>
