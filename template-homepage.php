@@ -98,6 +98,12 @@ get_header(); ?>
 			<section class="tired-of-shopping col-full">
 				<img src="/wp-content/themes/storefront-child/images/tired-of-shopping.png" alt="Tired of shopping?" />
 				<div class="read-the-blog">
+					<script type="text/javascript">
+						var getFeaturedBlogPost = function () {
+							$.get( "http://www.your-web-site.com/wp-json/wp/v2/posts/{id}" )
+						};
+						$(document).ready( console.log( getFeaturedBlogPost() ); );
+					</script>
 					<a href="http://blog.hyzershop.com" target="_blank"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
 				</div>
 				<div class="featured-video">
