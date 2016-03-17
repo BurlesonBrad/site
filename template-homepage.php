@@ -98,20 +98,24 @@ get_header(); ?>
 			<section class="tired-of-shopping col-full">
 				<img src="/wp-content/themes/storefront-child/images/tired-of-shopping.png" alt="Tired of shopping?" />
 				<div class="read-the-blog">
-					<script type="text/javascript">
-						var getFeaturedBlogPost = function () {
-							jQuery.ajax({
-								url: "http://blog.hyzershop.com/api/get_post/?slug=discraft-disc-golf-clinic-throwing-basics",
-								dataType: "jsonp",
-								success: function(data) {
-									console.log(data);
-								}
-							});
-						};
-						jQuery(document).ready(getFeaturedBlogPost);
-					</script>
 					<a href="http://blog.hyzershop.com" target="_blank"><img src="/wp-content/themes/storefront-child/images/read-the-blog.png" alt="Read the blog" /></a>
 				</div>
+				<script type="text/javascript">
+					var getFeaturedBlogPost = function ($) {
+						$.ajax({
+							url: "http://blog.hyzershop.com/api/get_post/?slug=discraft-disc-golf-clinic-throwing-basics",
+							dataType: "jsonp",
+							success: function(data) {
+								featuredBlogPost(data);
+							}
+						});
+
+						function featuredBlogPost(data) {
+							$(".read-the-blog").html("<div>" + data.post.excerpt + "</div>");
+						}
+					}(jQuery);
+					jQuery(document).ready(getFeaturedBlogPost);
+				</script>
 				<div class="featured-video">
 					<?php
 					$video_args = array(
