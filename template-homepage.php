@@ -101,7 +101,7 @@ get_header(); ?>
 					<script type="text/javascript">
 						var getFeaturedBlogPost = function () {
 							jQuery.ajax({
-								url: "http://blog.hyzershop.com/api/get_post/?id=introduction-to-the-disc-golf-basics",
+								url: "http://blog.hyzershop.com/api/get_post/?slug=discraft-disc-golf-clinic-throwing-basics",
 								dataType: "jsonp",
 								success: function(data) {
 									console.log(data);
