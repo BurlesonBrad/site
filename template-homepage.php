@@ -100,7 +100,7 @@ get_header(); ?>
 				<div class="read-the-blog">
 					<script type="text/javascript">
 						var getFeaturedBlogPost = function () {
-							jQuery.get( "http://blog.hyzershop.com/wp-json/posts", function(data) {
+							jQuery.get( "http://blog.hyzershop.com/?json=get_post&post_id=535", function(data) {
 								console.log(data);
 							});
 						};
