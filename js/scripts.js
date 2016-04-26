@@ -23,7 +23,7 @@ $(document).ready(function() {
 			$(".header-widget-region").remove();
 		}
 
-		var $logo = $("<img src='/wp-content/themes/storefront-child/images/logo-white.png' alt='Hyzer Shop' width='74' height='46' style='padding-top:5px;' />");
+		var $logo = $("<img src='/wp-content/themes/storefront-child/images/wordmark-white.png' alt='Hyzer Shop' width='96' height='51' />");
 
 		if ( $(window).width() > 1280 ) {
 			$menuHome.html($logo)
