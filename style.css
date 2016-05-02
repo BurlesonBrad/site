@@ -314,7 +314,7 @@ button.menu-toggle::before {
 
 @media screen and (max-width: 1280px) and (min-width: 768px) {
 	/* doin the EMs thing! */
-	header > .col-full {
+	header > .col-full > * {
 		font-size: 0.8em;
 	}
 
@@ -385,7 +385,8 @@ button.menu-toggle::before {
 	}
 
 	ul#menu-main-menu li:nth-child(2) > a {
-		border-left: 1px solid #00aaf5;
+		/*border-left: 1px solid #00aaf5;*/
+		border-left: 0px none;
 	}
 
 	/* ^ ERASING over-1280 styling */
