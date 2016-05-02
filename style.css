@@ -384,6 +384,10 @@ button.menu-toggle::before {
 		border-right: 1px solid #00b0ff;
 	}
 
+	ul#menu-main-menu li:first-child > a {
+		padding-right: 1.6em;
+	}
+
 	ul#menu-main-menu li:nth-child(2) > a {
 		/*border-left: 1px solid #00aaf5;*/
 		border-left: 0px none;
