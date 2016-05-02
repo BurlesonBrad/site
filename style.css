@@ -388,6 +388,19 @@ button.menu-toggle::before {
 		border-left: 1px solid #00aaf5;
 	}
 
+	/* ^ ERASING over-1280 styling */
+	header > .col-full {
+		font-size: 0.8em;
+	}
+
+	ul#menu-main-menu > li > a {
+		padding: 3.1em 1em 3.2em;
+	}
+
+	.secondary-navigation ul.menu a {
+		padding: 1.2em 0.9em !important;
+	}
+
 /*
 	.primary-navigation {
 	    display: block;

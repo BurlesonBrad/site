@@ -25,18 +25,19 @@ $(document).ready(function() {
 
 		var $logo = $("<img src='/wp-content/themes/storefront-child/images/wordmark-white.png' alt='Hyzer Shop' width='96' height='51' />");
 
-		if ( $(window).width() > 1280 ) {
-			$menuHome.html($logo)
-				.css({
-					paddingTop: 0,
-				    paddingBottom: 0,
-				    "vertical-align": "middle",
-				    display: "inline-block"
-				})
-				.parent().css({
-					"line-height": liHeight + "px"
-				});
-		} else if ( 768 < $(window).width() < 1280 ) {
+		// if ( $(window).width() > 1280 ) {
+		// 	$menuHome.html($logo)
+		// 		.css({
+		// 			paddingTop: 0,
+		// 		    paddingBottom: 0,
+		// 		    "vertical-align": "middle",
+		// 		    display: "inline-block"
+		// 		})
+		// 		.parent().css({
+		// 			"line-height": liHeight + "px"
+		// 		});
+		// } else 
+		if ( 768 < $(window).width() ) {
 			$menuHome.html($logo)
 				.css({
 					paddingTop: 0,
@@ -48,7 +49,7 @@ $(document).ready(function() {
 					"line-height": "7.1em"
 				});
 				$logo.css({
-					width: "6.4em"
+					width: "11em"
 				});
 		}
 	}
