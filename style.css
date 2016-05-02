@@ -389,9 +389,9 @@ button.menu-toggle::before {
 	}
 
 	/* ^ ERASING over-1280 styling */
-	/*header > .col-full {
+	header > .col-full {
 		font-size: 0.8em;
-	}*/
+	}
 
 	ul#menu-main-menu > li > a {
 		padding: 3.1em 1em 3.2em;
