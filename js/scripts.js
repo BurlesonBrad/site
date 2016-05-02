@@ -37,7 +37,7 @@ $(document).ready(function() {
 		// 			"line-height": liHeight + "px"
 		// 		});
 		// } else 
-		if ( 768 < $(window).width() ) {
+		if ( $(window).width() > 768 ) {
 			$menuHome.html($logo)
 				.css({
 					paddingTop: 0,
