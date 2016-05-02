@@ -382,10 +382,7 @@ button.menu-toggle::before {
 
 	.js ul#menu-main-menu li:first-child > a, ul#menu-main-menu li:first-child > a:hover {
 		border-right: 1px solid #00b0ff;
-	}
-
-	ul#menu-main-menu li:first-child > a {
-		padding-right: 1.6em;
+		padding-right: 1.8em !important;
 	}
 
 	ul#menu-main-menu li:nth-child(2) > a {
