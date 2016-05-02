@@ -391,7 +391,7 @@ button.menu-toggle::before {
 	}
 
 	/* ^ ERASING over-1280 styling */
-	header > .col-full {
+	header > .col-full > * {
 		font-size: 0.8em;
 	}
 
