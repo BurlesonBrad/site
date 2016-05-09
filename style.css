@@ -58,6 +58,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
 	text-transform: uppercase;
 	border-radius: 5em;
 	border: 0.27em solid #00b0ff;
+	background: #00b0ff;
 }
 
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
@@ -90,6 +91,7 @@ select, option {
 /* header */
 .site-header {
 	padding-top: 0;
+	background-color: #00b0ff;
 }
 
 .site-branding {
@@ -110,8 +112,11 @@ select, option {
 }
 
 button.menu-toggle {
-	text-align: right;
+	float: left;
 	box-shadow: none;
+    font-family: 'Rock Salt';
+    text-transform: lowercase;
+    font-size: 1.4em;
 }
 
 ul.menu li.current-menu-item > a {
@@ -276,7 +281,7 @@ header .widget_product_search form:before {
 
 button.menu-toggle {
 	position: relative;
-	top: -2px;
+	top: 11px;
 	text-align: left;
 	padding: 1em 0;
 }
@@ -310,12 +315,19 @@ button.menu-toggle::before {
 	}
 	header ul ul li.menu-item-has-children > a {
 	}
+	ul#menu-main-menu li a {
+		color: #fff;
+	}
 }
 
 @media screen and (max-width: 1280px) and (min-width: 768px) {
 	/* doin the EMs thing! */
 	header > .col-full > * {
 		font-size: 0.71em !important;
+	}
+
+	ul#menu-main-menu li a {
+		color: #fff;
 	}
 
 	ul#menu-main-menu > li > a {
@@ -349,12 +361,24 @@ button.menu-toggle::before {
 
 	.secondary-navigation ul.menu a {
 		padding: 1.2em 1.6em;
-		color: #777;
 	}
 
 	.main-navigation ul li, .secondary-navigation ul li {
 		vertical-align: top;
 		float: left;
+	}
+
+	.main-navigation ul li {
+		background: #00b0ff;
+	}
+
+	.main-navigation ul li a {
+		color: #fff;
+		font-weight: bold !important;
+	}
+
+	.site-header-cart li a {
+		color: #fff;
 	}
 
 	.main-navigation ul.menu > li > a, .main-navigation ul.nav-menu > li > a, .site-header-cart .cart-contents {
@@ -368,6 +392,7 @@ button.menu-toggle::before {
 	ul#menu-main-menu li a {
 		border-right: 1px solid #00aaf5;
 		cursor: default;
+		color: #fff;
 	}
 
 	ul#menu-main-menu li a:hover {
@@ -393,6 +418,10 @@ button.menu-toggle::before {
 	/* ^ ERASING over-1280 styling */
 	header > .col-full > * {
 		font-size: 0.8em;
+	}
+
+	header > .col-full > .storefront-primary-navigation {
+		background: transparent;
 	}
 
 	ul#menu-main-menu > li > a {
@@ -437,6 +466,7 @@ button.menu-toggle::before {
 .page-template-template-homepage #content > .col-full {
 	width: 100% !important;
 	max-width: 100% !important;
+	padding-left: 0;
 }
 
 .woocommerce-breadcrumb { display: none; }
@@ -2847,6 +2877,11 @@ table.cart .product-remove {
 .site-footer {
 	border-top: 10px solid #4a4a4a;
 	box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+	background: #4a4a4a;
+}
+
+.storefront-handheld-footer-bar {
+	display: none !important;
 }
 
 .footer-widgets {
@@ -2877,6 +2912,10 @@ table.cart .product-remove {
 	color: #ff3c7c;
 }
 
+.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
+	color: #fff;
+}
+
 
 .site-footer .footer-widget-2 h3 {
 	font-family: 'Viga';
@@ -2892,12 +2931,12 @@ table.cart .product-remove {
 }
 
 .widget_recent_entries ul li a, .widget_pages ul li a {
-	color: #00b0ff;
+	color: #00b0ff !important;
 	text-transform: uppercase;
 }
 
 .widget_recent_entries ul li:nth-child(odd) a, .widget_pages ul li:nth-child(odd) a {
-	color: #fff;
+	color: #fff !important;
 }
 /*.widget_recent_entries ul li:nth-child(odd) a:hover, .widget_pages ul li:nth-child(odd) a:hover {
 	color: #00b0ff;
