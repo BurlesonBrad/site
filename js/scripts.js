@@ -297,7 +297,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-	feauxLazyLoad("section");
+	//feauxLazyLoad("section");
 
 	function filterIcons() {
 		var $filterLi = $("form.searchandfilter > ul > li");
