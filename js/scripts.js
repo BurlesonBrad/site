@@ -399,10 +399,10 @@ $(document).ready(function() {
 			css: { "transform": "translateY(" + trans + "px)" }
 		});
 	}
-	footerParallax(-0.1);
-	$(window).scroll(function() {
-		footerParallax(-0.1);
-	});
+	// footerParallax(-0.1);
+	// $(window).scroll(function() {
+	// 	footerParallax(-0.1);
+	// });
 
 	$(document).ready(function() {
 		$(".single-product .related h2").addClass("block-header");
