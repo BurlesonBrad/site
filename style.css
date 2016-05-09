@@ -183,6 +183,10 @@ header ul ul {
 	border-top: 0.6em solid #00a0ea !important;
 }
 
+.main-navigation ul.menu ul, .main-navigation ul.nav-menu ul {
+	background-color: #00b0ff !important;
+}
+
 .sub-menu li, .sub-menu li a {
 	width: 100% !important;
 	border: 0;
@@ -2381,10 +2385,9 @@ p.comment-subscription-form {
 }
 
 .specs h2 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     line-height: 0.9;
-    font-size: 7em;
-    color: #f5f5f5;
+    font-size: 7em !important;
     z-index: 0;
     white-space: nowrap;
 }
